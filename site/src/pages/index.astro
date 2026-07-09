@@ -1,166 +1,224 @@
 ---
 /**
- * トップページ = ライブ・映像ハブ（仕様 §4.1）。
- * P0 では 6 セクションの骨組みを「準備中」のプレースホルダーカードで実装する。
- * データ接続（ライブ検知・RSSフィード・温泉期間）は P1 以降。
+ * トップページ = ライブ・映像ハブ（仕様 §4.1 / デザインガイドライン準拠）。
+ * P0.5 では 6 セクションを、レイアウトのリズムを変えながら実データ前提の器として実装する:
+ *   01 LIVE     いま配信中          → 空状態（マスコット＋理由＋導線）
+ *   02 ALWAYS   いつでも見られる      → 特集（大1枚＋小リスト）
+ *   03 ARCHIVE  よりぬきアーカイブ    → 番号付き編集リスト
+ *   04 FEED     新着動画フィード      → 横スクロールカード
+ *   05 ONSEN    今シーズンの温泉      → 特集ストリップ
+ *   06 READS    新着記事            → 編集カード（2列）
+ * データ接続（ライブ検知・RSS・温泉期間）は P1 以降。
  */
+import { Icon } from 'astro-icon/components';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/Section.astro';
 import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
+import Mascot from '../components/Mascot.astro';
 
 // --- プレースホルダーのダミーデータ（表示レイアウト確認用・P1以降で実データに差し替え） ---
-const alwaysOn = [
-  { name: 'Taronga Zoo（オーストラリア）', emoji: '🌏', note: '24時間ライブ配信の定番。稼働状況を自動チェックして表示します。' },
-  { name: 'Angel Valley Farm（ラトビア）', emoji: '🚜', note: '牧場ののどかなカピバラたち。時間帯で表情が変わります。' },
-  { name: 'Riga Zoo（季節限定）', emoji: '❄️', note: '配信方式を確認中。稼働時のみカードが点灯します。' },
+const alwaysOnFeatured = {
+  name: 'Taronga Zoo（オーストラリア）',
+  icon: 'ph:globe-hemisphere-west',
+  meta: '海外・24時間ライブ',
+  note: 'シドニーの動物園から24時間配信される定番カメラ。稼働状況を自動チェックし、映っているときにここへ大きく掲載します。',
+};
+const alwaysOnRest = [
+  { name: 'Angel Valley Farm（ラトビア）', icon: 'ph:tractor', note: '牧場ののどかな群れ。時間帯で表情が変わります。' },
+  { name: 'Riga Zoo（季節限定）', icon: 'ph:snowflake', note: '配信方式を確認中。稼働時のみカードが点灯します。' },
 ];
 
 const archives = [
-  { name: '露天風呂ライブ（冬の名場面）', emoji: '♨️', note: '湯船でとろける表情の名シーンをキュレーション予定。' },
-  { name: '池のおそうじタイム', emoji: '🧹', note: '飼育員さんの作業に集まるカピバラたち。' },
-  { name: 'スイカタイム / おやつの時間', emoji: '🍉', note: '餌やりイベントのハイライトを厳選します。' },
+  { name: '露天風呂ライブ（冬の名場面）', note: '湯船でとろける表情の名シーンを手動でキュレーション。' },
+  { name: '池のおそうじタイム', note: '飼育員さんの作業に集まってくるカピバラたち。' },
+  { name: 'スイカタイム / おやつの時間', note: '餌やりイベントのハイライトを厳選します。' },
 ];
 
 const feed = [
-  { name: '長崎バイオパーク 公式', emoji: '📺', note: '最新投稿を RSS で自動集約し「今日のカピバラ」として掲載予定。' },
-  { name: '伊豆シャボテン動物公園 公式', emoji: '📺', note: '元祖・カピバラ露天風呂の園。冬季は配信が増える傾向。' },
-  { name: '池田動物園 公式', emoji: '📺', note: 'イベント型の配信をチェックしてお届けします。' },
-  { name: '埼玉こども動物自然公園 公式', emoji: '📺', note: '突発的なライブも見逃さないよう自動監視します。' },
+  { name: '長崎バイオパーク 公式', note: '最新投稿を RSS で自動集約し「今日のカピバラ」として掲載。' },
+  { name: '伊豆シャボテン動物公園 公式', note: '元祖・カピバラ露天風呂の園。冬季は配信が増える傾向。' },
+  { name: '池田動物園 公式', note: 'イベント型の配信をチェックしてお届けします。' },
+  { name: '埼玉こども動物自然公園 公式', note: '突発的なライブも見逃さないよう自動監視します。' },
 ];
 
 const articles = [
-  { name: 'カピバラ温泉はいつからいつまで？全国まとめ', emoji: '♨️', tag: '温泉' },
-  { name: '関東でカピバラとふれあえる施設まとめ', emoji: '🤝', tag: 'おでかけ' },
-  { name: 'カピバラってどんな動物？生態Q&A', emoji: '❓', tag: '生態' },
+  { name: 'カピバラ温泉はいつからいつまで？全国まとめ', tag: '温泉', icon: 'ph:drop' },
+  { name: '関東でカピバラとふれあえる施設まとめ', tag: 'おでかけ', icon: 'ph:map-pin' },
+  { name: 'カピバラってどんな動物？生態Q&A', tag: '生態', icon: 'ph:paw-print' },
 ];
 ---
 
-<BaseLayout description="カピバラのライブ配信・全国の会える施設マップ・温泉カレンダーをまとめたポータルサイト。今すぐ見たい・会いに行きたいを1か所で。">
-  {/* ===== ヒーロー ===== */}
-  <section class="hero">
-    <div class="container hero__inner">
-      <p class="hero__eyebrow">🐹♨️ カピバラを見る・会いに行く</p>
-      <h1 class="hero__title">今日は、カピバラ日和。</h1>
-      <p class="hero__lead">
-        全国のカピバラのライブ配信、会える施設マップ、温泉イベントカレンダーをまとめました。
-        「今すぐ見たい」も「会いに行きたい」も、ここから。
-      </p>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="/map/">🗺️ 施設マップを見る</a>
-        <a class="btn btn--ghost" href="/onsen/">♨️ 温泉カレンダー</a>
+<BaseLayout description="カピバラのライブ配信・全国の会える施設マップ・温泉イベントカレンダーをまとめたポータルサイト。今すぐ見たい・会いに行きたいを1か所で。">
+  {/* ===== ヒーロー（タイポ型シグネチャー） ===== */}
+  <section class="hero u-grain">
+    <div class="container container--hero hero__inner">
+      <div class="hero__content">
+        <p class="hero__eyebrow label">Live &middot; Map &middot; Onsen</p>
+        <h1 class="hero__title">今日は、<br />カピバラ日和。</h1>
+        <p class="hero__lead">
+          全国のカピバラのライブ配信、会える施設マップ、温泉イベントカレンダー。
+          「今すぐ見たい」も「会いに行きたい」も、ここから。
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="/map/">
+            <Icon name="ph:map-trifold" aria-hidden="true" />
+            施設マップを見る
+          </a>
+          <a class="hero__link" href="/onsen/">
+            温泉ごよみを見る
+            <Icon name="ph:arrow-right" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <span class="hero__vlabel label">Capybara Biyori</span>
+        <svg class="steam steam--hero" viewBox="0 0 140 200" fill="none">
+          <path d="M40 195 C26 158 54 146 40 108 C30 78 52 62 40 26" />
+          <path d="M72 200 C56 160 86 148 72 104 C60 70 84 54 72 14" />
+          <path d="M104 195 C90 158 118 146 104 110 C94 80 116 64 104 30" />
+        </svg>
       </div>
     </div>
   </section>
 
-  {/* ===== 1. 🔴 ライブ中（配信検知時のみ出現。P0は準備中表示） ===== */}
-  <Section
-    emoji="🔴"
-    title="いま配信中のカピバラ"
-    description="登録チャンネルのライブを自動検知し、配信中のものをここに表示します。"
-  >
+  {/* ===== 01 LIVE いま配信中（配信検知時のみ出現・空状態） ===== */}
+  <Section index="01" label="Live" title="いま配信中のカピバラ" space="l">
     <div class="live-empty">
-      <span class="live-empty__emoji" aria-hidden="true">😴</span>
-      <div>
-        <p class="live-empty__title">
-          現在ライブ配信はありません
-          <Badge variant="neutral">準備中</Badge>
-        </p>
+      <Mascot size={78} steam={false} class="live-empty__mascot" />
+      <div class="live-empty__body">
+        <p class="live-empty__title">いまは配信中のカピバラはいません</p>
         <p class="live-empty__note">
-          ライブ検知は P3 で稼働します。配信が始まると、この場所に「🔴 LIVE」カードが並びます。
-          いまは下の「いつでも見られるカピバラ」からお楽しみください。
+          登録チャンネルのライブを30分ごとに自動チェックしています。
+          配信が始まると、この場所に「LIVE」カードが並びます。
         </p>
+        <a class="live-empty__link" href="#always-on">
+          いつでも見られるカピバラを見る
+          <Icon name="ph:arrow-right" aria-hidden="true" />
+        </a>
       </div>
     </div>
   </Section>
 
-  {/* ===== 2. いつでも見られるカピバラ（24/7海外配信） ===== */}
+  {/* ===== 02 ALWAYS いつでも見られる（大1枚＋小リスト） ===== */}
   <Section
-    emoji="🌏"
+    id="always-on"
+    index="02"
+    label="Always on"
     title="いつでも見られるカピバラ"
-    description="24時間ライブ配信の海外カメラ。稼働状況をチェックして表示します。"
-    class="section--tint"
+    description="24時間ライブ配信の海外カメラ。稼働状況を自動でチェックして掲載します。"
+    class="band"
   >
-    <div class="card-grid">
-      {alwaysOn.map((c) => (
-        <Card
-          title={c.name}
-          thumbEmoji={c.emoji}
-          placeholder={true}
-          badgeText="確認中"
-          badgeVariant="ok"
-        >
-          {c.note}
-        </Card>
-      ))}
+    <div class="feature">
+      <Card
+        variant="friendly"
+        class="feature__main"
+        title={alwaysOnFeatured.name}
+        icon={alwaysOnFeatured.icon}
+        meta={alwaysOnFeatured.meta}
+        badgeText="稼働確認中"
+        badgeVariant="ok"
+      >
+        {alwaysOnFeatured.note}
+      </Card>
+      <ul class="feature__list">
+        {alwaysOnRest.map((c) => (
+          <li class="mini">
+            <span class="mini__thumb" aria-hidden="true">
+              <Icon name={c.icon} />
+            </span>
+            <span class="mini__body">
+              <span class="mini__head">
+                <span class="mini__title">{c.name}</span>
+                <Badge variant="neutral">確認中</Badge>
+              </span>
+              <span class="mini__note">{c.note}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
     </div>
   </Section>
 
-  {/* ===== 3. よりぬきアーカイブ ===== */}
+  {/* ===== 03 ARCHIVE よりぬきアーカイブ（番号付き編集リスト） ===== */}
   <Section
-    emoji="⭐"
+    index="03"
+    label="Archive"
     title="よりぬきアーカイブ"
-    description="露天風呂・池そうじ・おやつタイムなどの名場面を手動キュレーション。"
+    description="露天風呂・池そうじ・おやつタイムなどの名場面を、解説つきで手動キュレーション。"
   >
-    <div class="card-grid">
-      {archives.map((c) => (
-        <Card title={c.name} thumbEmoji={c.emoji} placeholder={true}>
-          {c.note}
-        </Card>
+    <ol class="archive">
+      {archives.map((c, i) => (
+        <li class="archive__row">
+          <span class="num archive__index" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+          <span class="archive__thumb" aria-hidden="true">
+            <Icon name="ph:play-circle" />
+          </span>
+          <span class="archive__body">
+            <span class="archive__title">{c.name}</span>
+            <span class="archive__note">{c.note}</span>
+          </span>
+        </li>
       ))}
-    </div>
+    </ol>
   </Section>
 
-  {/* ===== 4. 新着カピバラ動画フィード ===== */}
+  {/* ===== 04 FEED 新着動画フィード（横スクロールカード） ===== */}
   <Section
-    emoji="🆕"
+    index="04"
+    label="Daily feed"
     title="新着カピバラ動画フィード"
     description="登録チャンネルの最新投稿を毎日自動で集めて「今日のカピバラ」に。"
-    class="section--tint"
+    class="band"
   >
-    <div class="card-grid">
+    <div class="feed-scroll" role="list">
       {feed.map((c) => (
-        <Card title={c.name} thumbEmoji={c.emoji} placeholder={true} badgeText="RSS" badgeVariant="brand">
-          {c.note}
-        </Card>
+        <div class="feed-scroll__item" role="listitem">
+          <Card variant="friendly" title={c.name} icon="ph:television-simple" badgeText="RSS" badgeVariant="accent">
+            {c.note}
+          </Card>
+        </div>
       ))}
     </div>
   </Section>
 
-  {/* ===== 5. 今シーズンの温泉情報ストリップ ===== */}
-  <Section
-    emoji="♨️"
-    title="今シーズンの温泉情報"
-    description="全国の露天風呂イベントの開催状況をまとめてお届けします。"
-    moreHref="/onsen/"
-    moreLabel="カレンダーを見る"
-  >
-    <div class="onsen-strip">
-      <div class="onsen-strip__lead">
-        <p class="onsen-strip__title">
-          カピバラ温泉カレンダー
-          <Badge variant="neutral">準備中</Badge>
+  {/* ===== 05 ONSEN 今シーズンの温泉（特集ストリップ） ===== */}
+  <Section index="05" label="Onsen" title="今シーズンの温泉情報" moreHref="/onsen/" moreLabel="カレンダーを見る">
+    <div class="onsen">
+      <div class="onsen__body">
+        <p class="onsen__title">全国の露天風呂イベントを、横断のカレンダーで。</p>
+        <p class="onsen__note">
+          伊豆シャボテン・長崎バイオパークなど、各園の開催期間を一覧で表示。
+          「開催中／まもなく終了」を、閲覧した日付から自動で判定します。
         </p>
-        <p class="onsen-strip__note">
-          伊豆シャボテン・長崎バイオパークなど、全国の露天風呂イベントの開催期間を横断表示。
-          「開催中／まもなく終了」を日付から自動判定します（P2）。
-        </p>
+        <a class="btn btn--primary" href="/onsen/">
+          <Icon name="ph:calendar-dots" aria-hidden="true" />
+          温泉ごよみを見る
+        </a>
       </div>
-      <a class="btn btn--primary" href="/onsen/">♨️ 温泉カレンダーへ</a>
+      <div class="onsen__art" aria-hidden="true">
+        <svg class="steam" viewBox="0 0 140 160" fill="none">
+          <path d="M40 155 C26 122 54 112 40 78 C30 54 52 42 40 12" />
+          <path d="M72 158 C56 124 86 114 72 74 C60 46 84 34 72 8" />
+          <path d="M104 155 C90 122 118 112 104 80 C94 56 116 44 104 16" />
+        </svg>
+      </div>
     </div>
   </Section>
 
-  {/* ===== 6. 新着記事 ===== */}
+  {/* ===== 06 READS 新着記事（編集カード・2列） ===== */}
   <Section
-    emoji="📝"
+    index="06"
+    label="Reads"
     title="新着記事"
-    description="温泉の時期・ふれあい施設・カピバラの生態など、役立つ記事を準備中。"
+    description="温泉の時期・ふれあい施設・カピバラの生態など、役立つ記事をお届けします。"
     moreHref="/articles/"
-    class="section--tint"
+    class="band"
   >
-    <div class="card-grid">
+    <div class="reads">
       {articles.map((a) => (
-        <Card title={a.name} thumbEmoji={a.emoji} placeholder={true} badgeText={a.tag} badgeVariant="warn">
+        <Card variant="editorial" class="reads__card" title={a.name} icon={a.icon} meta={a.tag} href="/articles/">
           公開準備中の記事です。SEO実測にもとづくラインナップで順次公開します。
         </Card>
       ))}
@@ -169,139 +227,337 @@ const articles = [
 </BaseLayout>
 
 <style>
-  /* ---- ヒーロー ---- */
+  /* ============ ヒーロー ============ */
   .hero {
-    background:
-      radial-gradient(90% 120% at 10% 0%, var(--color-accent-soft) 0%, transparent 55%),
-      radial-gradient(90% 120% at 100% 10%, var(--color-brand-soft) 0%, transparent 50%),
-      var(--color-bg-tint);
-    border-bottom: 1px solid var(--color-border);
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
   }
   .hero__inner {
-    padding-block: var(--space-9);
-    max-width: 720px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--space-6);
+    padding-block: clamp(3.5rem, 2.5rem + 6vw, 6.5rem);
+  }
+  .hero__content {
+    max-width: 34rem;
   }
   .hero__eyebrow {
-    margin: 0 0 var(--space-3);
-    color: var(--color-brand-strong);
-    font-weight: 700;
-    font-size: var(--font-size-sm);
-    letter-spacing: 0.04em;
+    margin: 0 0 var(--space-4);
+    color: var(--accent-ink);
   }
   .hero__title {
-    margin: 0 0 var(--space-4);
-    font-size: clamp(2rem, 6vw, var(--font-size-3xl));
-    color: var(--color-text);
+    margin: 0 0 var(--space-5);
+    font-size: clamp(2.4rem, 1.6rem + 4.2vw, 4rem);
+    line-height: 1.22;
+    letter-spacing: 0.04em;
+    color: var(--text-1);
   }
   .hero__lead {
     margin: 0 0 var(--space-6);
-    max-width: 54ch;
-    color: var(--color-text-muted);
-    font-size: var(--font-size-lg);
-    line-height: 1.85;
+    max-width: 42ch;
+    color: var(--text-2);
+    font-size: 1.0625rem;
+    line-height: 1.9;
   }
   .hero__actions {
     display: flex;
-    gap: var(--space-3);
+    align-items: center;
+    gap: var(--space-5);
     flex-wrap: wrap;
   }
-
-  /* ---- ボタン共通 ---- */
-  .btn {
+  .hero__link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 12px 22px;
-    border-radius: var(--radius-pill);
-    font-weight: 700;
-    font-size: var(--font-size-base);
-    border: 1px solid transparent;
-    transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    color: var(--text-1);
+    font-weight: 500;
   }
-  .btn:hover {
+  .hero__link :global(svg) {
+    color: var(--accent);
+    transition: transform var(--motion-fast);
+  }
+  .hero__link:hover {
     text-decoration: none;
-    transform: translateY(-2px);
+    color: var(--accent-ink);
   }
-  .btn--primary {
-    background: var(--color-brand);
-    color: var(--color-text-on-brand);
-  }
-  .btn--primary:hover {
-    background: var(--color-brand-strong);
-  }
-  .btn--ghost {
-    background: var(--color-surface);
-    border-color: var(--color-border-strong);
-    color: var(--color-text);
-  }
-  .btn--ghost:hover {
-    border-color: var(--color-brand-soft);
+  .hero__link:hover :global(svg) {
+    transform: translateX(3px);
   }
 
-  /* 交互の色帯（tint 付きセクション） */
-  :global(.section--tint) {
-    background: var(--color-bg-tint);
-  }
-
-  /* ---- ライブ空状態 ---- */
-  .live-empty {
+  /* ヒーローの湯けむり＋縦ラベル */
+  .hero__art {
+    position: relative;
     display: flex;
     align-items: center;
     gap: var(--space-4);
-    padding: var(--space-6);
-    background: var(--color-surface);
-    border: 1px dashed var(--color-border-strong);
-    border-radius: var(--radius-lg);
+    padding-right: var(--space-4);
   }
-  .live-empty__emoji {
-    font-size: 2.6rem;
-    line-height: 1;
+  .hero__vlabel {
+    writing-mode: vertical-rl;
+    color: var(--text-3);
+    letter-spacing: 0.28em;
   }
-  .live-empty__title {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    margin: 0 0 var(--space-2);
-    font-weight: 700;
-    font-size: var(--font-size-lg);
-    color: var(--color-text);
+  .steam {
+    width: clamp(90px, 12vw, 140px);
+    height: auto;
   }
-  .live-empty__note {
-    margin: 0;
-    color: var(--color-text-muted);
-    font-size: var(--font-size-sm);
+  .steam path {
+    stroke: var(--line-strong);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+  }
+  .steam path:nth-child(1) { opacity: 0.55; }
+  .steam path:nth-child(2) { opacity: 0.9; }
+  .steam path:nth-child(3) { opacity: 0.7; }
+
+  @media (max-width: 760px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    .hero__art {
+      order: -1;
+      justify-content: flex-start;
+      padding: 0;
+    }
+    .hero__vlabel {
+      display: none;
+    }
+    .steam--hero {
+      width: 80px;
+    }
   }
 
-  /* ---- 温泉ストリップ ---- */
-  .onsen-strip {
+  /* ============ 帯（面の明度差でリズム） ============ */
+  :global(.band) {
+    background: var(--surface-soft);
+  }
+
+  /* ============ 01 LIVE 空状態 ============ */
+  .live-empty {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+  }
+  .live-empty__mascot {
+    flex-shrink: 0;
+  }
+  .live-empty__title {
+    margin: 0 0 var(--space-2);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.1875rem;
+    color: var(--text-1);
+  }
+  .live-empty__note {
+    margin: 0 0 var(--space-3);
+    color: var(--text-2);
+    font-size: 0.9375rem;
+  }
+  .live-empty__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    color: var(--accent-ink);
+  }
+  .live-empty__link :global(svg) {
+    transition: transform var(--motion-fast);
+  }
+  .live-empty__link:hover {
+    text-decoration: none;
+  }
+  .live-empty__link:hover :global(svg) {
+    transform: translateX(3px);
+  }
+
+  /* ============ 02 特集（大1枚＋小リスト） ============ */
+  .feature {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-5);
+    align-items: start;
+  }
+  .feature__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .mini {
+    display: flex;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+  }
+  .mini__thumb {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-s);
+    background: var(--surface-soft);
+    color: var(--line-strong);
+    font-size: 1.5rem;
+  }
+  .mini__body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+  .mini__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--space-5);
-    padding: var(--space-6);
-    background: linear-gradient(120deg, var(--color-surface) 0%, var(--color-warn-bg) 100%);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    flex-wrap: wrap;
+    gap: var(--space-2);
   }
-  .onsen-strip__lead {
-    min-width: min(100%, 260px);
-    flex: 1;
-  }
-  .onsen-strip__title {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    margin: 0 0 var(--space-2);
+  .mini__title {
     font-weight: 700;
-    font-size: var(--font-size-xl);
-    color: var(--color-text);
+    font-size: 0.9375rem;
+    color: var(--text-1);
   }
-  .onsen-strip__note {
-    margin: 0;
-    color: var(--color-text-muted);
-    font-size: var(--font-size-sm);
-    max-width: 60ch;
+  .mini__note {
+    color: var(--text-2);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 760px) {
+    .feature {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ============ 03 番号付き編集リスト ============ */
+  .archive {
+    display: flex;
+    flex-direction: column;
+    counter-reset: none;
+  }
+  .archive__row {
+    display: grid;
+    grid-template-columns: auto 88px 1fr;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-1);
+    border-top: 1px solid var(--line);
+  }
+  .archive__row:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+  .archive__index {
+    font-size: 1.5rem;
+    color: var(--accent-ink);
+    line-height: 1;
+  }
+  .archive__thumb {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-s);
+    background: var(--surface-soft);
+    color: var(--line-strong);
+    font-size: 1.6rem;
+  }
+  .archive__body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+  .archive__title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--text-1);
+  }
+  .archive__note {
+    color: var(--text-2);
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 560px) {
+    .archive__row {
+      grid-template-columns: auto 1fr;
+      gap: var(--space-3);
+    }
+    .archive__thumb {
+      display: none;
+    }
+  }
+
+  /* ============ 04 横スクロールカード ============ */
+  .feed-scroll {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(240px, 1fr);
+    gap: var(--space-4);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: var(--space-3);
+    margin-inline: calc(-1 * var(--space-5));
+    padding-inline: var(--space-5);
+    scrollbar-width: thin;
+  }
+  .feed-scroll__item {
+    scroll-snap-align: start;
+  }
+  .feed-scroll__item :global(.card) {
+    height: 100%;
+  }
+
+  /* ============ 05 温泉ストリップ ============ */
+  .onsen {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--space-5);
+    padding: var(--space-6) var(--space-7);
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+    overflow: hidden;
+  }
+  .onsen__title {
+    margin: 0 0 var(--space-3);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: clamp(1.25rem, 1.05rem + 1vw, 1.6rem);
+    line-height: 1.45;
+    color: var(--text-1);
+  }
+  .onsen__note {
+    margin: 0 0 var(--space-5);
+    max-width: 52ch;
+    color: var(--text-2);
+    font-size: 0.9375rem;
+  }
+  .onsen__art .steam {
+    width: clamp(80px, 10vw, 130px);
+  }
+  @media (max-width: 640px) {
+    .onsen {
+      grid-template-columns: 1fr;
+      padding: var(--space-5);
+    }
+    .onsen__art {
+      display: none;
+    }
+  }
+
+  /* ============ 06 記事カード（2列） ============ */
+  .reads {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: var(--space-4);
   }
 </style>

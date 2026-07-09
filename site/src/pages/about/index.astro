@@ -13,19 +13,20 @@ import ComingSoon from '../../components/ComingSoon.astro';
   description="「カピバラ日和」の運営方針・情報の扱い・お問い合わせについてのご案内です。"
 >
   <ComingSoon
-    emoji="🐹"
     title="サイトについて"
-    lead="「カピバラ日和」は、カピバラを『今すぐ見たい・会いに行きたい』を1か所で叶える無料サービスです。運営者情報は準備中です。"
+    lead="「カピバラ日和」は、カピバラを『今すぐ見たい・会いに行きたい』を1か所で叶える無料サービスです。正式な運営者情報を整えています。"
     points={[
       '運営方針: 施設情報は公式サイトを一次情報として自力で確認します',
       '情報の鮮度: 各施設に「最終確認日」を表示します',
       'アフィリエイト・解析の利用方針を明記します',
     ]}
+    altHref="/privacy/"
+    altLabel="プライバシーポリシー"
   >
     <div id="contact" class="contact-note">
       <h2 class="contact-note__title">お問い合わせ</h2>
       <p class="contact-note__text">
-        お問い合わせ窓口（Googleフォーム）は準備中です。公開までしばらくお待ちください。
+        お問い合わせ窓口（Googleフォーム）は現在開設を進めています。開設までは、本サイト各ページの公式リンクから各施設へ直接ご確認ください。
       </p>
     </div>
   </ComingSoon>
@@ -33,22 +34,22 @@ import ComingSoon from '../../components/ComingSoon.astro';
 
 <style>
   .contact-note {
-    margin: 0 auto var(--space-2);
+    margin: 0 auto var(--space-6);
     max-width: 520px;
     padding: var(--space-5);
     text-align: left;
-    background: var(--color-surface-2);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
     scroll-margin-top: calc(var(--header-height) + var(--space-4));
   }
   .contact-note__title {
     margin: 0 0 var(--space-2);
-    font-size: var(--font-size-lg);
+    font-size: 1.0625rem;
   }
   .contact-note__text {
     margin: 0;
-    color: var(--color-text-muted);
-    font-size: var(--font-size-sm);
+    color: var(--text-2);
+    font-size: 0.9375rem;
   }
 </style>

@@ -1,48 +1,71 @@
 ---
 /**
- * トップページ等で使う見出し付きセクション。
- * - emoji: 見出し左の絵文字
- * - title: 見出し
- * - description: 補足説明（任意）
- * - moreHref / moreLabel: 右側の「もっと見る」リンク（任意）
- * 中身（カードグリッド等）は default スロットに置く。
+ * 雑誌的セクション見出しの型（デザインガイドライン §5・全セクション統一）。
+ *   ┌ 短い罫線
+ *   01 — LIVE            ← Fraunces .label（字間.12em）
+ *   いま配信中のカピバラ   ← Shippori Mincho h2
+ *
+ * Props:
+ *   - index:       セクション番号（"01" 等。省略可）
+ *   - label:       欧文小ラベル（"LIVE" 等・Fraunces）
+ *   - title:       見出し（明朝 h2）
+ *   - description: 補足説明（任意）
+ *   - moreHref/moreLabel: 右側の導線リンク（任意）
+ *   - width:       コンテナ幅（list=既定 / text / hero）
+ *   - space:       セクション余白（l / m / s。重要度でリズムを付ける）
+ *   - id/class
  */
+import { Icon } from 'astro-icon/components';
+
 interface Props {
   title: string;
-  emoji?: string;
+  index?: string;
+  label?: string;
   description?: string;
   moreHref?: string;
   moreLabel?: string;
-  /** セクションに与える id（アンカー用・任意） */
+  width?: 'list' | 'text' | 'hero';
+  space?: 'l' | 'm' | 's';
   id?: string;
   class?: string;
 }
 
 const {
   title,
-  emoji,
+  index,
+  label,
   description,
   moreHref,
-  moreLabel = 'もっと見る',
+  moreLabel = 'すべて見る',
+  width = 'list',
+  space = 'm',
   id,
   class: className = '',
 } = Astro.props;
+
+const containerClass =
+  width === 'text' ? 'container container--text' : width === 'hero' ? 'container container--hero' : 'container';
 ---
 
-<section class:list={['section', className]} {...id ? { id } : {}}>
-  <div class="container">
+<section class:list={['section', `section--space-${space}`, className]} {...id ? { id } : {}}>
+  <div class={containerClass}>
     <div class="section__head">
       <div class="section__heading">
-        <h2 class="section__title">
-          {emoji && <span class="section__emoji" aria-hidden="true">{emoji}</span>}
-          {title}
-        </h2>
+        {(index || label) && (
+          <p class="section__kicker label">
+            <span class="section__rule" aria-hidden="true"></span>
+            {index && <span class="num section__index">{index}</span>}
+            {index && label && <span class="section__dash" aria-hidden="true">—</span>}
+            {label && <span>{label}</span>}
+          </p>
+        )}
+        <h2 class="section__title">{title}</h2>
         {description && <p class="section__desc">{description}</p>}
       </div>
       {moreHref && (
         <a class="section__more" href={moreHref}>
-          {moreLabel}
-          <span aria-hidden="true">→</span>
+          <span>{moreLabel}</span>
+          <Icon name="ph:arrow-right" aria-hidden="true" />
         </a>
       )}
     </div>
@@ -52,7 +75,13 @@ const {
 
 <style>
   .section {
-    padding-block: var(--space-7);
+    padding-block: var(--space-section-m);
+  }
+  .section--space-l {
+    padding-block: var(--space-section-l);
+  }
+  .section--space-s {
+    padding-block: var(--space-section-s);
   }
 
   .section__head {
@@ -60,7 +89,7 @@ const {
     align-items: flex-end;
     justify-content: space-between;
     gap: var(--space-4);
-    margin-bottom: var(--space-5);
+    margin-bottom: var(--space-6);
     flex-wrap: wrap;
   }
 
@@ -68,33 +97,63 @@ const {
     min-width: 0;
   }
 
-  .section__title {
+  /* 01 — LIVE（Fraunces小ラベル＋短い罫線） */
+  .section__kicker {
     display: flex;
     align-items: center;
-    gap: var(--space-3);
-    margin: 0;
-    font-size: var(--font-size-2xl);
-    color: var(--color-text);
+    gap: 10px;
+    margin: 0 0 var(--space-3);
+    color: var(--accent-ink);
+  }
+  .section__rule {
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.7;
+  }
+  .section__index {
+    color: var(--text-2);
+    font-size: 0.9375rem;
+  }
+  .section__dash {
+    color: var(--text-3);
   }
 
-  .section__emoji {
-    font-size: 1.5rem;
-    line-height: 1;
+  .section__title {
+    margin: 0;
+    color: var(--text-1);
   }
 
   .section__desc {
-    margin: var(--space-2) 0 0;
-    color: var(--color-text-muted);
-    font-size: var(--font-size-sm);
+    margin: var(--space-3) 0 0;
+    max-width: 60ch;
+    color: var(--text-2);
+    font-size: 0.9375rem;
   }
 
   .section__more {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
     flex-shrink: 0;
-    font-weight: 700;
-    font-size: var(--font-size-sm);
-    color: var(--color-brand-strong);
+    padding-bottom: 3px;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    color: var(--accent-ink);
+  }
+  .section__more :global(svg) {
+    transition: transform var(--motion-fast);
+  }
+  .section__more:hover {
+    text-decoration: none;
+  }
+  .section__more:hover :global(svg) {
+    transform: translateX(3px);
+  }
+
+  @media (max-width: 640px) {
+    .section__head {
+      margin-bottom: var(--space-5);
+    }
   }
 </style>

@@ -32,11 +32,15 @@ export const SITE = {
   author: 'カピバラ日和 運営',
 } as const;
 
-/** グローバルナビゲーション（ヘッダー） */
+/**
+ * グローバルナビゲーション（ヘッダー）。
+ * 文言は「目的起点」（すみだ水族館式・デザインガイドライン §9）。
+ * icon は Phosphor Icons 名（絵文字全廃・§5）。
+ */
 export const NAV_ITEMS = [
-  { label: 'マップ', href: '/map/', emoji: '🗺️' },
-  { label: '温泉カレンダー', href: '/onsen/', emoji: '♨️' },
-  { label: '記事', href: '/articles/', emoji: '📝' },
+  { label: '会いに行く', href: '/map/', icon: 'ph:map-trifold' },
+  { label: '温泉ごよみ', href: '/onsen/', icon: 'ph:calendar-dots' },
+  { label: 'よみもの', href: '/articles/', icon: 'ph:notebook' },
 ] as const;
 
 /** フッターのポリシー・情報リンク */

@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="カピバラ日和">
-  <!-- 角丸の生成り地（P0暫定ファビコン。正式版はP4で差し替え） -->
-  <rect x="0" y="0" width="64" height="64" rx="16" fill="#faf6ef"/>
-  <!-- 湯けむり -->
-  <g fill="none" stroke="#d97a3c" stroke-width="2.4" stroke-linecap="round" opacity="0.75">
-    <path d="M24 15c-2-2 2-3 0-5"/>
-    <path d="M32 13c-2-2 2-3 0-5"/>
-    <path d="M40 15c-2-2 2-3 0-5"/>
+  <!-- 生成り地（新パレット・角丸） -->
+  <rect x="0" y="0" width="64" height="64" rx="15" fill="#f7f2e9"/>
+  <!-- 湯けむり（細線・単色） -->
+  <g fill="none" stroke="#c9b99f" stroke-width="2" stroke-linecap="round">
+    <path d="M24 15c-2-2 2-3.2 0-5.2"/>
+    <path d="M32 12.5c-2-2 2-3.2 0-5.2"/>
+    <path d="M40 15c-2-2 2-3.2 0-5.2"/>
   </g>
-  <!-- カピバラの頭（俵型） -->
-  <rect x="14" y="22" width="36" height="28" rx="14" fill="#a5714e"/>
   <!-- 耳 -->
-  <circle cx="19" cy="24" r="4.5" fill="#8a5a3b"/>
-  <circle cx="45" cy="24" r="4.5" fill="#8a5a3b"/>
-  <!-- 鼻先（マズル） -->
-  <ellipse cx="32" cy="43" rx="12" ry="8" fill="#c79a78"/>
-  <!-- 目 -->
-  <circle cx="25" cy="34" r="2.6" fill="#3a2a1e"/>
-  <circle cx="39" cy="34" r="2.6" fill="#3a2a1e"/>
+  <circle cx="18" cy="24" r="5.2" fill="#a85320"/>
+  <circle cx="46" cy="24" r="5.2" fill="#a85320"/>
+  <!-- 頭（俵型の丸い輪郭） -->
+  <rect x="12" y="20" width="40" height="34" rx="16" fill="#c9682f"/>
+  <!-- 四角い鼻先 -->
+  <rect x="20" y="38" width="24" height="16" rx="7" fill="#e7b48f"/>
+  <!-- 点の目 -->
+  <circle cx="25" cy="33" r="2.6" fill="#3a2e22"/>
+  <circle cx="39" cy="33" r="2.6" fill="#3a2e22"/>
   <!-- 鼻の穴 -->
-  <circle cx="28.5" cy="42" r="1.8" fill="#6c5748"/>
-  <circle cx="35.5" cy="42" r="1.8" fill="#6c5748"/>
+  <circle cx="28.5" cy="46" r="1.8" fill="#3a2e22"/>
+  <circle cx="35.5" cy="46" r="1.8" fill="#3a2e22"/>
 </svg>

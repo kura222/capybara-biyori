@@ -1,10 +1,10 @@
 ---
 /**
- * ステータスバッジ（ライブ中・稼働中・まもなく終了・準備中 等）
- * variant で配色を切り替える。
+ * ステータスバッジ（ライブ中・開催中/稼働中・まもなく終了・中立・アクセント）。
+ * variant で配色を切り替える。ピル形状（--radius-full）。
  */
 interface Props {
-  variant?: 'live' | 'ok' | 'warn' | 'neutral' | 'brand';
+  variant?: 'live' | 'ok' | 'warn' | 'neutral' | 'accent';
   /** 先頭に小さな丸ドットを表示するか（ライブ表示などで使用） */
   dot?: boolean;
   class?: string;
@@ -24,23 +24,24 @@ const { variant = 'neutral', dot = false, class: className = '' } = Astro.props;
     align-items: center;
     gap: 6px;
     padding: 3px 10px;
-    border-radius: var(--radius-pill);
-    font-size: var(--font-size-xs);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
     font-weight: 700;
     line-height: 1.4;
+    letter-spacing: 0.02em;
     white-space: nowrap;
   }
 
   .badge__dot {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: currentColor;
   }
 
   .badge--live {
-    color: var(--color-live);
-    background: var(--color-live-bg);
+    color: var(--live);
+    background: var(--live-soft);
   }
   /* ライブ中ドットはゆっくり点滅（reduce-motion 環境では停止） */
   .badge--live .badge__dot {
@@ -48,20 +49,20 @@ const { variant = 'neutral', dot = false, class: className = '' } = Astro.props;
   }
 
   .badge--ok {
-    color: var(--color-ok);
-    background: var(--color-ok-bg);
+    color: var(--green);
+    background: var(--green-soft);
   }
   .badge--warn {
-    color: var(--color-warn);
-    background: var(--color-warn-bg);
+    color: var(--accent-ink);
+    background: var(--accent-soft);
   }
   .badge--neutral {
-    color: var(--color-neutral);
-    background: var(--color-neutral-bg);
+    color: var(--text-2);
+    background: var(--surface-soft);
   }
-  .badge--brand {
-    color: var(--color-text-on-brand);
-    background: var(--color-brand);
+  .badge--accent {
+    color: var(--text-on-accent);
+    background: var(--cta-bg);
   }
 
   @keyframes badge-pulse {

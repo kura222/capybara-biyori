@@ -3,8 +3,10 @@
  * ダークモード切替ボタン。
  * - クリックで light / dark を切り替え、localStorage("theme") に保存
  * - <html data-theme> を更新（FOUC防止スクリプトと同じキーを使用）
+ * - アイコンは Phosphor（絵文字全廃・§5）
  * 初期状態の data-theme は BaseLayout 内のインラインスクリプトが設定済み。
  */
+import { Icon } from 'astro-icon/components';
 ---
 
 <button
@@ -14,15 +16,8 @@
   aria-label="配色テーマを切り替える"
   title="ライト / ダーク切替"
 >
-  <!-- 太陽（ライト時に表示） -->
-  <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-    <circle cx="12" cy="12" r="4"></circle>
-    <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
-  </svg>
-  <!-- 月（ダーク時に表示） -->
-  <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
-  </svg>
+  <Icon name="ph:sun-dim" class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true" />
+  <Icon name="ph:moon-stars" class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true" />
 </button>
 
 <style>
@@ -31,21 +26,24 @@
     place-items: center;
     width: 40px;
     height: 40px;
-    border-radius: var(--radius-pill);
-    border: 1px solid var(--color-border);
-    background: var(--color-surface);
-    color: var(--color-brand-strong);
-    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    border-radius: var(--radius-s);
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: var(--text-2);
+    transition:
+      background-color var(--motion-fast),
+      border-color var(--motion-fast),
+      color var(--motion-fast);
   }
   .theme-toggle:hover {
-    background: var(--color-surface-2);
-    border-color: var(--color-brand-soft);
+    background: var(--surface-soft);
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
   .theme-toggle__icon {
-    width: 20px;
-    height: 20px;
     grid-area: 1 / 1;
+    font-size: 1.25rem;
   }
 
   /* 既定（ライト）は太陽を表示・月を隠す */

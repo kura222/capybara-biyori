@@ -1,0 +1,85 @@
+---
+/**
+ * カピバラのマスコットSVG（デザインガイドライン §7）。
+ * 制約: 単純図形（丸い輪郭＋小さい耳＋四角い鼻先＋点の目）・フラット塗り・
+ *       限定パレット（--accent系3色）・線は湯気のみ。
+ * 出す場所は「空状態・完了・季節演出・フッター・ロゴ」に限定する。
+ *   - size:    表示サイズ（px。既定 64）
+ *   - steam:   頬の湯気の細線を表示するか（既定 true）
+ *   - title:   アクセシブルな代替テキスト（装飾用途では空文字で aria-hidden 化）
+ */
+interface Props {
+  size?: number;
+  steam?: boolean;
+  title?: string;
+  class?: string;
+}
+
+const { size = 64, steam = true, title = '', class: className = '' } = Astro.props;
+const decorative = title.length === 0;
+---
+
+<svg
+  class:list={['mascot', className]}
+  width={size}
+  height={size}
+  viewBox="0 0 64 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role={decorative ? undefined : 'img'}
+  aria-hidden={decorative ? 'true' : undefined}
+  aria-label={decorative ? undefined : title}
+>
+  {!decorative && <title>{title}</title>}
+
+  {steam && (
+    <g class="mascot__steam" fill="none" stroke-width="1.5" stroke-linecap="round">
+      <path d="M22 12c-2-2 2-3.2 0-5.2" />
+      <path d="M32 9.5c-2-2 2-3.2 0-5.2" />
+      <path d="M42 12c-2-2 2-3.2 0-5.2" />
+    </g>
+  )}
+
+  {/* 耳（頭の後ろ・単純な円） */}
+  <circle cx="18" cy="22" r="5.4" class="mascot__ear" />
+  <circle cx="46" cy="22" r="5.4" class="mascot__ear" />
+
+  {/* 頭（俵型の丸い輪郭） */}
+  <rect x="12" y="18" width="40" height="34" rx="16" class="mascot__head" />
+
+  {/* 四角い鼻先（角丸スクエア） */}
+  <rect x="20" y="36" width="24" height="16" rx="7" class="mascot__muzzle" />
+
+  {/* 点の目 */}
+  <circle cx="25" cy="31" r="2.5" class="mascot__eye" />
+  <circle cx="39" cy="31" r="2.5" class="mascot__eye" />
+
+  {/* 鼻の穴 */}
+  <circle cx="28.5" cy="44" r="1.7" class="mascot__nose" />
+  <circle cx="35.5" cy="44" r="1.7" class="mascot__nose" />
+</svg>
+
+<style>
+  .mascot {
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  /* フラット塗り・--accent系3色以内（目/鼻穴は点として濃色） */
+  .mascot__head {
+    fill: var(--accent);
+  }
+  .mascot__ear {
+    fill: var(--accent-strong);
+  }
+  .mascot__muzzle {
+    fill: color-mix(in srgb, var(--accent) 42%, #fff 58%);
+  }
+  .mascot__eye,
+  .mascot__nose {
+    fill: color-mix(in srgb, var(--accent-strong) 55%, #000 45%);
+  }
+  .mascot__steam {
+    stroke: var(--line-strong);
+    opacity: 0.85;
+  }
+</style>

@@ -1,55 +1,74 @@
 /* =============================================================
-   カピバラ日和 デザイントークン & グローバルスタイル（仕様 §7）
-   - テーマ: 温泉×カピバラの「ゆるい・あたたかい」
-   - ライト: 生成りホワイト / 焦げ茶テキスト / カピバラブラウン + 湯けむりオレンジ
-   - ダーク: 焦げ茶ベース
-   - コントラスト AA 準拠・角丸大きめ・余白広め
+   カピバラ日和 デザイントークン & グローバルスタイル
+   ─ デザインガイドライン v1.0（§2〜§8）準拠 ─
+   コンセプト: 「温泉宿の雑誌のような、カピバラのポータル」
+   ・面は生成りの階調（純白禁止）／文字は焦げ茶の墨
+   ・アクセントは面積5%未満・くすみ暖色
+   ・影は背景と同色相で段数固定／角丸は用途別3スケール
    ============================================================= */
 
-/* ---- ライトテーマ（既定） ---------------------------------- */
+/* ---- ライトテーマ（既定・ガイドライン §2） ------------------ */
 :root {
   color-scheme: light;
 
-  /* ブランドカラー */
-  --color-brand: #a5714e;          /* カピバラブラウン（アクセント） */
-  --color-brand-strong: #855636;   /* 濃色（ボタン等の文字コントラスト確保用） */
-  --color-brand-soft: #c79a78;     /* 淡色 */
-  --color-accent: #d97a3c;         /* 湯けむりオレンジ（サブアクセント） */
-  --color-accent-soft: #f0c39a;
+  /* 面（純白禁止・生成りの階調） */
+  --bg: #f7f2e9; /* ページ地=生成り */
+  --surface: #fdfbf6; /* カード面（地との差はわずか） */
+  --surface-soft: #f1e9dc; /* 帯・ソフト面 */
+  --surface-deep: #eae0d0; /* 強調帯・フッター */
 
-  /* 面（サーフェス）と背景 */
-  --color-bg: #faf6ef;             /* 生成りホワイト */
-  --color-bg-tint: #f4ecdf;        /* うっすら色づいた背景帯 */
-  --color-surface: #ffffff;        /* カード面 */
-  --color-surface-2: #f6efe3;      /* サブ面・プレースホルダー地 */
-  --color-border: #e5d8c4;         /* 罫線 */
-  --color-border-strong: #d3c1a6;
+  /* 文字（3階層・焦げ茶の墨） */
+  --text-1: #3a2e22;
+  --text-2: #6e5f4e;
+  --text-3: #9b8b77;
+  --text-on-accent: #fffaf3; /* アクセント地の上の文字（純白は避けた生成り寄り白） */
 
-  /* テキスト */
-  --color-text: #3a2a1e;           /* 焦げ茶（本文） */
-  --color-text-muted: #6c5748;     /* 補助テキスト（AA: 生成り地で 5.3:1） */
-  --color-text-faint: #90796a;     /* さらに淡い（非本文用途） */
-  --color-text-on-brand: #ffffff;  /* ブランド地の上の文字 */
-  --color-link: #9a5f34;           /* リンク（生成り地で AA 準拠） */
+  /* 罫線 */
+  --line: #e4dac8; /* ヘアライン */
+  --line-strong: #c9b99f;
 
-  /* ステータス色 */
-  --color-live: #d64545;           /* 🔴 ライブ */
-  --color-live-bg: #fbe9e7;
-  --color-ok: #3f8a54;             /* 稼働中 */
-  --color-ok-bg: #e6f2e8;
-  --color-warn: #b9791f;           /* まもなく終了・注意 */
-  --color-warn-bg: #f7edd8;
-  --color-neutral: #6c5748;        /* 準備中・中立 */
-  --color-neutral-bg: #efe7d9;
+  /* アクセント（面積5%未満・淡色ペア体系） */
+  --accent: #c9682f; /* 湯けむりテラコッタ（くすみ寄り）＝面/罫線/アイコン用 */
+  --accent-strong: #a85320; /* hover/active・Duolingo式ボタン影 */
+  --accent-soft: #f6e3d2; /* バッジ地・選択状態 */
+  --accent-ink: #9a4a1b; /* アクセント色の“文字”用（AA担保・生成り面で4.5:1以上） */
+  /* 主CTA/アクセント地バッジ: 白文字がAAになる濃さ（#C9682Fは白でも最大4.35で不足するため一段濃く） */
+  --cta-bg: #a85320;
+  --cta-bg-hover: #8f4519;
+  --cta-edge: #7c3c15; /* Duolingo式ボタン下辺の実影 */
+  --green: #536f40; /* 開催中・営業中（くすみ苔色・小さいバッジ文字でAAになるよう一段深く） */
+  --green-soft: #e4ebdd;
+  --live: #b23a26; /* LIVE（くすんだ朱・純赤禁止・AA担保で一段深く） */
+  --live-soft: #f7dfd8;
 
-  /* 角丸（大きめ） */
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 22px;
-  --radius-xl: 30px;
-  --radius-pill: 999px;
+  /* 影（黒影禁止・背景と同色相。段数固定）
+     1=浮き要素（ヘッダー影は不可・罫線で区切る）
+     2=hover時のカード/ドロップダウンのみ。それ以外は影なし */
+  --shadow-1: 0 1px 2px hsl(33 30% 30% / 0.06);
+  --shadow-2:
+    0 2px 4px hsl(33 30% 30% / 0.06), 0 6px 16px hsl(33 30% 30% / 0.08);
 
-  /* 余白スケール（広め） */
+  /* 微グレイン（feTurbulence・data URI・ヒーロー/強調帯のみ） */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  /* 角丸（用途固定・§5。これ以外の値を発明しない） */
+  --radius-s: 6px; /* ボタン・入力・タグ */
+  --radius-m: 12px; /* カード・埋め込み */
+  --radius-full: 9999px; /* ピル・ステータスバッジ */
+
+  /* モーション（3トークンで完結・§8） */
+  --motion-fast: 150ms cubic-bezier(0.23, 1, 0.32, 1); /* hover/press */
+  --motion-base: 250ms cubic-bezier(0.23, 1, 0.32, 1); /* カード・開閉 */
+  --motion-slow: 400ms cubic-bezier(0.32, 0.72, 0, 1); /* ドロワー等 */
+
+  /* フォント（§4） */
+  --font-serif: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", serif; /* 見出し */
+  --font-sans:
+    "Zen Kaku Gothic New", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", "Yu Gothic", system-ui, sans-serif; /* 本文・UI */
+  --font-latin: "Fraunces", "Shippori Mincho B1", serif; /* 数字・欧文小ラベル */
+
+  /* 余白スケール */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -59,70 +78,53 @@
   --space-7: 48px;
   --space-8: 64px;
   --space-9: 96px;
+  /* セクション余白（重要度でリズムを付ける・§5） */
+  --space-section-l: clamp(4rem, 3rem + 5vw, 7rem);
+  --space-section-m: clamp(3rem, 2.4rem + 3vw, 5rem);
+  --space-section-s: clamp(2rem, 1.6rem + 2vw, 3.25rem);
 
-  /* 影（やわらかい） */
-  --shadow-sm: 0 1px 2px rgba(58, 42, 30, 0.06);
-  --shadow-card: 0 2px 8px rgba(58, 42, 30, 0.06), 0 6px 20px rgba(58, 42, 30, 0.05);
-  --shadow-card-hover: 0 4px 12px rgba(58, 42, 30, 0.1), 0 12px 30px rgba(58, 42, 30, 0.08);
+  /* コンテナ幅（全セクション同幅にしない・§9） */
+  --w-text: 720px; /* 本文系 */
+  --w-list: 1080px; /* 一覧系 */
+  --w-hero: 1200px; /* ヒーロー系 */
 
-  /* タイポグラフィ（システムフォントスタック / 仕様 §2） */
-  --font-sans:
-    "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP",
-    "Yu Gothic", "Meiryo", system-ui, -apple-system, "Segoe UI", Roboto,
-    sans-serif;
-  --font-size-xs: 0.78rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.375rem;
-  --font-size-2xl: 1.75rem;
-  --font-size-3xl: 2.25rem;
-  --leading-tight: 1.3;
-  --leading-normal: 1.75;
-
-  /* レイアウト */
-  --content-max: 1080px;
-  --header-height: 60px;
+  --header-height: 62px;
 }
 
-/* ---- ダークテーマ（焦げ茶ベース） -------------------------- */
-/* prefers-color-scheme 準拠（JS無効環境向けフォールバック）。
-   手動トグルで data-theme="light" が付いている場合は上書きしない。 */
+/* ---- ダークテーマ（Linear方式・§3） ------------------------
+   「色反転」ではなく同色相でLightnessだけ落として面4段・彩度は微減。 */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
 
-    --color-brand: #d19a72;
-    --color-brand-strong: #e3b48f;
-    --color-brand-soft: #7a5537;
-    --color-accent: #e79a5f;
-    --color-accent-soft: #5a3d26;
+    --bg: #1c1610;
+    --surface: #262019;
+    --surface-soft: #322a20;
+    --surface-deep: #14100b;
 
-    --color-bg: #241a13;           /* 焦げ茶ベース */
-    --color-bg-tint: #2c211a;
-    --color-surface: #302419;      /* カード面 */
-    --color-surface-2: #3a2c20;
-    --color-border: #4a382a;
-    --color-border-strong: #5c4834;
+    --text-1: #f2eadf; /* 純白禁止 */
+    --text-2: #c3b4a0;
+    --text-3: #8e7f6c;
+    --text-on-accent: #1c1610;
 
-    --color-text: #f3e9dd;
-    --color-text-muted: #cbb6a3;
-    --color-text-faint: #a08d7c;
-    --color-text-on-brand: #241a13;
-    --color-link: #e3b48f;
+    --line: #3c3225;
+    --line-strong: #554835;
 
-    --color-live: #ef6b6b;
-    --color-live-bg: #3d2320;
-    --color-ok: #7bc08d;
-    --color-ok-bg: #22322a;
-    --color-warn: #e0b063;
-    --color-warn-bg: #362b1a;
-    --color-neutral: #cbb6a3;
-    --color-neutral-bg: #3a2c20;
+    --accent: #e0824a;
+    --accent-strong: #c9682f;
+    --accent-soft: #3e2b1b;
+    --accent-ink: #e0824a; /* ダークは地が暗いので accent 明色をそのまま文字に（6.3:1） */
+    --cta-bg: #e0824a; /* ダークCTAは暗い文字（--text-on-accent）で6.3:1 */
+    --cta-bg-hover: #eca066;
+    --cta-edge: #c9682f;
+    --green: #8cad7e; /* AA担保で一段明るく */
+    --green-soft: #2a3323;
+    --live: #ea7a62; /* AA担保で一段明るく */
+    --live-soft: #42251e;
 
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
-    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.28);
-    --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.4), 0 12px 30px rgba(0, 0, 0, 0.35);
+    /* ダークでは影を使わず面の明度差＋1pxで階層化（Linear） */
+    --shadow-1: none;
+    --shadow-2: 0 0 0 1px var(--line-strong);
   }
 }
 
@@ -130,37 +132,33 @@
 :root[data-theme="dark"] {
   color-scheme: dark;
 
-  --color-brand: #d19a72;
-  --color-brand-strong: #e3b48f;
-  --color-brand-soft: #7a5537;
-  --color-accent: #e79a5f;
-  --color-accent-soft: #5a3d26;
+  --bg: #1c1610;
+  --surface: #262019;
+  --surface-soft: #322a20;
+  --surface-deep: #14100b;
 
-  --color-bg: #241a13;
-  --color-bg-tint: #2c211a;
-  --color-surface: #302419;
-  --color-surface-2: #3a2c20;
-  --color-border: #4a382a;
-  --color-border-strong: #5c4834;
+  --text-1: #f2eadf;
+  --text-2: #c3b4a0;
+  --text-3: #8e7f6c;
+  --text-on-accent: #1c1610;
 
-  --color-text: #f3e9dd;
-  --color-text-muted: #cbb6a3;
-  --color-text-faint: #a08d7c;
-  --color-text-on-brand: #241a13;
-  --color-link: #e3b48f;
+  --line: #3c3225;
+  --line-strong: #554835;
 
-  --color-live: #ef6b6b;
-  --color-live-bg: #3d2320;
-  --color-ok: #7bc08d;
-  --color-ok-bg: #22322a;
-  --color-warn: #e0b063;
-  --color-warn-bg: #362b1a;
-  --color-neutral: #cbb6a3;
-  --color-neutral-bg: #3a2c20;
+  --accent: #e0824a;
+  --accent-strong: #c9682f;
+  --accent-soft: #3e2b1b;
+  --accent-ink: #e0824a;
+  --cta-bg: #e0824a;
+  --cta-bg-hover: #eca066;
+  --cta-edge: #c9682f;
+  --green: #8cad7e;
+  --green-soft: #2a3323;
+  --live: #ea7a62;
+  --live-soft: #42251e;
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.28);
-  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.4), 0 12px 30px rgba(0, 0, 0, 0.35);
+  --shadow-1: none;
+  --shadow-2: 0 0 0 1px var(--line-strong);
 }
 
 /* ---- リセット & ベース ------------------------------------- */
@@ -181,24 +179,55 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--font-sans);
-  font-size: var(--font-size-base);
-  line-height: var(--leading-normal);
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  font-size: 16px;
+  line-height: 1.75; /* 万平系の読み物値 */
+  letter-spacing: 0.04em;
+  color: var(--text-1);
+  background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  /* テーマ切替時のちらつき低減 */
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* 見出し=明朝（温泉宿の気配）。paltは非対応ブラウザでは無害に無視される */
 h1,
 h2,
 h3,
 h4 {
-  line-height: var(--leading-tight);
+  font-family: var(--font-serif);
   font-weight: 700;
+  font-feature-settings: "palt";
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+  word-break: auto-phrase;
+  text-wrap: balance;
   margin: 0 0 var(--space-3);
-  letter-spacing: 0.01em;
+}
+h1 {
+  font-size: clamp(1.75rem, 1.2rem + 2.8vw, 2.75rem); /* h1:本文≒3:1・vw連動 */
+}
+h2 {
+  font-size: clamp(1.5rem, 1.15rem + 1.5vw, 2rem);
+}
+h3 {
+  font-size: 1.25rem;
+}
+
+/* 欧文小ラベル（Fraunces・字間広め・§4） */
+.label {
+  font-family: var(--font-latin);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1;
+  font-feature-settings: normal;
+}
+
+/* 数字専用書体（日付・時刻・料金・番号） */
+.num {
+  font-family: var(--font-latin);
+  font-feature-settings: "tnum";
+  letter-spacing: 0.02em;
 }
 
 p {
@@ -206,11 +235,12 @@ p {
 }
 
 a {
-  color: var(--color-link);
+  color: var(--accent-ink);
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 img,
@@ -230,11 +260,11 @@ button {
   cursor: pointer;
 }
 
-/* キーボードフォーカスの可視化（アクセシビリティ） */
+/* キーボードフォーカスの可視化 */
 :focus-visible {
-  outline: 3px solid var(--color-accent);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-s);
 }
 
 /* スクリーンリーダー専用テキスト */
@@ -250,25 +280,121 @@ button {
   border: 0;
 }
 
+/* astro-icon のインラインSVG既定（1em基準・currentColor） */
+[data-icon] svg,
+svg.icon {
+  width: 1em;
+  height: 1em;
+}
+
+/* ---- ボタン（§5・Duolingo式の控えめ版） ------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: var(--radius-s);
+  border: 1px solid transparent;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  transition:
+    transform var(--motion-fast),
+    background-color var(--motion-fast),
+    border-color var(--motion-fast),
+    color var(--motion-fast),
+    box-shadow var(--motion-fast);
+}
+.btn:hover {
+  text-decoration: none;
+}
+.btn svg {
+  font-size: 1.15em;
+}
+
+/* 主CTA（1画面1個まで）: アクセント地×白文字＋下方向の実影＋押し込み（AA担保の --cta-* を使用） */
+.btn--primary {
+  background: var(--cta-bg);
+  color: var(--text-on-accent);
+  box-shadow: 0 3px 0 var(--cta-edge);
+}
+.btn--primary:hover {
+  background: var(--cta-bg-hover);
+  box-shadow: 0 3px 0 var(--cta-edge);
+}
+.btn--primary:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* 副ボタン: surface地＋line-strong枠。hoverで枠と文字が accent 化 */
+.btn--ghost {
+  background: var(--surface);
+  border-color: var(--line-strong);
+  color: var(--text-1);
+}
+.btn--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+.btn--ghost:active {
+  transform: scale(0.97);
+}
+
 /* ---- レイアウトユーティリティ ------------------------------ */
 .container {
   width: 100%;
-  max-width: var(--content-max);
+  max-width: var(--w-list);
   margin-inline: auto;
   padding-inline: var(--space-5);
 }
+.container--text {
+  max-width: var(--w-text);
+}
+.container--hero {
+  max-width: var(--w-hero);
+}
 
-/* メインは flex で伸ばし、フッターを最下部に固定 */
 .site-main {
   flex: 1 0 auto;
   width: 100%;
 }
 
-/* レスポンシブなカードグリッド（トップページ等で共用） */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
-  gap: var(--space-5);
+/* 微グレインのオーバーレイ（ヒーロー・強調帯のみに付与） */
+.u-grain {
+  position: relative;
+  isolation: isolate;
+}
+.u-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--grain);
+  opacity: 0.055;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+:root[data-theme="dark"] .u-grain::after {
+  mix-blend-mode: overlay;
+  opacity: 0.05;
+}
+
+/* reveal（表示済みが既定・prefers-reduced-motion 内でのみ動く・§8） */
+@media (prefers-reduced-motion: no-preference) {
+  .u-reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: reveal var(--motion-base) forwards;
+  }
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
 
 /* アニメーション抑制設定を尊重 */
