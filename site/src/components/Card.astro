@@ -1,0 +1,142 @@
+---
+/**
+ * 汎用カード。トップページの各セクションのプレースホルダー表示に使う。
+ * - thumbEmoji: サムネイル領域に表示する絵文字（画像はP1以降で差し替え）
+ * - badgeText / badgeVariant: 右上ステータスバッジ（任意）
+ * - href: 指定時はカード全体をリンク化
+ * - placeholder: true でサムネ地を「準備中」調にする
+ * 本文は default スロットに記述する。
+ */
+import Badge from './Badge.astro';
+
+interface Props {
+  title: string;
+  thumbEmoji?: string;
+  badgeText?: string;
+  badgeVariant?: 'live' | 'ok' | 'warn' | 'neutral' | 'brand';
+  badgeDot?: boolean;
+  href?: string;
+  placeholder?: boolean;
+  class?: string;
+}
+
+const {
+  title,
+  thumbEmoji = '🐹',
+  badgeText,
+  badgeVariant = 'neutral',
+  badgeDot = false,
+  href,
+  placeholder = false,
+  class: className = '',
+} = Astro.props;
+
+const Tag = href ? 'a' : 'article';
+---
+
+<Tag
+  class:list={['card', { 'card--link': href, 'card--placeholder': placeholder }, className]}
+  {...href ? { href } : {}}
+>
+  <div class="card__thumb" aria-hidden="true">
+    <span class="card__thumb-emoji">{thumbEmoji}</span>
+    {placeholder && <span class="card__thumb-tag">準備中</span>}
+  </div>
+  <div class="card__body">
+    <div class="card__head">
+      <h3 class="card__title">{title}</h3>
+      {badgeText && (
+        <Badge variant={badgeVariant} dot={badgeDot}>{badgeText}</Badge>
+      )}
+    </div>
+    <div class="card__text">
+      <slot />
+    </div>
+  </div>
+</Tag>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    color: var(--color-text);
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.18s ease,
+      border-color 0.18s ease;
+  }
+
+  .card--link {
+    text-decoration: none;
+  }
+  .card--link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-brand-soft);
+    text-decoration: none;
+  }
+
+  .card__thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(120% 120% at 50% 0%, var(--color-surface-2) 0%, var(--color-bg-tint) 100%);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .card__thumb-emoji {
+    font-size: 2.6rem;
+    line-height: 1;
+    filter: saturate(0.9);
+    opacity: 0.85;
+  }
+
+  .card__thumb-tag {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 2px 9px;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--color-neutral);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+  }
+
+  .card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4);
+  }
+
+  .card__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
+  .card__title {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
+  }
+
+  .card__text {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.65;
+  }
+  .card__text :global(p:last-child) {
+    margin-bottom: 0;
+  }
+</style>

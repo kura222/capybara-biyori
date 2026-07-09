@@ -1,0 +1,307 @@
+---
+/**
+ * トップページ = ライブ・映像ハブ（仕様 §4.1）。
+ * P0 では 6 セクションの骨組みを「準備中」のプレースホルダーカードで実装する。
+ * データ接続（ライブ検知・RSSフィード・温泉期間）は P1 以降。
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+
+// --- プレースホルダーのダミーデータ（表示レイアウト確認用・P1以降で実データに差し替え） ---
+const alwaysOn = [
+  { name: 'Taronga Zoo（オーストラリア）', emoji: '🌏', note: '24時間ライブ配信の定番。稼働状況を自動チェックして表示します。' },
+  { name: 'Angel Valley Farm（ラトビア）', emoji: '🚜', note: '牧場ののどかなカピバラたち。時間帯で表情が変わります。' },
+  { name: 'Riga Zoo（季節限定）', emoji: '❄️', note: '配信方式を確認中。稼働時のみカードが点灯します。' },
+];
+
+const archives = [
+  { name: '露天風呂ライブ（冬の名場面）', emoji: '♨️', note: '湯船でとろける表情の名シーンをキュレーション予定。' },
+  { name: '池のおそうじタイム', emoji: '🧹', note: '飼育員さんの作業に集まるカピバラたち。' },
+  { name: 'スイカタイム / おやつの時間', emoji: '🍉', note: '餌やりイベントのハイライトを厳選します。' },
+];
+
+const feed = [
+  { name: '長崎バイオパーク 公式', emoji: '📺', note: '最新投稿を RSS で自動集約し「今日のカピバラ」として掲載予定。' },
+  { name: '伊豆シャボテン動物公園 公式', emoji: '📺', note: '元祖・カピバラ露天風呂の園。冬季は配信が増える傾向。' },
+  { name: '池田動物園 公式', emoji: '📺', note: 'イベント型の配信をチェックしてお届けします。' },
+  { name: '埼玉こども動物自然公園 公式', emoji: '📺', note: '突発的なライブも見逃さないよう自動監視します。' },
+];
+
+const articles = [
+  { name: 'カピバラ温泉はいつからいつまで？全国まとめ', emoji: '♨️', tag: '温泉' },
+  { name: '関東でカピバラとふれあえる施設まとめ', emoji: '🤝', tag: 'おでかけ' },
+  { name: 'カピバラってどんな動物？生態Q&A', emoji: '❓', tag: '生態' },
+];
+---
+
+<BaseLayout description="カピバラのライブ配信・全国の会える施設マップ・温泉カレンダーをまとめたポータルサイト。今すぐ見たい・会いに行きたいを1か所で。">
+  {/* ===== ヒーロー ===== */}
+  <section class="hero">
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">🐹♨️ カピバラを見る・会いに行く</p>
+      <h1 class="hero__title">今日は、カピバラ日和。</h1>
+      <p class="hero__lead">
+        全国のカピバラのライブ配信、会える施設マップ、温泉イベントカレンダーをまとめました。
+        「今すぐ見たい」も「会いに行きたい」も、ここから。
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="/map/">🗺️ 施設マップを見る</a>
+        <a class="btn btn--ghost" href="/onsen/">♨️ 温泉カレンダー</a>
+      </div>
+    </div>
+  </section>
+
+  {/* ===== 1. 🔴 ライブ中（配信検知時のみ出現。P0は準備中表示） ===== */}
+  <Section
+    emoji="🔴"
+    title="いま配信中のカピバラ"
+    description="登録チャンネルのライブを自動検知し、配信中のものをここに表示します。"
+  >
+    <div class="live-empty">
+      <span class="live-empty__emoji" aria-hidden="true">😴</span>
+      <div>
+        <p class="live-empty__title">
+          現在ライブ配信はありません
+          <Badge variant="neutral">準備中</Badge>
+        </p>
+        <p class="live-empty__note">
+          ライブ検知は P3 で稼働します。配信が始まると、この場所に「🔴 LIVE」カードが並びます。
+          いまは下の「いつでも見られるカピバラ」からお楽しみください。
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  {/* ===== 2. いつでも見られるカピバラ（24/7海外配信） ===== */}
+  <Section
+    emoji="🌏"
+    title="いつでも見られるカピバラ"
+    description="24時間ライブ配信の海外カメラ。稼働状況をチェックして表示します。"
+    class="section--tint"
+  >
+    <div class="card-grid">
+      {alwaysOn.map((c) => (
+        <Card
+          title={c.name}
+          thumbEmoji={c.emoji}
+          placeholder={true}
+          badgeText="確認中"
+          badgeVariant="ok"
+        >
+          {c.note}
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  {/* ===== 3. よりぬきアーカイブ ===== */}
+  <Section
+    emoji="⭐"
+    title="よりぬきアーカイブ"
+    description="露天風呂・池そうじ・おやつタイムなどの名場面を手動キュレーション。"
+  >
+    <div class="card-grid">
+      {archives.map((c) => (
+        <Card title={c.name} thumbEmoji={c.emoji} placeholder={true}>
+          {c.note}
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  {/* ===== 4. 新着カピバラ動画フィード ===== */}
+  <Section
+    emoji="🆕"
+    title="新着カピバラ動画フィード"
+    description="登録チャンネルの最新投稿を毎日自動で集めて「今日のカピバラ」に。"
+    class="section--tint"
+  >
+    <div class="card-grid">
+      {feed.map((c) => (
+        <Card title={c.name} thumbEmoji={c.emoji} placeholder={true} badgeText="RSS" badgeVariant="brand">
+          {c.note}
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  {/* ===== 5. 今シーズンの温泉情報ストリップ ===== */}
+  <Section
+    emoji="♨️"
+    title="今シーズンの温泉情報"
+    description="全国の露天風呂イベントの開催状況をまとめてお届けします。"
+    moreHref="/onsen/"
+    moreLabel="カレンダーを見る"
+  >
+    <div class="onsen-strip">
+      <div class="onsen-strip__lead">
+        <p class="onsen-strip__title">
+          カピバラ温泉カレンダー
+          <Badge variant="neutral">準備中</Badge>
+        </p>
+        <p class="onsen-strip__note">
+          伊豆シャボテン・長崎バイオパークなど、全国の露天風呂イベントの開催期間を横断表示。
+          「開催中／まもなく終了」を日付から自動判定します（P2）。
+        </p>
+      </div>
+      <a class="btn btn--primary" href="/onsen/">♨️ 温泉カレンダーへ</a>
+    </div>
+  </Section>
+
+  {/* ===== 6. 新着記事 ===== */}
+  <Section
+    emoji="📝"
+    title="新着記事"
+    description="温泉の時期・ふれあい施設・カピバラの生態など、役立つ記事を準備中。"
+    moreHref="/articles/"
+    class="section--tint"
+  >
+    <div class="card-grid">
+      {articles.map((a) => (
+        <Card title={a.name} thumbEmoji={a.emoji} placeholder={true} badgeText={a.tag} badgeVariant="warn">
+          公開準備中の記事です。SEO実測にもとづくラインナップで順次公開します。
+        </Card>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>
+
+<style>
+  /* ---- ヒーロー ---- */
+  .hero {
+    background:
+      radial-gradient(90% 120% at 10% 0%, var(--color-accent-soft) 0%, transparent 55%),
+      radial-gradient(90% 120% at 100% 10%, var(--color-brand-soft) 0%, transparent 50%),
+      var(--color-bg-tint);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .hero__inner {
+    padding-block: var(--space-9);
+    max-width: 720px;
+  }
+  .hero__eyebrow {
+    margin: 0 0 var(--space-3);
+    color: var(--color-brand-strong);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.04em;
+  }
+  .hero__title {
+    margin: 0 0 var(--space-4);
+    font-size: clamp(2rem, 6vw, var(--font-size-3xl));
+    color: var(--color-text);
+  }
+  .hero__lead {
+    margin: 0 0 var(--space-6);
+    max-width: 54ch;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-lg);
+    line-height: 1.85;
+  }
+  .hero__actions {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  /* ---- ボタン共通 ---- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 22px;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    font-size: var(--font-size-base);
+    border: 1px solid transparent;
+    transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+  }
+  .btn:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+  .btn--primary {
+    background: var(--color-brand);
+    color: var(--color-text-on-brand);
+  }
+  .btn--primary:hover {
+    background: var(--color-brand-strong);
+  }
+  .btn--ghost {
+    background: var(--color-surface);
+    border-color: var(--color-border-strong);
+    color: var(--color-text);
+  }
+  .btn--ghost:hover {
+    border-color: var(--color-brand-soft);
+  }
+
+  /* 交互の色帯（tint 付きセクション） */
+  :global(.section--tint) {
+    background: var(--color-bg-tint);
+  }
+
+  /* ---- ライブ空状態 ---- */
+  .live-empty {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border: 1px dashed var(--color-border-strong);
+    border-radius: var(--radius-lg);
+  }
+  .live-empty__emoji {
+    font-size: 2.6rem;
+    line-height: 1;
+  }
+  .live-empty__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin: 0 0 var(--space-2);
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
+  }
+  .live-empty__note {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+
+  /* ---- 温泉ストリップ ---- */
+  .onsen-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    padding: var(--space-6);
+    background: linear-gradient(120deg, var(--color-surface) 0%, var(--color-warn-bg) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    flex-wrap: wrap;
+  }
+  .onsen-strip__lead {
+    min-width: min(100%, 260px);
+    flex: 1;
+  }
+  .onsen-strip__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin: 0 0 var(--space-2);
+    font-weight: 700;
+    font-size: var(--font-size-xl);
+    color: var(--color-text);
+  }
+  .onsen-strip__note {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    max-width: 60ch;
+  }
+</style>

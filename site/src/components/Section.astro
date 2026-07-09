@@ -1,0 +1,100 @@
+---
+/**
+ * トップページ等で使う見出し付きセクション。
+ * - emoji: 見出し左の絵文字
+ * - title: 見出し
+ * - description: 補足説明（任意）
+ * - moreHref / moreLabel: 右側の「もっと見る」リンク（任意）
+ * 中身（カードグリッド等）は default スロットに置く。
+ */
+interface Props {
+  title: string;
+  emoji?: string;
+  description?: string;
+  moreHref?: string;
+  moreLabel?: string;
+  /** セクションに与える id（アンカー用・任意） */
+  id?: string;
+  class?: string;
+}
+
+const {
+  title,
+  emoji,
+  description,
+  moreHref,
+  moreLabel = 'もっと見る',
+  id,
+  class: className = '',
+} = Astro.props;
+---
+
+<section class:list={['section', className]} {...id ? { id } : {}}>
+  <div class="container">
+    <div class="section__head">
+      <div class="section__heading">
+        <h2 class="section__title">
+          {emoji && <span class="section__emoji" aria-hidden="true">{emoji}</span>}
+          {title}
+        </h2>
+        {description && <p class="section__desc">{description}</p>}
+      </div>
+      {moreHref && (
+        <a class="section__more" href={moreHref}>
+          {moreLabel}
+          <span aria-hidden="true">→</span>
+        </a>
+      )}
+    </div>
+    <slot />
+  </div>
+</section>
+
+<style>
+  .section {
+    padding-block: var(--space-7);
+  }
+
+  .section__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+    flex-wrap: wrap;
+  }
+
+  .section__heading {
+    min-width: 0;
+  }
+
+  .section__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin: 0;
+    font-size: var(--font-size-2xl);
+    color: var(--color-text);
+  }
+
+  .section__emoji {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .section__desc {
+    margin: var(--space-2) 0 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+
+  .section__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    color: var(--color-brand-strong);
+  }
+</style>

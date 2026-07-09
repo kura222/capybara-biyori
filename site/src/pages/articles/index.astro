@@ -1,0 +1,24 @@
+---
+/**
+ * 記事一覧（/articles/）— P0 は準備中プレースホルダー。
+ * 記事本文（Markdown・8本）は P4。
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ComingSoon from '../../components/ComingSoon.astro';
+---
+
+<BaseLayout
+  title="記事一覧"
+  description="カピバラ温泉の時期、ふれあえる施設、カピバラの生態など、役立つ記事をまとめます。"
+>
+  <ComingSoon
+    emoji="📝"
+    title="記事一覧"
+    lead="カピバラのおでかけと豆知識に役立つ記事を掲載していく予定です。ただいま準備中です。"
+    points={[
+      'カピバラ温泉はいつからいつまで？全国開催期間まとめ',
+      '関東・関西・東海でカピバラに会える施設まとめ',
+      'カピバラってどんな動物？生態Q&A（なぜ温泉に入る？）',
+    ]}
+  />
+</BaseLayout>

@@ -1,0 +1,71 @@
+---
+/**
+ * アフィリエイト表記（景表法ステマ規制対応・仕様 §9）。
+ * アフィリエイトリンクを含むページの上部に表示する。
+ * 表示可否はページ単位で制御する設計:
+ *   BaseLayout の prop `showPrNotice` から呼び出す想定。
+ * variant:
+ *   - 'bar'  : ページ上部の帯（施設詳細・記事など）
+ *   - 'inline': フッター等に置く控えめな一文
+ */
+interface Props {
+  variant?: 'bar' | 'inline';
+  class?: string;
+}
+
+const { variant = 'bar', class: className = '' } = Astro.props;
+
+const text = '当サイトはアフィリエイト広告（プロモーション）を利用しています。';
+---
+
+{
+  variant === 'bar' ? (
+    <div class:list={['pr-bar', className]} role="note">
+      <span class="pr-bar__label" aria-hidden="true">PR</span>
+      <span>{text}</span>
+    </div>
+  ) : (
+    <p class:list={['pr-inline', className]}>
+      <span class="pr-inline__label" aria-hidden="true">PR</span>
+      {text}
+    </p>
+  )
+}
+
+<style>
+  .pr-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-warn-bg);
+    color: var(--color-text-muted);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+  }
+  .pr-bar__label {
+    flex-shrink: 0;
+    padding: 1px 7px;
+    font-weight: 700;
+    color: var(--color-text-on-brand);
+    background: var(--color-warn);
+    border-radius: var(--radius-sm);
+  }
+
+  .pr-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0;
+    color: var(--color-text-faint);
+    font-size: var(--font-size-xs);
+  }
+  .pr-inline__label {
+    padding: 0 6px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background: var(--color-neutral-bg);
+    border-radius: var(--radius-sm);
+  }
+</style>

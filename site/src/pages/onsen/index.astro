@@ -1,0 +1,24 @@
+---
+/**
+ * カピバラ温泉カレンダー（/onsen/）— P0 は準備中プレースホルダー。
+ * 横棒タイムライン・開催中バッジの自動判定は P2。
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ComingSoon from '../../components/ComingSoon.astro';
+---
+
+<BaseLayout
+  title="カピバラ温泉カレンダー"
+  description="全国のカピバラ露天風呂イベントの開催期間を横断カレンダーで表示。開催中・まもなく終了を日付から自動判定します。"
+>
+  <ComingSoon
+    emoji="♨️"
+    title="カピバラ温泉カレンダー"
+    lead="全国の露天風呂イベントの「いつから・いつまで」を横断で見られるカレンダーです。ただいま準備中です。"
+    points={[
+      '11月〜4月の開催期間を横棒タイムラインで一覧表示',
+      '「開催中／まもなく終了／今季終了／発表待ち」を自動でバッジ表示',
+      '「カピバラの長風呂対決」など全国同日イベントの特集枠',
+    ]}
+  />
+</BaseLayout>

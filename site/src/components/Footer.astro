@@ -1,0 +1,152 @@
+---
+/**
+ * サイト共通フッター。
+ * - コピーライト
+ * - ポリシー/情報リンク（FOOTER_LINKS）
+ * - ナビ（再掲）
+ * - 投げ銭導線プレースホルダー（仕様 §9・URLはP5で投入）
+ * - アフィリエイト表記（inline 版 PrNotice）
+ */
+import { SITE, NAV_ITEMS, FOOTER_LINKS } from '../config';
+import PrNotice from './PrNotice.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__logo" href="/">
+        <span aria-hidden="true">🐹♨️</span>
+        <span>{SITE.name}</span>
+      </a>
+      <p class="site-footer__tagline">{SITE.description}</p>
+      <!-- 投げ銭導線（プレースホルダー: リンクはP5で有効化） -->
+      <span class="site-footer__support" aria-disabled="true" title="準備中">
+        🌿 カピバラのおやつ代を応援（準備中）
+      </span>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">コンテンツ</h2>
+        <ul>
+          {NAV_ITEMS.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">サイト情報</h2>
+        <ul>
+          {FOOTER_LINKS.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+          <li><a href="/about/#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="container site-footer__bottom-inner">
+      <PrNotice variant="inline" />
+      <small class="site-footer__copy">© {year} {SITE.name}</small>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--space-8);
+    background: var(--color-bg-tint);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .site-footer__inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-6);
+    padding-block: var(--space-7);
+  }
+
+  .site-footer__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-text);
+    font-weight: 800;
+    font-size: var(--font-size-lg);
+  }
+  .site-footer__logo:hover {
+    text-decoration: none;
+  }
+
+  .site-footer__tagline {
+    margin: var(--space-3) 0 var(--space-4);
+    max-width: 46ch;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+  }
+
+  .site-footer__support {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    border: 1px dashed var(--color-border-strong);
+    color: var(--color-text-faint);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+  }
+
+  .site-footer__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+
+  .site-footer__heading {
+    margin: 0 0 var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-faint);
+    letter-spacing: 0.06em;
+  }
+
+  .site-footer__col ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  .site-footer__col a {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+  .site-footer__col a:hover {
+    color: var(--color-brand-strong);
+  }
+
+  .site-footer__bottom {
+    border-top: 1px solid var(--color-border);
+  }
+  .site-footer__bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding-block: var(--space-4);
+    flex-wrap: wrap;
+  }
+  .site-footer__copy {
+    color: var(--color-text-faint);
+    font-size: var(--font-size-xs);
+  }
+
+  @media (max-width: 640px) {
+    .site-footer__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+  }
+</style>

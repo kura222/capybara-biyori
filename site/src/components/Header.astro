@@ -1,0 +1,155 @@
+---
+/**
+ * サイト共通ヘッダー。
+ * - ロゴ（テキスト+絵文字。画像ロゴはP4で差し替え・仕様 §7）
+ * - グローバルナビ（NAV_ITEMS）
+ * - ダークモード切替ボタン
+ * 現在のパスと一致するナビ項目に aria-current を付与する。
+ */
+import { SITE, NAV_ITEMS } from '../config';
+import ThemeToggle from './ThemeToggle.astro';
+
+// 末尾スラッシュを吸収して現在ページ判定
+const current = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const isActive = (href: string) => {
+  const h = href.replace(/\/+$/, '') || '/';
+  return h === '/' ? current === '/' : current === h || current.startsWith(h + '/');
+};
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="/" aria-label={`${SITE.name} ホーム`}>
+      <span class="logo__mark" aria-hidden="true">🐹<span class="logo__mark-bath">♨️</span></span>
+      <span class="logo__text">{SITE.name}</span>
+    </a>
+
+    <nav class="site-nav" aria-label="メインナビゲーション">
+      <ul class="site-nav__list">
+        {
+          NAV_ITEMS.map((item) => (
+            <li>
+              <a
+                class="site-nav__link"
+                href={item.href}
+                {...isActive(item.href) ? { 'aria-current': 'page' } : {}}
+              >
+                <span class="site-nav__emoji" aria-hidden="true">{item.emoji}</span>
+                <span>{item.label}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <ThemeToggle />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    min-height: var(--header-height);
+    padding-block: var(--space-2);
+  }
+
+  /* ---- ロゴ ---- */
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-right: auto;
+    color: var(--color-text);
+    font-weight: 800;
+    font-size: var(--font-size-lg);
+    letter-spacing: 0.02em;
+  }
+  .logo:hover {
+    text-decoration: none;
+  }
+  .logo__mark {
+    position: relative;
+    display: inline-flex;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .logo__mark-bath {
+    position: absolute;
+    right: -8px;
+    bottom: -4px;
+    font-size: 0.85rem;
+  }
+  .logo__text {
+    white-space: nowrap;
+  }
+
+  /* ---- ナビ ---- */
+  .site-nav__list {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+  .site-nav__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: var(--radius-pill);
+    color: var(--color-text-muted);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .site-nav__link:hover {
+    background: var(--color-surface-2);
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .site-nav__link[aria-current='page'] {
+    color: var(--color-brand-strong);
+    background: var(--color-surface-2);
+  }
+  .site-nav__emoji {
+    font-size: 0.95rem;
+  }
+
+  .site-header__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  /* ---- モバイル ---- */
+  @media (max-width: 640px) {
+    .site-header__inner {
+      gap: var(--space-2);
+      flex-wrap: wrap;
+    }
+    .logo__text {
+      font-size: var(--font-size-base);
+    }
+    /* ナビは絵文字のみ表示にして省スペース化 */
+    .site-nav__link span:not(.site-nav__emoji) {
+      display: none;
+    }
+    .site-nav__emoji {
+      font-size: 1.15rem;
+    }
+    .site-nav__link {
+      padding: 8px 10px;
+    }
+  }
+</style>

@@ -1,0 +1,135 @@
+---
+/**
+ * 全ページ共通レイアウト。
+ * - <head> の SEO メタ（title / description / canonical / OGP）を config と props から生成
+ * - ダークモード FOUC 防止インラインスクリプト（描画前に data-theme を確定）
+ * - Header / Footer
+ * - showPrNotice でページ単位にアフィリエイト表記の帯を制御（仕様 §9）
+ */
+import { SITE, SITE_URL, absoluteUrl } from '../config';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PrNotice from '../components/PrNotice.astro';
+import '../styles/global.css';
+
+interface Props {
+  /** <title> の主部（サイト名は自動付与）。トップは省略でサイト名のみ */
+  title?: string;
+  /** meta description / og:description */
+  description?: string;
+  /** canonical に使うパス（省略時は現在のパスを使用） */
+  canonicalPath?: string;
+  /** OGP画像（サイトルート相対 or 絶対URL）。省略時は既定ブランド画像 */
+  ogImage?: string;
+  /** og:type（記事は "article" など）*/
+  ogType?: string;
+  /** true で検索エンジンに noindex を指示 */
+  noindex?: boolean;
+  /** アフィリエイト表記の帯をページ上部に表示するか（既定 false） */
+  showPrNotice?: boolean;
+}
+
+const {
+  title,
+  description = SITE.description,
+  canonicalPath,
+  ogImage = SITE.defaultOgImage,
+  ogType = 'website',
+  noindex = false,
+  showPrNotice = false,
+} = Astro.props;
+
+// タイトル: 指定があれば「{title}｜{サイト名}」、無ければサイト名+キャッチ
+const pageTitle = title ? `${title}｜${SITE.name}` : `${SITE.name}｜カピバラを見る・会いに行く`;
+
+// canonical: 指定パス優先、無ければ現在パス。SITE_URL 基点で絶対化（仕様 §8）
+const canonical = absoluteUrl(canonicalPath ?? Astro.url.pathname);
+
+// OGP画像を絶対URL化
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : absoluteUrl(ogImage);
+---
+
+<!doctype html>
+<html lang={SITE.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- OGP / Twitter Card -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <meta name="theme-color" content="#a5714e" />
+
+    {/* FOUC防止: 描画前に localStorage / システム設定から data-theme を確定させる */}
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          /* localStorage 不可時は CSS の prefers-color-scheme に委ねる */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へスキップ</a>
+    <Header />
+    <main id="main" class="site-main">
+      {showPrNotice && (
+        <div class="container pr-notice-wrap">
+          <PrNotice variant="bar" />
+        </div>
+      )}
+      <slot />
+    </main>
+    <Footer />
+
+    <style>
+      .skip-link {
+        position: absolute;
+        left: var(--space-4);
+        top: -60px;
+        z-index: 100;
+        padding: 8px 16px;
+        background: var(--color-brand-strong);
+        color: var(--color-text-on-brand);
+        border-radius: var(--radius-md);
+        font-weight: 700;
+        transition: top 0.15s ease;
+      }
+      .skip-link:focus {
+        top: var(--space-3);
+        text-decoration: none;
+      }
+      .pr-notice-wrap {
+        padding-top: var(--space-4);
+      }
+    </style>
+  </body>
+</html>
+<!-- SITE_URL: {SITE_URL} を基点に canonical / OGP を生成（ドメイン移行は config.ts 1か所） -->

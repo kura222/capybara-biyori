@@ -1,0 +1,124 @@
+---
+/**
+ * 「準備中」ページの共通表示。map / onsen / articles / about / privacy の
+ * プレースホルダーで使う。中身（補足リストなど）は default スロットに置ける。
+ */
+interface Props {
+  emoji?: string;
+  title: string;
+  lead: string;
+  /** このページで将来提供する内容の箇条書き（任意） */
+  points?: string[];
+  /** 戻り先ボタンのラベル/リンク（既定はトップ） */
+  backHref?: string;
+  backLabel?: string;
+}
+
+const {
+  emoji = '🐹',
+  title,
+  lead,
+  points = [],
+  backHref = '/',
+  backLabel = 'トップへ戻る',
+} = Astro.props;
+---
+
+<section class="coming">
+  <div class="container coming__inner">
+    <span class="coming__emoji" aria-hidden="true">{emoji}</span>
+    <span class="coming__tag">準備中</span>
+    <h1 class="coming__title">{title}</h1>
+    <p class="coming__lead">{lead}</p>
+
+    {points.length > 0 && (
+      <ul class="coming__points">
+        {points.map((p) => (
+          <li>
+            <span class="coming__check" aria-hidden="true">🛁</span>
+            <span>{p}</span>
+          </li>
+        ))}
+      </ul>
+    )}
+
+    <slot />
+
+    <a class="coming__back" href={backHref}>
+      <span aria-hidden="true">←</span>
+      {backLabel}
+    </a>
+  </div>
+</section>
+
+<style>
+  .coming {
+    padding-block: var(--space-9) var(--space-8);
+  }
+  .coming__inner {
+    max-width: 640px;
+    text-align: center;
+  }
+  .coming__emoji {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+  .coming__tag {
+    display: inline-block;
+    margin-top: var(--space-4);
+    padding: 4px 14px;
+    border-radius: var(--radius-pill);
+    background: var(--color-neutral-bg);
+    color: var(--color-neutral);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .coming__title {
+    margin: var(--space-4) 0 var(--space-3);
+    font-size: var(--font-size-3xl);
+  }
+  .coming__lead {
+    margin: 0 auto var(--space-5);
+    max-width: 48ch;
+    color: var(--color-text-muted);
+    line-height: 1.85;
+  }
+  .coming__points {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin: 0 auto var(--space-6);
+    padding: var(--space-5);
+    text-align: left;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+  }
+  .coming__points li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+  }
+  .coming__check {
+    flex-shrink: 0;
+  }
+  .coming__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: var(--space-4);
+    padding: 10px 20px;
+    border-radius: var(--radius-pill);
+    background: var(--color-brand);
+    color: var(--color-text-on-brand);
+    font-weight: 700;
+  }
+  .coming__back:hover {
+    background: var(--color-brand-strong);
+    text-decoration: none;
+  }
+</style>
