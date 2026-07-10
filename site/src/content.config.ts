@@ -83,4 +83,28 @@ const facilities = defineCollection({
   }),
 });
 
-export const collections = { facilities };
+/**
+ * 記事コレクション（Markdown・仕様 §4.5 / P4）。
+ * ファイル名（拡張子なし）が記事スラッグ = URL になる（例: onsen-season-guide.md → /articles/onsen-season-guide/）。
+ * 本文は Markdown（目次は render() が返す headings から自動生成する）。
+ */
+const articles = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/articles' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    // 公開日・更新日（YYYY-MM-DD を Date に変換）。updatedDate は任意。
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    // カテゴリタグ（一覧の絞り込み表示・記事メタに使用）
+    tags: z.array(z.string()).default([]),
+    // 関連施設のスラッグ（src/content/facilities のファイル名）。詳細ページ末尾のカードで解決する。
+    relatedSpots: z.array(z.string()).default([]),
+    // 一覧・ヒーローのプレースホルダーアイコン（Phosphor 名・絵文字全廃 §5）
+    icon: z.string().default('ph:notebook'),
+    // 下書き（true でビルド対象から除外）
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { facilities, articles };

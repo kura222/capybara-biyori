@@ -1,55 +1,85 @@
 ---
 /**
- * サイトについて・運営者情報（/about/）— P0 は準備中プレースホルダー。
- * 正式な運営者情報・お問い合わせ導線は P4。
- * フッターから /about/#contact でお問い合わせ位置へアンカーする。
+ * サイトについて・運営者情報（/about/）— 仕様 §3 / §4.6・security.md §4（掲載ポリシーと削除依頼窓口）。
+ * 目的 / 情報の集め方 / 掲載ポリシー・削除依頼窓口 / 運営表記。
+ * 問い合わせは Googleフォーム予定のプレースホルダー（開設後にURLを投入）。
  */
+import { Icon } from 'astro-icon/components';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ComingSoon from '../../components/ComingSoon.astro';
+import DocArticle from '../../components/DocArticle.astro';
+import { SITE } from '../../config';
+
+const description =
+  '「カピバラ日和」の運営方針・情報の集め方・掲載ポリシー・削除依頼窓口についてご案内します。施設や配信者の方からの修正・削除のご連絡には速やかに対応します。';
 ---
 
-<BaseLayout
-  title="サイトについて"
-  description="「カピバラ日和」の運営方針・情報の扱い・お問い合わせについてのご案内です。"
->
-  <ComingSoon
+<BaseLayout title="サイトについて" description={description}>
+  <DocArticle
+    label="About"
     title="サイトについて"
-    lead="「カピバラ日和」は、カピバラを『今すぐ見たい・会いに行きたい』を1か所で叶える無料サービスです。正式な運営者情報を整えています。"
-    points={[
-      '運営方針: 施設情報は公式サイトを一次情報として自力で確認します',
-      '情報の鮮度: 各施設に「最終確認日」を表示します',
-      'アフィリエイト・解析の利用方針を明記します',
-    ]}
-    altHref="/privacy/"
-    altLabel="プライバシーポリシー"
+    lead="「カピバラ日和」は、カピバラを『今すぐ見たい・会いに行きたい』を1か所で叶える無料の情報サイトです。運営の考え方と、情報の扱いについてご案内します。"
   >
-    <div id="contact" class="contact-note">
-      <h2 class="contact-note__title">お問い合わせ</h2>
-      <p class="contact-note__text">
-        お問い合わせ窓口（Googleフォーム）は現在開設を進めています。開設までは、本サイト各ページの公式リンクから各施設へ直接ご確認ください。
+    <section>
+      <h2><Icon name="ph:target" aria-hidden="true" />このサイトの目的</h2>
+      <p>
+        カピバラのライブカメラ、全国の会える施設マップ、温泉イベントのカレンダー、そして役立つ記事を一つにまとめ、「画面ごしに見る」と「実際に会いに行く」の両方をひとつの場所でかなえることを目指しています。
       </p>
-    </div>
-  </ComingSoon>
-</BaseLayout>
+      <p>
+        カピバラが好きな人が、見たいときにすぐ見られて、会いたくなったらすぐ探せる——そんな入口になれたらと考えています。
+      </p>
+    </section>
 
-<style>
-  .contact-note {
-    margin: 0 auto var(--space-6);
-    max-width: 520px;
-    padding: var(--space-5);
-    text-align: left;
-    background: var(--surface-soft);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-m);
-    scroll-margin-top: calc(var(--header-height) + var(--space-4));
-  }
-  .contact-note__title {
-    margin: 0 0 var(--space-2);
-    font-size: 1.0625rem;
-  }
-  .contact-note__text {
-    margin: 0;
-    color: var(--text-2);
-    font-size: 0.9375rem;
-  }
-</style>
+    <section>
+      <h2><Icon name="ph:magnifying-glass" aria-hidden="true" />情報の集め方</h2>
+      <p>
+        施設や配信の情報は、原則として<strong>各施設・チャンネルの公式サイトを一次情報として、運営が自分の目で確認</strong>してまとめています。他サイトの記事や写真を転載することはしません。
+      </p>
+      <ul>
+        <li>料金・開催期間・営業時間などの事実は、公式ページや公式の告知をもとに記載しています。</li>
+        <li>各施設のページには<strong>情報の最終確認日</strong>を表示し、情報がいつ時点のものかがわかるようにしています。</li>
+        <li>閉園・休止などのデリケートな情報は、公式発表や報道にもとづき、推測では書きません。日程が未確定のものは「発表待ち」などと明記します。</li>
+      </ul>
+      <p>
+        それでも、情報は日々変わります。おでかけの前には、必ず各施設の公式サイトで最新情報をご確認ください。
+      </p>
+    </section>
+
+    <section>
+      <h2><Icon name="ph:scales" aria-hidden="true" />動画・ライブ配信の扱い</h2>
+      <p>
+        動画やライブ配信は、配信者が埋め込みを許可しているYouTube公式の埋め込みのみを使用します。埋め込みが提供されていないカメラは転載せず、公式サイトへのリンクでご案内します。各配信カードには、当サイト独自の解説文を必ず添えています。
+      </p>
+    </section>
+
+    <section>
+      <h2><Icon name="ph:shield-check" aria-hidden="true" />掲載ポリシーと削除依頼の窓口</h2>
+      <p>
+        当サイトは、施設や配信者のみなさまの活動を応援する立場で情報を掲載しています。掲載内容について、修正や削除のご希望がある場合は、速やかに対応いたします。
+      </p>
+      <div class="doc-note">
+        <h3 class="doc-note__title">施設・配信者のみなさまへ</h3>
+        <p>
+          掲載内容の<strong>修正・削除のご連絡には、速やかに対応します</strong>。「この情報を直してほしい」「掲載を取りやめてほしい」といったご要望は、下記のお問い合わせ窓口までお知らせください。
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2><Icon name="ph:envelope-simple" aria-hidden="true" />お問い合わせ</h2>
+      <p>
+        お問い合わせは、専用のお問い合わせフォーム（Googleフォーム）で受け付ける予定です。
+      </p>
+      <div class="doc-note">
+        <p>
+          <strong>お問い合わせフォームは現在開設を準備しています。</strong>
+          開設まで少々お待ちください。掲載の修正・削除など、お急ぎのご連絡がある場合は、恐れ入りますが開設までお待ちいただくか、該当施設の情報の出典元をご確認ください。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2><Icon name="ph:info" aria-hidden="true" />運営者</h2>
+      <p>本サイトは「<strong>{SITE.author}</strong>」が運営しています。</p>
+    </section>
+  </DocArticle>
+</BaseLayout>

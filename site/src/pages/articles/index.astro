@@ -1,25 +1,177 @@
 ---
 /**
- * 記事一覧（/articles/）— P0 は準備中プレースホルダー。
- * 記事本文（Markdown・8本）は P4。
+ * 記事一覧（/articles/）— 仕様 §4.5 / P4。
+ * content collection「articles」を公開日の新しい順に並べ、編集的カードで見せる。
+ * draft:true は本番ビルドから除外する。
  */
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ComingSoon from '../../components/ComingSoon.astro';
+import Section from '../../components/Section.astro';
+
+const posts = (await getCollection('articles'))
+  .filter((p) => import.meta.env.DEV || !p.data.draft)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const fmtDate = (d: Date): string =>
+  `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
+
+const description =
+  'カピバラ温泉の開催期間、ふれあえる施設、カフェの料金比較、ライブカメラの見方、生態のQ&Aまで。当サイトの検証済みデータと公式情報にもとづく記事をまとめています。';
 ---
 
-<BaseLayout
-  title="記事一覧"
-  description="カピバラ温泉の時期、ふれあえる施設、カピバラの生態など、役立つ記事をまとめます。"
->
-  <ComingSoon
+<BaseLayout title="よみもの" description={description}>
+  <Section
+    label="Reads"
     title="よみもの"
-    lead="カピバラのおでかけと豆知識に役立つ記事を掲載していきます。SEO実測にもとづくラインナップから順に執筆・公開します。"
-    points={[
-      'カピバラ温泉はいつからいつまで？全国開催期間まとめ',
-      '関東・関西・東海でカピバラに会える施設まとめ',
-      'カピバラってどんな動物？生態Q&A（なぜ温泉に入る？）',
-    ]}
-    altHref="/map/"
-    altLabel="施設マップを見る"
-  />
+    description="温泉の時期・ふれあい施設・カフェ・ライブカメラ・生態まで。当サイトが公式情報を確認してまとめた記事です。"
+    space="l"
+  >
+    <ol class="artlist" role="list">
+      {
+        posts.map((p, i) => (
+          <li class="artlist__item">
+            <a class="artcard" href={`/articles/${p.id}/`}>
+              <span class="artcard__index num" aria-hidden="true">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <span class="artcard__icon" aria-hidden="true">
+                <Icon name={p.data.icon} />
+              </span>
+              <span class="artcard__body">
+                <span class="artcard__meta">
+                  <time class="num" datetime={p.data.pubDate.toISOString()}>
+                    {fmtDate(p.data.pubDate)}
+                  </time>
+                  {p.data.tags.slice(0, 2).map((t) => (
+                    <span class="artcard__tag">{t}</span>
+                  ))}
+                </span>
+                <span class="artcard__title">{p.data.title}</span>
+                <span class="artcard__desc">{p.data.description}</span>
+              </span>
+              <Icon class="artcard__arrow" name="ph:arrow-right" aria-hidden="true" />
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+  </Section>
 </BaseLayout>
+
+<style>
+  .artlist {
+    display: flex;
+    flex-direction: column;
+  }
+  .artlist__item {
+    border-top: 1px solid var(--line);
+  }
+  .artlist__item:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .artcard {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-5) var(--space-1);
+    color: var(--text-1);
+  }
+  .artcard:hover {
+    text-decoration: none;
+  }
+
+  .artcard__index {
+    font-size: 1.35rem;
+    color: var(--accent-ink);
+    line-height: 1;
+  }
+
+  .artcard__icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-m);
+    background: var(--surface-soft);
+    color: var(--accent);
+    font-size: 1.35rem;
+    transition:
+      background var(--motion-fast),
+      color var(--motion-fast);
+  }
+  .artcard:hover .artcard__icon {
+    background: var(--accent-soft);
+  }
+
+  .artcard__body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+  .artcard__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--text-3);
+    font-size: 0.8125rem;
+  }
+  .artcard__tag {
+    padding: 1px 9px;
+    border-radius: var(--radius-full);
+    background: var(--surface-soft);
+    color: var(--text-2);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  .artcard__title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.15rem;
+    line-height: 1.45;
+    color: var(--text-1);
+    transition: color var(--motion-fast);
+  }
+  .artcard:hover .artcard__title {
+    color: var(--accent-ink);
+  }
+  .artcard__desc {
+    color: var(--text-2);
+    font-size: 0.875rem;
+    line-height: 1.7;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .artcard__arrow {
+    color: var(--text-3);
+    font-size: 1.2rem;
+    transition:
+      transform var(--motion-fast),
+      color var(--motion-fast);
+  }
+  .artcard:hover .artcard__arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 640px) {
+    .artcard {
+      grid-template-columns: auto 1fr;
+      gap: var(--space-3);
+      row-gap: var(--space-2);
+    }
+    /* 番号とアイコンは省スペース化: 番号を隠しアイコンを先頭に */
+    .artcard__index {
+      display: none;
+    }
+    .artcard__arrow {
+      display: none;
+    }
+  }
+</style>

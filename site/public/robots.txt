@@ -1,0 +1,6 @@
+# カピバラ日和 robots.txt（仕様 §8）
+# 全クローラを許可し、sitemap の場所を伝える。
+User-agent: *
+Allow: /
+
+Sitemap: https://capybara-biyori.pages.dev/sitemap-index.xml

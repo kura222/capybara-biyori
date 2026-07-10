@@ -1,25 +1,90 @@
 ---
 /**
- * プライバシーポリシー＋アフィリエイト表記（/privacy/）— P0 は準備中プレースホルダー。
- * 正式なポリシー本文（解析・アフィリエイト・ステマ規制対応）は P4。
+ * プライバシーポリシー（/privacy/）— 仕様 §3 / §8 / §9・security.md §2。
+ * 個人情報を集めない方針 / 解析（Cloudflare Web Analytics・Cookieレス） /
+ * YouTube埋め込み（youtube-nocookie） / 位置情報（端末内処理） /
+ * アフィリエイト表記 / 免責事項 / 制定日。
  */
+import { Icon } from 'astro-icon/components';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ComingSoon from '../../components/ComingSoon.astro';
+import DocArticle from '../../components/DocArticle.astro';
+
+const description =
+  '「カピバラ日和」のプライバシーポリシー。個人情報を収集しない方針、Cookieレスのアクセス解析、YouTube埋め込み、位置情報の扱い、アフィリエイト広告と免責事項についてご案内します。';
 ---
 
-<BaseLayout
-  title="プライバシーポリシー"
-  description="「カピバラ日和」のプライバシーポリシー・アクセス解析・アフィリエイト広告の取り扱いについて。"
->
-  <ComingSoon
+<BaseLayout title="プライバシーポリシー" description={description}>
+  <DocArticle
+    label="Privacy"
     title="プライバシーポリシー"
-    lead="アクセス解析やアフィリエイト広告の取り扱いを記載する正式なポリシーを、公開ページの整備にあわせて用意します。"
-    points={[
-      'アクセス解析: Cookieレスの Cloudflare Web Analytics を利用予定',
-      'アフィリエイト: 楽天・A8.net 等のプロモーションを利用（PR表記あり）',
-      '景表法ステマ規制に対応し、該当ページに広告である旨を明示します',
-    ]}
-    altHref="/about/"
-    altLabel="サイトについて"
-  />
+    lead="「カピバラ日和」（以下、当サイト）は、利用者のプライバシーを尊重し、個人情報を極力扱わない設計を方針としています。本ポリシーでは、当サイトにおける情報の取り扱いについてご説明します。"
+    date="2026-07-11"
+    dateLabel="制定日"
+  >
+    <section>
+      <h2><Icon name="ph:user-minus" aria-hidden="true" />個人情報を収集しません</h2>
+      <p>
+        当サイトは、会員登録・ログイン・コメント機能・お問い合わせフォームを自サイト内に持たず、<strong>氏名・メールアドレスなどの個人情報を収集・保存しません</strong>。静的なウェブサイトとして運営しており、利用者の情報を蓄えるデータベースを持たない設計です。
+      </p>
+      <p>
+        お問い合わせには外部のGoogleフォーム（開設準備中）を利用する予定で、その場合の入力情報はGoogleのプライバシーポリシーにもとづいて扱われます。
+      </p>
+    </section>
+
+    <section>
+      <h2><Icon name="ph:chart-bar" aria-hidden="true" />アクセス解析について</h2>
+      <p>
+        当サイトでは、サイトの改善のためにアクセス解析ツール「<strong>Cloudflare Web Analytics</strong>」の導入を予定しています。このツールは<strong>Cookieを使用せず</strong>、個人を特定する情報を収集しません。ページの表示回数など、匿名の統計情報のみを取得します。
+      </p>
+    </section>
+
+    <section>
+      <h2><Icon name="ph:youtube-logo" aria-hidden="true" />YouTube動画の埋め込みについて</h2>
+      <p>
+        当サイトはカピバラのライブ配信・動画を紹介するにあたり、YouTubeの動画を埋め込んでいます。プライバシーに配慮し、原則として<strong>プライバシー強化モード（youtube-nocookie.com）</strong>を用い、動画を再生するまでYouTube側のCookieが設定されないようにしています。
+      </p>
+      <p>
+        ただし、<strong>動画を再生した時点から、YouTube（Google）のプライバシーポリシーおよび利用規約が適用されます</strong>。埋め込み動画の再生により取得される情報については、YouTube側の定めをご確認ください。
+      </p>
+    </section>
+
+    <section>
+      <h2><Icon name="ph:map-pin" aria-hidden="true" />位置情報について</h2>
+      <p>
+        施設マップには、現在地を地図に表示する機能があります。この機能をご利用の際、ブラウザが位置情報の許可を求めることがありますが、取得した位置情報は<strong>お使いの端末内での地図表示にのみ利用</strong>し、当サイトのサーバーへ送信したり保存したりすることは一切ありません。許可しない場合でも、地図はそのままご利用いただけます。
+      </p>
+    </section>
+
+    <section>
+      <h2><Icon name="ph:tag" aria-hidden="true" />アフィリエイト広告について</h2>
+      <p>
+        当サイトは、運営費をまかなうため、今後アフィリエイトプログラム（楽天アフィリエイト、A8.netなどのASP）を利用した広告を掲載することがあります。これらのリンクを経由して商品・サービスが購入された場合、当サイトが紹介料を受け取ることがあります。
+      </p>
+      <p>
+        広告を含むページには、景品表示法のステルスマーケティング規制に対応し、<strong>「PRを含みます」などの表記</strong>を明示します。広告主から金銭を受け取ることが、掲載内容の事実性を曲げることはありません。
+      </p>
+    </section>
+
+    <section>
+      <h2><Icon name="ph:warning-circle" aria-hidden="true" />免責事項</h2>
+      <ul>
+        <li>
+          当サイトは、掲載情報の正確性・最新性に努めていますが、その内容を保証するものではありません。料金・期間・営業情報などは変更されることがあるため、おでかけ前には各施設の公式サイトで最新情報をご確認ください。
+        </li>
+        <li>
+          当サイトの情報を利用して生じたいかなる損害についても、当サイトは責任を負いかねます。あらかじめご了承ください。
+        </li>
+        <li>
+          当サイトからリンクする外部サイトの内容については、当サイトは責任を負いません。各サイトの規約・ポリシーをご確認ください。
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><Icon name="ph:pencil-simple" aria-hidden="true" />本ポリシーの変更</h2>
+      <p>
+        本ポリシーの内容は、必要に応じて変更することがあります。重要な変更がある場合は、当ページ上でお知らせします。
+      </p>
+    </section>
+  </DocArticle>
 </BaseLayout>

@@ -138,11 +138,18 @@ const onsenStripLead =
     ? `全国${onsenActive}園でカピバラ温泉が開催中。開催期間を横断のタイムラインで確認できます。`
     : `いまはオフシーズン。通年で入れる${onsenPermanent}園に加え、冬に向けて全国${onsenSeasonal}園が発表待ちです。`;
 
-const articles = [
-  { name: 'カピバラ温泉はいつからいつまで？全国まとめ', tag: '温泉', icon: 'ph:drop' },
-  { name: '関東でカピバラとふれあえる施設まとめ', tag: 'おでかけ', icon: 'ph:map-pin' },
-  { name: 'カピバラってどんな動物？生態Q&A', tag: '生態', icon: 'ph:paw-print' },
-];
+// 新着記事（articles コレクションを公開日の新しい順に3件）
+const articles = (await getCollection('articles'))
+  .filter((p) => import.meta.env.DEV || !p.data.draft)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 3)
+  .map((p) => ({
+    id: p.id,
+    name: p.data.title,
+    tag: p.data.tags[0] ?? 'よみもの',
+    icon: p.data.icon,
+    description: p.data.description,
+  }));
 ---
 
 <BaseLayout description="国内外のカピバラ24時間ライブカメラを1つのビューアでまとめて視聴。会える施設マップ・温泉イベントカレンダーも。今すぐ見たい・会いに行きたいを1か所で。">
@@ -421,8 +428,15 @@ const articles = [
   >
     <div class="reads">
       {articles.map((a) => (
-        <Card variant="editorial" class="reads__card" title={a.name} icon={a.icon} meta={a.tag} href="/articles/">
-          公開準備中の記事です。SEO実測にもとづくラインナップで順次公開します。
+        <Card
+          variant="editorial"
+          class="reads__card"
+          title={a.name}
+          icon={a.icon}
+          meta={a.tag}
+          href={`/articles/${a.id}/`}
+        >
+          {a.description}
         </Card>
       ))}
     </div>

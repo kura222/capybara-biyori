@@ -1,0 +1,194 @@
+---
+/**
+ * 関連施設カード（記事詳細 §4.5「関連施設カードの埋め込み」）。
+ * 記事 frontmatter の relatedSpots[]（施設スラッグ）を施設DBで解決し、編集的カードで並べる。
+ * - detail:true の施設は /spots/{slug}/ へ、それ以外で公式URLがあれば公式サイトへ、無ければ非リンク表示。
+ * - 存在しないスラッグは黙って無視する（記事とデータの独立更新を許容）。
+ *
+ * Props:
+ *   - slugs: 表示する施設スラッグの配列
+ *   - title: 見出し（既定「この記事に関連する施設」）
+ */
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+import { typeMeta } from '../data/taxonomy';
+
+interface Props {
+  slugs: string[];
+  title?: string;
+}
+
+const { slugs, title = 'この記事に関連する施設' } = Astro.props;
+
+const all = await getCollection('facilities');
+const bySlug = new Map(all.map((e) => [e.id, e]));
+
+// 指定順を保ちつつ、存在する施設だけを解決
+const spots = slugs
+  .map((s) => bySlug.get(s))
+  .filter((e): e is NonNullable<typeof e> => !!e)
+  .map((e) => {
+    const m = typeMeta(e.data.type);
+    const onsen = e.data.onsen?.has ?? false;
+    // 内部リンク優先: detail ページ → 公式サイト → リンクなし
+    const href = e.data.detail ? `/spots/${e.id}/` : (e.data.officialUrl ?? null);
+    const external = !e.data.detail && !!e.data.officialUrl;
+    return {
+      id: e.id,
+      name: e.data.name,
+      prefecture: e.data.prefecture,
+      typeLabel: m.label,
+      typeIcon: m.icon,
+      note: e.data.capybara?.note ?? null,
+      onsen,
+      href,
+      external,
+    };
+  });
+---
+
+{
+  spots.length > 0 && (
+    <aside class="relspots" aria-label={title}>
+      <h2 class="relspots__title">
+        <Icon name="ph:map-trifold" aria-hidden="true" />
+        {title}
+      </h2>
+      <ul class="relspots__grid">
+        {spots.map((s) => {
+          const body = (
+            <>
+              <span class="relspots__type">
+                <Icon name={s.typeIcon} aria-hidden="true" />
+                {s.typeLabel}
+                {s.onsen && <span class="relspots__onsen">温泉あり</span>}
+              </span>
+              <span class="relspots__name">{s.name}</span>
+              <span class="relspots__pref">
+                <Icon name="ph:map-pin" aria-hidden="true" />
+                {s.prefecture}
+                {s.external && (
+                  <span class="relspots__ext">
+                    公式サイト
+                    <Icon name="ph:arrow-up-right" aria-hidden="true" />
+                  </span>
+                )}
+              </span>
+            </>
+          );
+          return (
+            <li class="relspots__item">
+              {s.href ? (
+                <a
+                  class="relspots__link"
+                  href={s.href}
+                  {...(s.external ? { target: '_blank', rel: 'noopener' } : {})}
+                >
+                  {body}
+                </a>
+              ) : (
+                <div class="relspots__link relspots__link--plain">{body}</div>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </aside>
+  )
+}
+
+<style>
+  .relspots {
+    margin-top: var(--space-7);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--line);
+  }
+  .relspots__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 var(--space-4);
+    font-size: 1.25rem;
+  }
+  .relspots__title :global(svg) {
+    font-size: 1.05em;
+    color: var(--accent);
+  }
+  .relspots__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+    gap: var(--space-3);
+  }
+  .relspots__link {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+    padding: var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-s);
+    color: var(--text-1);
+    transition: border-color var(--motion-fast);
+  }
+  .relspots__link:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+  }
+  .relspots__link--plain {
+    cursor: default;
+  }
+  .relspots__link--plain:hover {
+    border-color: var(--line);
+  }
+  .relspots__type {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-3);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+  .relspots__type :global(svg) {
+    color: var(--accent);
+    font-size: 1.1em;
+  }
+  .relspots__onsen {
+    margin-left: 3px;
+    padding: 1px 7px;
+    border-radius: var(--radius-full);
+    background: var(--green-soft);
+    color: var(--green);
+    font-size: 0.66rem;
+    font-weight: 700;
+  }
+  .relspots__name {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    color: var(--text-1);
+    transition: color var(--motion-fast);
+  }
+  .relspots__link:hover .relspots__name {
+    color: var(--accent-ink);
+  }
+  .relspots__pref {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-2);
+    font-size: 0.78rem;
+  }
+  .relspots__pref :global(svg) {
+    color: var(--text-3);
+  }
+  .relspots__ext {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: 3px;
+    color: var(--accent-ink);
+    font-size: 0.7rem;
+  }
+</style>

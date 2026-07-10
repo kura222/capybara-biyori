@@ -1,0 +1,389 @@
+---
+/**
+ * 記事詳細（/articles/[slug]/）— 仕様 §4.5 / §8。
+ * 構成: パンくず → タイトル・公開/更新日・タグ → 目次（headings 自動生成）
+ *       → 本文（Markdown prose）→ 断り書き → 関連施設カード → Article JSON-LD。
+ * 目次は render() が返す headings（depth 2・3）から組み立てる。
+ */
+import { getCollection, render } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedSpots from '../../components/RelatedSpots.astro';
+import { SITE, absoluteUrl } from '../../config';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('articles');
+  return posts
+    .filter((p) => import.meta.env.DEV || !p.data.draft)
+    .map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const a = entry.data;
+
+// 目次: h2 / h3 のみ（h1 は本文に無い＝ページタイトルが h1）
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+
+const fmtDate = (d: Date): string =>
+  `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+
+const pageUrl = absoluteUrl(`/articles/${entry.id}/`);
+
+// 構造化データ（Article・仕様 §8）
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: a.title,
+  description: a.description,
+  inLanguage: 'ja',
+  datePublished: a.pubDate.toISOString(),
+  dateModified: (a.updatedDate ?? a.pubDate).toISOString(),
+  author: { '@type': 'Organization', name: SITE.author },
+  publisher: { '@type': 'Organization', name: SITE.name },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+  url: pageUrl,
+};
+---
+
+<BaseLayout title={a.title} description={a.description} ogType="article">
+  <article class="article container container--text">
+    {/* パンくず */}
+    <nav class="article__crumbs" aria-label="パンくず">
+      <a href="/articles/">
+        <Icon name="ph:arrow-left" aria-hidden="true" />
+        よみもの
+      </a>
+    </nav>
+
+    {/* ヘッダー */}
+    <header class="article__head">
+      {a.tags.length > 0 && (
+        <p class="article__tags">
+          {a.tags.map((t) => (
+            <span class="article__tag">{t}</span>
+          ))}
+        </p>
+      )}
+      <h1 class="article__title">{a.title}</h1>
+      <p class="article__lead">{a.description}</p>
+      <div class="article__dates">
+        <span class="article__date">
+          <Icon name="ph:calendar-blank" aria-hidden="true" />
+          公開 <time class="num" datetime={a.pubDate.toISOString()}>{fmtDate(a.pubDate)}</time>
+        </span>
+        {a.updatedDate && (
+          <span class="article__date">
+            <Icon name="ph:arrows-clockwise" aria-hidden="true" />
+            更新 <time class="num" datetime={a.updatedDate.toISOString()}>{fmtDate(a.updatedDate)}</time>
+          </span>
+        )}
+      </div>
+    </header>
+
+    {/* 目次（自動生成） */}
+    {
+      toc.length >= 3 && (
+        <nav class="toc" aria-label="目次">
+          <p class="toc__label label">
+            <Icon name="ph:list-bullets" aria-hidden="true" />
+            もくじ
+          </p>
+          <ol class="toc__list">
+            {toc.map((h) => (
+              <li class:list={['toc__item', `toc__item--h${h.depth}`]}>
+                <a href={`#${h.slug}`}>{h.text}</a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )
+    }
+
+    {/* 本文（Markdown prose） */}
+    <div class="prose">
+      <Content />
+    </div>
+
+    {/* 断り書き（法的リスク対応・security.md §4） */}
+    <p class="article__disclaimer">
+      <Icon name="ph:info" aria-hidden="true" />
+      本記事の料金・期間・営業情報は2026年7月に公式サイト等で確認した時点のものです。実際に足を運ぶ前に、最新情報を各施設の公式サイトで必ずご確認ください。
+    </p>
+
+    {/* 関連施設カード */}
+    {a.relatedSpots.length > 0 && <RelatedSpots slugs={a.relatedSpots} />}
+  </article>
+
+  {/* 構造化データ（Article） */}
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+</BaseLayout>
+
+<style>
+  .article {
+    padding-block: var(--space-section-m) var(--space-section-s);
+  }
+
+  /* パンくず */
+  .article__crumbs {
+    margin-bottom: var(--space-5);
+  }
+  .article__crumbs a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-2);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .article__crumbs :global(svg) {
+    transition: transform var(--motion-fast);
+  }
+  .article__crumbs a:hover {
+    color: var(--accent-ink);
+    text-decoration: none;
+  }
+  .article__crumbs a:hover :global(svg) {
+    transform: translateX(-3px);
+  }
+
+  /* ヘッダー */
+  .article__head {
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-5);
+    border-bottom: 1px solid var(--line);
+  }
+  .article__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: 0 0 var(--space-4);
+  }
+  .article__tag {
+    padding: 2px 11px;
+    border-radius: var(--radius-full);
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .article__title {
+    margin: 0 0 var(--space-4);
+    font-size: clamp(1.7rem, 1.25rem + 2.2vw, 2.4rem);
+    line-height: 1.35;
+  }
+  .article__lead {
+    margin: 0 0 var(--space-4);
+    color: var(--text-2);
+    font-size: 1.0625rem;
+    line-height: 1.85;
+  }
+  .article__dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+  }
+  .article__date {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-3);
+    font-size: 0.8125rem;
+  }
+  .article__date :global(svg) {
+    font-size: 1.05em;
+    color: var(--accent);
+  }
+
+  /* 目次（親しみ寄りの罫線ボックス・影なし） */
+  .toc {
+    margin: 0 0 var(--space-7);
+    padding: var(--space-4) var(--space-5);
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+  }
+  .toc__label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 0 var(--space-3);
+    color: var(--accent-ink);
+  }
+  .toc__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin: 0;
+    counter-reset: toc;
+  }
+  .toc__item {
+    line-height: 1.5;
+  }
+  .toc__item a {
+    color: var(--text-1);
+    font-size: 0.9375rem;
+  }
+  .toc__item a:hover {
+    color: var(--accent-ink);
+  }
+  .toc__item--h2 a {
+    font-weight: 700;
+  }
+  .toc__item--h2 {
+    counter-increment: toc;
+  }
+  .toc__item--h2 a::before {
+    content: counter(toc, decimal-leading-zero) ' ';
+    margin-right: 6px;
+    font-family: var(--font-latin);
+    color: var(--accent);
+    font-size: 0.85em;
+  }
+  .toc__item--h3 {
+    padding-left: var(--space-5);
+  }
+  .toc__item--h3 a {
+    color: var(--text-2);
+    font-size: 0.875rem;
+  }
+
+  /* 断り書き */
+  .article__disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: var(--space-7) 0 0;
+    padding: var(--space-4);
+    background: var(--surface-soft);
+    border-radius: var(--radius-m);
+    color: var(--text-2);
+    font-size: 0.8125rem;
+    line-height: 1.75;
+  }
+  .article__disclaimer :global(svg) {
+    flex-shrink: 0;
+    margin-top: 0.2em;
+    color: var(--accent);
+    font-size: 1.1em;
+  }
+</style>
+
+{/* Markdown 本文の見た目（prose）。スコープドだが :global で子孫の生成要素に効かせる。 */}
+<style is:global>
+  .prose {
+    color: var(--text-1);
+    font-size: 1.0625rem;
+    line-height: 1.9;
+  }
+  .prose > :first-child {
+    margin-top: 0;
+  }
+  .prose h2 {
+    margin: var(--space-8) 0 var(--space-4);
+    padding-bottom: var(--space-3);
+    font-size: clamp(1.35rem, 1.15rem + 1vw, 1.7rem);
+    line-height: 1.4;
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: calc(var(--header-height) + var(--space-4));
+  }
+  .prose h3 {
+    margin: var(--space-6) 0 var(--space-3);
+    font-size: 1.2rem;
+    color: var(--text-1);
+    scroll-margin-top: calc(var(--header-height) + var(--space-4));
+  }
+  .prose p {
+    margin: 0 0 var(--space-4);
+  }
+  .prose a {
+    color: var(--accent-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--line-strong);
+  }
+  .prose a:hover {
+    text-decoration-color: var(--accent);
+  }
+  .prose strong {
+    font-weight: 700;
+    color: var(--text-1);
+  }
+  .prose ul,
+  .prose ol {
+    margin: 0 0 var(--space-4);
+    padding-left: 1.35em;
+  }
+  .prose ul {
+    list-style: disc;
+  }
+  .prose ol {
+    list-style: decimal;
+  }
+  .prose li {
+    margin-bottom: var(--space-2);
+    line-height: 1.85;
+  }
+  .prose li::marker {
+    color: var(--accent);
+  }
+  /* テーブル（期間表・料金比較。横スクロール可能に） */
+  .prose .table-wrap,
+  .prose > table {
+    margin: 0 0 var(--space-5);
+  }
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+  .prose thead th {
+    background: var(--surface-soft);
+    color: var(--text-1);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    text-align: left;
+  }
+  .prose th,
+  .prose td {
+    padding: var(--space-3);
+    border: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .prose tbody tr:nth-child(even) {
+    background: color-mix(in srgb, var(--surface-soft) 45%, transparent);
+  }
+  /* 引用（ポイント・注記） */
+  .prose blockquote {
+    margin: 0 0 var(--space-5);
+    padding: var(--space-3) var(--space-5);
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 var(--radius-s) var(--radius-s) 0;
+    color: var(--text-1);
+  }
+  .prose blockquote p:last-child {
+    margin-bottom: 0;
+  }
+  .prose blockquote strong {
+    color: var(--accent-ink);
+  }
+  .prose hr {
+    margin: var(--space-7) 0;
+    border: 0;
+    border-top: 1px solid var(--line);
+  }
+  .prose code {
+    padding: 2px 6px;
+    border-radius: var(--radius-s);
+    background: var(--surface-soft);
+    font-size: 0.9em;
+  }
+  /* 見出しリンク（Astro 既定の id 付与を利用したアンカー） */
+  .prose h2,
+  .prose h3 {
+    position: relative;
+  }
+</style>
