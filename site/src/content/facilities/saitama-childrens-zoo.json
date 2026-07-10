@@ -1,0 +1,35 @@
+{
+  "slug": "saitama-childrens-zoo",
+  "name": "埼玉県こども動物自然公園",
+  "type": "zoo",
+  "prefecture": "埼玉県",
+  "region": "kanto",
+  "lat": 36.0323,
+  "lng": 139.4213,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    { "label": "大人", "price": "700円" },
+    { "label": "小・中学生", "price": "200円" }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.parks.or.jp/sczoo/",
+  "hasCafe": false,
+  "capybara": null,
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2025-26シーズン",
+    "start": "2025-12-02",
+    "end": "2026-03-15",
+    "times": null,
+    "note": "開催期間はzooリサーチ調べ（公式発表を要確認）。",
+    "sourceUrl": "https://www.parks.or.jp/sczoo/"
+  },
+  "live": null,
+  "affiliate": { "asoview": "", "rakutenTravel": "" },
+  "sources": [
+    { "label": "公式サイト", "url": "https://www.parks.or.jp/sczoo/", "official": true }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

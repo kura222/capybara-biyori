@@ -1,0 +1,36 @@
+{
+  "slug": "nagasaki-biopark",
+  "name": "長崎バイオパーク",
+  "type": "zoo",
+  "prefecture": "長崎県",
+  "region": "kyushu",
+  "lat": 32.9578,
+  "lng": 129.7699,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [{ "label": "大人", "price": "2,100円" }],
+  "hours": null,
+  "officialUrl": "https://www.biopark.co.jp/",
+  "hasCafe": false,
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": null
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2025-26シーズン",
+    "start": "2025-11-26",
+    "end": "2026-03-01",
+    "times": "12:00〜15:00",
+    "note": null,
+    "sourceUrl": "https://www.biopark.co.jp/"
+  },
+  "live": null,
+  "affiliate": { "asoview": "", "rakutenTravel": "" },
+  "sources": [
+    { "label": "公式サイト", "url": "https://www.biopark.co.jp/", "official": true }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

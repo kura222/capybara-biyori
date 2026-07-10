@@ -1,0 +1,32 @@
+{
+  "slug": "nasu-animal-kingdom",
+  "name": "那須どうぶつ王国",
+  "type": "zoo",
+  "prefecture": "栃木県",
+  "region": "kanto",
+  "lat": 37.0851,
+  "lng": 140.0369,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [{ "label": "大人", "price": "2,900円" }],
+  "hours": null,
+  "officialUrl": "https://www.nasu-oukoku.com/",
+  "hasCafe": false,
+  "capybara": null,
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2025-26シーズン",
+    "start": "2025-11-25",
+    "end": "2026-03-08",
+    "times": null,
+    "note": "「カピバラ温泉」開催。",
+    "sourceUrl": "https://www.nasu-oukoku.com/"
+  },
+  "live": null,
+  "affiliate": { "asoview": "", "rakutenTravel": "" },
+  "sources": [
+    { "label": "公式サイト", "url": "https://www.nasu-oukoku.com/", "official": true }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

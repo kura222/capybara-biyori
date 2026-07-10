@@ -1,0 +1,647 @@
+---
+/**
+ * 施設詳細（/spots/[slug]/）— 仕様 §4.3。detail:true の施設のみ生成する。
+ * 構成: 施設名/種別/都道府県/情報最終確認日 → カピバラ情報 → 温泉イベント（開催中バッジ自動判定）
+ *       → 基本情報表 → 収益導線（枠のみ・affiliate URL投入時に表示）→ 近隣施設 → JSON-LD。
+ * PR表記はアフィリエイトリンクが出るページのみ（=現状は出ない）。
+ */
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { typeMeta, regionLabel } from '../../data/taxonomy';
+import { getOnsenStatus } from '../../lib/onsen';
+import { SITE, absoluteUrl } from '../../config';
+
+export async function getStaticPaths() {
+  const all = await getCollection('facilities');
+  const detailed = all.filter((e) => e.data.detail === true);
+  return detailed.map((e) => {
+    // 近隣施設: 同 region・自分以外を最大3件（詳細ありを優先し、名前順）
+    const neighbors = all
+      .filter((x) => x.id !== e.id && x.data.region === e.data.region)
+      .sort((a, b) => {
+        if (a.data.detail !== b.data.detail) return a.data.detail ? -1 : 1;
+        return a.data.name.localeCompare(b.data.name, 'ja');
+      })
+      .slice(0, 3)
+      .map((x) => {
+        const m = typeMeta(x.data.type);
+        return {
+          id: x.id,
+          name: x.data.name,
+          prefecture: x.data.prefecture,
+          typeLabel: m.label,
+          typeIcon: m.icon,
+          detail: x.data.detail,
+          officialUrl: x.data.officialUrl,
+          hasOnsen: !!x.data.onsen?.has,
+        };
+      });
+    return { params: { slug: e.id }, props: { entry: e, neighbors } };
+  });
+}
+
+const { entry, neighbors } = Astro.props;
+const f = entry.data;
+const meta = typeMeta(f.type);
+
+// 温泉の開催状況（ビルド時の初期値。閲覧時にクライアントで補正する）
+const onsenStatus =
+  f.onsen?.has && f.onsen.start && f.onsen.end ? getOnsenStatus(f.onsen.start, f.onsen.end) : null;
+
+// カピバラ情報を表示すべきか（いずれかの情報がある場合）
+const hasCapybaraInfo =
+  !!f.capybara && (f.capybara.fureai !== null || f.capybara.esayari !== null || !!f.capybara.note);
+
+// アフィリエイトの有無（提携後にURLが入ると収益導線とPR表記が出る）
+const hasAffiliate = !!(
+  f.affiliate &&
+  (f.affiliate.asoview || f.affiliate.rakutenTravel || f.affiliate.jalan)
+);
+
+// 公式サイトのホスト名（表示用）
+let officialHost = f.officialUrl;
+try {
+  officialHost = new URL(f.officialUrl).hostname.replace(/^www\./, '');
+} catch {
+  /* URL パース失敗時はそのまま表示 */
+}
+
+const pageUrl = absoluteUrl(`/spots/${entry.id}/`);
+
+// 構造化データ（TouristAttraction・仕様 §8）
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristAttraction',
+  name: f.name,
+  description: `${f.prefecture}のカピバラに会える施設「${f.name}」の情報（料金・温泉イベント・ふれあい）。`,
+  url: pageUrl,
+  sameAs: f.officialUrl,
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: f.prefecture,
+    addressCountry: 'JP',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: f.lat,
+    longitude: f.lng,
+  },
+  ...(f.hours ? { openingHours: f.hours } : {}),
+};
+
+const title = `${f.name}のカピバラ情報｜料金・温泉・ふれあい`;
+const description = `${f.prefecture}の「${f.name}」でカピバラに会うための情報。料金・営業時間・温泉イベントの開催期間・ふれあい可否を、最終確認日つきでまとめています。`;
+---
+
+<BaseLayout title={title} description={description} showPrNotice={hasAffiliate}>
+  <article class="spot container container--text">
+    {/* 戻る導線 */}
+    <a class="spot__back" href="/map/">
+      <Icon name="ph:arrow-left" aria-hidden="true" />
+      全国カピバラマップへ戻る
+    </a>
+
+    {/* ヘッダー */}
+    <header class="spot__head">
+      <p class="spot__kicker label">
+        <span class="spot__rule" aria-hidden="true"></span>
+        <span>{meta.label}</span>
+        <span class="spot__dash" aria-hidden="true">—</span>
+        <span>{regionLabel(f.region)}</span>
+      </p>
+      <h1 class="spot__name">{f.name}</h1>
+      <div class="spot__meta">
+        <span class="spot__meta-item">
+          <Icon name="ph:map-pin" aria-hidden="true" />
+          {f.prefecture}
+          {f.latlngApprox && <span class="spot__approx">位置はおおよそ</span>}
+        </span>
+        <span class="spot__meta-item">
+          <Icon name="ph:seal-check" aria-hidden="true" />
+          情報最終確認日 <span class="num">{f.lastVerified}</span>
+        </span>
+      </div>
+    </header>
+
+    {/* カピバラ情報 */}
+    <section class="block">
+      <h2 class="block__title">
+        <Icon name="ph:paw-print" aria-hidden="true" />
+        カピバラ情報
+      </h2>
+      {
+        hasCapybaraInfo ? (
+          <div class="block__body">
+            {(f.capybara?.fureai !== null || f.capybara?.esayari !== null) && (
+              <ul class="chips-row" aria-label="ふれあい・餌やり">
+                {f.capybara?.fureai !== null && (
+                  <li class:list={['infochip', f.capybara?.fureai ? 'infochip--yes' : 'infochip--no']}>
+                    <Icon name={f.capybara?.fureai ? 'ph:hand-heart' : 'ph:hand'} aria-hidden="true" />
+                    ふれあい{f.capybara?.fureai ? '可' : '不可'}
+                  </li>
+                )}
+                {f.capybara?.esayari !== null && (
+                  <li class:list={['infochip', f.capybara?.esayari ? 'infochip--yes' : 'infochip--no']}>
+                    <Icon name="ph:bowl-food" aria-hidden="true" />
+                    餌やり{f.capybara?.esayari ? '可' : '不可'}
+                  </li>
+                )}
+              </ul>
+            )}
+            {f.capybara?.note && <p class="block__note">{f.capybara.note}</p>}
+          </div>
+        ) : (
+          <p class="block__empty">
+            ふれあい・餌やりの詳細は確認中です。最新の内容は公式サイトをご確認ください。
+          </p>
+        )
+      }
+    </section>
+
+    {/* 温泉イベント */}
+    {
+      f.onsen?.has && (
+        <section class="block block--onsen">
+          <h2 class="block__title">
+            <Icon name="ph:drop" aria-hidden="true" />
+            カピバラ温泉イベント
+            {onsenStatus && (
+              <span
+                id="onsen-status"
+                class:list={['onsen-badge', `onsen-badge--${onsenStatus.badge}`]}
+                data-start={f.onsen.start ?? ''}
+                data-end={f.onsen.end ?? ''}
+              >
+                {onsenStatus.label}
+              </span>
+            )}
+          </h2>
+          <div class="block__body">
+            <dl class="deflist">
+              {f.onsen.seasonLabel && (
+                <div class="deflist__row">
+                  <dt>シーズン</dt>
+                  <dd>{f.onsen.seasonLabel}</dd>
+                </div>
+              )}
+              {f.onsen.start && f.onsen.end && (
+                <div class="deflist__row">
+                  <dt>開催期間</dt>
+                  <dd>
+                    <span class="num">{f.onsen.start}</span> 〜 <span class="num">{f.onsen.end}</span>
+                  </dd>
+                </div>
+              )}
+              {f.onsen.times && (
+                <div class="deflist__row">
+                  <dt>時間</dt>
+                  <dd>{f.onsen.times}</dd>
+                </div>
+              )}
+            </dl>
+            {f.onsen.note && <p class="block__note">{f.onsen.note}</p>}
+            {f.onsen.sourceUrl && (
+              <p class="block__source">
+                <Icon name="ph:link-simple" aria-hidden="true" />
+                <a href={f.onsen.sourceUrl} target="_blank" rel="noopener">
+                  開催情報の出典
+                </a>
+              </p>
+            )}
+          </div>
+        </section>
+      )
+    }
+
+    {/* 基本情報表 */}
+    <section class="block">
+      <h2 class="block__title">
+        <Icon name="ph:info" aria-hidden="true" />
+        基本情報
+      </h2>
+      <table class="infotable">
+        <tbody>
+          {
+            f.fees.length > 0 && (
+              <tr>
+                <th scope="row">料金</th>
+                <td>
+                  <ul class="feelist">
+                    {f.fees.map((fee) => (
+                      <li>
+                        {fee.label} <span class="num">{fee.price}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </td>
+              </tr>
+            )
+          }
+          {
+            f.hours && (
+              <tr>
+                <th scope="row">営業時間</th>
+                <td>{f.hours}</td>
+              </tr>
+            )
+          }
+          <tr>
+            <th scope="row">都道府県</th>
+            <td>{f.prefecture}</td>
+          </tr>
+          <tr>
+            <th scope="row">公式サイト</th>
+            <td>
+              <a href={f.officialUrl} target="_blank" rel="noopener" class="infotable__link">
+                {officialHost}
+                <Icon name="ph:arrow-square-out" aria-hidden="true" />
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    {/* 収益導線（枠のみ・affiliate URL が入ったら表示。仕様 §9） */}
+    {
+      hasAffiliate && (
+        <section class="block revenue">
+          <h2 class="block__title">
+            <Icon name="ph:ticket" aria-hidden="true" />
+            チケット・宿を探す
+          </h2>
+          <div class="revenue__actions">
+            {(f.affiliate.asoview || f.affiliate.jalan) && (
+              <a class="btn btn--primary" href={f.affiliate.asoview || f.affiliate.jalan} target="_blank" rel="sponsored noopener">
+                <Icon name="ph:ticket" aria-hidden="true" />
+                チケットを探す
+              </a>
+            )}
+            {f.affiliate.rakutenTravel && (
+              <a class="btn btn--ghost" href={f.affiliate.rakutenTravel} target="_blank" rel="sponsored noopener">
+                <Icon name="ph:bed" aria-hidden="true" />
+                近くの宿を探す
+              </a>
+            )}
+          </div>
+        </section>
+      )
+    }
+
+    {/* 近隣施設 */}
+    {
+      neighbors.length > 0 && (
+        <section class="block">
+          <h2 class="block__title">
+            <Icon name="ph:map-trifold" aria-hidden="true" />
+            近くのカピバラ施設
+          </h2>
+          <ul class="neighbors">
+            {neighbors.map((n) => (
+              <li class="neighbor">
+                <a href={n.detail ? `/spots/${n.id}/` : n.officialUrl} class="neighbor__link">
+                  <span class="neighbor__type">
+                    <Icon name={n.typeIcon} aria-hidden="true" />
+                    {n.typeLabel}
+                  </span>
+                  <span class="neighbor__name">{n.name}</span>
+                  <span class="neighbor__pref">
+                    <Icon name="ph:map-pin" aria-hidden="true" />
+                    {n.prefecture}
+                    {n.hasOnsen && <span class="neighbor__onsen">温泉あり</span>}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </article>
+
+  {/* 構造化データ（TouristAttraction） */}
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+</BaseLayout>
+
+{/* 温泉「開催中」バッジを閲覧時の日付で補正する（ビルド日とのズレ対策） */}
+<script>
+  import { getOnsenStatus } from '../../lib/onsen';
+
+  const el = document.getElementById('onsen-status');
+  if (el) {
+    const r = getOnsenStatus(el.dataset.start || null, el.dataset.end || null);
+    el.textContent = r.label;
+    el.classList.remove('onsen-badge--ok', 'onsen-badge--warn', 'onsen-badge--neutral');
+    el.classList.add('onsen-badge--' + r.badge);
+  }
+</script>
+
+<style>
+  .spot {
+    padding-block: var(--space-section-m) var(--space-section-s);
+  }
+
+  .spot__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: var(--space-5);
+    color: var(--text-2);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .spot__back :global(svg) {
+    transition: transform var(--motion-fast);
+  }
+  .spot__back:hover {
+    color: var(--accent-ink);
+    text-decoration: none;
+  }
+  .spot__back:hover :global(svg) {
+    transform: translateX(-3px);
+  }
+
+  /* ヘッダー（セクション見出しの型を踏襲: Fraunces ラベル＋明朝 h1） */
+  .spot__head {
+    margin-bottom: var(--space-7);
+    padding-bottom: var(--space-5);
+    border-bottom: 1px solid var(--line);
+  }
+  .spot__kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 var(--space-3);
+    color: var(--accent-ink);
+  }
+  .spot__rule {
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.7;
+  }
+  .spot__dash {
+    color: var(--text-3);
+  }
+  .spot__name {
+    margin: 0 0 var(--space-4);
+  }
+  .spot__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+  }
+  .spot__meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-2);
+    font-size: 0.875rem;
+  }
+  .spot__meta-item :global(svg) {
+    font-size: 1.1em;
+    color: var(--accent);
+  }
+  .spot__approx {
+    margin-left: 4px;
+    padding: 1px 7px;
+    border-radius: var(--radius-full);
+    background: var(--surface-soft);
+    color: var(--text-3);
+    font-size: 0.6875rem;
+  }
+
+  /* 情報ブロック共通 */
+  .block {
+    margin-bottom: var(--space-7);
+  }
+  .block__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 var(--space-4);
+    font-size: 1.25rem;
+  }
+  .block__title :global(svg) {
+    font-size: 1.05em;
+    color: var(--accent);
+  }
+  .block__body {
+    color: var(--text-1);
+  }
+  .block__note {
+    margin: var(--space-3) 0 0;
+    color: var(--text-2);
+    font-size: 0.9375rem;
+    line-height: 1.85;
+  }
+  .block__empty {
+    margin: 0;
+    color: var(--text-3);
+    font-size: 0.9375rem;
+  }
+  .block__source {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: var(--space-3) 0 0;
+    font-size: 0.8125rem;
+    color: var(--text-3);
+  }
+  .block__source :global(svg) {
+    font-size: 1em;
+  }
+
+  /* 温泉「開催中」バッジ（ページローカルに定義。クライアントで配色を切替える） */
+  .onsen-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 4px;
+    padding: 3px 11px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    /* h2 の明朝を継がず本文フォントで */
+    font-family: var(--font-sans);
+  }
+  .onsen-badge--ok {
+    color: var(--green);
+    background: var(--green-soft);
+  }
+  .onsen-badge--warn {
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+  }
+  .onsen-badge--neutral {
+    color: var(--text-2);
+    background: var(--surface-soft);
+  }
+
+  /* 定義リスト（温泉の期間など） */
+  .deflist {
+    display: grid;
+    gap: var(--space-2);
+    margin: 0;
+  }
+  .deflist__row {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: var(--space-3);
+    align-items: baseline;
+  }
+  .deflist dt {
+    color: var(--text-3);
+    font-size: 0.8125rem;
+  }
+  .deflist dd {
+    margin: 0;
+    color: var(--text-1);
+    font-size: 0.9375rem;
+  }
+
+  /* ふれあい・餌やりの可否チップ */
+  .chips-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .infochip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    border: 1px solid var(--line);
+  }
+  .infochip :global(svg) {
+    font-size: 1.05em;
+  }
+  .infochip--yes {
+    color: var(--green);
+    background: var(--green-soft);
+    border-color: transparent;
+  }
+  .infochip--no {
+    color: var(--text-3);
+    background: var(--surface-soft);
+    border-color: transparent;
+  }
+
+  /* 基本情報表 */
+  .infotable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+  .infotable th,
+  .infotable td {
+    padding: var(--space-3) var(--space-2);
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+  .infotable th {
+    width: 7.5rem;
+    color: var(--text-3);
+    font-weight: 500;
+    font-family: var(--font-sans);
+    white-space: nowrap;
+  }
+  .infotable td {
+    color: var(--text-1);
+  }
+  .feelist {
+    display: grid;
+    gap: 4px;
+  }
+  .infotable__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .infotable__link :global(svg) {
+    font-size: 0.9em;
+  }
+
+  /* 収益導線 */
+  .revenue {
+    padding: var(--space-5);
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+  }
+  .revenue__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  /* 近隣施設（編集的カード・罫線1px） */
+  .neighbors {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+    gap: var(--space-3);
+  }
+  .neighbor__link {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+    padding: var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-s);
+    color: var(--text-1);
+    transition: border-color var(--motion-fast);
+  }
+  .neighbor__link:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+  }
+  .neighbor__type {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-3);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+  .neighbor__type :global(svg) {
+    color: var(--accent);
+    font-size: 1.1em;
+  }
+  .neighbor__name {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    color: var(--text-1);
+    transition: color var(--motion-fast);
+  }
+  .neighbor__link:hover .neighbor__name {
+    color: var(--accent-ink);
+  }
+  .neighbor__pref {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-2);
+    font-size: 0.78rem;
+  }
+  .neighbor__pref :global(svg) {
+    color: var(--text-3);
+  }
+  .neighbor__onsen {
+    margin-left: 3px;
+    padding: 1px 7px;
+    border-radius: var(--radius-full);
+    background: var(--green-soft);
+    color: var(--green);
+    font-size: 0.66rem;
+    font-weight: 700;
+  }
+</style>

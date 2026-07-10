@@ -1,0 +1,36 @@
+{
+  "slug": "izu-shaboten",
+  "name": "伊豆シャボテン動物公園",
+  "type": "zoo",
+  "prefecture": "静岡県",
+  "region": "tokai",
+  "lat": 34.888,
+  "lng": 139.084,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [{ "label": "大人", "price": "2,700円" }],
+  "hours": "9:30〜16:00（季節変動）",
+  "officialUrl": "https://izushaboten.com/",
+  "hasCafe": false,
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "元祖カピバラの露天風呂（1982年〜）。全国に広がった冬の名物イベント発祥の地。"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2025-26シーズン",
+    "start": "2025-11-22",
+    "end": "2026-04-05",
+    "times": "平日13:30／土日祝10:30・13:30",
+    "note": null,
+    "sourceUrl": "https://izushaboten.com/"
+  },
+  "live": null,
+  "affiliate": { "asoview": "", "rakutenTravel": "" },
+  "sources": [
+    { "label": "公式サイト", "url": "https://izushaboten.com/", "official": true }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

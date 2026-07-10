@@ -1,25 +1,866 @@
 ---
 /**
- * 全国カピバラマップ（/map/）— P0 は準備中プレースホルダー。
- * 地図（Leaflet）・フィルタ・施設一覧の実装は P1。
+ * 全国カピバラマップ（/map/）— 仕様 §4.2。
+ * - Leaflet + OSM のクライアント地図（JSはこのページでのみ読込）
+ * - 種別で色分けした自作ピン（divIcon+CSSでトークン色を割当。既定の青ピン画像は使わない）
+ * - フィルタチップ（温泉あり／ふれあい可／カフェ／ライブ配信あり）＋地方セレクタ＋閉園トグル
+ * - 下部の編集的カード一覧（罫線1px流派）。地図とデータ属性で連動
+ * デザインガイドライン §5（セクション見出しの型・カード2流派）に準拠。
  */
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ComingSoon from '../../components/ComingSoon.astro';
+import Section from '../../components/Section.astro';
+import { typeMeta, regionLabel, sortRegions, TYPE_META } from '../../data/taxonomy';
+
+// --- 施設の読み込み・整形 ---
+const entries = await getCollection('facilities');
+
+/** カード表示・フィルタ用に施設を整形（フィーチャーフラグを先に計算しておく） */
+const facilities = entries
+  .map((e) => {
+    const d = e.data;
+    const meta = typeMeta(d.type);
+    return {
+      id: e.id,
+      name: d.name,
+      type: d.type,
+      typeLabel: meta.label,
+      typeIcon: meta.icon,
+      pinClass: meta.pinClass,
+      prefecture: d.prefecture,
+      region: d.region,
+      regionLabel: regionLabel(d.region),
+      lat: d.lat,
+      lng: d.lng,
+      latlngApprox: d.latlngApprox,
+      status: d.status,
+      officialUrl: d.officialUrl,
+      detail: d.detail,
+      fees: d.fees,
+      // フィーチャーフラグ（フィルタ判定に使用）
+      fOnsen: !!d.onsen?.has,
+      fFureai: d.capybara?.fureai === true,
+      fCafe: d.type === 'cafe' || d.hasCafe,
+      fLive: !!d.live,
+      // 詳細ページがある施設は詳細へ、無い施設は公式サイトへ
+      url: d.detail ? `/spots/${e.id}/` : d.officialUrl,
+    };
+  })
+  .sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+
+// 地方セレクタの選択肢（データに存在する地方のみ・北→南で整列）
+const regionOptions = sortRegions(facilities.map((f) => f.region));
+
+// フィルタチップ定義（デザインガイドライン: アイコンは Phosphor）
+const chips = [
+  { key: 'onsen', label: '温泉あり', icon: 'ph:drop' },
+  { key: 'fureai', label: 'ふれあい可', icon: 'ph:hand-heart' },
+  { key: 'cafe', label: 'カフェ', icon: 'ph:coffee' },
+  { key: 'live', label: 'ライブ配信あり', icon: 'ph:broadcast' },
+] as const;
+
+// 凡例（地図に出現しうる全種別）
+const legend = Object.entries(TYPE_META).map(([, m]) => ({
+  label: m.label,
+  pinClass: m.pinClass,
+}));
+
+// クライアント地図へ渡す最小データ（座標・種別・フラグ・リンク）
+const mapData = facilities.map((f) => ({
+  id: f.id,
+  name: f.name,
+  lat: f.lat,
+  lng: f.lng,
+  pinClass: f.pinClass,
+  typeLabel: f.typeLabel,
+  prefecture: f.prefecture,
+  region: f.region,
+  status: f.status,
+  detail: f.detail,
+  url: f.url,
+  latlngApprox: f.latlngApprox,
+  fOnsen: f.fOnsen,
+  fFureai: f.fFureai,
+  fCafe: f.fCafe,
+  fLive: f.fLive,
+}));
+
+const statusLabel: Record<string, string> = {
+  open: '',
+  closed: '閉園',
+  suspended: '休止中',
+};
 ---
 
 <BaseLayout
   title="全国カピバラマップ"
-  description="カピバラに会える全国の動物園・水族館・カフェを地図と一覧でまとめます。温泉あり／ふれあい可などで絞り込み。"
+  description="カピバラに会える全国の動物園・水族館・カフェを地図と一覧でまとめます。温泉あり／ふれあい可などで絞り込み、閉園情報も明示します。"
 >
-  <ComingSoon
+  <Section
+    index="01"
+    label="Map"
     title="全国カピバラマップ"
-    lead="カピバラに会える全国の動物園・水族館・カフェを、地図とカード一覧で探せるページです。施設データを一件ずつ公式サイトで確認しながら整備しています。"
-    points={[
-      '地図＋一覧のハイブリッド表示（都道府県・地方で絞り込み）',
-      '「温泉あり／ふれあい可／カフェ／ライブ配信あり」のフィルタ',
-      '閉園・休止情報も明示（情報の鮮度を大切にします）',
-    ]}
-    altHref="/onsen/"
-    altLabel="温泉ごよみを見る"
-  />
+    description="カピバラに会える施設を地図と一覧で。温泉・ふれあいなどで絞り込めます。座標が概算の施設は「およその位置」と表示します。"
+  >
+    <div class="mapview">
+      {/* フィルタ */}
+      <div class="filters" role="group" aria-label="施設の絞り込み">
+        <div class="filters__chips" role="group" aria-label="設備で絞り込み">
+          {
+            chips.map((c) => (
+              <button type="button" class="chip" data-filter={c.key} aria-pressed="false">
+                <Icon name={c.icon} class="chip__icon" aria-hidden="true" />
+                <span>{c.label}</span>
+              </button>
+            ))
+          }
+        </div>
+
+        <div class="filters__side">
+          <label class="field">
+            <span class="field__label">地方</span>
+            <span class="field__select">
+              <select id="region-select" aria-label="地方で絞り込み">
+                <option value="all">すべての地方</option>
+                {regionOptions.map((r) => <option value={r}>{regionLabel(r)}</option>)}
+              </select>
+              <Icon name="ph:caret-down" aria-hidden="true" />
+            </span>
+          </label>
+
+          <label class="toggle">
+            <input type="checkbox" id="show-closed" />
+            <span>閉園・休止も表示</span>
+          </label>
+        </div>
+      </div>
+
+      {/* 地図 */}
+      <div class="map-wrap">
+        <div id="map" class="map" role="application" aria-label="カピバラ施設の地図">
+          <p class="map__fallback">地図を読み込んでいます…（読み込めない場合も、下の一覧から施設を探せます）</p>
+        </div>
+        <ul class="legend" aria-label="ピンの色と種別">
+          {
+            legend.map((l) => (
+              <li class="legend__item">
+                <span class={`pin pin--legend ${l.pinClass}`} aria-hidden="true" />
+                <span>{l.label}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      {/* 一覧のメタ（件数） */}
+      <p class="listmeta">
+        <span id="result-count" class="num">{facilities.length}</span>
+        <span>件の施設</span>
+      </p>
+
+      {/* カード一覧（編集的カード=罫線1px流派） */}
+      <ul class="facil-list" id="facil-list">
+        {
+          facilities.map((f) => (
+            <li
+              class:list={['facil', { 'facil--muted': f.status !== 'open', 'facil--simple': !f.detail }]}
+              data-id={f.id}
+              data-region={f.region}
+              data-type={f.type}
+              data-status={f.status}
+              data-onsen={String(f.fOnsen)}
+              data-fureai={String(f.fFureai)}
+              data-cafe={String(f.fCafe)}
+              data-live={String(f.fLive)}
+            >
+              <div class="facil__head">
+                <span class="facil__type">
+                  <Icon name={f.typeIcon} aria-hidden="true" />
+                  {f.typeLabel}
+                </span>
+                {f.status !== 'open' && <span class="facil__status">{statusLabel[f.status]}</span>}
+              </div>
+
+              <h3 class="facil__name">
+                <a href={f.url}>
+                  {f.name}
+                  {!f.detail && <Icon name="ph:arrow-square-out" class="facil__extlink" aria-hidden="true" />}
+                </a>
+              </h3>
+
+              <p class="facil__pref">
+                <Icon name="ph:map-pin" aria-hidden="true" />
+                {f.prefecture}
+                {f.latlngApprox && <span class="facil__approx">おおよその位置</span>}
+              </p>
+
+              {f.detail && (
+                <>
+                  {(f.fOnsen || f.fFureai || f.fCafe || f.fLive) && (
+                    <ul class="ftags" aria-label="設備">
+                      {f.fOnsen && (
+                        <li class="ftag">
+                          <Icon name="ph:drop" aria-hidden="true" />
+                          温泉
+                        </li>
+                      )}
+                      {f.fFureai && (
+                        <li class="ftag">
+                          <Icon name="ph:hand-heart" aria-hidden="true" />
+                          ふれあい
+                        </li>
+                      )}
+                      {f.fCafe && (
+                        <li class="ftag">
+                          <Icon name="ph:coffee" aria-hidden="true" />
+                          カフェ
+                        </li>
+                      )}
+                      {f.fLive && (
+                        <li class="ftag">
+                          <Icon name="ph:broadcast" aria-hidden="true" />
+                          配信
+                        </li>
+                      )}
+                    </ul>
+                  )}
+                  {f.fees.length > 0 && (
+                    <p class="facil__fee">
+                      <span class="facil__fee-label">料金</span>
+                      <span class="num">{f.fees[0].price}</span>
+                      <span class="facil__fee-note">（{f.fees[0].label}）</span>
+                    </p>
+                  )}
+                </>
+              )}
+
+              {!f.detail && <p class="facil__simple-note">詳細情報は準備中です。公式サイトをご確認ください。</p>}
+            </li>
+          ))
+        }
+      </ul>
+
+      {/* 絞り込み結果ゼロ時の空状態 */}
+      <p class="facil-empty" id="facil-empty" hidden>
+        <Icon name="ph:magnifying-glass" aria-hidden="true" />
+        条件に合う施設が見つかりませんでした。フィルタを外すと表示されます。
+      </p>
+    </div>
+  </Section>
+
+  {/* クライアント地図へ渡すデータ（JSON） */}
+  <script type="application/json" id="facilities-data" is:inline set:html={JSON.stringify(mapData)}></script>
 </BaseLayout>
+
+{/* 地図とフィルタのクライアント処理（このページでのみ Leaflet を読込） */}
+<script>
+  import L from 'leaflet';
+  import 'leaflet/dist/leaflet.css';
+
+  type Facility = {
+    id: string;
+    name: string;
+    lat: number;
+    lng: number;
+    pinClass: string;
+    typeLabel: string;
+    prefecture: string;
+    region: string;
+    status: string;
+    detail: boolean;
+    url: string;
+    latlngApprox: boolean;
+    fOnsen: boolean;
+    fFureai: boolean;
+    fCafe: boolean;
+    fLive: boolean;
+  };
+
+  const dataEl = document.getElementById('facilities-data');
+  const mapEl = document.getElementById('map');
+  if (dataEl && mapEl) {
+    const facilities: Facility[] = JSON.parse(dataEl.textContent || '[]');
+
+    // --- 地図の初期化（日本全体） ---
+    mapEl.innerHTML = '';
+    const map = L.map(mapEl, {
+      scrollWheelZoom: false, // 誤スクロール防止（フォーカス時のみ有効化）
+      zoomControl: true,
+    }).setView([37.5, 137.5], 5);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+    }).addTo(map);
+
+    map.on('focus', () => map.scrollWheelZoom.enable());
+    map.on('blur', () => map.scrollWheelZoom.disable());
+
+    // --- マーカー（自作 divIcon・トークン色） ---
+    const records = new Map<string, { marker: L.Marker; data: Facility }>();
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string);
+
+    for (const f of facilities) {
+      const icon = L.divIcon({
+        className: 'pin-icon',
+        html: `<span class="pin ${f.pinClass}"></span>`,
+        iconSize: [22, 22],
+        iconAnchor: [11, 11],
+        popupAnchor: [0, -12],
+      });
+      const marker = L.marker([f.lat, f.lng], { icon, title: f.name, keyboard: true });
+      const approx = f.latlngApprox ? '<span class="pin-popup__approx">おおよその位置</span>' : '';
+      const linkLabel = f.detail ? '詳細を見る' : '公式サイトを見る';
+      marker.bindPopup(
+        `<div class="pin-popup">
+          <p class="pin-popup__type">${esc(f.typeLabel)}・${esc(f.prefecture)}</p>
+          <p class="pin-popup__name">${esc(f.name)}</p>
+          ${approx}
+          <a class="pin-popup__link" href="${esc(f.url)}">${linkLabel} →</a>
+        </div>`,
+      );
+      records.set(f.id, { marker, data: f });
+    }
+
+    // --- フィルタ ---
+    const chipEls = Array.from(document.querySelectorAll<HTMLButtonElement>('.chip'));
+    const regionSel = document.getElementById('region-select') as HTMLSelectElement | null;
+    const showClosed = document.getElementById('show-closed') as HTMLInputElement | null;
+    const countEl = document.getElementById('result-count');
+    const emptyEl = document.getElementById('facil-empty');
+
+    function activeChips(): Set<string> {
+      const set = new Set<string>();
+      for (const c of chipEls) {
+        if (c.getAttribute('aria-pressed') === 'true' && c.dataset.filter) set.add(c.dataset.filter);
+      }
+      return set;
+    }
+
+    function matches(f: Facility): boolean {
+      const active = activeChips();
+      const region = regionSel?.value ?? 'all';
+      const closedVisible = showClosed?.checked ?? false;
+      if (!closedVisible && f.status !== 'open') return false;
+      if (region !== 'all' && f.region !== region) return false;
+      // アクティブなチップはすべて満たす必要がある（AND）
+      if (active.has('onsen') && !f.fOnsen) return false;
+      if (active.has('fureai') && !f.fFureai) return false;
+      if (active.has('cafe') && !f.fCafe) return false;
+      if (active.has('live') && !f.fLive) return false;
+      return true;
+    }
+
+    function apply() {
+      let count = 0;
+      for (const f of facilities) {
+        const ok = matches(f);
+        const card = document.querySelector<HTMLElement>(`.facil[data-id="${f.id}"]`);
+        if (card) card.hidden = !ok;
+        const rec = records.get(f.id);
+        if (rec) {
+          if (ok) {
+            if (!map.hasLayer(rec.marker)) rec.marker.addTo(map);
+          } else if (map.hasLayer(rec.marker)) {
+            map.removeLayer(rec.marker);
+          }
+        }
+        if (ok) count++;
+      }
+      if (countEl) countEl.textContent = String(count);
+      if (emptyEl) emptyEl.hidden = count !== 0;
+    }
+
+    for (const c of chipEls) {
+      c.addEventListener('click', () => {
+        const pressed = c.getAttribute('aria-pressed') === 'true';
+        c.setAttribute('aria-pressed', String(!pressed));
+        apply();
+      });
+    }
+    regionSel?.addEventListener('change', apply);
+    showClosed?.addEventListener('change', apply);
+
+    // --- 一覧カード → 地図の連動（ホバーでポップアップ、クリックで寄せる） ---
+    for (const f of facilities) {
+      const card = document.querySelector<HTMLElement>(`.facil[data-id="${f.id}"]`);
+      const rec = records.get(f.id);
+      if (!card || !rec) continue;
+      card.addEventListener('mouseenter', () => {
+        if (map.hasLayer(rec.marker)) rec.marker.openPopup();
+      });
+    }
+
+    // 初期描画：まず全ピンを載せ（open のみ）、可視ピンに地図を合わせる
+    apply();
+    const visible = facilities.filter(matches);
+    if (visible.length > 0) {
+      const bounds = L.latLngBounds(visible.map((f) => [f.lat, f.lng] as [number, number]));
+      map.fitBounds(bounds, { padding: [48, 48], maxZoom: 7 });
+    }
+    // レイアウト確定後にサイズを再計算（コンテナ高さ確定のズレ対策）
+    setTimeout(() => map.invalidateSize(), 0);
+  }
+</script>
+
+<style>
+  .mapview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  /* ---- フィルタ ---- */
+  .filters {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+  .filters__chips {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+  .filters__side {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+
+  /* チップ（副ボタン系。押下で accent-soft 地＋accent 文字に） */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: var(--text-2);
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    transition:
+      color var(--motion-fast),
+      border-color var(--motion-fast),
+      background-color var(--motion-fast);
+  }
+  .chip__icon {
+    font-size: 1.05em;
+    color: var(--text-3);
+    transition: color var(--motion-fast);
+  }
+  .chip:hover {
+    border-color: var(--accent);
+    color: var(--accent-ink);
+  }
+  .chip:hover .chip__icon {
+    color: var(--accent);
+  }
+  .chip[aria-pressed='true'] {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent-ink);
+  }
+  .chip[aria-pressed='true'] .chip__icon {
+    color: var(--accent);
+  }
+
+  /* 地方セレクタ */
+  .field {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 0.875rem;
+    color: var(--text-2);
+  }
+  .field__select {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  .field__select select {
+    appearance: none;
+    padding: 8px 32px 8px 12px;
+    border-radius: var(--radius-s);
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: var(--text-1);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .field__select select:hover {
+    border-color: var(--accent);
+  }
+  .field__select :global(svg) {
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    color: var(--text-3);
+    font-size: 1em;
+  }
+
+  /* 閉園トグル */
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: var(--text-2);
+    cursor: pointer;
+    user-select: none;
+  }
+  .toggle input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+
+  /* ---- 地図 ---- */
+  .map-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .map {
+    height: clamp(340px, 52vh, 520px);
+    border-radius: var(--radius-m);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    background: var(--surface-soft);
+    z-index: 0; /* Leaflet ペインが sticky ヘッダーへ被らないように */
+  }
+  .map__fallback {
+    margin: 0;
+    padding: var(--space-6);
+    color: var(--text-3);
+    font-size: 0.9375rem;
+    text-align: center;
+  }
+
+  /* 凡例 */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+  .legend__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.8125rem;
+    color: var(--text-2);
+  }
+  .pin--legend {
+    position: static;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* ---- 一覧 ---- */
+  .listmeta {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin: 0;
+    color: var(--text-2);
+    font-size: 0.875rem;
+  }
+  .listmeta .num {
+    font-size: 1.125rem;
+    color: var(--text-1);
+  }
+
+  .facil-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+    gap: var(--space-4);
+  }
+
+  /* 編集的カード（罫線1px・角丸s・影なし。hoverで罫線と見出しが accent 化） */
+  .facil {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-s);
+    transition: border-color var(--motion-fast);
+  }
+  .facil:hover {
+    border-color: var(--accent);
+  }
+  /* hidden 属性で確実に隠す（display 指定が [hidden] の既定を上書きしてしまうのを防ぐ） */
+  .facil[hidden] {
+    display: none;
+  }
+
+  .facil__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+  .facil__type {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-3);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+  .facil__type :global(svg) {
+    font-size: 1.1em;
+    color: var(--accent);
+  }
+  .facil__status {
+    padding: 2px 9px;
+    border-radius: var(--radius-full);
+    background: var(--surface-soft);
+    color: var(--text-3);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  .facil__name {
+    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.4;
+  }
+  .facil__name a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    color: var(--text-1);
+    transition: color var(--motion-fast);
+  }
+  .facil:hover .facil__name a {
+    color: var(--accent-ink);
+  }
+  .facil__name a:hover {
+    text-decoration: none;
+  }
+  .facil__extlink {
+    font-size: 0.75em;
+    color: var(--text-3);
+    align-self: center;
+  }
+
+  .facil__pref {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    color: var(--text-2);
+    font-size: 0.8125rem;
+  }
+  .facil__pref :global(svg) {
+    font-size: 1.05em;
+    color: var(--text-3);
+  }
+  .facil__approx {
+    margin-left: 4px;
+    padding: 1px 7px;
+    border-radius: var(--radius-full);
+    background: var(--surface-soft);
+    color: var(--text-3);
+    font-size: 0.6875rem;
+  }
+
+  /* 設備タグ（アウトライン・小） */
+  .ftags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 2px;
+  }
+  .ftag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 9px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--line);
+    color: var(--text-2);
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+  .ftag :global(svg) {
+    font-size: 1.05em;
+    color: var(--accent);
+  }
+
+  .facil__fee {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 5px;
+    margin: 2px 0 0;
+    color: var(--text-2);
+    font-size: 0.8125rem;
+  }
+  .facil__fee-label {
+    color: var(--text-3);
+    font-size: 0.75rem;
+  }
+  .facil__fee .num {
+    color: var(--text-1);
+    font-size: 0.9375rem;
+  }
+  .facil__fee-note {
+    color: var(--text-3);
+    font-size: 0.75rem;
+  }
+
+  .facil__simple-note {
+    margin: 2px 0 0;
+    color: var(--text-3);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+
+  /* 閉園・休止＝グレー表現（色を抜いても成立させる） */
+  .facil--muted {
+    background: var(--surface-soft);
+    border-style: dashed;
+  }
+  .facil--muted .facil__name a,
+  .facil--muted .facil__type {
+    color: var(--text-3);
+  }
+  .facil--muted:hover {
+    border-color: var(--line-strong);
+  }
+  .facil--muted:hover .facil__name a {
+    color: var(--text-2);
+  }
+
+  /* 空状態 */
+  .facil-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: var(--space-7) var(--space-4);
+    color: var(--text-3);
+    font-size: 0.9375rem;
+    text-align: center;
+  }
+  .facil-empty :global(svg) {
+    font-size: 1.2em;
+  }
+  .facil-empty[hidden] {
+    display: none;
+  }
+
+  @media (max-width: 640px) {
+    .filters {
+      flex-direction: column;
+    }
+  }
+</style>
+
+{/* Leaflet が生成する要素・自作ピン・ポップアップはスコープ外のため is:global で装飾 */}
+<style is:global>
+  /* 自作ピン（種別でトークン色を割当。既定の青ピン画像は不使用） */
+  .pin {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-full);
+    background: var(--pin-color, var(--accent));
+    border: 2px solid var(--surface);
+    box-shadow: 0 1px 3px hsl(33 30% 20% / 0.35);
+    transition: transform var(--motion-fast);
+  }
+  .pin-icon:hover .pin {
+    transform: scale(1.25);
+  }
+  .pin--zoo {
+    --pin-color: var(--green);
+  }
+  .pin--aquarium {
+    --pin-color: var(--accent);
+  }
+  .pin--cafe {
+    --pin-color: var(--accent-strong);
+  }
+  .pin--farm {
+    --pin-color: var(--text-2);
+  }
+
+  /* Leaflet コントロール・帰属表示を生成りトーンに寄せる */
+  .leaflet-container {
+    font-family: var(--font-sans);
+    background: var(--surface-soft);
+  }
+  .leaflet-bar a,
+  .leaflet-control-zoom a {
+    background: var(--surface);
+    color: var(--text-1);
+    border-color: var(--line);
+  }
+  .leaflet-bar a:hover {
+    background: var(--surface-soft);
+  }
+  .leaflet-control-attribution {
+    background: color-mix(in srgb, var(--surface) 85%, transparent) !important;
+    color: var(--text-3);
+    font-size: 0.6875rem;
+  }
+  .leaflet-control-attribution a {
+    color: var(--accent-ink);
+  }
+
+  /* ポップアップ */
+  .leaflet-popup-content-wrapper {
+    background: var(--surface);
+    color: var(--text-1);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-2);
+  }
+  .leaflet-popup-tip {
+    background: var(--surface);
+  }
+  .leaflet-popup-content {
+    margin: 12px 14px;
+    line-height: 1.6;
+  }
+  .pin-popup__type {
+    margin: 0 0 2px;
+    color: var(--text-3);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+  .pin-popup__name {
+    margin: 0 0 6px;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-1);
+  }
+  .pin-popup__approx {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 1px 7px;
+    border-radius: var(--radius-full);
+    background: var(--surface-soft);
+    color: var(--text-3);
+    font-size: 0.68rem;
+  }
+  .pin-popup__link {
+    font-weight: 700;
+    font-size: 0.8125rem;
+    color: var(--accent-ink);
+  }
+</style>
