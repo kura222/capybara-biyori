@@ -24,6 +24,7 @@
  */
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -34,7 +35,43 @@ const LATEST_PER_CHANNEL = 4;
 /** RSS 取得のタイムアウト（ms） */
 const FETCH_TIMEOUT = 15000;
 
-const API_KEY = process.env.YOUTUBE_API_KEY?.trim() || '';
+/**
+ * site/.env を最小パースして KEY=VALUE を返す（dotenv不使用）。
+ * これにより `node scripts/check-live.mjs` を素で叩いてもフル動作する。
+ * 環境変数（GitHub Actions secrets 等）が優先で、.env はローカル開発時のフォールバック。
+ * @returns {Record<string,string>}
+ */
+function loadDotEnv() {
+  const envPath = resolve(__dirname, '../.env');
+  /** @type {Record<string,string>} */
+  const out = {};
+  try {
+    const text = readFileSync(envPath, 'utf-8');
+    for (const line of text.split(/\r?\n/)) {
+      const t = line.trim();
+      if (!t || t.startsWith('#')) continue;
+      const eq = t.indexOf('=');
+      if (eq === -1) continue;
+      const key = t.slice(0, eq).trim();
+      let val = t.slice(eq + 1).trim();
+      // 前後のクオートがあれば剥がす
+      if (
+        (val.startsWith('"') && val.endsWith('"')) ||
+        (val.startsWith("'") && val.endsWith("'"))
+      ) {
+        val = val.slice(1, -1);
+      }
+      if (key && !(key in out)) out[key] = val;
+    }
+  } catch {
+    /* .env が無ければ環境変数のみで動く（縮退判定は後段に委ねる） */
+  }
+  return out;
+}
+
+const fileEnv = loadDotEnv();
+// 環境変数を最優先し、無ければ .env の値を使う
+const API_KEY = (process.env.YOUTUBE_API_KEY ?? fileEnv.YOUTUBE_API_KEY ?? '').trim();
 const DEGRADED = API_KEY === '';
 
 /** 出力先（既定は site/public/data/live-status.json） */
@@ -121,8 +158,13 @@ async function main() {
   /** videoId → channelSlug の対応（判定結果を戻すため） */
   const idToChannel = new Map();
 
-  // display==='archive' は「よりぬきアーカイブ」の出典参照専用。ライブ検知・フィード対象外なので巡回しない
-  const monitored = channels.filter((ch) => ch.display !== 'archive');
+  // 巡回対象外:
+  //   display==='archive' … 「よりぬきアーカイブ」の出典参照専用
+  //   display==='link'    … 埋め込み不可の外部カメラ（YouTube以外・リンク紹介のみ）
+  //   channelId が無い    … RSS の取りようがない（linkOnly 等）
+  const monitored = channels.filter(
+    (ch) => ch.display !== 'archive' && ch.display !== 'link' && ch.channelId,
+  );
 
   // 常設カメラ（liveStreams）の動画IDも liveness 確認対象に含める（主に display==='always'）
   for (const ch of monitored) {

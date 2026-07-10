@@ -8,15 +8,22 @@
       "facilitySlug": "対応する施設（src/content/facilities/*.json のファイル名）。無ければ null",
       "country": "配信国（JP/AU/LV 等）",
       "type": "24h=24時間ライブ / event=イベント型（都度URL変更） / seasonal=季節限定",
-      "display": "UIでの扱い。always=『いつでも見られる』に常設カメラ表示 / feed=『新着動画フィード』にRSS表示+ライブ検知 / monitor=UI非表示・ライブ検知のみ（復活/イベント時に live に出す） / archive=よりぬきアーカイブの出典参照専用（check-liveは巡回しない）",
-      "capybaraContent": "そのチャンネルのライブ/カメラにカピバラが映るか。false=カピバラ確認不可（誠実性のためカピバラ枠として表に出さない。ライブ検知結果もフロントで除外）",
+      "display": "UIでの扱い。always=『ライブビューア』の切替リストに常設カメラを表示 / feed=『新着動画フィード』にRSS表示+ライブ検知（配信時はビューア最上位にLIVE合流） / monitor=UI非表示・ライブ検知のみ（capybaraContent:trueは配信時にビューアへ合流／falseは合流しない） / archive=よりぬきアーカイブの出典参照専用（check-liveは巡回しない） / link=埋め込み不可の外部カメラ（リンク紹介枠のみ。check-liveは巡回しない）",
+      "capybaraContent": "そのチャンネルのライブ/カメラにカピバラが映るか。false=カピバラ確認不可（誠実性のためカピバラ枠として表に出さない。ライブ検知結果もフロントで除外＝配信してもビューアへ合流しない）",
       "status": "active=通常 / paused=長期停止中（常設グリッド非表示。ライブ検知で復活時のみ live に出す）",
       "embedOk": "埋め込み可否（yt-dlp playable_in_embed の実測。false/未確認は『YouTubeで見る』リンク方式）",
-      "embedChecked": "埋め込み可否を実機確認した日 YYYY-MM-DD",
+      "embedChecked": "稼働状況・埋め込み可否を実機確認した日 YYYY-MM-DD（稼働状況の最終確認日として表示に使用）",
       "tendency": "配信傾向（ライブ/24hカードの独自解説。YouTube規約対応の中核）",
       "watchNote": "新着フィード等での短い独自解説（チャンネル単位）",
-      "liveStreams": "24h/seasonal で動画IDが長期固定の常設カメラ群 [{videoId,label,note}]。event型は都度URLが変わるため空にし、live-status.json の動的検知に委ねる",
-      "seasonalNote": "seasonal チャンネルの季節注記（夏季休止など・任意）"
+      "liveStreams": "24h/seasonal で動画IDが長期固定の常設カメラ群 [{videoId,label,note}]。event型は都度URLが変わるため空にし、live-status.json の動的検知に委ねる。24hでもID再起動で入れ替わるチャンネル（Roger Williams等）は登録IDをフォールバックにしつつ、フロントが live-status の同一チャンネルIDを自動採用する",
+      "seasonalNote": "seasonal チャンネルの季節注記（夏季休止など・任意）",
+      "linkOnly": "true=埋め込み不可でリンク紹介する外部カメラ（display:link と併用）。自前HLS等のストリームURLはコードに一切含めない（転載防止・security.md §4）",
+      "linkUrl": "linkOnly カメラの視聴先（公式サイト）URL",
+      "hoursNote": "linkOnly カメラの視聴可能時間帯の注記（現地時間・要登録など）"
+    },
+    "manualWatchlistFields": {
+      "note": "YouTube外・手動監視のカメラ記録（UIは当面非表示）。復活・新設を人手で追跡するためのメモ。ストリームURLは載せず、公式ページURLのみ",
+      "fields": "{ name, country, url, note }"
     },
     "featuredArchiveFields": {
       "videoId": "実在の動画ID（yt-dlp 実測・embedOk=true を確認済み）",
@@ -416,6 +423,145 @@
       "tendency": "カピバラと猫がいる吉祥寺のカフェ。看板カピバラ『たわしくん』とねこ達のまったり動画が中心。",
       "watchNote": "カピねこカフェ吉祥寺のチャンネル。たわしくんの動画をアーカイブに採用しています。",
       "liveStreams": []
+    },
+    {
+      "slug": "roger-williams-zoo",
+      "name": "Roger Williams Park Zoo（水中カメラ）",
+      "channelId": "UCvhS7elhxHIfvJuhb_331MA",
+      "facilitySlug": null,
+      "country": "US",
+      "type": "24h",
+      "display": "always",
+      "capybaraContent": true,
+      "status": "active",
+      "embedOk": true,
+      "embedChecked": "2026-07-10",
+      "tendency": "米ロードアイランド州の動物園が、カピバラプールを水中から映す珍しいライブ。2アングルの常設カメラで、水に潜るカピバラの脚さばきや水面のゆらぎまで見られます。数日ごとに配信を再起動するため、映像が途切れているときは自動でつなぎ直します。",
+      "watchNote": "米ロードアイランド州・ロジャーウィリアムズ公園動物園の、カピバラプール水中ライブです。",
+      "liveStreams": [
+        {
+          "videoId": "StVYWohOxR4",
+          "label": "水中カメラ1",
+          "note": "カピバラプールを水中から映す第1カメラ。水に浸かったカピバラを下から見上げる、他ではなかなか見られない画角です。"
+        },
+        {
+          "videoId": "R4Ak7UOzduA",
+          "label": "水中カメラ2",
+          "note": "同じプールを別角度から映す第2カメラ。2画面を見比べると、群れの動きが追えます。"
+        }
+      ]
+    },
+    {
+      "slug": "capybara-taiwan",
+      "name": "水豚君（台湾カピバラカフェ）",
+      "channelId": "UChAHPhhetaXwN-w9mis1LFA",
+      "facilitySlug": null,
+      "country": "TW",
+      "type": "event",
+      "display": "feed",
+      "capybaraContent": true,
+      "status": "active",
+      "embedOk": true,
+      "embedChecked": "2026-07-10",
+      "tendency": "海の見える台湾のカピバラカフェが、ほぼ毎日、短時間のライブを配信。赤ちゃんカピバラが複数いて、フェンス越しのふれあいやおやつの時間が映ります。24時間ではなく、その日ごとの短いライブ型です。",
+      "watchNote": "台湾のカピバラカフェ『水豚君』のチャンネル。ほぼ毎日、短時間のライブを配信しています。",
+      "liveStreams": []
+    },
+    {
+      "slug": "budapest-zoo",
+      "name": "ブダペスト動物園 南米エリア",
+      "channelId": "UCzE4PjV4gHoDAsN6BXwsLQw",
+      "facilitySlug": null,
+      "country": "HU",
+      "type": "event",
+      "display": "monitor",
+      "capybaraContent": false,
+      "status": "active",
+      "embedOk": null,
+      "embedChecked": "2026-07-10",
+      "tendency": "ブダペスト動物園の公式ライブカメラ網。他エリアのカメラは稼働中で、停止中の南米エリアカメラの復活が期待されます。カピバラが映るかは未確認のため、確認が取れるまで表には出さず監視します。",
+      "watchNote": "ブダペスト動物園の南米エリアカメラ。カピバラが映ることを確認できたら掲載します。",
+      "liveStreams": []
+    },
+    {
+      "slug": "kharkiv-zoo",
+      "name": "ハリコフ動物園 南米エリア",
+      "channelId": "UChGdfGFDSKDX3K1wkrFR26w",
+      "facilitySlug": null,
+      "country": "UA",
+      "type": "event",
+      "display": "monitor",
+      "capybaraContent": false,
+      "status": "paused",
+      "embedOk": true,
+      "embedChecked": "2026-07-10",
+      "tendency": "ウクライナ・ハリコフ動物園の南米エリアにカピバラの飼育記録があります。戦争の影響で全カメラが長期停止中。復活を検知したら、カピバラが映ることを確認のうえで掲載します。",
+      "watchNote": "ハリコフ動物園のライブカメラ。現在は停止中です。復活を注視しています。",
+      "liveStreams": []
+    },
+    {
+      "slug": "moscow-zoo",
+      "name": "モスクワ動物園 カピバラ舎",
+      "channelId": null,
+      "facilitySlug": null,
+      "country": "RU",
+      "type": "seasonal",
+      "display": "link",
+      "capybaraContent": true,
+      "status": "active",
+      "embedOk": false,
+      "embedChecked": "2026-07-10",
+      "linkOnly": true,
+      "linkUrl": "https://zoo.mos.ru/kapibara/",
+      "hoursNote": "毎日 7:30〜22:00（モスクワ時間）。夜間は録画映像。",
+      "tendency": "モスクワ動物園がカピバラ舎を屋内・屋外の2系統で公式配信。季節で屋内外を切り替えます。埋め込みは提供されていないため、公式サイトで視聴します（英語版ミラーもあります）。",
+      "watchNote": "モスクワ動物園の公式カピバラライブ（外部サイト）。",
+      "liveStreams": []
+    },
+    {
+      "slug": "zoolife-phoenix",
+      "name": "フェニックス動物園 カピバラ（zoolife）",
+      "channelId": null,
+      "facilitySlug": null,
+      "country": "US",
+      "type": "event",
+      "display": "link",
+      "capybaraContent": true,
+      "status": "active",
+      "embedOk": false,
+      "embedChecked": "2026-07-10",
+      "linkOnly": true,
+      "linkUrl": "https://www.zoolife.tv/",
+      "hoursNote": "現地の日中（おおむね 9:00〜16:00 MST）。視聴には zoolife への登録が必要。",
+      "tendency": "米フェニックス動物園のカピバラを、双方向配信サービス zoolife が中継。カメラを操作したりおやつをあげたりできる参加型ですが、視聴には登録（サブスク）が必要です。",
+      "watchNote": "zoolife 経由で見られるフェニックス動物園のカピバラ（外部サイト・要登録）。",
+      "liveStreams": []
+    }
+  ],
+  "manualWatchlist": [
+    {
+      "name": "Bella Állatpark Siófok（ハンガリー）",
+      "country": "HU",
+      "url": "https://cam.siofokzoo.com/",
+      "note": "遠隔で餌やりができる有料カメラ（1回約160円）。2025年5月にカピバラ導入。季節運用で現在は停止中。手動監視。"
+    },
+    {
+      "name": "ザモシチ動物園（ポーランド）",
+      "country": "PL",
+      "url": "https://www.windy.com/webcams/1446403087",
+      "note": "カバとカピバラの同居という珍しい画角。現在は配信停止中。復活を手動監視。"
+    },
+    {
+      "name": "エバーランド（韓国）",
+      "country": "KR",
+      "url": "https://www.youtube.com/@EverlandLive",
+      "note": "8カメラのライブ網にカピバラ枠はまだなし。新設に期待して手動監視。"
+    },
+    {
+      "name": "南京紅山森林動物園（中国）",
+      "country": "CN",
+      "url": "https://www.hongshanzoo.com/",
+      "note": "抖音（Douyin）で1日2回の時間限定ライブ。手動監視。"
     }
   ],
   "featuredArchives": [

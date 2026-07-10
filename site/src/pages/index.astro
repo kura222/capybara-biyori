@@ -1,34 +1,54 @@
 ---
 /**
- * トップページ = ライブ・映像ハブ（仕様 §4.1 / デザインガイドライン準拠）。
- * P0.5 では 6 セクションを、レイアウトのリズムを変えながら実データ前提の器として実装する:
- *   01 LIVE     いま配信中          → 空状態（マスコット＋理由＋導線）
- *   02 ALWAYS   いつでも見られる      → 特集（大1枚＋小リスト）
- *   03 ARCHIVE  よりぬきアーカイブ    → 番号付き編集リスト
- *   04 FEED     新着動画フィード      → 横スクロールカード
- *   05 ONSEN    今シーズンの温泉      → 特集ストリップ
- *   06 READS    新着記事            → 編集カード（2列）
- * データ接続（ライブ検知・RSS・温泉期間）は P1 以降。
+ * トップページ = ライブビューア主役（仕様 §4.1 / デザインガイドライン準拠）。
+ *
+ * 2026-07-10 ユーザー指示「メインは24時間ライブカメラ。国内外すべての公開カメラを集める」を受け、
+ * トップ最上部を大型ライブビューア＋カメラ切替リストに再構成した。旧「いま配信中」「いつでも見られる」を統合。
+ *
+ * 構成:
+ *   HERO   ライブビューア    → 大プレイヤー(facade)＋カメラ切替リスト（always常設＋ライブ検知で合流）
+ *   —      配信で浮上するカメラ → オフライン時の定期ライブ組を「配信元」一覧で紹介（国内外）
+ *   —      世界のカメラ        → 埋め込み不可の外部カメラをリンク枠で紹介
+ *   —      会いに行く          → 施設マップ導線バンド
+ *   01 ARCHIVE よりぬきアーカイブ → 番号付き編集リスト
+ *   02 FEED    新着動画フィード   → 横スクロールカード（RSS由来・クライアント描画）
+ *   03 ONSEN   今シーズンの温泉   → 特集ストリップ
+ *   04 READS   新着記事          → 編集カード
+ *
+ * セキュリティ（security.md §3）: live-status.json 由来の外部文字列（動画タイトル・チャンネル名）は
+ *   クライアントで textContent / setAttribute のみで挿入する（innerHTML への外部文字列連結を禁止）。
+ *   自前HLS（モスクワ・Bella等）は埋め込まずリンク紹介のみ（コードにストリームURLを含めない）。
  */
 import { getCollection } from 'astro:content';
 import { Icon } from 'astro-icon/components';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/Section.astro';
 import Card from '../components/Card.astro';
-import Mascot from '../components/Mascot.astro';
-import VideoCard from '../components/VideoCard.astro';
 import VideoFacade from '../components/VideoFacade.astro';
 import channelsData from '../data/channels.json';
 import { classifyOnsen, getOnsenCalStatus, isOnsenSeason } from '../lib/onsen';
 
-// --- 配信チャンネル（channels.json）から各セクションの実データを組み立てる ---
 const channels = channelsData.channels;
 const channelBySlug = Object.fromEntries(channels.map((c) => [c.slug, c]));
-const COUNTRY_JA: Record<string, string> = { JP: '日本', AU: 'オーストラリア', LV: 'ラトビア' };
+const COUNTRY_JA: Record<string, string> = {
+  JP: '日本',
+  AU: 'オーストラリア',
+  LV: 'ラトビア',
+  US: 'アメリカ',
+  TW: '台湾',
+  RU: 'ロシア',
+  HU: 'ハンガリー',
+  UA: 'ウクライナ',
+  PL: 'ポーランド',
+  KR: '韓国',
+  CN: '中国',
+};
+const jaCountry = (code: string): string => COUNTRY_JA[code] ?? code;
+const thumb = (id: string): string => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
 
-// 02「いつでも見られるカピバラ」= display:always（24h/seasonal）の常設カメラを平坦化。
-// カピバラ確認不可（capybaraContent:false）や停止中は出さない（誠実性優先）。
-const alwaysStreams = channels
+// --- ビューアの切替リスト（基礎）= display:always の常設カメラを平坦化 ---
+// カピバラ確認不可・停止中は出さない（誠実性優先）。ライブ検知でLIVE合流・ID採用はクライアントで行う。
+const viewerCameras = channels
   .filter((c) => c.display === 'always' && c.status === 'active' && c.capybaraContent !== false)
   .flatMap((c) =>
     (c.liveStreams ?? []).map((s) => ({
@@ -36,12 +56,46 @@ const alwaysStreams = channels
       channelName: c.name,
       type: c.type,
       country: c.country,
-      seasonalNote: c.seasonalNote ?? null,
+      seasonalNote: c.seasonalNote ?? '',
+      embedChecked: c.embedChecked ?? '',
       videoId: s.videoId,
       label: s.label,
       note: s.note,
     })),
   );
+const first = viewerCameras[0];
+
+// --- 配信で浮上する「定期ライブの配信元」（オフライン時に紹介）= capybara確認済みの feed/monitor ---
+const scheduledSources = channels
+  .filter((c) => c.capybaraContent === true && (c.display === 'feed' || c.display === 'monitor'))
+  .map((c) => {
+    let label = 'ライブ復活を監視中';
+    let variant: 'ok' | 'warn' | 'neutral' = 'neutral';
+    if (c.slug === 'capybara-taiwan') {
+      label = 'ほぼ毎日ライブ';
+      variant = 'ok';
+    } else if (c.status === 'paused') {
+      label = '復活を監視中';
+      variant = 'warn';
+    } else if (c.display === 'feed') {
+      label = '新着・不定期ライブ';
+      variant = 'neutral';
+    }
+    return { name: c.name, country: c.country, label, variant, note: c.watchNote ?? c.tendency ?? '' };
+  });
+
+// --- 埋め込み不可の外部カメラ（リンク紹介枠）= display:link ---
+const externalCameras = channels
+  .filter((c) => c.display === 'link')
+  .map((c) => ({
+    name: c.name,
+    country: c.country,
+    // @ts-ignore linkOnly 拡張フィールド
+    linkUrl: c.linkUrl as string,
+    // @ts-ignore
+    hoursNote: (c.hoursNote as string) ?? '',
+    tendency: c.tendency ?? '',
+  }));
 
 // 03「よりぬきアーカイブ」= featuredArchives（出典チャンネル名を解決）
 const archives = channelsData.featuredArchives.map((a) => ({
@@ -49,7 +103,7 @@ const archives = channelsData.featuredArchives.map((a) => ({
   channelName: channelBySlug[a.channelSlug]?.name ?? '',
 }));
 
-// クライアント（LIVE/新着フィードの動的描画）に渡すチャンネルメタ（必要フィールドのみ）
+// クライアント（ビューア合流・新着フィード）に渡すチャンネルメタ
 const channelsForClient = Object.fromEntries(
   channels.map((c) => [
     c.slug,
@@ -61,12 +115,16 @@ const channelsForClient = Object.fromEntries(
       watchNote: c.watchNote ?? '',
       tendency: c.tendency ?? '',
       country: c.country,
+      type: c.type,
+      embedChecked: c.embedChecked ?? '',
     },
   ]),
 );
 
-// --- 温泉ストリップ用の実データ集計（/onsen/ と同じ判定を共用） ---
-const onsenFacilities = (await getCollection('facilities')).filter((e) => e.data.onsen?.has);
+// --- 施設データ（温泉ストリップ＋マップ導線の件数） ---
+const allFacilities = await getCollection('facilities');
+const facilityCount = allFacilities.length;
+const onsenFacilities = allFacilities.filter((e) => e.data.onsen?.has);
 const onsenTotal = onsenFacilities.length;
 const onsenPermanent = onsenFacilities.filter((e) => classifyOnsen(e.data.onsen!) === 'permanent').length;
 const onsenSeasonal = onsenTotal - onsenPermanent;
@@ -75,7 +133,6 @@ const onsenActive = onsenFacilities.filter((e) => {
   return s === 'active' || s === 'soon-end' || s === 'soon-start';
 }).length;
 const onsenInSeason = isOnsenSeason();
-// シーズン中で開催中があれば開催件数を、オフシーズンは常設＋発表待ち見込みを主役に
 const onsenStripLead =
   onsenInSeason && onsenActive > 0
     ? `全国${onsenActive}園でカピバラ温泉が開催中。開催期間を横断のタイムラインで確認できます。`
@@ -88,92 +145,184 @@ const articles = [
 ];
 ---
 
-<BaseLayout description="カピバラのライブ配信・全国の会える施設マップ・温泉イベントカレンダーをまとめたポータルサイト。今すぐ見たい・会いに行きたいを1か所で。">
-  {/* ===== ヒーロー（タイポ型シグネチャー） ===== */}
-  <section class="hero u-grain">
-    <div class="container container--hero hero__inner">
-      <div class="hero__content">
-        <p class="hero__eyebrow label">Live &middot; Map &middot; Onsen</p>
-        <h1 class="hero__title">今日は、<br />カピバラ日和。</h1>
-        <p class="hero__lead">
-          全国のカピバラのライブ配信、会える施設マップ、温泉イベントカレンダー。
-          「今すぐ見たい」も「会いに行きたい」も、ここから。
+<BaseLayout description="国内外のカピバラ24時間ライブカメラを1つのビューアでまとめて視聴。会える施設マップ・温泉イベントカレンダーも。今すぐ見たい・会いに行きたいを1か所で。">
+  {/* ===== HERO: ライブビューア（シグネチャーモーメント＝映像） ===== */}
+  <section class="viewer u-grain">
+    <div class="container container--hero">
+      <div class="viewer__intro">
+        <p class="viewer__eyebrow label">Live Capybara Cameras</p>
+        <h1 class="viewer__brand">今日は、カピバラ日和。</h1>
+        <p class="viewer__lead">
+          国内外の公開カピバラライブカメラを、ここでまとめて。カメラを選ぶと、その場で再生します。
         </p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="/map/">
-            <Icon name="ph:map-trifold" aria-hidden="true" />
-            施設マップを見る
-          </a>
-          <a class="hero__link" href="/onsen/">
-            温泉ごよみを見る
-            <Icon name="ph:arrow-right" aria-hidden="true" />
-          </a>
-        </div>
       </div>
 
-      <div class="hero__art" aria-hidden="true">
-        <span class="hero__vlabel label">Capybara Biyori</span>
-        <svg class="steam steam--hero" viewBox="0 0 140 200" fill="none">
-          <path d="M40 195 C26 158 54 146 40 108 C30 78 52 62 40 26" />
-          <path d="M72 200 C56 160 86 148 72 104 C60 70 84 54 72 14" />
-          <path d="M104 195 C90 158 118 146 104 110 C94 80 116 64 104 30" />
-        </svg>
+      <div class="viewer__layout">
+        {/* 大プレイヤー（facade・初回クリックまで iframe を作らない） */}
+        <div class="viewer__main">
+          <div
+            class="viewer-stage"
+            id="viewer-player"
+            role="button"
+            tabindex="0"
+            data-video-id={first?.videoId}
+            aria-label={`選択中のカメラを再生: ${first?.channelName ?? ''}`}
+          >
+            <img
+              class="viewer-stage__img"
+              id="viewer-stage-img"
+              src={first ? thumb(first.videoId) : ''}
+              alt=""
+              width="1280"
+              height="720"
+              decoding="async"
+            />
+            <span class="viewer-stage__scrim" aria-hidden="true"></span>
+            <span class="viewer-stage__play" aria-hidden="true"><Icon name="ph:play-fill" /></span>
+          </div>
+          <div class="viewer-now">
+            <span class="viewer-now__badge" id="viewer-now-badge">
+              {first?.type === 'seasonal' ? (
+                <span class="badge badge--warn">季節限定</span>
+              ) : (
+                <span class="badge badge--ok">24時間</span>
+              )}
+            </span>
+            <p class="viewer-now__title" id="viewer-now-title">{first?.channelName}</p>
+            <p class="viewer-now__meta label" id="viewer-now-meta">
+              {first ? `${jaCountry(first.country)} ・ ${first.label}` : ''}
+            </p>
+            <p class="viewer-now__note" id="viewer-now-note">{first?.note}</p>
+            <p class="viewer-now__foot" id="viewer-now-foot">{first?.seasonalNote}</p>
+            <p class="viewer-now__checked" id="viewer-now-checked">
+              {first?.embedChecked ? `稼働確認 ${first.embedChecked}` : ''}
+            </p>
+          </div>
+        </div>
+
+        {/* カメラ切替リスト */}
+        <div class="viewer__rail">
+          <p class="viewer__rail-head label">
+            <Icon name="ph:television-simple" aria-hidden="true" />
+            カメラを選ぶ
+          </p>
+          <div class="viewer__list" id="viewer-list">
+            {viewerCameras.map((cam, i) => (
+              <button
+                class="viewer-cam"
+                type="button"
+                data-video-id={cam.videoId}
+                data-channel={cam.channelSlug}
+                data-name={cam.channelName}
+                data-country={jaCountry(cam.country)}
+                data-label={cam.label}
+                data-note={cam.note}
+                data-type={cam.type}
+                data-checked={cam.embedChecked}
+                data-seasonal={cam.seasonalNote}
+                data-live="false"
+                aria-pressed={i === 0 ? 'true' : 'false'}
+              >
+                <span class="viewer-cam__thumb">
+                  <img src={thumb(cam.videoId)} alt="" loading="lazy" decoding="async" width="480" height="360" />
+                  <span class="viewer-cam__badge" data-badge>
+                    {cam.type === 'seasonal' ? (
+                      <span class="badge badge--warn">季節限定</span>
+                    ) : (
+                      <span class="badge badge--ok">24時間</span>
+                    )}
+                  </span>
+                </span>
+                <span class="viewer-cam__body">
+                  <span class="viewer-cam__name">{cam.channelName}</span>
+                  <span class="viewer-cam__meta label">{jaCountry(cam.country)} ・ {cam.label}</span>
+                  <span class="viewer-cam__note">{cam.note}</span>
+                </span>
+              </button>
+            ))}
+          </div>
+          <p class="viewer__rail-foot">
+            登録カメラのライブを30分ごとに自動チェック。配信が始まったカメラは、この一覧に「LIVE」で合流します。
+          </p>
+        </div>
       </div>
     </div>
+    {/* クライアントのビューア合流・新着フィード描画で使うチャンネルメタ */}
+    <script type="application/json" id="channels-data" set:html={JSON.stringify(channelsForClient)}></script>
   </section>
 
-  {/* ===== 01 LIVE いま配信中（配信検知時のみ出現・空状態フォールバック） ===== */}
-  <Section index="01" label="Live" title="いま配信中のカピバラ" space="l">
-    {/* live-status.json を fetch し、live[] があればクライアントで LIVE カードを差し込む。
-        fetch失敗・0件時は空状態のまま（静的部分だけで完全動作＝既存挙動を壊さない）。 */}
-    <div id="live-root" data-state="empty">
-      <div class="live-grid" id="live-grid" hidden></div>
-      <div class="live-empty" id="live-empty">
-        <Mascot size={78} steam={false} class="live-empty__mascot" />
-        <div class="live-empty__body">
-          <p class="live-empty__title">いまは配信中のカピバラはいません</p>
-          <p class="live-empty__note">
-            登録チャンネルのライブを30分ごとに自動チェックしています。
-            配信が始まると、この場所に「LIVE」カードが並びます。
-          </p>
-          <a class="live-empty__link" href="#always-on">
-            いつでも見られるカピバラを見る
-            <Icon name="ph:arrow-right" aria-hidden="true" />
-          </a>
-        </div>
-      </div>
-    </div>
-    {/* クライアントの LIVE / 新着フィード描画で使うチャンネルメタ */}
-    <script type="application/json" id="channels-data" set:html={JSON.stringify(channelsForClient)}></script>
-  </Section>
-
-  {/* ===== 02 ALWAYS いつでも見られる（24h/seasonal の常設カメラ・実データ） ===== */}
+  {/* ===== 配信で浮上するカメラ（定期ライブの配信元・オフライン時の紹介） ===== */}
   <Section
-    id="always-on"
-    index="02"
-    label="Always on"
-    title="いつでも見られるカピバラ"
-    description="海外の24時間ライブカメラ。サムネイルをクリックすると、その場で再生します。"
+    label="On schedule"
+    title="配信が始まると浮上するカメラ"
+    description="24時間ではない定期ライブ型のカメラ。ライブが始まると、上のビューアに自動でLIVE合流します。国内外の配信元を一覧で紹介します。"
     class="band"
   >
-    <div class="always-grid">
-      {alwaysStreams.map((s) => (
-        <VideoCard
-          videoId={s.videoId}
-          title={s.channelName}
-          meta={`${COUNTRY_JA[s.country] ?? s.country} ・ ${s.label}`}
-          note={s.note}
-          footnote={s.seasonalNote ?? undefined}
-          badgeText={s.type === 'seasonal' ? '季節限定' : '24時間'}
-          badgeVariant={s.type === 'seasonal' ? 'warn' : 'ok'}
-        />
+    <ul class="sched" aria-label="定期ライブの配信元">
+      {scheduledSources.map((s) => (
+        <li class="sched__row">
+          <span class:list={['badge', `badge--${s.variant}`, 'sched__badge']}>{s.label}</span>
+          <span class="sched__body">
+            <span class="sched__name">{s.name}</span>
+            <span class="sched__meta label">{jaCountry(s.country)}</span>
+            <span class="sched__note">{s.note}</span>
+          </span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  {/* ===== 世界のカメラ（埋め込み不可＝外部リンク紹介） ===== */}
+  <Section
+    label="Worldwide"
+    title="外部サイトで見る世界のカメラ"
+    description="埋め込みが提供されていない、または登録が必要なカメラ。転載はせず、公式サイトへのリンクでご案内します。視聴できる時間帯にご注意ください。"
+  >
+    <div class="extcam-grid">
+      {externalCameras.map((c) => (
+        <article class="extcam">
+          <div class="extcam__body">
+            <p class="extcam__meta label">{jaCountry(c.country)}</p>
+            <h3 class="extcam__name">{c.name}</h3>
+            <p class="extcam__note">{c.tendency}</p>
+            {c.hoursNote && (
+              <p class="extcam__hours">
+                <Icon name="ph:clock" aria-hidden="true" />
+                {c.hoursNote}
+              </p>
+            )}
+          </div>
+          <a class="extcam__link" href={c.linkUrl} target="_blank" rel="noopener">
+            公式サイトで見る
+            <Icon name="ph:arrow-up-right" aria-hidden="true" />
+          </a>
+        </article>
       ))}
     </div>
   </Section>
 
-  {/* ===== 03 ARCHIVE よりぬきアーカイブ（番号付き編集リスト） ===== */}
+  {/* ===== 会いに行く（施設マップ導線バンド） ===== */}
+  <section class="mapband">
+    <div class="container">
+      <div class="mapband__inner">
+        <div class="mapband__text">
+          <p class="mapband__eyebrow label">Visit</p>
+          <p class="mapband__title">画面の中の次は、会いに行く。</p>
+          <p class="mapband__note">
+            全国{facilityCount}施設のカピバラスポットを地図から。温泉・ふれあい・カフェで絞り込めます。
+          </p>
+        </div>
+        <a class="btn btn--primary" href="/map/">
+          <Icon name="ph:map-trifold" aria-hidden="true" />
+          施設マップを見る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ===== 01 ARCHIVE よりぬきアーカイブ（番号付き編集リスト） ===== */}
   <Section
-    index="03"
+    index="01"
     label="Archive"
     title="よりぬきアーカイブ"
     description="露天風呂・池そうじ・おやつタイムなどの名場面を、解説つきで手動キュレーション。"
@@ -193,9 +342,9 @@ const articles = [
     </ol>
   </Section>
 
-  {/* ===== 04 FEED 新着動画フィード（横スクロールカード・RSS由来をクライアント描画） ===== */}
+  {/* ===== 02 FEED 新着動画フィード（横スクロールカード・RSS由来をクライアント描画） ===== */}
   <Section
-    index="04"
+    index="02"
     label="Daily feed"
     title="新着カピバラ動画フィード"
     description="登録チャンネルの最新投稿を毎日自動で集めて「今日のカピバラ」に。カードをクリックするとYouTubeで開きます。"
@@ -207,8 +356,8 @@ const articles = [
     </div>
   </Section>
 
-  {/* ===== 05 ONSEN 今シーズンの温泉（特集ストリップ・実データ接続） ===== */}
-  <Section index="05" label="Onsen" title="今シーズンの温泉情報" moreHref="/onsen/" moreLabel="カレンダーを見る">
+  {/* ===== 03 ONSEN 今シーズンの温泉（特集ストリップ・実データ接続） ===== */}
+  <Section index="03" label="Onsen" title="今シーズンの温泉情報" moreHref="/onsen/" moreLabel="カレンダーを見る">
     <div class="onsen">
       <div class="onsen__body">
         <ul class="onsen__stats" aria-label="カピバラ温泉のいまの状況">
@@ -239,7 +388,6 @@ const articles = [
           <Icon name="ph:calendar-dots" aria-hidden="true" />
           温泉ごよみを見る
         </a>
-        {/* 閲覧日でのストリップ再集計用データ（開催中件数はビルド日と閲覧日でズレるため） */}
         <script
           type="application/json"
           id="onsen-strip-data"
@@ -262,9 +410,9 @@ const articles = [
     </div>
   </Section>
 
-  {/* ===== 06 READS 新着記事（編集カード・2列） ===== */}
+  {/* ===== 04 READS 新着記事（編集カード・2列） ===== */}
   <Section
-    index="06"
+    index="04"
     label="Reads"
     title="新着記事"
     description="温泉の時期・ふれあい施設・カピバラの生態など、役立つ記事をお届けします。"
@@ -319,7 +467,8 @@ const articles = [
   }
 </script>
 
-{/* ライブ状態JSONを取得して 01 LIVE と 04 新着フィードをクライアント描画する */}
+{/* ライブ状態JSONを取得して ①ライブビューアへの合流 ②新着フィード をクライアント描画する。
+    セキュリティ: 外部由来文字列は textContent / setAttribute / dataset のみで挿入（innerHTML連結禁止）。 */}
 <script>
   import { LIVE_STATUS_URL, LIVE_STATUS_FALLBACK_URL } from '../config';
 
@@ -331,8 +480,11 @@ const articles = [
     watchNote: string;
     tendency: string;
     country: string;
+    type: string;
+    embedChecked: string;
   };
   type LiveItem = { channelSlug: string | null; videoId: string; title: string; startedAt?: string | null };
+  type UpItem = { channelSlug: string | null; videoId: string; title: string; scheduledAt?: string | null };
   type FeedItem = {
     channelSlug: string;
     channelName: string;
@@ -341,54 +493,317 @@ const articles = [
     title: string;
     published: string;
   };
-  type Status = { updatedAt: string; degraded: boolean; live: LiveItem[]; upcoming: LiveItem[]; latestVideos: FeedItem[] };
+  type Status = { updatedAt: string; degraded: boolean; live: LiveItem[]; upcoming: UpItem[]; latestVideos: FeedItem[] };
 
   const channelsEl = document.getElementById('channels-data');
   const channels: Record<string, ChannelMeta> = channelsEl?.textContent ? JSON.parse(channelsEl.textContent) : {};
 
-  // 再生ボタンの三角（Phosphor play-fill 相当・絵文字を使わない）
-  const PLAY_SVG =
-    '<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M228.23 134.69 84.15 222.81A8 8 0 0 1 72 216V40a8 8 0 0 1 12.15-6.81l144.08 88.12a8 8 0 0 1 0 13.38Z"></path></svg>';
-
-  const esc = (s: string): string => {
-    const d = document.createElement('div');
-    d.textContent = s ?? '';
-    return d.innerHTML;
+  const COUNTRY_JA: Record<string, string> = {
+    JP: '日本', AU: 'オーストラリア', LV: 'ラトビア', US: 'アメリカ', TW: '台湾',
+    RU: 'ロシア', HU: 'ハンガリー', UA: 'ウクライナ', PL: 'ポーランド', KR: '韓国', CN: '中国',
   };
+  const jaCountry = (code: string): string => COUNTRY_JA[code] ?? code ?? '';
   const thumb = (id: string): string => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
 
-  function liveCardHtml(item: LiveItem): string {
-    const ch = item.channelSlug ? channels[item.channelSlug] : undefined;
-    const name = ch?.name ?? '配信チャンネル';
-    const note = ch?.tendency || ch?.watchNote || 'カピバラのライブ配信です。';
-    const title = item.title || name;
-    const badge = '<span class="vcard__badge"><span class="live-badge"><span class="live-badge__dot"></span>LIVE</span></span>';
-    if (ch && ch.embedOk === false) {
-      // 埋め込み不可 → 「YouTubeで見る」外部リンクカード（フォールバック）
-      const url = `https://www.youtube.com/watch?v=${item.videoId}`;
-      return `<article class="vcard"><a class="vcard__media vcard__extlink" href="${url}" target="_blank" rel="noopener" aria-label="YouTubeで見る: ${esc(title)}"><img class="lyt__img" src="${thumb(item.videoId)}" alt="" loading="lazy" decoding="async" /><span class="lyt__scrim"></span><span class="vcard__ext">YouTubeで見る</span>${badge}</a><div class="vcard__body"><p class="vcard__meta label">${esc(name)}</p><h3 class="vcard__title">${esc(title)}</h3><p class="vcard__note">${esc(note)}</p></div></article>`;
+  // ---------- ビューア ----------
+  const stage = document.getElementById('viewer-player');
+  const stageImg = document.getElementById('viewer-stage-img') as HTMLImageElement | null;
+  const list = document.getElementById('viewer-list');
+  const nowBadge = document.getElementById('viewer-now-badge');
+  const nowTitle = document.getElementById('viewer-now-title');
+  const nowMeta = document.getElementById('viewer-now-meta');
+  const nowNote = document.getElementById('viewer-now-note');
+  const nowFoot = document.getElementById('viewer-now-foot');
+  const nowChecked = document.getElementById('viewer-now-checked');
+
+  let userInteracted = false;
+
+  type BadgeState = 'live' | 'upcoming' | 'idle';
+  function makeBadge(state: BadgeState, type: string): HTMLElement {
+    const s = document.createElement('span');
+    if (state === 'live') {
+      s.className = 'live-badge';
+      const dot = document.createElement('span');
+      dot.className = 'live-badge__dot';
+      s.appendChild(dot);
+      s.appendChild(document.createTextNode('LIVE'));
+    } else if (state === 'upcoming') {
+      s.className = 'badge badge--neutral';
+      s.textContent = 'まもなく配信';
+    } else if (type === 'seasonal') {
+      s.className = 'badge badge--warn';
+      s.textContent = '季節限定';
+    } else {
+      s.className = 'badge badge--ok';
+      s.textContent = type === '24h' ? '24時間' : 'ライブ';
     }
-    // 埋め込み可 → lite-youtube facade
-    return `<article class="vcard"><div class="vcard__media"><div class="lyt" role="button" tabindex="0" data-yt-facade data-video-id="${item.videoId}" style="--lyt-ratio:16 / 9;" aria-label="再生: ${esc(title)}"><img class="lyt__img" src="${thumb(item.videoId)}" alt="" loading="lazy" decoding="async" /><span class="lyt__scrim"></span><span class="lyt__play">${PLAY_SVG}</span></div>${badge}</div><div class="vcard__body"><p class="vcard__meta label">${esc(name)}</p><h3 class="vcard__title">${esc(title)}</h3><p class="vcard__note">${esc(note)}</p></div></article>`;
+    return s;
   }
 
-  function feedCardHtml(item: FeedItem): string {
+  function setNowPlaying(card: HTMLElement): void {
+    const d = card.dataset;
+    if (nowBadge) nowBadge.replaceChildren(makeBadge(d.live === 'true' ? 'live' : 'idle', d.type ?? ''));
+    if (nowTitle) nowTitle.textContent = d.name ?? '';
+    if (nowMeta) nowMeta.textContent = `${d.country ?? ''} ・ ${d.label ?? ''}`;
+    if (nowNote) nowNote.textContent = d.note ?? '';
+    if (nowFoot) nowFoot.textContent = d.seasonal ?? '';
+    if (nowChecked) nowChecked.textContent = d.checked ? `稼働確認 ${d.checked}` : '';
+  }
+
+  function selectCard(card: HTMLElement): void {
+    if (!list) return;
+    for (const b of Array.from(list.querySelectorAll('.viewer-cam'))) b.setAttribute('aria-pressed', 'false');
+    card.setAttribute('aria-pressed', 'true');
+    if (stage) stage.setAttribute('data-video-id', card.dataset.videoId ?? '');
+    if (stageImg && card.dataset.videoId) stageImg.src = thumb(card.dataset.videoId);
+    setNowPlaying(card);
+  }
+
+  function playCurrent(): void {
+    if (!stage) return;
+    const id = stage.getAttribute('data-video-id');
+    if (!id) return;
+    const iframe = document.createElement('iframe');
+    iframe.className = 'viewer-stage__iframe';
+    // ユーザー操作起点のため autoplay を許可。自動再生ポリシーに合わせ mute=1。
+    iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&mute=1&rel=0`;
+    iframe.title = (nowTitle?.textContent || 'カピバラライブ') as string;
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('frameborder', '0');
+    stage.replaceChildren(iframe);
+    stage.removeAttribute('role');
+    stage.removeAttribute('tabindex');
+  }
+
+  if (stage) {
+    stage.addEventListener('click', () => {
+      userInteracted = true;
+      playCurrent();
+    });
+    stage.addEventListener('keydown', (ev) => {
+      if (ev.key !== 'Enter' && ev.key !== ' ') return;
+      ev.preventDefault();
+      userInteracted = true;
+      playCurrent();
+    });
+  }
+  if (list) {
+    list.addEventListener('click', (ev) => {
+      const target = ev.target as Element | null;
+      const card = target?.closest?.('.viewer-cam') as HTMLElement | null;
+      if (!card || !list.contains(card)) return;
+      userInteracted = true;
+      selectCard(card);
+      playCurrent();
+    });
+  }
+
+  type DynOpts = {
+    videoId: string;
+    channelSlug: string;
+    name: string;
+    countryJa: string;
+    label: string;
+    note: string;
+    type: string;
+    checked: string;
+    state: BadgeState;
+  };
+  function buildCamCard(o: DynOpts): HTMLButtonElement {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'viewer-cam';
+    btn.setAttribute('aria-pressed', 'false');
+    // dataset 経由（=setAttribute相当）で外部文字列を安全に格納
+    btn.dataset.videoId = o.videoId;
+    btn.dataset.channel = o.channelSlug;
+    btn.dataset.name = o.name;
+    btn.dataset.country = o.countryJa;
+    btn.dataset.label = o.label;
+    btn.dataset.note = o.note;
+    btn.dataset.type = o.type;
+    btn.dataset.checked = o.checked;
+    btn.dataset.seasonal = '';
+    btn.dataset.live = o.state === 'live' ? 'true' : 'false';
+
+    const thumbSpan = document.createElement('span');
+    thumbSpan.className = 'viewer-cam__thumb';
+    const img = document.createElement('img');
+    img.src = thumb(o.videoId);
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.width = 480;
+    img.height = 360;
+    const badgeWrap = document.createElement('span');
+    badgeWrap.className = 'viewer-cam__badge';
+    badgeWrap.setAttribute('data-badge', '');
+    badgeWrap.appendChild(makeBadge(o.state, o.type));
+    thumbSpan.append(img, badgeWrap);
+
+    const body = document.createElement('span');
+    body.className = 'viewer-cam__body';
+    const nm = document.createElement('span');
+    nm.className = 'viewer-cam__name';
+    nm.textContent = o.name;
+    const meta = document.createElement('span');
+    meta.className = 'viewer-cam__meta label';
+    meta.textContent = `${o.countryJa} ・ ${o.label}`;
+    const note = document.createElement('span');
+    note.className = 'viewer-cam__note';
+    note.textContent = o.note;
+    body.append(nm, meta, note);
+
+    btn.append(thumbSpan, body);
+    return btn;
+  }
+
+  function markCardLive(card: HTMLElement): void {
+    card.dataset.live = 'true';
+    const bw = card.querySelector('[data-badge]');
+    if (bw) bw.replaceChildren(makeBadge('live', card.dataset.type ?? ''));
+  }
+  function adoptCard(card: HTMLElement, newId: string): void {
+    card.dataset.videoId = newId;
+    const img = card.querySelector('img');
+    if (img) (img as HTMLImageElement).src = thumb(newId);
+  }
+
+  function reconcileViewer(status: Status | null): void {
+    if (!status || !list) return;
+    const baseCards = Array.from(list.querySelectorAll('.viewer-cam')) as HTMLElement[];
+    // カピバラが映る＆埋め込み可のライブだけ対象（capybaraContent:false は合流させない＝誠実性）
+    const liveItems = (status.live ?? []).filter((x) => {
+      const ch = x.channelSlug ? channels[x.channelSlug] : undefined;
+      return ch && ch.capybaraContent && ch.embedOk !== false;
+    });
+    const liveIds = new Set(liveItems.map((x) => x.videoId));
+    const consumed = new Set<string>();
+
+    // 1) 既存カードの動画IDがそのままライブ → LIVE 昇格
+    for (const card of baseCards) {
+      const vid = card.dataset.videoId ?? '';
+      if (liveIds.has(vid)) {
+        markCardLive(card);
+        consumed.add(vid);
+      }
+    }
+    // 2) ID再起動組（Roger Williams等）: 未ライブの常設カードに同一チャンネルの新IDを採用
+    for (const card of baseCards) {
+      if (card.dataset.live === 'true') continue;
+      const slug = card.dataset.channel ?? '';
+      const cand = liveItems.find((x) => x.channelSlug === slug && !consumed.has(x.videoId));
+      if (cand) {
+        adoptCard(card, cand.videoId);
+        markCardLive(card);
+        consumed.add(cand.videoId);
+      }
+    }
+    // 3) 常設外の動的ライブ（Taronga・台湾・国内イベント型など）を合流。国内(JP)は最上位。
+    const baseIds = new Set(baseCards.map((c) => c.dataset.videoId ?? ''));
+    const dynamics = liveItems.filter((x) => !consumed.has(x.videoId) && !baseIds.has(x.videoId));
+    const jp: LiveItem[] = [];
+    const other: LiveItem[] = [];
+    for (const x of dynamics) {
+      const ch = x.channelSlug ? channels[x.channelSlug] : undefined;
+      (ch && ch.country === 'JP' ? jp : other).push(x);
+    }
+    const makeDyn = (x: LiveItem, state: BadgeState): HTMLButtonElement => {
+      const ch = (x.channelSlug ? channels[x.channelSlug] : undefined) ?? ({} as ChannelMeta);
+      return buildCamCard({
+        videoId: x.videoId,
+        channelSlug: x.channelSlug ?? '',
+        name: ch.name ?? '配信チャンネル',
+        countryJa: jaCountry(ch.country ?? ''),
+        label: state === 'upcoming' ? 'まもなく配信' : 'ライブ配信',
+        note: ch.tendency || ch.watchNote || 'カピバラのライブ配信です。',
+        type: ch.type ?? 'event',
+        checked: ch.embedChecked ?? '',
+        state,
+      });
+    };
+    // 国内ライブは先頭へ（表示順を保つため逆順に prepend）
+    for (const x of jp.slice().reverse()) list.insertBefore(makeDyn(x, 'live'), list.firstChild);
+    // 海外の動的ライブは末尾へ
+    for (const x of other) list.appendChild(makeDyn(x, 'live'));
+
+    // upcoming（配信予定）を「まもなく配信」で末尾に
+    const upItems = (status.upcoming ?? []).filter((x) => {
+      const ch = x.channelSlug ? channels[x.channelSlug] : undefined;
+      return ch && ch.capybaraContent && ch.embedOk !== false;
+    });
+    for (const x of upItems) {
+      if (baseIds.has(x.videoId) || liveIds.has(x.videoId)) continue;
+      list.appendChild(makeDyn(x, 'upcoming'));
+    }
+
+    // 4) 初期選択: ライブ中の常設(always/24h)カメラの先頭（未操作時のみ）。国内イベントは最上位に出すが主役の初期選択にはしない。
+    if (!userInteracted) {
+      const firstLiveBase = baseCards.find((c) => c.dataset.live === 'true');
+      const target = firstLiveBase ?? (list.querySelector('.viewer-cam') as HTMLElement | null);
+      if (target) selectCard(target);
+    }
+  }
+
+  // ---------- 新着フィード（横スクロール・クリックでYouTube） ----------
+  function buildFeedCard(item: FeedItem): HTMLAnchorElement {
     const ch = channels[item.channelSlug];
     const name = item.channelName || ch?.name || '';
     const note = ch?.watchNote || 'カピバラの新着動画です。';
-    const url = `https://www.youtube.com/watch?v=${item.videoId}`;
     const date = item.published
       ? new Date(item.published).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })
       : '';
-    return `<a class="feed-card" href="${url}" target="_blank" rel="noopener" role="listitem"><span class="feed-card__media"><img class="feed-card__img" src="${thumb(item.videoId)}" alt="" loading="lazy" decoding="async" /></span><span class="feed-card__body"><span class="feed-card__meta label">${esc(name)}${date ? ` ・ ${date}` : ''}</span><span class="feed-card__title">${esc(item.title)}</span><span class="feed-card__note">${esc(note)}</span></span></a>`;
+    const a = document.createElement('a');
+    a.className = 'feed-card';
+    a.href = `https://www.youtube.com/watch?v=${encodeURIComponent(item.videoId)}`;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.setAttribute('role', 'listitem');
+
+    const media = document.createElement('span');
+    media.className = 'feed-card__media';
+    const img = document.createElement('img');
+    img.className = 'feed-card__img';
+    img.src = thumb(item.videoId);
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    media.appendChild(img);
+
+    const body = document.createElement('span');
+    body.className = 'feed-card__body';
+    const meta = document.createElement('span');
+    meta.className = 'feed-card__meta label';
+    meta.textContent = date ? `${name} ・ ${date}` : name;
+    const title = document.createElement('span');
+    title.className = 'feed-card__title';
+    title.textContent = item.title;
+    const noteEl = document.createElement('span');
+    noteEl.className = 'feed-card__note';
+    noteEl.textContent = note;
+    body.append(meta, title, noteEl);
+
+    a.append(media, body);
+    return a;
+  }
+
+  function renderFeed(status: Status | null): void {
+    const scroll = document.getElementById('feed-scroll');
+    const fallback = document.getElementById('feed-fallback');
+    if (!scroll || !fallback) return;
+    const items = (status?.latestVideos ?? []).slice(0, 16);
+    if (items.length === 0) {
+      fallback.textContent = '新着動画を読み込めませんでした。時間をおいて再度お試しください。';
+      return;
+    }
+    scroll.replaceChildren(...items.map(buildFeedCard));
+    scroll.hidden = false;
+    fallback.hidden = true;
   }
 
   async function loadStatus(): Promise<Status | null> {
     const bust = `?t=${Date.now()}`;
-    // ローカル開発（DEV）は公開前で remote が 404 になるためローカルのみ参照（コンソールエラー回避）。
-    // 本番は data ブランチの raw を優先し、失敗時にローカルへフォールバック。
-    // ただし LIVE_STATUS_URL が未設定（OWNER プレースホルダのまま＝P5前）の場合は
-    // 確実に404になる remote 参照を避け、ローカルのみにする。
     const remoteConfigured = !LIVE_STATUS_URL.includes('OWNER/');
     const urls =
       import.meta.env.DEV || !remoteConfigured
@@ -405,144 +820,290 @@ const articles = [
     return null;
   }
 
-  function renderLive(status: Status | null): void {
-    const grid = document.getElementById('live-grid');
-    const empty = document.getElementById('live-empty');
-    const root = document.getElementById('live-root');
-    if (!grid || !empty || !root) return;
-    // カピバラが映るチャンネルのライブだけを対象（capybaraContent:false は除外＝非カピバラを装わない）
-    const items = (status?.live ?? []).filter((x) => {
-      const ch = x.channelSlug ? channels[x.channelSlug] : undefined;
-      return ch && ch.capybaraContent;
-    });
-    if (items.length === 0) return; // 0件・fetch失敗 → 空状態のまま（既存挙動を維持）
-    grid.innerHTML = items.map(liveCardHtml).join('');
-    grid.hidden = false;
-    empty.hidden = true;
-    root.setAttribute('data-state', 'live');
-  }
-
-  function renderFeed(status: Status | null): void {
-    const scroll = document.getElementById('feed-scroll');
-    const fallback = document.getElementById('feed-fallback');
-    if (!scroll || !fallback) return;
-    const items = (status?.latestVideos ?? []).slice(0, 16);
-    if (items.length === 0) {
-      fallback.textContent = '新着動画を読み込めませんでした。時間をおいて再度お試しください。';
-      return;
-    }
-    scroll.innerHTML = items.map(feedCardHtml).join('');
-    scroll.hidden = false;
-    fallback.hidden = true;
-  }
-
   loadStatus().then((status) => {
-    renderLive(status);
+    reconcileViewer(status);
     renderFeed(status);
   });
 </script>
 
 <style>
-  /* ============ ヒーロー ============ */
-  .hero {
+  /* ============ HERO: ライブビューア ============ */
+  .viewer {
     background: var(--bg);
     border-bottom: 1px solid var(--line);
-    overflow: hidden;
+    padding-block: clamp(2rem, 1.4rem + 3vw, 3.5rem);
   }
-  .hero__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: var(--space-6);
-    padding-block: clamp(3.5rem, 2.5rem + 6vw, 6.5rem);
+  .viewer__intro {
+    margin-bottom: var(--space-6);
   }
-  .hero__content {
-    max-width: 34rem;
-  }
-  .hero__eyebrow {
-    margin: 0 0 var(--space-4);
+  .viewer__eyebrow {
+    margin: 0 0 var(--space-3);
     color: var(--accent-ink);
   }
-  .hero__title {
-    margin: 0 0 var(--space-5);
-    font-size: clamp(2.4rem, 1.6rem + 4.2vw, 4rem);
-    line-height: 1.22;
-    letter-spacing: 0.04em;
+  .viewer__brand {
+    margin: 0 0 var(--space-3);
+    font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem);
+    line-height: 1.3;
+    letter-spacing: 0.05em;
     color: var(--text-1);
   }
-  .hero__lead {
-    margin: 0 0 var(--space-6);
-    max-width: 42ch;
+  .viewer__lead {
+    margin: 0;
+    max-width: 48ch;
     color: var(--text-2);
-    font-size: 1.0625rem;
-    line-height: 1.9;
+    font-size: 1rem;
+    line-height: 1.85;
   }
-  .hero__actions {
-    display: flex;
-    align-items: center;
+
+  /* プレイヤー(左・大) ＋ カメラリスト(右) */
+  .viewer__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
     gap: var(--space-5);
-    flex-wrap: wrap;
+    align-items: start;
   }
-  .hero__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--text-1);
-    font-weight: 500;
+  .viewer__main {
+    min-width: 0;
   }
-  .hero__link :global(svg) {
+
+  /* 大プレイヤー（facade） */
+  .viewer-stage {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+    cursor: pointer;
+    padding: 0;
+  }
+  .viewer-stage__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--motion-base);
+  }
+  .viewer-stage__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, hsl(33 30% 12% / 0) 55%, hsl(33 30% 12% / 0.3) 100%);
+    pointer-events: none;
+  }
+  .viewer-stage__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-full);
+    background: hsl(33 30% 99% / 0.94);
     color: var(--accent);
-    transition: transform var(--motion-fast);
+    font-size: 2.1rem;
+    box-shadow: var(--shadow-2);
+    transition: transform var(--motion-fast), background var(--motion-fast);
+    pointer-events: none;
   }
-  .hero__link:hover {
-    text-decoration: none;
+  .viewer-stage:hover .viewer-stage__img,
+  .viewer-stage:focus-visible .viewer-stage__img {
+    transform: scale(1.02);
+  }
+  .viewer-stage:hover .viewer-stage__play,
+  .viewer-stage:focus-visible .viewer-stage__play {
+    transform: translate(-50%, -50%) scale(1.06);
+    background: hsl(33 30% 99% / 1);
+  }
+  .viewer-stage:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  :global(.viewer-stage__iframe) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* 再生中カメラの説明（now playing） */
+  .viewer-now {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4) 0 0;
+  }
+  .viewer-now__badge {
+    display: inline-flex;
+  }
+  .viewer-now__title {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-1);
+  }
+  .viewer-now__meta {
+    margin: 0;
     color: var(--accent-ink);
   }
-  .hero__link:hover :global(svg) {
-    transform: translateX(3px);
+  .viewer-now__note {
+    margin: 0;
+    max-width: 60ch;
+    color: var(--text-2);
+    font-size: 0.9375rem;
+    line-height: 1.75;
+  }
+  .viewer-now__foot {
+    margin: 0;
+    color: var(--text-3);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+  .viewer-now__foot:empty {
+    display: none;
+  }
+  .viewer-now__checked {
+    margin: var(--space-1) 0 0;
+    color: var(--text-3);
+    font-size: 0.8125rem;
+    font-family: var(--font-latin);
+  }
+  .viewer-now__checked:empty {
+    display: none;
   }
 
-  /* ヒーローの湯けむり＋縦ラベル */
-  .hero__art {
-    position: relative;
+  /* カメラ切替リスト（縦・右カラム。多い時はスクロール） */
+  .viewer__rail {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .viewer__rail-head {
     display: flex;
     align-items: center;
-    gap: var(--space-4);
-    padding-right: var(--space-4);
+    gap: 8px;
+    margin: 0;
+    color: var(--text-2);
   }
-  .hero__vlabel {
-    writing-mode: vertical-rl;
+  .viewer__rail-head :global(svg) {
+    color: var(--accent);
+    font-size: 1.1em;
+  }
+  .viewer__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-height: 30rem;
+    overflow-y: auto;
+    padding-right: 4px;
+    scrollbar-width: thin;
+  }
+  .viewer__rail-foot {
+    margin: 0;
     color: var(--text-3);
-    letter-spacing: 0.28em;
+    font-size: 0.8125rem;
+    line-height: 1.65;
   }
-  .steam {
-    width: clamp(90px, 12vw, 140px);
-    height: auto;
-  }
-  .steam path {
-    stroke: var(--line-strong);
-    stroke-width: 1.5;
-    stroke-linecap: round;
-  }
-  .steam path:nth-child(1) { opacity: 0.55; }
-  .steam path:nth-child(2) { opacity: 0.9; }
-  .steam path:nth-child(3) { opacity: 0.7; }
 
-  @media (max-width: 760px) {
-    .hero__inner {
+  /* カメラカード（横並び・親しみカード寄り） */
+  .viewer-cam {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    gap: var(--space-3);
+    align-items: stretch;
+    width: 100%;
+    text-align: left;
+    padding: var(--space-2);
+    background: var(--surface-soft);
+    border: 1px solid transparent;
+    border-radius: var(--radius-m);
+    cursor: pointer;
+    transition: box-shadow var(--motion-base), border-color var(--motion-fast);
+  }
+  .viewer-cam:hover {
+    box-shadow: var(--shadow-2);
+  }
+  .viewer-cam[aria-pressed='true'] {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .viewer-cam:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .viewer-cam__thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: var(--radius-s);
+    background: var(--surface-deep);
+  }
+  .viewer-cam__thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .viewer-cam__badge {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    pointer-events: none;
+    transform: scale(0.86);
+    transform-origin: left top;
+  }
+  .viewer-cam__body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    padding-right: var(--space-1);
+  }
+  .viewer-cam__name {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 1.35;
+    color: var(--text-1);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .viewer-cam__meta {
+    color: var(--accent-ink);
+  }
+  .viewer-cam__note {
+    color: var(--text-2);
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  @media (max-width: 900px) {
+    .viewer__layout {
       grid-template-columns: 1fr;
-      gap: var(--space-4);
+      gap: var(--space-5);
     }
-    .hero__art {
-      order: -1;
-      justify-content: flex-start;
-      padding: 0;
+    .viewer__list {
+      max-height: none;
+      overflow: visible;
     }
-    .hero__vlabel {
-      display: none;
-    }
-    .steam--hero {
-      width: 80px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .viewer-stage__img,
+    .viewer-stage__play {
+      transition: none;
     }
   }
 
@@ -551,75 +1112,146 @@ const articles = [
     background: var(--surface-soft);
   }
 
-  /* ============ 01 LIVE 空状態 ============ */
-  .live-empty {
+  /* ============ 配信で浮上するカメラ（定期ライブの配信元） ============ */
+  .sched {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    gap: var(--space-3) var(--space-5);
+  }
+  .sched__row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-3);
+    align-items: start;
+    padding: var(--space-3) 0;
+    border-top: 1px solid var(--line);
+  }
+  .sched__badge {
+    margin-top: 2px;
+  }
+  .sched__body {
     display: flex;
-    align-items: center;
-    gap: var(--space-5);
-    padding: var(--space-6);
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-m);
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
   }
-  .live-empty__mascot {
-    flex-shrink: 0;
-  }
-  .live-empty__title {
-    margin: 0 0 var(--space-2);
-    font-family: var(--font-serif);
+  .sched__name {
     font-weight: 700;
-    font-size: 1.1875rem;
+    font-size: 0.9375rem;
     color: var(--text-1);
   }
-  .live-empty__note {
-    margin: 0 0 var(--space-3);
+  .sched__meta {
+    color: var(--text-3);
+  }
+  .sched__note {
     color: var(--text-2);
-    font-size: 0.9375rem;
-  }
-  .live-empty__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 500;
-    color: var(--accent-ink);
-  }
-  .live-empty__link :global(svg) {
-    transition: transform var(--motion-fast);
-  }
-  .live-empty__link:hover {
-    text-decoration: none;
-  }
-  .live-empty__link:hover :global(svg) {
-    transform: translateX(3px);
+    font-size: 0.8125rem;
+    line-height: 1.6;
   }
 
-  /* ============ 02 いつでも見られる（動画カードのグリッド） ============ */
-  .always-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 264px), 1fr));
-    gap: var(--space-4);
-  }
-
-  /* ============ 01 LIVE（クライアント描画のカードグリッド） ============ */
-  .live-grid {
+  /* ============ 世界のカメラ（外部リンク枠） ============ */
+  .extcam-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: var(--space-4);
   }
-  /* prefers-reduced-motion 環境でなければ、出現時に一度だけそっと持ち上げる */
-  @media (prefers-reduced-motion: no-preference) {
-    .live-grid:not([hidden]) :global(.vcard) {
-      animation: live-reveal var(--motion-base) both;
-    }
+  .extcam {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
   }
-  @keyframes live-reveal {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
-    }
+  .extcam__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    flex: 1;
+  }
+  .extcam__meta {
+    margin: 0;
+    color: var(--accent-ink);
+  }
+  .extcam__name {
+    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.4;
+    color: var(--text-1);
+  }
+  .extcam__note {
+    margin: 0;
+    color: var(--text-2);
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+  .extcam__hours {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    color: var(--text-3);
+    font-size: 0.8125rem;
+  }
+  .extcam__hours :global(svg) {
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .extcam__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    font-weight: 500;
+    color: var(--accent-ink);
+  }
+  .extcam__link :global(svg) {
+    transition: transform var(--motion-fast);
+  }
+  .extcam__link:hover {
+    text-decoration: none;
+  }
+  .extcam__link:hover :global(svg) {
+    transform: translate(2px, -2px);
   }
 
-  /* ============ 03 番号付き編集リスト（アーカイブ・ファサード付き） ============ */
+  /* ============ 会いに行く（マップ導線バンド） ============ */
+  .mapband {
+    background: var(--surface-deep);
+    border-block: 1px solid var(--line);
+  }
+  .mapband__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    padding-block: var(--space-6);
+    flex-wrap: wrap;
+  }
+  .mapband__eyebrow {
+    margin: 0 0 var(--space-2);
+    color: var(--accent-ink);
+  }
+  .mapband__title {
+    margin: 0 0 var(--space-2);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: clamp(1.2rem, 1rem + 1vw, 1.55rem);
+    color: var(--text-1);
+  }
+  .mapband__note {
+    margin: 0;
+    max-width: 52ch;
+    color: var(--text-2);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  /* ============ 01 番号付き編集リスト（アーカイブ・ファサード付き） ============ */
   .archive {
     display: flex;
     flex-direction: column;
@@ -666,7 +1298,6 @@ const articles = [
     font-size: 0.875rem;
     line-height: 1.7;
   }
-
   @media (max-width: 560px) {
     .archive__row {
       grid-template-columns: auto 1fr;
@@ -677,7 +1308,7 @@ const articles = [
     }
   }
 
-  /* ============ 04 横スクロールカード（新着フィード） ============ */
+  /* ============ 02 横スクロールカード（新着フィード） ============ */
   .feed-scroll {
     display: grid;
     grid-auto-flow: column;
@@ -696,7 +1327,7 @@ const articles = [
     font-size: 0.9375rem;
   }
 
-  /* ============ 05 温泉ストリップ ============ */
+  /* ============ 03 温泉ストリップ ============ */
   .onsen {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -708,15 +1339,6 @@ const articles = [
     border-radius: var(--radius-m);
     overflow: hidden;
   }
-  .onsen__title {
-    margin: 0 0 var(--space-3);
-    font-family: var(--font-serif);
-    font-weight: 700;
-    font-size: clamp(1.25rem, 1.05rem + 1vw, 1.6rem);
-    line-height: 1.45;
-    color: var(--text-1);
-  }
-  /* 実データの状況（数字はFraunces） */
   .onsen__stats {
     display: flex;
     gap: var(--space-6);
@@ -745,6 +1367,14 @@ const articles = [
   .onsen__art .steam {
     width: clamp(80px, 10vw, 130px);
   }
+  .steam path {
+    stroke: var(--line-strong);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+  }
+  .steam path:nth-child(1) { opacity: 0.55; }
+  .steam path:nth-child(2) { opacity: 0.9; }
+  .steam path:nth-child(3) { opacity: 0.7; }
   @media (max-width: 640px) {
     .onsen {
       grid-template-columns: 1fr;
@@ -755,7 +1385,7 @@ const articles = [
     }
   }
 
-  /* ============ 06 記事カード（2列） ============ */
+  /* ============ 04 記事カード（2列） ============ */
   .reads {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
@@ -763,10 +1393,36 @@ const articles = [
   }
 </style>
 
-{/* クライアントで動的生成する LIVE カード・新着フィードカード用のグローバルスタイル
-    （スコープドCSSは動的HTMLに効かないため is:global で定義） */}
+{/* クライアント動的生成カード（ビューア合流カード・新着フィード）用のグローバルスタイル。
+    スコープドCSSは動的HTMLに効かないため is:global で定義する。 */}
 <style is:global>
-  /* LIVE バッジ（くすんだ朱・純赤禁止）。ドットはゆっくり点滅（reduce-motionで停止） */
+  /* --- バッジ（Badge.astro と同配色。動的カードでも使えるようグローバル定義） --- */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .badge--ok {
+    color: var(--green);
+    background: var(--green-soft);
+  }
+  .badge--warn {
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+  }
+  .badge--neutral {
+    color: var(--text-2);
+    background: var(--surface-soft);
+  }
+
+  /* --- LIVE バッジ（くすんだ朱・純赤禁止・ゆっくり点滅） --- */
   .live-badge {
     display: inline-flex;
     align-items: center;
@@ -802,41 +1458,7 @@ const articles = [
     }
   }
 
-  /* 埋め込み不可チャンネルの外部リンクカード（メディア面） */
-  .vcard__extlink {
-    position: relative;
-    display: block;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-  }
-  .vcard__extlink .lyt__img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--motion-base);
-  }
-  .vcard__extlink:hover .lyt__img {
-    transform: scale(1.03);
-  }
-  .vcard__ext {
-    position: absolute;
-    left: 50%;
-    bottom: 12px;
-    transform: translateX(-50%);
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 14px;
-    border-radius: var(--radius-full);
-    background: hsl(33 30% 99% / 0.94);
-    color: var(--accent-ink);
-    font-size: 0.8125rem;
-    font-weight: 700;
-    box-shadow: var(--shadow-2);
-  }
-
-  /* 新着フィードの横スクロールカード（クリックでYouTubeへ・埋め込みなし） */
+  /* --- 新着フィードの横スクロールカード（クリックでYouTubeへ・埋め込みなし） --- */
   .feed-card {
     display: flex;
     flex-direction: column;
@@ -884,7 +1506,6 @@ const articles = [
     font-size: 0.9375rem;
     line-height: 1.5;
     color: var(--text-1);
-    /* 2行で省略 */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
