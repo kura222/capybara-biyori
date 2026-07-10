@@ -1,0 +1,72 @@
+name: check-live
+
+# ライブ検知（仕様 §5）。30分ごと + 手動実行。
+# 生成した live-status.json は **data ブランチ** にのみ強制コミットする（main には触れない）。
+#   → main を汚さないことで Cloudflare Pages の無料ビルド枠（月500回）を消費しない。
+# 60日無コミットで cron が止まる仕様への対策として、変更が無くても keepalive コミットで
+# タイムスタンプを更新し続ける（check-live.mjs は毎回 updatedAt を書き換えるため通常は差分が出る）。
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+# data ブランチへ push するため書き込み権限が必要
+permissions:
+  contents: write
+
+# 実行の重なりを防ぐ（前回が長引いても data ブランチの競合を避ける）
+concurrency:
+  group: check-live
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (main)
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # check-live.mjs は依存ゼロ（Node 22 の global fetch と標準ライブラリのみ）→ npm install 不要
+
+      - name: Prepare data branch worktree & generate live-status.json
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          set -e
+          git config user.name "capybara-biyori-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          # data ブランチを ./data-branch に worktree として用意する。
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            # 既存の data ブランチを取得して worktree 化
+            git fetch origin data --depth=1
+            git worktree add -B data data-branch origin/data
+          else
+            # 初回: 履歴を持たない orphan の data ブランチを作成
+            git worktree add --detach data-branch
+            cd data-branch
+            git checkout --orphan data
+            git reset          # index を空にする（unborn ブランチで作業ファイルを未追跡化）
+            git clean -fdx     # main 由来の作業ファイルを除去
+            cd ..
+          fi
+
+          # data ブランチ worktree のルートに live-status.json を生成する
+          LIVE_STATUS_OUT="$PWD/data-branch/live-status.json" node site/scripts/check-live.mjs
+
+      - name: Commit & force-push to data branch
+        run: |
+          set -e
+          cd data-branch
+          git add live-status.json
+          # check-live.mjs は毎回 updatedAt を更新するため通常は差分が出る。
+          # 万一差分が無い場合も keepalive のため空コミットを許可する。
+          git commit -m "chore(live): update live-status.json ($(date -u +%FT%TZ))" \
+            || git commit --allow-empty -m "chore(live): keepalive ($(date -u +%FT%TZ))"
+          # data ブランチはデータ専用のため強制 push で問題ない
+          git push -f origin data

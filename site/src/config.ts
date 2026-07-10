@@ -12,6 +12,23 @@ export const SITE_URL: string = (
   import.meta.env?.PUBLIC_SITE_URL ?? 'https://capybara-biyori.pages.dev'
 ).replace(/\/+$/, '');
 
+/**
+ * ライブ状態JSON（仕様 §5）の取得先。
+ * GitHub Actions が **data ブランチ** に生成・コミットした live-status.json を、
+ * クライアントが raw.githubusercontent 経由で fetch する。
+ *
+ * - 既定は data ブランチの raw URL。GitHub 公開（P5）で `OWNER/REPO` を実値に差し替える
+ *   （環境変数 `PUBLIC_LIVE_STATUS_URL` で上書き可能）。
+ * - ローカル開発・公開前は remote が 404 になるため、`LIVE_STATUS_FALLBACK_URL`
+ *   （`/data/live-status.json`＝check-live.mjs のローカル出力）へフォールバックする。
+ */
+export const LIVE_STATUS_URL: string =
+  import.meta.env?.PUBLIC_LIVE_STATUS_URL ??
+  'https://raw.githubusercontent.com/OWNER/capybara-biyori/data/live-status.json';
+
+/** ローカル開発時のフォールバック（Astro が public/data/ を /data/ として配信） */
+export const LIVE_STATUS_FALLBACK_URL = '/data/live-status.json';
+
 /** サイト全体のメタ情報 */
 export const SITE = {
   /** 正式サイト名 */

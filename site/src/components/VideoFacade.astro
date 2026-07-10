@@ -1,0 +1,159 @@
+---
+/**
+ * lite-youtube 方式の動画ファサード（仕様 §4.1）。
+ *   サムネイル（YouTube公式サムネ）＋再生ボタンだけを初期表示し、
+ *   クリック/Enter で初めて youtube-nocookie の iframe を生成する。
+ * 目的:
+ *   1) 初期表示の高速化（iframe を読み込まない）
+ *   2) 「ライブ終了後の黒画面」回避
+ *   3) プレイヤーへのオーバーレイを作らない（規約遵守。再生ボタンは自前サムネ上の導線）
+ *
+ * クライアント側で動的生成する LIVE カードも、同じ `data-yt-facade` マークアップを使えば
+ * 下部の委譲ハンドラでそのまま iframe 化される。
+ */
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  videoId: string;
+  /** アクセシビリティ用の説明（何を再生するか） */
+  title: string;
+  /** アスペクト比（'16 / 9' | '16 / 10' など） */
+  ratio?: string;
+  /** サムネURLを明示（省略時は hqdefault） */
+  thumb?: string;
+  class?: string;
+}
+
+const { videoId, title, ratio = '16 / 9', thumb, class: className = '' } = Astro.props;
+const src = thumb ?? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+---
+
+<div
+  class:list={['lyt', className]}
+  role="button"
+  tabindex="0"
+  data-yt-facade
+  data-video-id={videoId}
+  style={`--lyt-ratio:${ratio};`}
+  aria-label={`再生: ${title}`}
+>
+  <img class="lyt__img" src={src} alt="" loading="lazy" decoding="async" width="480" height="360" />
+  <span class="lyt__scrim" aria-hidden="true"></span>
+  <span class="lyt__play" aria-hidden="true"><Icon name="ph:play-fill" /></span>
+</div>
+
+<style is:global>
+  /* is:global: クライアント側で動的生成する LIVE カードの .lyt にも同じ見た目を効かせるため */
+  .lyt {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: var(--lyt-ratio, 16 / 9);
+    overflow: hidden;
+    background: var(--surface-soft);
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+  }
+  .lyt__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--motion-base);
+  }
+  /* 上端をわずかに沈めて再生ボタンの視認性を上げる（純黒スクリム禁止＝背景色相の暗色で） */
+  .lyt__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, hsl(33 30% 12% / 0) 55%, hsl(33 30% 12% / 0.28) 100%);
+    pointer-events: none;
+  }
+  .lyt__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-full);
+    background: hsl(33 30% 99% / 0.92);
+    color: var(--accent);
+    font-size: 1.7rem;
+    box-shadow: var(--shadow-2);
+    transition: transform var(--motion-fast), background var(--motion-fast);
+    pointer-events: none;
+  }
+  .lyt:hover .lyt__img,
+  .lyt:focus-visible .lyt__img {
+    transform: scale(1.03);
+  }
+  .lyt:hover .lyt__play,
+  .lyt:focus-visible .lyt__play {
+    transform: translate(-50%, -50%) scale(1.06);
+    background: hsl(33 30% 99% / 1);
+  }
+  .lyt:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* 再生後に差し込まれる iframe（委譲ハンドラが生成） */
+  .lyt .lyt__iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lyt__img,
+    .lyt__play {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  // facade → iframe への差し替え（委譲。SSR/クライアント生成の両方に効く）。
+  // Astro は同一 <script> を1回だけバンドルするため、複数箇所で使っても二重登録しない。
+  const w = window as unknown as { __lytBound?: boolean };
+  if (!w.__lytBound) {
+    w.__lytBound = true;
+
+    const activate = (el: Element) => {
+      if (el.getAttribute('data-yt-activated')) return;
+      const id = el.getAttribute('data-video-id');
+      if (!id) return;
+      el.setAttribute('data-yt-activated', '1');
+      const iframe = document.createElement('iframe');
+      iframe.className = 'lyt__iframe';
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.title = el.getAttribute('aria-label') || 'YouTube';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('frameborder', '0');
+      el.replaceChildren(iframe);
+    };
+
+    document.addEventListener('click', (ev) => {
+      const target = ev.target as Element | null;
+      const el = target?.closest?.('[data-yt-facade]');
+      if (el) activate(el);
+    });
+    // キーボード操作（role="button"）
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key !== 'Enter' && ev.key !== ' ') return;
+      const target = ev.target as Element | null;
+      const el = target?.closest?.('[data-yt-facade]');
+      if (el) {
+        ev.preventDefault();
+        activate(el);
+      }
+    });
+  }
+</script>

@@ -29,3 +29,6 @@ Thumbs.db
 
 # Cloudflare Pages ローカル
 .wrangler/
+
+# ライブ検知のローカル出力（check-live.mjs が生成。本番は data ブランチ / raw から取得するため main には含めない）
+site/public/data/live-status.json

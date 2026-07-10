@@ -1,0 +1,115 @@
+---
+/**
+ * 動画カード（親しみカード・デザインガイドライン §5b）。
+ *   面色 surface-soft＋角丸m＋影なし、hover時のみ --shadow-2。
+ *   メディア部は VideoFacade（lite-youtube）で、クリックまで iframe を読み込まない。
+ *   独自解説（note）を必ず併載する（YouTube規約対応）。
+ *
+ * クライアント動的生成（LIVEカード）も同じ .vcard / .lyt 構造を組み立てれば見た目が揃う。
+ */
+import Badge from './Badge.astro';
+import VideoFacade from './VideoFacade.astro';
+
+interface Props {
+  videoId: string;
+  title: string;
+  /** 独自解説（必須・規約対応） */
+  note: string;
+  /** サムネ上の小ラベル（カメラ名など・任意） */
+  meta?: string;
+  badgeText?: string;
+  badgeVariant?: 'live' | 'ok' | 'warn' | 'neutral' | 'accent';
+  badgeDot?: boolean;
+  ratio?: string;
+  thumb?: string;
+  /** 季節注記など、note の下に添える補足（任意） */
+  footnote?: string;
+  class?: string;
+}
+
+const {
+  videoId,
+  title,
+  note,
+  meta,
+  badgeText,
+  badgeVariant = 'neutral',
+  badgeDot = false,
+  ratio = '16 / 9',
+  thumb,
+  footnote,
+  class: className = '',
+} = Astro.props;
+---
+
+<article class:list={['vcard', className]}>
+  <div class="vcard__media">
+    <VideoFacade videoId={videoId} title={title} ratio={ratio} thumb={thumb} />
+    {badgeText && (
+      <span class="vcard__badge">
+        <Badge variant={badgeVariant} dot={badgeDot}>{badgeText}</Badge>
+      </span>
+    )}
+  </div>
+  <div class="vcard__body">
+    {meta && <p class="vcard__meta label">{meta}</p>}
+    <h3 class="vcard__title">{title}</h3>
+    <p class="vcard__note">{note}</p>
+    {footnote && <p class="vcard__foot">{footnote}</p>}
+  </div>
+</article>
+
+<style is:global>
+  /* is:global: クライアント側で動的生成する LIVE カードの .vcard にも同じ見た目を効かせるため */
+  .vcard {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--surface-soft);
+    border: 1px solid transparent;
+    border-radius: var(--radius-m);
+    transition: box-shadow var(--motion-base);
+  }
+  .vcard:hover {
+    box-shadow: var(--shadow-2);
+  }
+  .vcard__media {
+    position: relative;
+  }
+  .vcard__badge {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .vcard__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    flex: 1;
+  }
+  .vcard__meta {
+    margin: 0;
+    color: var(--accent-ink);
+  }
+  .vcard__title {
+    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.4;
+    color: var(--text-1);
+  }
+  .vcard__note {
+    margin: 0;
+    color: var(--text-2);
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+  .vcard__foot {
+    margin: 0;
+    color: var(--text-3);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+</style>
