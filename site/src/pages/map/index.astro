@@ -136,6 +136,25 @@ const statusLabel: Record<string, string> = {
         </div>
       </div>
 
+      {/* 現在地から探す（位置情報は端末内でのみ利用・送信/保存しない） */}
+      <div class="geobar">
+        <div class="geobar__actions">
+          <button type="button" class="btn-locate" id="locate-btn">
+            <Icon name="ph:crosshair" class="btn-locate__icon" aria-hidden="true" />
+            <span>現在地から探す</span>
+          </button>
+          <button type="button" class="btn-back" id="reset-region-btn" hidden>
+            <Icon name="ph:globe-hemisphere-west" aria-hidden="true" />
+            <span>全国表示に戻す</span>
+          </button>
+        </div>
+        <p class="geobar__privacy">
+          <Icon name="ph:lock-simple" aria-hidden="true" />
+          位置情報はお使いの端末内でのみ使われ、送信・保存されません。
+        </p>
+        <p class="geo-msg" id="geo-msg" role="status" aria-live="polite" hidden></p>
+      </div>
+
       {/* 地図 */}
       <div class="map-wrap">
         <div id="map" class="map" role="application" aria-label="カピバラ施設の地図">
@@ -153,11 +172,17 @@ const statusLabel: Record<string, string> = {
         </ul>
       </div>
 
-      {/* 一覧のメタ（件数） */}
-      <p class="listmeta">
-        <span id="result-count" class="num">{facilities.length}</span>
-        <span>件の施設</span>
-      </p>
+      {/* 一覧のメタ（件数・並び替え） */}
+      <div class="listmeta">
+        <p class="listmeta__count">
+          <span id="result-count" class="num">{facilities.length}</span>
+          <span>件の施設</span>
+        </p>
+        <div class="sortmode" id="sortmode" role="group" aria-label="並び替え" hidden>
+          <button type="button" class="sortmode__btn" data-sort="near" aria-pressed="true">近い順</button>
+          <button type="button" class="sortmode__btn" data-sort="region" aria-pressed="false">地域順</button>
+        </div>
+      </div>
 
       {/* カード一覧（編集的カード=罫線1px流派） */}
       <ul class="facil-list" id="facil-list">
@@ -197,6 +222,7 @@ const statusLabel: Record<string, string> = {
                 <Icon name="ph:map-pin" aria-hidden="true" />
                 {f.prefecture}
                 {f.latlngApprox && <span class="facil__approx">おおよその位置</span>}
+                <span class="facil__dist" hidden aria-hidden="true"></span>
               </p>
 
               {f.detail && (
@@ -253,6 +279,9 @@ const statusLabel: Record<string, string> = {
     </div>
   </Section>
 
+  {/* 地図の現在地コントロール用アイコン（Phosphor SVG をクライアントで複製） */}
+  <template id="tmpl-locate-icon"><Icon name="ph:crosshair" aria-hidden="true" /></template>
+
   {/* クライアント地図へ渡すデータ（JSON） */}
   <script type="application/json" id="facilities-data" is:inline set:html={JSON.stringify(mapData)}></script>
 </BaseLayout>
@@ -261,6 +290,7 @@ const statusLabel: Record<string, string> = {
 <script>
   import L from 'leaflet';
   import 'leaflet/dist/leaflet.css';
+  import { REGION_ORDER } from '../../data/taxonomy';
 
   type Facility = {
     id: string;
@@ -403,16 +433,261 @@ const statusLabel: Record<string, string> = {
       });
     }
 
-    // 初期描画：まず全ピンを載せ（open のみ）、可視ピンに地図を合わせる
-    apply();
-    // 座標を持つ可視施設だけで地図の表示範囲を合わせる（座標なしは一覧のみ）
-    const visible = facilities.filter((f) => matches(f) && f.lat != null && f.lng != null);
-    if (visible.length > 0) {
-      const bounds = L.latLngBounds(
-        visible.map((f) => [f.lat as number, f.lng as number] as [number, number]),
-      );
-      map.fitBounds(bounds, { padding: [48, 48], maxZoom: 7 });
+    // ===== 現在地から探す（位置情報は端末内でのみ利用・送信/保存しない） =====
+    const GEO_FLAG = 'capybara-geo-allowed';
+    const locateBtn = document.getElementById('locate-btn') as HTMLButtonElement | null;
+    const resetBtn = document.getElementById('reset-region-btn') as HTMLButtonElement | null;
+    const geoMsg = document.getElementById('geo-msg');
+    const sortmodeEl = document.getElementById('sortmode');
+    const sortBtns = Array.from(document.querySelectorAll<HTMLButtonElement>('.sortmode__btn'));
+    const listEl = document.getElementById('facil-list');
+
+    let userMarker: L.Marker | null = null;
+    let accuracyCircle: L.Circle | null = null;
+    let hasLocation = false;
+    let sortMode: 'near' | 'region' = 'near';
+    const distances = new Map<string, number>(); // id → km（座標ありのみ）
+
+    const regionRank = (r: string) => {
+      const i = REGION_ORDER.indexOf(r);
+      return i === -1 ? REGION_ORDER.length : i;
+    };
+
+    // ハーバサイン距離（km・クライアント計算・依存追加なし）
+    function haversineKm(aLat: number, aLng: number, bLat: number, bLng: number): number {
+      const R = 6371;
+      const toRad = (d: number) => (d * Math.PI) / 180;
+      const dLat = toRad(bLat - aLat);
+      const dLng = toRad(bLng - aLng);
+      const s =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(toRad(aLat)) * Math.cos(toRad(bLat)) * Math.sin(dLng / 2) ** 2;
+      return 2 * R * Math.asin(Math.min(1, Math.sqrt(s)));
     }
+    const fmtDist = (km: number) => `約${Math.max(1, Math.round(km))}km`;
+
+    function showMsg(text: string) {
+      if (!geoMsg) return;
+      geoMsg.textContent = text;
+      geoMsg.hidden = !text;
+    }
+
+    // 全国表示（可視ピンに地図を合わせる）
+    function fitNational() {
+      const vis = facilities.filter((f) => matches(f) && f.lat != null && f.lng != null);
+      if (vis.length > 0) {
+        const b = L.latLngBounds(
+          vis.map((f) => [f.lat as number, f.lng as number] as [number, number]),
+        );
+        map.fitBounds(b, { padding: [48, 48], maxZoom: 7 });
+      } else {
+        map.setView([37.5, 137.5], 5);
+      }
+    }
+
+    // カード一覧の並び替え（DOM の並べ替え・textContent のみ使用）
+    function orderCards() {
+      if (!listEl) return;
+      const byId = new Map<string, Facility>(facilities.map((f) => [f.id, f]));
+      const cards = Array.from(listEl.querySelectorAll<HTMLElement>('.facil'));
+      cards.sort((ca, cb) => {
+        const a = byId.get(ca.dataset.id || '');
+        const b = byId.get(cb.dataset.id || '');
+        if (!a || !b) return 0;
+        if (sortMode === 'near') {
+          const da = distances.has(a.id) ? (distances.get(a.id) as number) : Infinity;
+          const db = distances.has(b.id) ? (distances.get(b.id) as number) : Infinity;
+          if (da !== db) return da - db;
+          return a.name.localeCompare(b.name, 'ja');
+        }
+        const ra = regionRank(a.region);
+        const rb = regionRank(b.region);
+        if (ra !== rb) return ra - rb;
+        return a.name.localeCompare(b.name, 'ja');
+      });
+      for (const c of cards) listEl.appendChild(c);
+    }
+
+    // 各カードの距離バッジを更新（textContent のみ）
+    function updateDistanceLabels() {
+      for (const f of facilities) {
+        const card = document.querySelector<HTMLElement>(`.facil[data-id="${f.id}"]`);
+        const span = card?.querySelector<HTMLElement>('.facil__dist');
+        if (!span) continue;
+        if (hasLocation && distances.has(f.id)) {
+          span.textContent = fmtDist(distances.get(f.id) as number);
+          span.hidden = false;
+        } else {
+          span.textContent = '';
+          span.hidden = true;
+        }
+      }
+    }
+
+    function setSortMode(mode: 'near' | 'region') {
+      sortMode = mode;
+      for (const b of sortBtns) b.setAttribute('aria-pressed', String(b.dataset.sort === mode));
+      orderCards();
+    }
+
+    function onGeoSuccess(pos: GeolocationPosition) {
+      const { latitude, longitude, accuracy } = pos.coords;
+      hasLocation = true;
+      showMsg('');
+      try {
+        localStorage.setItem(GEO_FLAG, '1');
+      } catch {}
+
+      // 距離を計算（座標のある施設のみ・座標なしは末尾扱い）
+      distances.clear();
+      for (const f of facilities) {
+        if (f.lat != null && f.lng != null) {
+          distances.set(f.id, haversineKm(latitude, longitude, f.lat, f.lng));
+        }
+      }
+
+      // ユーザー位置マーカー（青ドット＋精度円。カピバラピンと区別）
+      if (userMarker) map.removeLayer(userMarker);
+      if (accuracyCircle) map.removeLayer(accuracyCircle);
+      const uicon = L.divIcon({
+        className: 'user-loc-icon',
+        html: '<span class="user-loc-dot"></span>',
+        iconSize: [20, 20],
+        iconAnchor: [10, 10],
+      });
+      userMarker = L.marker([latitude, longitude], {
+        icon: uicon,
+        keyboard: false,
+        title: '現在地',
+        zIndexOffset: 1000,
+      }).addTo(map);
+      userMarker.bindPopup('<div class="pin-popup"><p class="pin-popup__name">現在地</p></div>');
+      accuracyCircle = L.circle([latitude, longitude], {
+        radius: Math.min(accuracy || 0, 20000),
+        className: 'user-accuracy',
+        interactive: false,
+      }).addTo(map);
+
+      // 近い順に並べ替え・距離表示・並び替えトグルを表示
+      setSortMode('near');
+      updateDistanceLabels();
+      if (sortmodeEl) sortmodeEl.hidden = false;
+      if (resetBtn) resetBtn.hidden = false;
+      if (locateBtn) locateBtn.setAttribute('aria-pressed', 'true');
+
+      // 地図を現在地中心へ（周辺に施設が少なくても最寄り3件が入るよう自動調整）
+      const near = facilities
+        .filter((f) => matches(f) && f.lat != null && f.lng != null)
+        .sort((a, b) => (distances.get(a.id) as number) - (distances.get(b.id) as number))
+        .slice(0, 3);
+      const pts: [number, number][] = [[latitude, longitude]];
+      for (const f of near) pts.push([f.lat as number, f.lng as number]);
+      if (pts.length > 1) {
+        map.fitBounds(L.latLngBounds(pts), { padding: [60, 60], maxZoom: 10 });
+      } else {
+        map.setView([latitude, longitude], 10);
+      }
+    }
+
+    function onGeoError(err: GeolocationPositionError) {
+      // 拒否・失敗時は全国表示のまま・控えめに知らせる
+      if (err && err.code === err.PERMISSION_DENIED) {
+        try {
+          localStorage.removeItem(GEO_FLAG);
+        } catch {}
+        showMsg('位置情報の利用が許可されませんでした。全国表示のままご利用いただけます。');
+      } else {
+        showMsg('現在地を取得できませんでした。全国表示のままご利用いただけます。');
+      }
+      if (locateBtn) {
+        locateBtn.disabled = false;
+        locateBtn.removeAttribute('aria-busy');
+      }
+    }
+
+    function requestLocation() {
+      if (!('geolocation' in navigator)) {
+        showMsg('お使いの環境では位置情報を利用できません。全国表示でご利用ください。');
+        return;
+      }
+      showMsg('');
+      if (locateBtn) {
+        locateBtn.disabled = true;
+        locateBtn.setAttribute('aria-busy', 'true');
+      }
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          if (locateBtn) {
+            locateBtn.disabled = false;
+            locateBtn.removeAttribute('aria-busy');
+          }
+          onGeoSuccess(pos);
+        },
+        onGeoError,
+        { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 },
+      );
+    }
+
+    function resetToNational() {
+      hasLocation = false;
+      distances.clear();
+      try {
+        localStorage.removeItem(GEO_FLAG);
+      } catch {}
+      if (userMarker) {
+        map.removeLayer(userMarker);
+        userMarker = null;
+      }
+      if (accuracyCircle) {
+        map.removeLayer(accuracyCircle);
+        accuracyCircle = null;
+      }
+      updateDistanceLabels();
+      setSortMode('region');
+      if (sortmodeEl) sortmodeEl.hidden = true;
+      if (resetBtn) resetBtn.hidden = true;
+      if (locateBtn) locateBtn.setAttribute('aria-pressed', 'false');
+      showMsg('');
+      fitNational();
+    }
+
+    // 地図上の現在地コントロール（Google マップ風の ⌖ ボタン・Phosphor アイコン）
+    const LocateControl = L.Control.extend({
+      options: { position: 'topleft' as L.ControlPosition },
+      onAdd() {
+        const div = L.DomUtil.create('div', 'leaflet-bar leaflet-control locate-control');
+        const a = L.DomUtil.create('a', '', div) as HTMLAnchorElement;
+        a.href = '#';
+        a.setAttribute('role', 'button');
+        a.title = '現在地から探す';
+        a.setAttribute('aria-label', '現在地から探す');
+        const tmpl = document.getElementById('tmpl-locate-icon') as HTMLTemplateElement | null;
+        if (tmpl) a.innerHTML = tmpl.innerHTML; // 自前の Phosphor SVG のみ（外部由来の文字列ではない）
+        L.DomEvent.on(a, 'click', (e: Event) => {
+          L.DomEvent.stop(e);
+          requestLocation();
+        });
+        return div;
+      },
+    });
+    map.addControl(new LocateControl());
+
+    // ボタン・トグルの配線
+    locateBtn?.addEventListener('click', requestLocation);
+    resetBtn?.addEventListener('click', resetToNational);
+    for (const b of sortBtns) {
+      b.addEventListener('click', () => setSortMode(b.dataset.sort === 'region' ? 'region' : 'near'));
+    }
+
+    // ===== 初期描画 =====
+    apply();
+    fitNational();
+    // 前回「位置利用を許可」していれば自動で現在地から開始（座標は保存していない）
+    let autoGeo = false;
+    try {
+      autoGeo = localStorage.getItem(GEO_FLAG) === '1';
+    } catch {}
+    if (autoGeo) requestLocation();
     // レイアウト確定後にサイズを再計算（コンテナ高さ確定のズレ対策）
     setTimeout(() => map.invalidateSize(), 0);
   }
@@ -538,6 +813,98 @@ const statusLabel: Record<string, string> = {
     cursor: pointer;
   }
 
+  /* ---- 現在地から探す ---- */
+  .geobar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3) var(--space-4);
+  }
+  .geobar__actions {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  /* 現在地ボタン（副ボタン系＝surface 地＋line-strong 枠、hover/選択で accent 化） */
+  .btn-locate,
+  .btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 16px;
+    border-radius: var(--radius-s);
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: var(--text-1);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+      color var(--motion-fast),
+      border-color var(--motion-fast),
+      background-color var(--motion-fast);
+  }
+  .btn-locate :global(svg),
+  .btn-back :global(svg) {
+    font-size: 1.15em;
+    color: var(--accent);
+    transition: color var(--motion-fast);
+  }
+  .btn-locate:hover,
+  .btn-back:hover {
+    border-color: var(--accent);
+    color: var(--accent-ink);
+  }
+  .btn-locate:active,
+  .btn-back:active {
+    transform: scale(0.97);
+  }
+  .btn-locate[aria-pressed='true'] {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent-ink);
+  }
+  .btn-locate[disabled] {
+    opacity: 0.6;
+    cursor: progress;
+  }
+  .btn-back[hidden] {
+    display: none;
+  }
+
+  .geobar__privacy {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    color: var(--text-3);
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+  .geobar__privacy :global(svg) {
+    font-size: 1.05em;
+    color: var(--text-3);
+    flex-shrink: 0;
+  }
+
+  .geo-msg {
+    flex-basis: 100%;
+    margin: 0;
+    padding: 8px 12px;
+    border-radius: var(--radius-s);
+    background: var(--surface-soft);
+    color: var(--text-2);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+  .geo-msg[hidden] {
+    display: none;
+  }
+
   /* ---- 地図 ---- */
   .map-wrap {
     display: flex;
@@ -583,15 +950,75 @@ const statusLabel: Record<string, string> = {
   /* ---- 一覧 ---- */
   .listmeta {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .listmeta__count {
+    display: inline-flex;
     align-items: baseline;
     gap: 6px;
     margin: 0;
     color: var(--text-2);
     font-size: 0.875rem;
   }
-  .listmeta .num {
+  .listmeta__count .num {
     font-size: 1.125rem;
     color: var(--text-1);
+  }
+
+  /* 並び替えトグル（近い順⇄地域順・セグメント） */
+  .sortmode {
+    display: inline-flex;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-s);
+    overflow: hidden;
+  }
+  .sortmode[hidden] {
+    display: none;
+  }
+  .sortmode__btn {
+    padding: 6px 14px;
+    background: var(--surface);
+    color: var(--text-2);
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+      color var(--motion-fast),
+      background-color var(--motion-fast);
+  }
+  .sortmode__btn + .sortmode__btn {
+    border-left: 1px solid var(--line-strong);
+  }
+  .sortmode__btn:hover {
+    color: var(--accent-ink);
+  }
+  .sortmode__btn[aria-pressed='true'] {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    font-weight: 700;
+  }
+
+  /* 距離バッジ（現在地からの概算距離） */
+  .facil__dist {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 4px;
+    padding: 1px 8px;
+    border-radius: var(--radius-full);
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    font-family: var(--font-latin);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .facil__dist[hidden] {
+    display: none;
   }
 
   .facil-list {
@@ -826,6 +1253,45 @@ const statusLabel: Record<string, string> = {
   }
   .pin--other {
     --pin-color: var(--text-3);
+  }
+
+  /* 現在地マーカー（青ドット＝カピバラピンのトークン色と明確に区別・道案内の慣習色） */
+  .user-loc-dot {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: var(--radius-full);
+    background: #2f6fc9;
+    border: 3px solid var(--surface);
+    box-shadow:
+      0 0 0 1px hsl(214 62% 40% / 0.5),
+      0 1px 4px hsl(214 40% 20% / 0.4);
+  }
+  /* 精度円（淡い青） */
+  .user-accuracy {
+    stroke: #2f6fc9;
+    stroke-opacity: 0.5;
+    stroke-width: 1;
+    fill: #2f6fc9;
+    fill-opacity: 0.12;
+  }
+
+  /* 地図上の現在地コントロール（Google マップ風・Phosphor crosshair） */
+  .locate-control a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: var(--text-1);
+    cursor: pointer;
+  }
+  .locate-control a:hover {
+    color: var(--accent);
+  }
+  .locate-control svg {
+    width: 18px;
+    height: 18px;
   }
 
   /* Leaflet コントロール・帰属表示を生成りトーンに寄せる */
