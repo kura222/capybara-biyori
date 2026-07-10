@@ -321,6 +321,11 @@ const statusLabel: Record<string, string> = {
     const map = L.map(mapEl, {
       scrollWheelZoom: false, // 誤スクロール防止（フォーカス時のみ有効化）
       zoomControl: true,
+      // ズームアニメーション無効: transitionendが発火しない環境（非表示タブ・
+      // ヘッドレス等）で _animatingZoom フラグが残留し、以後の setView が無視され
+      // タイル更新まで止まる Leaflet の既知の挙動を実測で確認。アニメーションを
+      // 切ることでこの問題のクラスごと根絶する（ズームは即時切替になる）。
+      zoomAnimation: false,
     }).setView([37.5, 137.5], 5);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -582,11 +587,23 @@ const statusLabel: Record<string, string> = {
         .slice(0, 3);
       const pts: [number, number][] = [[latitude, longitude]];
       for (const f of near) pts.push([f.lat as number, f.lng as number]);
-      if (pts.length > 1) {
-        map.fitBounds(L.latLngBounds(pts), { padding: [60, 60], maxZoom: 10 });
-      } else {
-        map.setView([latitude, longitude], 10);
-      }
+      // ページ読込直後の自動開始では地図コンテナのサイズ確定前に届くことがあり、
+      // そのままfitBoundsするとズーム計算が狂う（全国表示のままに見える）。
+      // サイズを再計算してから1フレーム遅らせて確実に寄せる。
+      // reset:true が重要: Leafletは既存のズームアニメーション実行中に setView/fitBounds を
+      // 呼ぶと「何もせず成功を装って返す」（_tryAnimatedZoom の短絡）。初期の全国fitの
+      // アニメーション残留と競合し、現在地ズームが無視される事象を実測で確認済み。
+      // reset:true はアニメーション機構を完全にバイパスして確実にビューを適用する。
+      setTimeout(() => {
+        map.invalidateSize();
+        if (pts.length > 1) {
+          const b = L.latLngBounds(pts);
+          const z = Math.min(10, map.getBoundsZoom(b, false, L.point(60, 60)));
+          map.setView(b.getCenter(), z, { reset: true, animate: false });
+        } else {
+          map.setView([latitude, longitude], 10, { reset: true, animate: false });
+        }
+      }, 60);
     }
 
     function onGeoError(err: GeolocationPositionError) {
