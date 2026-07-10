@@ -1,25 +1,979 @@
 ---
 /**
- * カピバラ温泉カレンダー（/onsen/）— P0 は準備中プレースホルダー。
- * 横棒タイムライン・開催中バッジの自動判定は P2。
+ * カピバラ温泉カレンダー（/onsen/）— 仕様 §4.4 / デザインガイドライン準拠。
+ *
+ * データは3タイプに分かれる（onsen.ts の classifyOnsen で判定）:
+ *   A dated     … 開催期間ありの施設 → ①横棒タイムライン（11月〜4月）
+ *   B permanent … 通年・常設の施設   → ②いつでも入れる湯（オフシーズンの主役）
+ *   C pending   … 今季日程が未確定    → ③今季の発表待ち（例年の傾向＋実績）
+ * 加えて ④特集「カピバラの長風呂対決」（全国5園・例年1月同日開催）を横断枠で紹介。
+ *
+ * 並び順は日付で自動切替:
+ *   シーズン中(11〜4月) … タイムライン先頭 / オフシーズン … 常設→発表待ち→タイムライン(参考)
+ * バッジ・今日位置線・並び順・サマリは、静的ビルド日と閲覧日のズレをクライアントで補正する。
  */
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ComingSoon from '../../components/ComingSoon.astro';
+import { regionLabel } from '../../data/taxonomy';
+import {
+  classifyOnsen,
+  getOnsenCalStatus,
+  onsenBar,
+  isOnsenSeason,
+  todayPosition,
+  TIMELINE_MONTHS,
+} from '../../lib/onsen';
+
+const all = await getCollection('facilities');
+const onsenEntries = all.filter((e) => e.data.onsen?.has);
+
+/** YYYY-MM-DD → M/D（軸ラベル・期間表示用）。 */
+function md(ymd: string | null | undefined): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(ymd ?? '');
+  return m ? `${Number(m[2])}/${Number(m[3])}` : '';
+}
+/** 期間の短い表記。終了未定は「〜時期未定」、単日はその日のみ。 */
+function periodText(o: { start?: string | null; end?: string | null }): string {
+  if (!o.start) return '';
+  const a = md(o.start);
+  if (!o.end) return `${a} 〜 時期未定`;
+  if (o.start === o.end) return a;
+  return `${a} 〜 ${md(o.end)}`;
+}
+
+const rows = onsenEntries.map((e) => {
+  const o = e.data.onsen!;
+  // 詳細ページがあれば /spots/ へ、無ければ公式サイトへ（両方無ければリンクなし）
+  const href = e.data.detail ? `/spots/${e.id}/` : e.data.officialUrl;
+  const external = !!href && /^https?:/.test(href);
+  return {
+    id: e.id,
+    name: e.data.name,
+    prefecture: e.data.prefecture,
+    region: e.data.region,
+    detail: e.data.detail,
+    officialUrl: e.data.officialUrl,
+    href,
+    // 外部（公式サイト）リンクは別タブ＋rel付与
+    external,
+    linkAttrs: external ? { target: '_blank', rel: 'noopener' } : {},
+    onsen: o,
+    category: classifyOnsen(o),
+    status: getOnsenCalStatus(o),
+    bar: onsenBar(o),
+    period: periodText(o),
+  };
+});
+
+// ① dated（開始位置→名前順）／② permanent／③ pending
+const dated = rows
+  .filter((r) => r.category === 'dated' && r.bar)
+  .sort((a, b) => a.bar!.left - b.bar!.left || a.name.localeCompare(b.name, 'ja'));
+const permanent = rows
+  .filter((r) => r.category === 'permanent')
+  .sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+const pending = rows
+  .filter((r) => r.category === 'pending')
+  .sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+
+// ④特集: カピバラの長風呂対決（例年1月・全国5園同日開催）
+const NAGABURO_SLUGS = [
+  'izu-shaboten',
+  'nasu-animal-kingdom',
+  'ishikawa-zoo',
+  'saitama-childrens-zoo',
+  'nagasaki-biopark',
+];
+const nagaburo = NAGABURO_SLUGS.map((slug) => rows.find((r) => r.id === slug)).filter(
+  (r): r is (typeof rows)[number] => Boolean(r),
+);
+
+// 並び順・今日位置・サマリ（ビルド時。クライアントで閲覧日に補正）
+const inSeason = isOnsenSeason();
+const today = todayPosition();
+const activeCount = rows.filter(
+  (r) => r.status.status === 'active' || r.status.status === 'soon-end' || r.status.status === 'soon-start',
+).length;
+const permanentCount = permanent.length;
+const seasonalCount = dated.length + pending.length;
+
+// 図例（バッジ配色キー）
+const legend = [
+  { badge: 'ok', label: '開催中・通年' },
+  { badge: 'warn', label: 'まもなく開始／終了' },
+  { badge: 'neutral', label: 'シーズン待ち・発表待ち' },
+] as const;
+
+const title = 'カピバラ温泉カレンダー2025-26';
+const description =
+  '全国のカピバラ露天風呂イベントの開催期間を、11月〜4月の横断タイムラインで表示。開催中・まもなく終了を閲覧日から自動判定し、通年で入れる常設風呂・今季の発表待ちもまとめています。';
 ---
 
-<BaseLayout
-  title="カピバラ温泉カレンダー"
-  description="全国のカピバラ露天風呂イベントの開催期間を横断カレンダーで表示。開催中・まもなく終了を日付から自動判定します。"
->
-  <ComingSoon
-    title="カピバラ温泉カレンダー"
-    lead="全国の露天風呂イベントの「いつから・いつまで」を横断で見られるカレンダーです。各園の今季発表を待って開催期間を反映していきます。"
-    points={[
-      '11月〜4月の開催期間を横棒タイムラインで一覧表示',
-      '「開催中／まもなく終了／今季終了／発表待ち」を自動でバッジ表示',
-      '「カピバラの長風呂対決」など全国同日イベントの特集枠',
-    ]}
-    altHref="/map/"
-    altLabel="施設マップを見る"
-  />
+<BaseLayout title={title} description={description}>
+  {/* ===== 導入（タイポ型・現在の状況サマリ） ===== */}
+  <section class="intro u-grain">
+    <div class="container intro__inner">
+      <p class="intro__eyebrow label">Onsen Calendar 2025&ndash;26</p>
+      <h1 class="intro__title">カピバラ温泉ごよみ</h1>
+      <p class="intro__lead" id="onsen-summary" data-active={activeCount} data-inseason={String(inSeason)}>
+        {
+          inSeason && activeCount > 0
+            ? `いま全国${activeCount}園でカピバラ温泉が開催中です。下のタイムラインで開催期間を確認できます。`
+            : `いまはオフシーズン。通年で入れる${permanentCount}園と、冬に向けて発表待ちの園をまとめました。開催期間が決まった園から、タイムラインに反映していきます。`
+        }
+      </p>
+      <ul class="legend" aria-label="バッジの色の意味">
+        {
+          legend.map((l) => (
+            <li class="legend__item">
+              <span class:list={['legend__dot', `legend__dot--${l.badge}`]} aria-hidden="true" />
+              {l.label}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  {/* ===== 並び替え対象の3ブロック（シーズンで順序が入れ替わる） ===== */}
+  <div
+    class:list={['onsen-flow', inSeason ? 'onsen-flow--inseason' : 'onsen-flow--offseason']}
+  >
+    {/* ① 横棒タイムライン（dated） */}
+    <section class="flow-block flow-timeline">
+      <div class="container">
+        <div class="block-head">
+          <p class="block-head__kicker label">
+            <span class="block-head__rule" aria-hidden="true"></span>
+            Timeline
+          </p>
+          <h2 class="block-head__title">開催期間タイムライン</h2>
+          <p class="block-head__desc">
+            開催期間が判明している園を、11月〜4月の軸で並べています。
+            オフシーズンは直近シーズンの実績を「参考」として表示します。
+          </p>
+        </div>
+
+        <div class="tl" role="img" aria-label={`カピバラ温泉の開催期間タイムライン（${dated.length}園）`}>
+          <div class="tl__scroll">
+            {/* 月ヘッダー */}
+            <div class="tl__head">
+              <span class="tl__head-spacer" aria-hidden="true"></span>
+              <div class="tl__months">
+                {
+                  TIMELINE_MONTHS.map((m) => (
+                    <span class="tl__month">
+                      <span class="num tl__month-num">{m}</span>
+                      <span class="tl__month-unit">月</span>
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+
+            {/* 本体（今日線＋各行） */}
+            <div class="tl__body">
+              <span
+                id="tl-today"
+                class="tl__today"
+                hidden={today === null}
+                style={today !== null ? `--tf:${today.toFixed(4)}` : ''}
+                aria-hidden="true"
+              >
+                <span class="tl__today-label label">今日</span>
+              </span>
+
+              {
+                dated.map((r) => (
+                  <div class="tl-row">
+                    <div class="tl-row__label">
+                      <span class="tl-row__namewrap">
+                        {r.href ? (
+                          <a class="tl-row__name" href={r.href} {...r.linkAttrs}>
+                            {r.name}
+                          </a>
+                        ) : (
+                          <span class="tl-row__name tl-row__name--plain">{r.name}</span>
+                        )}
+                      </span>
+                      <span class="tl-row__sub">
+                        <span class="num tl-row__period">{r.period}</span>
+                        <span
+                          class:list={['onsen-badge', `onsen-badge--${r.status.badge}`]}
+                          data-onsen-badge
+                          data-start={r.onsen.start ?? ''}
+                          data-end={r.onsen.end ?? ''}
+                          data-season={r.onsen.seasonLabel ?? ''}
+                        >
+                          {r.status.label}
+                        </span>
+                      </span>
+                    </div>
+                    <div class="tl-row__track" aria-hidden="true">
+                      <span
+                        class:list={[
+                          'tl-bar',
+                          { 'tl-bar--open': r.bar!.openEnd, 'tl-bar--dot': r.bar!.singleDay },
+                        ]}
+                        style={`left:${(r.bar!.left * 100).toFixed(2)}%;right:${(100 - r.bar!.right * 100).toFixed(2)}%`}
+                      ></span>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+        <p class="tl__hint">
+          <Icon name="ph:arrows-horizontal" aria-hidden="true" />
+          横にスクロールできます。園名をタップすると詳細ページへ移動します。
+        </p>
+      </div>
+    </section>
+
+    {/* ② いつでも入れる湯（permanent） */}
+    <section class="flow-block flow-always band">
+      <div class="container">
+        <div class="block-head">
+          <p class="block-head__kicker label">
+            <span class="block-head__rule" aria-hidden="true"></span>
+            Always
+          </p>
+          <h2 class="block-head__title">いつでも入れる湯</h2>
+          <p class="block-head__desc">
+            夏でもカピバラ風呂が見られる、通年・常設の園。シーズンを問わず楽しめる主役です。
+          </p>
+        </div>
+        <ul class="always-grid">
+          {
+            permanent.map((r) => (
+              <li>
+                <article class="always-card">
+                  <span class="always-card__icon" aria-hidden="true">
+                    <Icon name="ph:drop" />
+                  </span>
+                  <div class="always-card__body">
+                    <div class="always-card__head">
+                      {r.href ? (
+                        <a class="always-card__name" href={r.href} {...r.linkAttrs}>
+                          {r.name}
+                        </a>
+                      ) : (
+                        <span class="always-card__name">{r.name}</span>
+                      )}
+                      <span class="onsen-badge onsen-badge--ok">通年</span>
+                    </div>
+                    <p class="always-card__pref">
+                      <Icon name="ph:map-pin" aria-hidden="true" />
+                      {r.prefecture}
+                      <span class="always-card__region">{regionLabel(r.region)}</span>
+                    </p>
+                    {r.onsen.seasonLabel && <p class="always-card__note">{r.onsen.seasonLabel}</p>}
+                  </div>
+                </article>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    {/* ③ 今季の発表待ち（pending） */}
+    <section class="flow-block flow-pending">
+      <div class="container">
+        <div class="block-head">
+          <p class="block-head__kicker label">
+            <span class="block-head__rule" aria-hidden="true"></span>
+            Coming
+          </p>
+          <h2 class="block-head__title">今季の発表待ち</h2>
+          <p class="block-head__desc">
+            例年カピバラ温泉を実施しているものの、今季の日程がまだ発表されていない園です。
+            公式発表があり次第、開催期間をタイムラインに反映します。
+          </p>
+        </div>
+        <ul class="pending-list">
+          {
+            pending.map((r) => (
+              <li class="pending-row">
+                <div class="pending-row__main">
+                  <span class="pending-row__head">
+                    {r.href ? (
+                      <a class="pending-row__name" href={r.href} {...r.linkAttrs}>
+                        {r.name}
+                      </a>
+                    ) : (
+                      <span class="pending-row__name">{r.name}</span>
+                    )}
+                    <span class="pending-row__pref">{r.prefecture}</span>
+                  </span>
+                  {r.onsen.seasonLabel && <span class="pending-row__trend">{r.onsen.seasonLabel}</span>}
+                  {r.onsen.times && (
+                    <span class="pending-row__times">
+                      <Icon name="ph:clock" aria-hidden="true" />
+                      {r.onsen.times}
+                    </span>
+                  )}
+                </div>
+                <span class="onsen-badge onsen-badge--neutral pending-row__badge">発表待ち</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  {/* ===== ④ 特集: カピバラの長風呂対決 ===== */}
+  <section class="feature u-grain">
+    <div class="container feature__inner">
+      <div class="feature__intro">
+        <p class="feature__kicker label">
+          <span class="block-head__rule" aria-hidden="true"></span>
+          Feature
+        </p>
+        <h2 class="feature__title">カピバラの長風呂対決</h2>
+        <p class="feature__lead">
+          例年1月、全国の名園が同じ日にカピバラの温泉を実施し、
+          「どの園のカピバラが一番長くお湯につかっていられるか」を競う名物イベント。
+          2026年は<span class="num">1月10日</span>に那須どうぶつ王国などで開催予定です。
+        </p>
+      </div>
+      <ul class="feature__parks">
+        {
+          nagaburo.map((r) => (
+            <li>
+              {r.href ? (
+                <a class="park" href={r.href} {...r.linkAttrs}>
+                  <span class="park__name">{r.name}</span>
+                  <span class="park__pref">
+                    <Icon name="ph:map-pin" aria-hidden="true" />
+                    {r.prefecture}
+                  </span>
+                  <Icon name="ph:arrow-right" class="park__arrow" aria-hidden="true" />
+                </a>
+              ) : (
+                <span class="park park--plain">
+                  <span class="park__name">{r.name}</span>
+                  <span class="park__pref">{r.prefecture}</span>
+                </span>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  {/* ===== 締め: マップへの導線 ===== */}
+  <section class="closing">
+    <div class="container container--text closing__inner">
+      <p class="closing__note">
+        カピバラ温泉は毎年、各園の公式発表にもとづいて更新しています。
+        お出かけ前には各施設の公式サイトで最新情報をご確認ください。
+      </p>
+      <a class="btn btn--primary" href="/map/">
+        <Icon name="ph:map-trifold" aria-hidden="true" />
+        全国のカピバラ施設マップへ
+      </a>
+    </div>
+  </section>
 </BaseLayout>
+
+{/* 閲覧日に合わせてバッジ・今日線・並び順・サマリを補正（ビルド日とのズレ対策） */}
+<script>
+  import { getOnsenCalStatus, isOnsenSeason, todayPosition } from '../../lib/onsen';
+
+  const nowInSeason = isOnsenSeason();
+
+  // 並び順（シーズン中はタイムライン先頭）
+  const flow = document.querySelector('.onsen-flow');
+  if (flow) {
+    flow.classList.toggle('onsen-flow--inseason', nowInSeason);
+    flow.classList.toggle('onsen-flow--offseason', !nowInSeason);
+  }
+
+  // 各バッジを閲覧日で再判定
+  let active = 0;
+  document.querySelectorAll<HTMLElement>('[data-onsen-badge]').forEach((el) => {
+    const r = getOnsenCalStatus({
+      start: el.dataset.start || null,
+      end: el.dataset.end || null,
+      seasonLabel: el.dataset.season || null,
+    });
+    el.textContent = r.label;
+    el.classList.remove('onsen-badge--ok', 'onsen-badge--warn', 'onsen-badge--neutral');
+    el.classList.add('onsen-badge--' + r.badge);
+    if (r.status === 'active' || r.status === 'soon-end' || r.status === 'soon-start') active++;
+  });
+
+  // 今日位置線
+  const line = document.getElementById('tl-today');
+  if (line) {
+    const t = todayPosition();
+    if (t === null) {
+      line.hidden = true;
+    } else {
+      line.hidden = false;
+      line.style.setProperty('--tf', t.toFixed(4));
+    }
+  }
+
+  // 導入サマリ
+  const summary = document.getElementById('onsen-summary');
+  if (summary) {
+    if (nowInSeason && active > 0) {
+      summary.textContent = `いま全国${active}園でカピバラ温泉が開催中です。下のタイムラインで開催期間を確認できます。`;
+    }
+    // オフシーズン時はビルド時の文言（常設・発表待ち件数）をそのまま使う
+  }
+</script>
+
+<style>
+  /* ============ 導入 ============ */
+  .intro {
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .intro__inner {
+    padding-block: var(--space-section-m) var(--space-section-s);
+    max-width: var(--w-text);
+  }
+  .intro__eyebrow {
+    margin: 0 0 var(--space-4);
+    color: var(--accent-ink);
+  }
+  .intro__title {
+    margin: 0 0 var(--space-4);
+  }
+  .intro__lead {
+    margin: 0 0 var(--space-5);
+    max-width: 54ch;
+    color: var(--text-2);
+    font-size: 1.0625rem;
+    line-height: 1.9;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+  }
+  .legend__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-2);
+    font-size: 0.8125rem;
+  }
+  .legend__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+  }
+  .legend__dot--ok {
+    background: var(--green-soft);
+    border: 1.5px solid var(--green);
+  }
+  .legend__dot--warn {
+    background: var(--accent-soft);
+    border: 1.5px solid var(--accent);
+  }
+  .legend__dot--neutral {
+    background: var(--surface-soft);
+    border: 1.5px solid var(--line-strong);
+  }
+
+  /* ============ 並び替えフロー（シーズンで order 入替） ============ */
+  .onsen-flow {
+    display: flex;
+    flex-direction: column;
+  }
+  .onsen-flow--offseason .flow-always {
+    order: 1;
+  }
+  .onsen-flow--offseason .flow-pending {
+    order: 2;
+  }
+  .onsen-flow--offseason .flow-timeline {
+    order: 3;
+  }
+  .onsen-flow--inseason .flow-timeline {
+    order: 1;
+  }
+  .onsen-flow--inseason .flow-always {
+    order: 2;
+  }
+  .onsen-flow--inseason .flow-pending {
+    order: 3;
+  }
+
+  .flow-block {
+    padding-block: var(--space-section-m);
+  }
+  :global(.band) {
+    background: var(--surface-soft);
+  }
+
+  /* セクション見出し（雑誌型・全ブロック共通） */
+  .block-head {
+    margin-bottom: var(--space-6);
+  }
+  .block-head__kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 var(--space-3);
+    color: var(--accent-ink);
+  }
+  .block-head__rule {
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.7;
+  }
+  .block-head__dash {
+    color: var(--text-3);
+  }
+  .block-head__title {
+    margin: 0;
+  }
+  .block-head__desc {
+    margin: var(--space-3) 0 0;
+    max-width: 60ch;
+    color: var(--text-2);
+    font-size: 0.9375rem;
+  }
+
+  /* ============ ① 横棒タイムライン ============ */
+  .tl {
+    --tl-label: 190px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+    background: var(--surface);
+  }
+  .tl__scroll {
+    min-width: 680px;
+  }
+  .tl__head {
+    display: grid;
+    grid-template-columns: var(--tl-label) 1fr;
+    border-bottom: 1px solid var(--line);
+  }
+  .tl__head-spacer {
+    border-right: 1px solid var(--line);
+  }
+  .tl__months {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .tl__month {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
+    padding: var(--space-3) 0;
+    color: var(--text-3);
+    border-right: 1px solid var(--line);
+  }
+  .tl__month:last-child {
+    border-right: none;
+  }
+  .tl__month-num {
+    font-size: 1.05rem;
+    color: var(--text-2);
+  }
+  .tl__month-unit {
+    font-size: 0.7rem;
+  }
+
+  .tl__body {
+    position: relative;
+  }
+
+  /* 今日位置の縦線（トラック領域内に配置） */
+  .tl__today {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--tl-label) + (100% - var(--tl-label)) * var(--tf, 0));
+    width: 2px;
+    background: var(--accent);
+    z-index: 3;
+    pointer-events: none;
+  }
+  .tl__today[hidden] {
+    display: none;
+  }
+  .tl__today-label {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+    background: var(--accent);
+    color: var(--text-on-accent);
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  .tl-row {
+    display: grid;
+    grid-template-columns: var(--tl-label) 1fr;
+    align-items: center;
+    border-top: 1px solid var(--line);
+  }
+  .tl-row:first-child {
+    border-top: none;
+  }
+  .tl-row__label {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: var(--space-3) var(--space-4);
+    border-right: 1px solid var(--line);
+    min-width: 0;
+  }
+  .tl-row__name {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 1.35;
+    color: var(--text-1);
+    transition: color var(--motion-fast);
+  }
+  a.tl-row__name:hover {
+    color: var(--accent-ink);
+    text-decoration: none;
+  }
+  .tl-row__sub {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+  .tl-row__period {
+    color: var(--text-3);
+    font-size: 0.75rem;
+  }
+
+  .tl-row__track {
+    position: relative;
+    height: 100%;
+    min-height: 46px;
+    /* 月境界の薄い縦罫線（6等分） */
+    background-image: repeating-linear-gradient(
+      to right,
+      transparent 0 calc(100% / 6 - 1px),
+      var(--line) calc(100% / 6 - 1px) calc(100% / 6)
+    );
+  }
+  .tl-bar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    border-radius: var(--radius-full);
+    background: var(--accent);
+    opacity: 0.9;
+    min-width: 6px;
+  }
+  /* 終了未定: 右端をフェード */
+  .tl-bar--open {
+    background: linear-gradient(
+      to right,
+      var(--accent) 55%,
+      color-mix(in srgb, var(--accent) 15%, transparent) 100%
+    );
+  }
+  /* 単日イベント: 点（丸）で表現 */
+  .tl-bar--dot {
+    width: 15px;
+    height: 15px;
+    border-radius: var(--radius-full);
+    right: auto !important;
+    background: var(--accent);
+  }
+
+  .tl__hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: var(--space-3) 0 0;
+    color: var(--text-3);
+    font-size: 0.8125rem;
+  }
+  .tl__hint :global(svg) {
+    font-size: 1.1em;
+  }
+
+  /* 共通バッジ（spot ページと同思想・淡色ペア） */
+  .onsen-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: var(--radius-full);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    font-family: var(--font-sans);
+  }
+  .onsen-badge--ok {
+    color: var(--green);
+    background: var(--green-soft);
+  }
+  .onsen-badge--warn {
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+  }
+  .onsen-badge--neutral {
+    color: var(--text-2);
+    background: var(--surface-soft);
+  }
+
+  /* ============ ② いつでも入れる湯 ============ */
+  .always-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: var(--space-4);
+  }
+  .always-card {
+    display: flex;
+    gap: var(--space-3);
+    height: 100%;
+    padding: var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+  }
+  .always-card__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-s);
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    font-size: 1.4rem;
+  }
+  .always-card__body {
+    min-width: 0;
+  }
+  .always-card__head {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .always-card__name {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.35;
+    color: var(--text-1);
+    transition: color var(--motion-fast);
+  }
+  a.always-card__name:hover {
+    color: var(--accent-ink);
+    text-decoration: none;
+  }
+  .always-card__pref {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0 0 var(--space-2);
+    color: var(--text-2);
+    font-size: 0.8125rem;
+  }
+  .always-card__pref :global(svg) {
+    color: var(--text-3);
+  }
+  .always-card__region {
+    margin-left: 3px;
+    padding: 0 7px;
+    border-radius: var(--radius-full);
+    background: var(--surface-soft);
+    color: var(--text-3);
+    font-size: 0.6875rem;
+  }
+  .always-card__note {
+    margin: 0;
+    color: var(--text-2);
+    font-size: 0.8125rem;
+    line-height: 1.7;
+  }
+
+  /* ============ ③ 今季の発表待ち ============ */
+  .pending-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .pending-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-1);
+    border-top: 1px solid var(--line);
+  }
+  .pending-row:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+  .pending-row__main {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+  .pending-row__head {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+  .pending-row__name {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--text-1);
+    transition: color var(--motion-fast);
+  }
+  a.pending-row__name:hover {
+    color: var(--accent-ink);
+    text-decoration: none;
+  }
+  .pending-row__pref {
+    color: var(--text-3);
+    font-size: 0.8125rem;
+  }
+  .pending-row__trend {
+    color: var(--text-2);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+  .pending-row__times {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-3);
+    font-size: 0.78rem;
+  }
+  .pending-row__badge {
+    flex-shrink: 0;
+  }
+
+  /* ============ ④ 特集: 長風呂対決 ============ */
+  .feature {
+    background: var(--surface-deep);
+    border-block: 1px solid var(--line);
+  }
+  .feature__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: var(--space-7);
+    align-items: center;
+    padding-block: var(--space-section-m);
+  }
+  .feature__kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 var(--space-4);
+    color: var(--accent-ink);
+  }
+  .feature__title {
+    margin: 0 0 var(--space-4);
+    font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.25rem);
+  }
+  .feature__lead {
+    margin: 0;
+    max-width: 46ch;
+    color: var(--text-2);
+    line-height: 1.9;
+  }
+  .feature__parks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  .park {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-s);
+    color: var(--text-1);
+    transition:
+      border-color var(--motion-fast),
+      transform var(--motion-fast);
+  }
+  a.park:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+    transform: translateX(3px);
+  }
+  .park__name {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: var(--text-1);
+  }
+  .park__pref {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    color: var(--text-3);
+    font-size: 0.78rem;
+  }
+  .park__arrow {
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  a.park .park__pref {
+    margin-left: auto;
+  }
+  a.park .park__arrow {
+    margin-left: 0;
+  }
+
+  /* ============ 締め ============ */
+  .closing {
+    padding-block: var(--space-section-m);
+  }
+  .closing__inner {
+    text-align: center;
+  }
+  .closing__note {
+    margin: 0 auto var(--space-5);
+    max-width: 48ch;
+    color: var(--text-2);
+    font-size: 0.9375rem;
+    line-height: 1.85;
+  }
+
+  /* ============ レスポンシブ ============ */
+  @media (max-width: 760px) {
+    .feature__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+  }
+  @media (max-width: 560px) {
+    .tl {
+      --tl-label: 130px;
+    }
+    .pending-row {
+      align-items: flex-start;
+    }
+  }
+</style>

@@ -10,12 +10,30 @@
  *   06 READS    新着記事            → 編集カード（2列）
  * データ接続（ライブ検知・RSS・温泉期間）は P1 以降。
  */
+import { getCollection } from 'astro:content';
 import { Icon } from 'astro-icon/components';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/Section.astro';
 import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
 import Mascot from '../components/Mascot.astro';
+import { classifyOnsen, getOnsenCalStatus, isOnsenSeason } from '../lib/onsen';
+
+// --- 温泉ストリップ用の実データ集計（/onsen/ と同じ判定を共用） ---
+const onsenFacilities = (await getCollection('facilities')).filter((e) => e.data.onsen?.has);
+const onsenTotal = onsenFacilities.length;
+const onsenPermanent = onsenFacilities.filter((e) => classifyOnsen(e.data.onsen!) === 'permanent').length;
+const onsenSeasonal = onsenTotal - onsenPermanent;
+const onsenActive = onsenFacilities.filter((e) => {
+  const s = getOnsenCalStatus(e.data.onsen!).status;
+  return s === 'active' || s === 'soon-end' || s === 'soon-start';
+}).length;
+const onsenInSeason = isOnsenSeason();
+// シーズン中で開催中があれば開催件数を、オフシーズンは常設＋発表待ち見込みを主役に
+const onsenStripLead =
+  onsenInSeason && onsenActive > 0
+    ? `全国${onsenActive}園でカピバラ温泉が開催中。開催期間を横断のタイムラインで確認できます。`
+    : `いまはオフシーズン。通年で入れる${onsenPermanent}園に加え、冬に向けて全国${onsenSeasonal}園が発表待ちです。`;
 
 // --- プレースホルダーのダミーデータ（表示レイアウト確認用・P1以降で実データに差し替え） ---
 const alwaysOnFeatured = {
@@ -183,19 +201,50 @@ const articles = [
     </div>
   </Section>
 
-  {/* ===== 05 ONSEN 今シーズンの温泉（特集ストリップ） ===== */}
+  {/* ===== 05 ONSEN 今シーズンの温泉（特集ストリップ・実データ接続） ===== */}
   <Section index="05" label="Onsen" title="今シーズンの温泉情報" moreHref="/onsen/" moreLabel="カレンダーを見る">
     <div class="onsen">
       <div class="onsen__body">
-        <p class="onsen__title">全国の露天風呂イベントを、横断のカレンダーで。</p>
-        <p class="onsen__note">
-          伊豆シャボテン・長崎バイオパークなど、各園の開催期間を一覧で表示。
-          「開催中／まもなく終了」を、閲覧した日付から自動で判定します。
+        <ul class="onsen__stats" aria-label="カピバラ温泉のいまの状況">
+          <li class="onsen__stat">
+            <span class="num onsen__stat-num" id="onsen-stat-primary">
+              {onsenInSeason && onsenActive > 0 ? onsenActive : onsenPermanent}
+            </span>
+            <span class="onsen__stat-label" id="onsen-stat-primary-label">
+              {onsenInSeason && onsenActive > 0 ? '園で開催中' : '園が通年営業'}
+            </span>
+          </li>
+          <li class="onsen__stat">
+            <span class="num onsen__stat-num">{onsenSeasonal}</span>
+            <span class="onsen__stat-label">園が冬季に開催</span>
+          </li>
+        </ul>
+        <p
+          class="onsen__note"
+          id="onsen-strip-lead"
+          data-active={onsenActive}
+          data-permanent={onsenPermanent}
+          data-seasonal={onsenSeasonal}
+          data-inseason={String(onsenInSeason)}
+        >
+          {onsenStripLead}
         </p>
         <a class="btn btn--primary" href="/onsen/">
           <Icon name="ph:calendar-dots" aria-hidden="true" />
           温泉ごよみを見る
         </a>
+        {/* 閲覧日でのストリップ再集計用データ（開催中件数はビルド日と閲覧日でズレるため） */}
+        <script
+          type="application/json"
+          id="onsen-strip-data"
+          set:html={JSON.stringify(
+            onsenFacilities.map((e) => ({
+              start: e.data.onsen!.start ?? null,
+              end: e.data.onsen!.end ?? null,
+              s: e.data.onsen!.seasonLabel ?? null,
+            })),
+          )}
+        ></script>
       </div>
       <div class="onsen__art" aria-hidden="true">
         <svg class="steam" viewBox="0 0 140 160" fill="none">
@@ -225,6 +274,44 @@ const articles = [
     </div>
   </Section>
 </BaseLayout>
+
+{/* 温泉ストリップの数字・文言を閲覧日で再集計（開催中件数のズレ対策） */}
+<script>
+  import { getOnsenCalStatus, isOnsenSeason } from '../lib/onsen';
+
+  const dataEl = document.getElementById('onsen-strip-data');
+  if (dataEl?.textContent) {
+    try {
+      const list = JSON.parse(dataEl.textContent) as { start: string | null; end: string | null; s: string | null }[];
+      let active = 0;
+      let permanent = 0;
+      for (const o of list) {
+        const st = getOnsenCalStatus({ start: o.start, end: o.end, seasonLabel: o.s }).status;
+        if (st === 'permanent') permanent++;
+        if (st === 'active' || st === 'soon-end' || st === 'soon-start') active++;
+      }
+      const seasonal = list.length - permanent;
+      const inSeason = isOnsenSeason();
+
+      const numEl = document.getElementById('onsen-stat-primary');
+      const labelEl = document.getElementById('onsen-stat-primary-label');
+      const leadEl = document.getElementById('onsen-strip-lead');
+      if (inSeason && active > 0) {
+        if (numEl) numEl.textContent = String(active);
+        if (labelEl) labelEl.textContent = '園で開催中';
+        if (leadEl)
+          leadEl.textContent = `全国${active}園でカピバラ温泉が開催中。開催期間を横断のタイムラインで確認できます。`;
+      } else {
+        if (numEl) numEl.textContent = String(permanent);
+        if (labelEl) labelEl.textContent = '園が通年営業';
+        if (leadEl)
+          leadEl.textContent = `いまはオフシーズン。通年で入れる${permanent}園に加え、冬に向けて全国${seasonal}園が発表待ちです。`;
+      }
+    } catch {
+      /* 解析失敗時はビルド時の表示をそのまま使う */
+    }
+  }
+</script>
 
 <style>
   /* ============ ヒーロー ============ */
@@ -534,6 +621,26 @@ const articles = [
     font-size: clamp(1.25rem, 1.05rem + 1vw, 1.6rem);
     line-height: 1.45;
     color: var(--text-1);
+  }
+  /* 実データの状況（数字はFraunces） */
+  .onsen__stats {
+    display: flex;
+    gap: var(--space-6);
+    margin: 0 0 var(--space-4);
+  }
+  .onsen__stat {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .onsen__stat-num {
+    font-size: clamp(1.9rem, 1.5rem + 1.6vw, 2.6rem);
+    line-height: 1;
+    color: var(--accent-ink);
+  }
+  .onsen__stat-label {
+    color: var(--text-2);
+    font-size: 0.875rem;
   }
   .onsen__note {
     margin: 0 0 var(--space-5);
