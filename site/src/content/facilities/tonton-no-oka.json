@@ -1,0 +1,30 @@
+{
+  "slug": "tonton-no-oka",
+  "name": "とんとんの丘もちぶた館",
+  "type": "farm",
+  "prefecture": "宮城県",
+  "region": "tohoku",
+  "lat": null,
+  "lng": null,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://mochibuta.jp/",
+  "capybara": null,
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://mochibuta.jp/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

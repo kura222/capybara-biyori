@@ -4,18 +4,34 @@
   "type": "zoo",
   "prefecture": "長崎県",
   "region": "kyushu",
-  "lat": 32.9578,
-  "lng": 129.7699,
+  "lat": 32.9898,
+  "lng": 129.7864,
   "latlngApprox": false,
   "status": "open",
-  "fees": [{ "label": "大人", "price": "2,100円" }],
-  "hours": null,
+  "fees": [
+    {
+      "label": "大人",
+      "price": "2,100円"
+    },
+    {
+      "label": "中高生",
+      "price": "1,500円"
+    },
+    {
+      "label": "3歳〜小学生",
+      "price": "1,100円"
+    },
+    {
+      "label": "シニア（60歳以上）",
+      "price": "1,500円"
+    }
+  ],
+  "hours": "10:00〜17:00（入園締切16:00）・年中無休",
   "officialUrl": "https://www.biopark.co.jp/",
-  "hasCafe": false,
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": null
+    "note": "カピバラの聖地。放し飼いのカピバラに直接触れ、エサやりができる。カピバラの露天風呂発祥級の名物イベントで有名"
   },
   "onsen": {
     "has": true,
@@ -23,13 +39,24 @@
     "start": "2025-11-26",
     "end": "2026-03-01",
     "times": "12:00〜15:00",
-    "note": null,
-    "sourceUrl": "https://www.biopark.co.jp/"
+    "sourceUrl": "https://www.biopark.co.jp/ent/events/article/20251031_002544.html"
   },
-  "live": null,
-  "affiliate": { "asoview": "", "rakutenTravel": "" },
   "sources": [
-    { "label": "公式サイト", "url": "https://www.biopark.co.jp/", "official": true }
+    {
+      "label": "公式サイト",
+      "url": "https://www.biopark.co.jp/info/admission/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.biopark.co.jp/activity/rotenburo/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.biopark.co.jp/ent/events/article/20251031_002544.html",
+      "official": true
+    }
   ],
   "lastVerified": "2026-07-10",
   "detail": true

@@ -1,0 +1,62 @@
+{
+  "slug": "anitouch-nagoya",
+  "name": "アニタッチ ららぽーと名古屋みなとアクルス",
+  "type": "indoor",
+  "prefecture": "愛知県",
+  "region": "tokai",
+  "lat": 35.093,
+  "lng": 136.883,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人 平日",
+      "price": "1,200円"
+    },
+    {
+      "label": "大人 休日（土日祝・長期休暇）",
+      "price": "1,500円"
+    },
+    {
+      "label": "大人 特定日",
+      "price": "1,700円"
+    },
+    {
+      "label": "小人（4歳〜小学生）平日／休日／特定日",
+      "price": "700円／900円／1,000円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "平日10:00〜19:00／土日祝10:00〜20:00（ららぽーとの営業時間に準ずる）",
+  "officialUrl": "https://www.nagoya.anitouch.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "屋内型ふれあい動物園。「カピバラの猫足風呂」あり。おやつあげ体験は別途有料。カピバラの5つ子誕生実績あり"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.nagoya.anitouch.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://shaboten.co.jp/press/5776/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

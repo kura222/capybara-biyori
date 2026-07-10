@@ -1,0 +1,52 @@
+{
+  "slug": "katsurahama-aquarium",
+  "name": "桂浜水族館",
+  "type": "aquarium",
+  "prefecture": "高知県",
+  "region": "shikoku",
+  "lat": 33.497,
+  "lng": 133.574,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "1,600円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "600円"
+    },
+    {
+      "label": "幼児（3歳以上）",
+      "price": "400円"
+    }
+  ],
+  "hours": "9:00〜17:00（季節・行事により変動）",
+  "officialUrl": "https://katurahama-aq.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": true,
+    "note": "カピバラを飼育し、エサやり体験（100円）を実施。2024年12月に新しいカピバラ放飼場が完成"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://katurahama-aq.jp/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://katurahama-aq.jp/price.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

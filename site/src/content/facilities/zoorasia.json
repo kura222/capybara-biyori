@@ -1,0 +1,47 @@
+{
+  "slug": "zoorasia",
+  "name": "よこはま動物園ズーラシア",
+  "type": "zoo",
+  "prefecture": "神奈川県",
+  "region": "kanto",
+  "lat": 35.495,
+  "lng": 139.525,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（18歳以上）",
+      "price": "800円"
+    },
+    {
+      "label": "中人（高校生）",
+      "price": "300円"
+    },
+    {
+      "label": "小人（小・中学生）",
+      "price": "200円"
+    }
+  ],
+  "hours": "9:30〜16:30（入園は16:00まで）・火曜休",
+  "officialUrl": "https://www.hama-midorinokyokai.or.jp/zoo/zoorasia/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "国内最大級の動物園。アマゾンの密林エリアでカピバラを展示（カピバラJP掲載）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.hama-midorinokyokai.or.jp/zoo/zoorasia/fee.php",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybarajp.com/wheres-capybara/zoorasia/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

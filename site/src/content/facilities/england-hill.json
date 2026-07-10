@@ -1,0 +1,54 @@
+{
+  "slug": "england-hill",
+  "name": "淡路ファームパーク イングランドの丘",
+  "type": "farm",
+  "prefecture": "兵庫県",
+  "region": "kansai",
+  "lat": 34.3076,
+  "lng": 134.8015,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "1,500円"
+    },
+    {
+      "label": "小人（4歳〜中学3年生）",
+      "price": "500円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.england-hill.com/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "グリーンヒルエリアでカピバラを展示（コアラなど約30種の動物）"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.england-hill.com/price/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

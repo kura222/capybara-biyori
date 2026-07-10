@@ -1,0 +1,46 @@
+{
+  "slug": "ikutopia-fureai-center",
+  "name": "いくとぴあ食花 動物ふれあいセンター",
+  "type": "zoo",
+  "prefecture": "新潟県",
+  "region": "koshinetsu",
+  "lat": 37.877,
+  "lng": 139.057,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入館料",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:00〜17:00（休館日は不定休・公式サイト要確認）",
+  "officialUrl": "https://www.ikutopia.com/facilities/doubutsu/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "「カピバラの庭」に温水プールがあり、食事や水浴びの様子を無料で観覧できる"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2022年実績（カピバラゆず湯）",
+    "start": "2022-12-16",
+    "end": "2022-12-26",
+    "times": null,
+    "sourceUrl": "https://gata21.jp/archives/89527766.html"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.ikutopia.com/facilities/doubutsu/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.city.niigata.lg.jp/chuo/shisetsu/yoka/leisure/dobutsufureai.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

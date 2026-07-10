@@ -1,0 +1,47 @@
+{
+  "slug": "anitouch-minatomirai",
+  "name": "アニタッチみなとみらい",
+  "type": "indoor",
+  "prefecture": "神奈川県",
+  "region": "kanto",
+  "lat": 35.455,
+  "lng": 139.638,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（平日）",
+      "price": "1,500円"
+    },
+    {
+      "label": "大人（土日祝・繁忙期）",
+      "price": "1,800円"
+    },
+    {
+      "label": "4歳〜小学生（平日）",
+      "price": "800円"
+    }
+  ],
+  "hours": "平日10:30〜19:00／土日祝10:30〜20:00・年中無休",
+  "officialUrl": "https://www.anitouch.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "横浜ワールドポーターズ2階の屋内型ふれあい動物園。カピバラの三つ子誕生実績もあり間近でふれあえる"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.anitouch.jp/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.hamakei.com/headline/11563/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

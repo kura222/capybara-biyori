@@ -1,0 +1,59 @@
+{
+  "slug": "kusatsu-nettaiken",
+  "name": "草津熱帯圏",
+  "type": "zoo",
+  "prefecture": "群馬県",
+  "region": "kanto",
+  "lat": 36.618,
+  "lng": 138.599,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "1,300円"
+    },
+    {
+      "label": "高校生",
+      "price": "1,000円"
+    },
+    {
+      "label": "小人（4歳以上）",
+      "price": "800円"
+    }
+  ],
+  "hours": "8:30〜17:30（入園は17:00まで）・無休",
+  "officialUrl": "https://nettaiken.com/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "日本一標高の高い動物園。温泉熱を利用した高さ15mの亜熱帯ドームでカピバラを飼育。温泉に浸かる姿が名物"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "通年（温泉熱利用・冬至時期はゆず湯が風物詩）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://nettaiken.com/"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://nettaiken.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://rurubu.jp/andmore/spot/80008150",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-kusatsu.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

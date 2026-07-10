@@ -1,0 +1,29 @@
+{
+  "slug": "rindoko-family-bokujo",
+  "name": "那須高原りんどう湖ファミリー牧場",
+  "type": "farm",
+  "prefecture": "栃木県",
+  "region": "kanto",
+  "lat": 37.027,
+  "lng": 140,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://www.rindo.co.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "公式「動物紹介」にカピバラ掲載。アルパカ・ジャージー牛などとともに飼育"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.rindo.co.jp/animal/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

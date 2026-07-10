@@ -1,0 +1,51 @@
+{
+  "slug": "kawasui-kawasaki-aquarium",
+  "name": "カワスイ 川崎水族館",
+  "type": "aquarium",
+  "prefecture": "神奈川県",
+  "region": "kanto",
+  "lat": 35.53,
+  "lng": 139.699,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "2,200円"
+    },
+    {
+      "label": "高校生",
+      "price": "1,700円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "1,400円"
+    },
+    {
+      "label": "幼児（4歳以上）",
+      "price": "800円"
+    }
+  ],
+  "hours": "10:00〜20:00（最終入館19:00）",
+  "officialUrl": "https://kawa-sui.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "川崎駅前の都市型水族館。カピバラやナマケモノ等も展示し、カピバラふれあい体験（20分800円・入館料別、12:00〜18:00）を実施"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://kawa-sui.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.timesclub.jp/sp/tanomachi_ex/kanagawa/kawasaki/007.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "ichihara-elephant-kingdom",
+  "name": "市原ぞうの国",
+  "type": "zoo",
+  "prefecture": "千葉県",
+  "region": "kanto",
+  "lat": 35.366,
+  "lng": 140.201,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "2,400円"
+    },
+    {
+      "label": "小人（3歳〜小学生）",
+      "price": "900円"
+    },
+    {
+      "label": "シニア（65歳以上）",
+      "price": "2,000円"
+    },
+    {
+      "label": "サユリワールドとのセット券 大人",
+      "price": "3,200円"
+    }
+  ],
+  "hours": "9:30〜16:30（最終入園15:30）・休園日は公式カレンダー参照",
+  "officialUrl": "https://zounokuni.com/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "ゾウで有名だがカピバラ・カバ等約70種を飼育。おやつマーク付き動物には園内販売のおやつをあげられる。小学生以下のみの入園不可（18歳以上の同伴必須）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://zounokuni.com/info/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://zounokuni.com/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

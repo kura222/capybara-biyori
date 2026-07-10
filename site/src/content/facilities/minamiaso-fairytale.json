@@ -1,0 +1,39 @@
+{
+  "slug": "minamiaso-fairytale",
+  "name": "南阿蘇ふれあい動物園フェアリーテール",
+  "type": "zoo",
+  "prefecture": "熊本県",
+  "region": "kyushu",
+  "lat": 32.825,
+  "lng": 131.13,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園（1日出入り自由）",
+      "price": "500円"
+    }
+  ],
+  "hours": "10:00〜17:00（11〜3月の平日は16:30まで）・木曜休（11〜3月は水・木曜休）",
+  "officialUrl": "https://fairytale-zoo.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "約25種200頭を飼育する小さなふれあい動物園。カピバラは父娘の2頭"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://fairytale-zoo.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://kumamoto.guide/spots/detail/18971",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "sayuri-world",
+  "name": "サユリワールド",
+  "type": "zoo",
+  "prefecture": "千葉県",
+  "region": "kanto",
+  "lat": 35.368,
+  "lng": 140.203,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "1,500円"
+    },
+    {
+      "label": "小人（3歳〜小学生）",
+      "price": "800円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://zounokuni.com/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "市原ぞうの国の姉妹園。キリンなど動物を間近に感じられる放し飼いスタイルでカピバラも飼育（カピバラJP掲載）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://zounokuni.com/info/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybarajp.com/wheres-capybara/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

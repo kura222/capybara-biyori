@@ -1,0 +1,36 @@
+{
+  "slug": "mofiina-kobe",
+  "name": "ふれあいカフェMOFiiNA（モフィーナ）",
+  "type": "cafe",
+  "prefecture": "兵庫県",
+  "region": "kansai",
+  "lat": 34.722,
+  "lng": 135.267,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": "11:00〜18:00（最終受付17:30）※動物の体調により変動あり",
+  "officialUrl": "https://mofiina.cafe/",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "神戸市東灘区のふれあいカフェ。カピバラ「フィーナ」ほかフクロモモンガ・フェネック等とふれあえる。2歳以下無料"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://mofiina.cafe/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

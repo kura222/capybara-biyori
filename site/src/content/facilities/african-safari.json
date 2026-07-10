@@ -1,0 +1,48 @@
+{
+  "slug": "african-safari",
+  "name": "九州自然動物公園アフリカンサファリ",
+  "type": "zoo",
+  "prefecture": "大分県",
+  "region": "kyushu",
+  "lat": 33.433,
+  "lng": 131.39,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "2,600円"
+    },
+    {
+      "label": "小人（4歳〜中学生）",
+      "price": "1,500円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://africansafari.co.jp/",
+  "capybara": {
+    "fureai": false,
+    "esayari": null,
+    "note": "ふれあいゾーンでカピバラを間近に観察できるが、カピバラとのふれあいは実施していない（公式FAQ）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://africansafari.co.jp/capybara/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://africansafari.co.jp/information/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://africansafari.co.jp/faq/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "cafe-capyba-asakusa",
+  "name": "cafe capyba ASAKUSA（浅草店）",
+  "type": "cafe",
+  "prefecture": "東京都",
+  "region": "kanto",
+  "lat": 35.718,
+  "lng": 139.797,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入場30分（1ドリンク込）",
+      "price": "2,300円"
+    },
+    {
+      "label": "延長10分ごと",
+      "price": "440円"
+    }
+  ],
+  "hours": "平日11:00〜17:30／土日祝10:00〜17:30・水木定休",
+  "officialUrl": "https://cspace.co.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "2025年10月11日オープンの2号店（台東区千束1-1-4・浅草駅徒歩5分）。曳舟本店と同じ完全事前予約制・6歳以上対象"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://cspace.co.jp/%E6%96%B0%E5%BA%97%E8%88%97%E3%80%8Ccafe-capyba-asakusa%E3%80%8D%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://cafecapyba-asakusa.rsvsys.jp/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "maxell-aqua-park-shinagawa",
+  "name": "マクセル アクアパーク品川",
+  "type": "aquarium",
+  "prefecture": "東京都",
+  "region": "kanto",
+  "lat": 35.628,
+  "lng": 139.734,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "2,500円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.aqua-park.jp/",
+  "capybara": {
+    "fureai": false,
+    "esayari": true,
+    "note": "都市型水族館でカピバラを展示。トングで笹をあげる有料体験「カピバラにごはん」（各回8名）を開催。2025年6月に飼育個体1頭の死亡を公式発表"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.aqua-park.jp/en/aqua/animals/capybara.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.asoview.com/channel/ticket/VetzKvXoxw/ticket0000010049/",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.seaparadise.co.jp/202506_information_kapibara.pdf",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

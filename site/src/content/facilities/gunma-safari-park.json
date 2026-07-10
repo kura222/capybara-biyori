@@ -1,0 +1,52 @@
+{
+  "slug": "gunma-safari-park",
+  "name": "群馬サファリパーク",
+  "type": "safari",
+  "prefecture": "群馬県",
+  "region": "kanto",
+  "lat": 36.238,
+  "lng": 138.879,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "高校生以上",
+      "price": "3,200円"
+    },
+    {
+      "label": "3歳〜中学生",
+      "price": "1,700円"
+    },
+    {
+      "label": "65歳以上",
+      "price": "2,400円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://safari.co.jp/",
+  "capybara": {
+    "fureai": false,
+    "esayari": null,
+    "note": "カピバラはウォーキングサファリゾーンで飼育（同ゾーンではふれあい・エサあげ禁止）。ふれあいパークでエサやり可の情報あり"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://safari.co.jp/animal/capybara/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.safari.co.jp/park/system/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-gunma.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

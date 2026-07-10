@@ -1,0 +1,59 @@
+{
+  "slug": "soleil-no-oka",
+  "name": "長井海の手公園 ソレイユの丘",
+  "type": "farm",
+  "prefecture": "神奈川県",
+  "region": "kanto",
+  "lat": 35.199,
+  "lng": 139.612,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園",
+      "price": "無料"
+    },
+    {
+      "label": "アニマルヴィレッジ 高校生以上",
+      "price": "800円"
+    },
+    {
+      "label": "アニマルヴィレッジ 4歳〜中学生",
+      "price": "400円"
+    }
+  ],
+  "hours": "9:00〜18:00（3〜11月）／9:30〜17:00（12〜2月）",
+  "officialUrl": "https://soleil-park.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "アニマルヴィレッジの池と芝生の丘がある放飼場でカピバラ・カンガルーと同エリアでふれあい、エサやり可"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "例年冬季実績（カピバラ温泉「ソレイ湯」・〜2月末頃。今季日程未確認）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://parkful.net/event/181201_kapibara-onsen/"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://soleil-park.jp/en/facility/366",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-soleiyu.html",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.city.yokosuka.kanagawa.jp/faq/shisei/gaiyo/shisetsu/0750.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

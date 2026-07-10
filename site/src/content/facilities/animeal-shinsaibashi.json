@@ -1,0 +1,58 @@
+{
+  "slug": "animeal-shinsaibashi",
+  "name": "動物たちが暮らす森 アニミル 心斎橋店",
+  "type": "cafe",
+  "prefecture": "大阪府",
+  "region": "kansai",
+  "lat": 34.674,
+  "lng": 135.498,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人 60分（ワンドリンク制）",
+      "price": "1,980円"
+    },
+    {
+      "label": "大人 90分",
+      "price": "2,530円"
+    },
+    {
+      "label": "小人（4〜12歳）",
+      "price": "990円"
+    },
+    {
+      "label": "幼児（0〜3歳）",
+      "price": "無料"
+    }
+  ],
+  "hours": "12:00〜19:00（最終受付18:00）※火曜定休（祝日は営業）",
+  "officialUrl": "https://animeal.jp/shinsaibashi/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "都市型ふれあい動物園。カピバラのお風呂「アニミル湯」あり。おやつ込みの時間パックあり"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://animeal.jp/shinsaibashi/system.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.animeal.jp/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

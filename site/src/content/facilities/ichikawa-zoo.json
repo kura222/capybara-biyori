@@ -1,0 +1,43 @@
+{
+  "slug": "ichikawa-zoo",
+  "name": "市川市動植物園",
+  "type": "zoo",
+  "prefecture": "千葉県",
+  "region": "kanto",
+  "lat": 35.762,
+  "lng": 139.954,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "440円"
+    },
+    {
+      "label": "小人",
+      "price": "110円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.city.ichikawa.lg.jp/site/zoo/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "「流しカワウソ」で有名な市営動植物園。カピバラも飼育しており飼育日誌でも近況を発信"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.ichikawa.lg.jp/site/zoo/7829.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.ichikawa.lg.jp/site/zoo/54303.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

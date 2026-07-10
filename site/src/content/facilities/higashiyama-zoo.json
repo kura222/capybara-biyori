@@ -1,0 +1,50 @@
+{
+  "slug": "higashiyama-zoo",
+  "name": "東山動植物園",
+  "type": "zoo",
+  "prefecture": "愛知県",
+  "region": "tokai",
+  "lat": 35.1545,
+  "lng": 136.9814,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "500円"
+    },
+    {
+      "label": "中学生以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:00〜16:50（入園16:30まで）※月曜休園（祝日の場合は直後の平日）・年末年始休",
+  "officialUrl": "https://www.higashiyama.city.nagoya.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "2025年3月28日にカピバラ展示を再開（メス2頭がアメリカゾーンに来園）"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.higashiyama.city.nagoya.jp/news/2025/03/post-1245.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.higashiyama.city.nagoya.jp/01_annai/01_01kaien/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "nakagawa-aqua-park",
+  "name": "栃木県なかがわ水遊園",
+  "type": "aquarium",
+  "prefecture": "栃木県",
+  "region": "kanto",
+  "lat": 36.796,
+  "lng": 140.121,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://tnap.jp/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "淡水魚水族館のアマゾン大水槽でカピバラ「ミチル」（2024年1月展示再開）。水槽上の通路を行き来し泳ぐ姿を横から観察できる"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://tnap.jp/creature/detail.php?id=89",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://tnap.jp/topics/detail.php?id=3159",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

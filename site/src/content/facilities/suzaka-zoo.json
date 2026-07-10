@@ -1,0 +1,50 @@
+{
+  "slug": "suzaka-zoo",
+  "name": "須坂市動物園",
+  "type": "zoo",
+  "prefecture": "長野県",
+  "region": "koshinetsu",
+  "lat": 36.6408,
+  "lng": 138.3142,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "200円"
+    },
+    {
+      "label": "小中学生",
+      "price": "70円"
+    }
+  ],
+  "hours": "9:00〜16:45（入園券販売は16:00まで）／月曜休園（祝日の場合翌日）・12/29〜31休園",
+  "officialUrl": "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "冬の風物詩カピバラ温泉「華の湯」で知られる。菊風呂・りんご風呂などのイベント風呂も実施"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2025-26シーズン",
+    "start": "2025-11-01",
+    "end": "2026-03-01",
+    "times": "平日11:00〜／休祝日11:00〜・14:00〜（各回約30分）",
+    "sourceUrl": "https://blog.suzaka.jp/zoo/2025/11/01"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://blog.suzaka.jp/zoo/2025/11/01",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

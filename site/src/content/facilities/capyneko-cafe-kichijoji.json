@@ -1,0 +1,47 @@
+{
+  "slug": "capyneko-cafe-kichijoji",
+  "name": "カピねこカフェ（capybara cafe TOKYO & cat）吉祥寺",
+  "type": "cafe",
+  "prefecture": "東京都",
+  "region": "kanto",
+  "lat": 35.702,
+  "lng": 139.581,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "カピバラとねことふれあい（50分）",
+      "price": "2,800円"
+    },
+    {
+      "label": "おやつ",
+      "price": "550円"
+    },
+    {
+      "label": "1歳未満",
+      "price": "無料"
+    }
+  ],
+  "hours": "10:00〜20:00（動物の体調により変動）",
+  "officialUrl": "https://capyneko.cafe/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "カピバラと猫両方とふれあえるカフェ（武蔵野市吉祥寺南町1-5-10 PLATANO 2F）。予約はTableCheckまたは電話、空きがあれば当日入店可。2026年8月1日から50分→40分に変更予定"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://capyneko.cafe/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.tablecheck.com/shops/capyneko-kichijoji/reserve",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

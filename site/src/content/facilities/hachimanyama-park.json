@@ -1,0 +1,39 @@
+{
+  "slug": "hachimanyama-park",
+  "name": "八幡山公園 動物舎",
+  "type": "park",
+  "prefecture": "栃木県",
+  "region": "kanto",
+  "lat": 36.57,
+  "lng": 139.885,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園",
+      "price": "無料"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://hatimanyama.jp/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "宇都宮市中心部の無料公園。2016年10月公開のカピバラ舎（幅・奥行約15m、1/3が池）で水鳥と同居。ふれあい・エサやり不可"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-hachimann.html",
+      "official": false
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://hatimanyama.jp/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

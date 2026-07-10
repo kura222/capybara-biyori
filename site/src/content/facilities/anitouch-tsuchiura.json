@@ -1,0 +1,29 @@
+{
+  "slug": "anitouch-tsuchiura",
+  "name": "アニタッチ イオンモール土浦",
+  "type": "zoo",
+  "prefecture": "茨城県",
+  "region": "kanto",
+  "lat": 36.064,
+  "lng": 140.228,
+  "latlngApprox": true,
+  "status": "closed",
+  "fees": [],
+  "hours": null,
+  "officialUrl": null,
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "屋内型ふれあい動物園。2024年5月6日で閉店（渡辺克仁氏リスト記載）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

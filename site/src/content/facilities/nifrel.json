@@ -1,0 +1,63 @@
+{
+  "slug": "nifrel",
+  "name": "NIFREL（ニフレル）",
+  "type": "aquarium",
+  "prefecture": "大阪府",
+  "region": "kansai",
+  "lat": 34.8064,
+  "lng": 135.5336,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生・16歳以上）",
+      "price": "2,400円"
+    },
+    {
+      "label": "こども（小・中学生）",
+      "price": "1,200円"
+    },
+    {
+      "label": "幼児（3歳以上）",
+      "price": "700円"
+    },
+    {
+      "label": "2歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "平日10:00〜18:00／休日9:30〜19:00（季節により変動、最終入館は閉館1時間前）",
+  "officialUrl": "https://www.nifrel.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "「うごきにふれる」ゾーンでカピバラを間近に観察できる（生きているミュージアム）"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.nifrel.jp/guide/admission.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.nifrel.jp/guide/open.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

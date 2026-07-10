@@ -1,0 +1,34 @@
+{
+  "slug": "anitouch-odaiba",
+  "name": "アニタッチ アクアシティお台場",
+  "type": "indoor",
+  "prefecture": "東京都",
+  "region": "kanto",
+  "lat": 35.628,
+  "lng": 139.774,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://www.anitouch.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "アクアシティお台場3階の屋内型ふれあい動物園。2025年にはカピバラの赤ちゃんが誕生"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.anitouch.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://report.iko-yo.net/articles/26227",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

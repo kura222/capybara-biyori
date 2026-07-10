@@ -1,0 +1,34 @@
+{
+  "slug": "aqua-world-oarai",
+  "name": "アクアワールド茨城県大洗水族館",
+  "type": "aquarium",
+  "prefecture": "茨城県",
+  "region": "kanto",
+  "lat": 36.3186,
+  "lng": 140.5772,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://www.aquaworld-oarai.com/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "2011年からカピバラを展示（カピバラJP掲載）。水族館では珍しい飼育例。最新の個体情報は公式SNS参照"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://capybarajp.com/wheres-capybara/",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.jalan.net/kankou/spt_08309cc3320040578/kuchikomi/0000378879/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

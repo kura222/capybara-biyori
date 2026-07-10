@@ -1,0 +1,50 @@
+{
+  "slug": "toyama-family-park",
+  "name": "富山市ファミリーパーク",
+  "type": "zoo",
+  "prefecture": "富山県",
+  "region": "hokuriku",
+  "lat": 36.6909,
+  "lng": 137.1482,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "高校生以上",
+      "price": "500円"
+    },
+    {
+      "label": "中学生以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "冬期（12〜2月）10:00〜15:30／通常期は公式サイト参照。12/28〜1/4休園",
+  "officialUrl": "https://www.toyama-familypark.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "カピバラ舎で冬季に「カピバラの湯」を実施（お湯に浸かる姿を観覧）"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2024-25実績（例年12/1〜2/28）",
+    "start": "2024-12-01",
+    "end": "2025-02-28",
+    "times": null,
+    "sourceUrl": "https://toyamadays.com/archives/46012342.html"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.toyama-familypark.jp/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://toyamadays.com/archives/46012342.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

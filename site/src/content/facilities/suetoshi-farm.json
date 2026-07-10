@@ -1,0 +1,30 @@
+{
+  "slug": "suetoshi-farm",
+  "name": "スエトシ牧場",
+  "type": "farm",
+  "prefecture": "長野県",
+  "region": "koshinetsu",
+  "lat": null,
+  "lng": null,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://www.bokujo.co.jp/",
+  "capybara": null,
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.bokujo.co.jp/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybarajp.com/wheres-capybara/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

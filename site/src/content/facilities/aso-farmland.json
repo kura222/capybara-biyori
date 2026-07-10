@@ -1,0 +1,43 @@
+{
+  "slug": "aso-farmland",
+  "name": "阿蘇ファームランド（ふれあい動物王国）",
+  "type": "theme_park",
+  "prefecture": "熊本県",
+  "region": "kyushu",
+  "lat": 32.8969,
+  "lng": 131.0054,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "ふれあい動物王国 大人（中学生以上）",
+      "price": "900円"
+    },
+    {
+      "label": "ふれあい動物王国 小人（3歳〜小学生）",
+      "price": "600円"
+    }
+  ],
+  "hours": "ふれあい動物王国 10:00〜17:00（最終入場16:30）※日により変動",
+  "officialUrl": "https://asofarmland.co.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "ふれあい動物王国にカピバラ一家が仲間入り。ふれあい・エサやり（有料）とも公式にOK"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://asofarmland.co.jp/experience/zoo",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://asofarmland.co.jp/price",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

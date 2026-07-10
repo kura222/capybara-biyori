@@ -1,0 +1,54 @@
+{
+  "slug": "fuji-safari-park",
+  "name": "富士サファリパーク",
+  "type": "safari",
+  "prefecture": "静岡県",
+  "region": "tokai",
+  "lat": 35.26,
+  "lng": 138.8106,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "3,200円"
+    },
+    {
+      "label": "こども（4歳〜中学生）",
+      "price": "2,000円"
+    },
+    {
+      "label": "シニア（65歳以上）",
+      "price": "2,500円"
+    }
+  ],
+  "hours": "9:00〜16:30ごろ（季節により変動）※ふれあいゾーン「どうぶつ村」は10:00〜15:30",
+  "officialUrl": "https://www.fujisafari.co.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "ふれあいゾーン「どうぶつ村」でカピバラとふれあい・エサあげ体験が可能"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.fujisafari.co.jp/animal-fureai/capybara/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.fujisafari.co.jp/park/fureai-zone/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

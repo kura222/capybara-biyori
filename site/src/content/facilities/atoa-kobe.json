@@ -1,0 +1,54 @@
+{
+  "slug": "atoa-kobe",
+  "name": "átoa（アトア）",
+  "type": "aquarium",
+  "prefecture": "兵庫県",
+  "region": "kansai",
+  "lat": 34.682,
+  "lng": 135.193,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "2,600円（時期により変動）"
+    },
+    {
+      "label": "子ども（小学生）",
+      "price": "1,500円"
+    },
+    {
+      "label": "幼児（3歳以上）",
+      "price": "500円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://atoa-kobe.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "劇場型アクアリウム。屋上「空辺の庭」でカピバラを飼育、飼育員の餌やり・解説を毎日開催"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://atoa-kobe.jp/information/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

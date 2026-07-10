@@ -1,0 +1,47 @@
+{
+  "slug": "miyazaki-phoenix-zoo",
+  "name": "宮崎市フェニックス自然動物園",
+  "type": "zoo",
+  "prefecture": "宮崎県",
+  "region": "kyushu",
+  "lat": 31.975,
+  "lng": 131.468,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "840円"
+    },
+    {
+      "label": "中学生",
+      "price": "420円"
+    },
+    {
+      "label": "小学生",
+      "price": "310円"
+    }
+  ],
+  "hours": "9:00〜17:00（入園16:30まで）・水曜休（春・夏・冬休み期間は開園）・12/31休",
+  "officialUrl": "https://www.miyazaki-city-zoo.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "約100種1,200点を飼育する動物園でカピバラを展示"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.miyazaki-city-zoo.jp/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.miyazaki-city-zoo.jp/user-guide/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

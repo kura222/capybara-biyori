@@ -1,0 +1,47 @@
+{
+  "slug": "uminonakamichi-park",
+  "name": "国営海の中道海浜公園（動物の森）",
+  "type": "park",
+  "prefecture": "福岡県",
+  "region": "kyushu",
+  "lat": 33.659,
+  "lng": 130.346,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（15歳以上）",
+      "price": "450円"
+    },
+    {
+      "label": "シルバー（65歳以上）",
+      "price": "210円"
+    },
+    {
+      "label": "中学生以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "3〜10月 9:30〜17:30／11〜2月 9:30〜17:00・動物の森は閉園30分前まで・年末年始等休園日あり",
+  "officialUrl": "https://uminaka-park.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "「動物の森」でマーラと一緒に飼育。低い柵越しに間近で観察でき、夏は池で泳ぐ姿も見られる。動物の森は公園入園料のみで利用可"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://uminaka-park.jp/animal/mam/capybara.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://uminaka-park.jp/guide/open-hour/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

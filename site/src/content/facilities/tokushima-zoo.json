@@ -1,0 +1,48 @@
+{
+  "slug": "tokushima-zoo",
+  "name": "とくしま動物園",
+  "type": "zoo",
+  "prefecture": "徳島県",
+  "region": "shikoku",
+  "lat": 34.0141,
+  "lng": 134.5221,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "600円"
+    },
+    {
+      "label": "中学生以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:30〜16:30（入園16:00まで）・月曜休（祝日の場合は翌日）・年末年始休",
+  "officialUrl": "https://tokushimazoo.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "カピバラの飼育頭数日本一とされる大所帯（2025年時点で約80頭前後）。群れで暮らす迫力の展示が名物"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://tokushimazoo.jp/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://tokushimazoo.jp/animals_sys/item.cgi?Id=12",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n8178f42dfcc9",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

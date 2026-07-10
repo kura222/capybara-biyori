@@ -1,0 +1,34 @@
+{
+  "slug": "maniwa-aguri-garden",
+  "name": "真庭あぐりガーデン",
+  "type": "farm",
+  "prefecture": "岡山県",
+  "region": "chugoku",
+  "lat": 35.023,
+  "lng": 133.754,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": "ショップ10:00〜18:00・水曜休（施設により異なる）",
+  "officialUrl": "https://maniwa-agurigarden.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "園内に「カピバラふれあいパーク」があり、ふれあい・エサやりができる"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://maniwa-agurigarden.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-maniwa.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

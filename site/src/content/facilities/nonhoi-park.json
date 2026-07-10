@@ -1,0 +1,54 @@
+{
+  "slug": "nonhoi-park",
+  "name": "のんほいパーク（豊橋総合動植物公園）",
+  "type": "zoo",
+  "prefecture": "愛知県",
+  "region": "tokai",
+  "lat": 34.7211,
+  "lng": 137.4319,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "600円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "100円"
+    },
+    {
+      "label": "未就学児",
+      "price": "無料"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.nonhoi.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": true,
+    "note": "もぐもぐひろばでカピバラのエサやり体験（200円、10:00と13:20）。冬季はプールがお湯になり入浴姿が見られる"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "冬季恒例（カピバラのお風呂。直近シーズンの期間は公式発表を要確認）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "http://www.honokuni.or.jp/toyohashi/topics/?Mode=detail&code=604"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.nonhoi.jp/animal/p612/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://castel.jp/p/7582",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

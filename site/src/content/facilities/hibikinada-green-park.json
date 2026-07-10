@@ -1,0 +1,47 @@
+{
+  "slug": "hibikinada-green-park",
+  "name": "北九州市立響灘緑地／グリーンパーク（ひびき動物ワールド）",
+  "type": "park",
+  "prefecture": "福岡県",
+  "region": "kyushu",
+  "lat": 33.9182,
+  "lng": 130.7272,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "グリーンパーク入園（一般）",
+      "price": "150円"
+    },
+    {
+      "label": "ひびき動物ワールド（一般）",
+      "price": "300円"
+    },
+    {
+      "label": "ひびき動物ワールド（小・中学生）",
+      "price": "150円"
+    }
+  ],
+  "hours": "9:00〜17:00・火曜休・12/28〜1/1休",
+  "officialUrl": "https://hibikinadagp.org/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "「ひびき動物ワールド」の熱帯生態園でカピバラの群れを飼育。カピバラをメインにした国内有数の展示施設"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://hibikinadagp.org/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://kitakyushucity.guide/spots/detail/47a3905b-400a-494a-bbd2-e60cbf3d20b4",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

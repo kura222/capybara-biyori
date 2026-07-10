@@ -1,0 +1,55 @@
+{
+  "slug": "omoriyama-zoo",
+  "name": "秋田市大森山動物園（あきぎんオモリンの森）",
+  "type": "zoo",
+  "prefecture": "秋田県",
+  "region": "tohoku",
+  "lat": 39.6722,
+  "lng": 140.0774,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "1,000円"
+    },
+    {
+      "label": "高校生以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "通常開園（3月下旬〜11月末）9:00〜16:30（最終入園16:00）／冬期「雪の動物園」は1〜2月の土日祝10:00〜15:00",
+  "officialUrl": "https://www.city.akita.lg.jp/zoo/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "冬の「カピバラの湯っこ」が名物。浴槽前面がガラス張りで入浴・遊泳姿を観察できる"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2025-26シーズン",
+    "start": "2025-11-01",
+    "end": "2026-02-28",
+    "times": "開催日は土日祝（11月は11/26(水)も実施）※12/1〜1/3は冬期休園",
+    "sourceUrl": "https://www.city.akita.lg.jp/zoo/news/1008854/1044496.html"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.akita.lg.jp/zoo/information/1003682/1005302/1003839.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.akita.lg.jp/zoo/guide/1003691.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.akita.lg.jp/zoo/news/1008854/1044496.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

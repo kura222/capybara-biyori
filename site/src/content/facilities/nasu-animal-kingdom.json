@@ -8,24 +8,47 @@
   "lng": 140.0369,
   "latlngApprox": false,
   "status": "open",
-  "fees": [{ "label": "大人", "price": "2,900円" }],
-  "hours": null,
-  "officialUrl": "https://www.nasu-oukoku.com/",
-  "hasCafe": false,
-  "capybara": null,
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "2,900円"
+    },
+    {
+      "label": "こども（3歳〜小学生）",
+      "price": "1,300円"
+    }
+  ],
+  "hours": "平日10:00〜16:30／土日祝9:00〜17:00（冬期は10:00〜16:00・王国タウンのみ営業）・水曜定休（繁忙期除く）",
+  "officialUrl": "https://nasu-oukoku.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "放し飼いの「カピバラの森」で直接なでられる・おやつやり100円。関東随一のカピバラ体験施設"
+  },
   "onsen": {
     "has": true,
-    "seasonLabel": "2025-26シーズン",
+    "seasonLabel": "2025-26シーズン（2026年3月上旬まで・公式発表）",
     "start": "2025-11-25",
-    "end": "2026-03-08",
-    "times": null,
-    "note": "「カピバラ温泉」開催。",
-    "sourceUrl": "https://www.nasu-oukoku.com/"
+    "end": null,
+    "times": "特別回13:00〜（りんご風呂・冬至ゆず湯・1/10長風呂対決など）",
+    "sourceUrl": "https://nasu-oukoku.com/topics/event/20251123_13458/"
   },
-  "live": null,
-  "affiliate": { "asoview": "", "rakutenTravel": "" },
   "sources": [
-    { "label": "公式サイト", "url": "https://www.nasu-oukoku.com/", "official": true }
+    {
+      "label": "公式サイト",
+      "url": "https://nasu-oukoku.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://tabi-mag.jp/nasucapibara/",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://zoo-research.net/capybara-zoo-japan/",
+      "official": false
+    }
   ],
   "lastVerified": "2026-07-10",
   "detail": true

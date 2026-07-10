@@ -1,0 +1,55 @@
+{
+  "slug": "beppu-yama-jigoku",
+  "name": "別府温泉 山地獄",
+  "type": "other",
+  "prefecture": "大分県",
+  "region": "kyushu",
+  "lat": 33.32,
+  "lng": 131.475,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "500円"
+    },
+    {
+      "label": "小・中・高校生",
+      "price": "300円"
+    }
+  ],
+  "hours": "9:00〜17:00",
+  "officialUrl": "https://www.yamajigoku.jp/",
+  "capybara": {
+    "fureai": false,
+    "esayari": true,
+    "note": "地獄の噴気で動物を飼うミニ動物園。カピバラのエサやりは柵越しに可（人参5本100円）"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "冬季（例年実績・源泉を引き込んだ約40度の露天風呂）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://beppu-midoubaru.jp/yama-hell/"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.yamajigoku.jp/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://beppu-midoubaru.jp/yama-hell/",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-yamajigoku.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

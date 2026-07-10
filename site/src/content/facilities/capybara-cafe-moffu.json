@@ -1,0 +1,44 @@
+{
+  "slug": "capybara-cafe-moffu",
+  "name": "Capybara Cafe Moffu（カピバラカフェ moffu 原宿）",
+  "type": "cafe",
+  "prefecture": "東京都",
+  "region": "kanto",
+  "lat": 35.671,
+  "lng": 139.706,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "30分（ドリンク飲み放題込・TableCheck事前券）",
+      "price": "4,000円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.instagram.com/capybaracafe.tokyo/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "サモエドカフェmoffu系列。渋谷区神宮前1-6-9 Om169ビル1F（竹下通りエリア）。お風呂に浸かるカピバラも見られる。TableCheck/Klook等で要事前予約。海外OTA記載では6歳以上・12歳未満保護者同伴。営業時間は公式Instagram参照"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://www.tablecheck.com/en/capibaramoffu-takeshitastreet",
+      "official": false
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.instagram.com/capybaracafe.tokyo/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://x.com/samoyedmoffu/status/1979094496001327241",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

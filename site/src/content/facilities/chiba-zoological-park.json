@@ -1,0 +1,43 @@
+{
+  "slug": "chiba-zoological-park",
+  "name": "千葉市動物公園",
+  "type": "zoo",
+  "prefecture": "千葉県",
+  "region": "kanto",
+  "lat": 35.648,
+  "lng": 140.14,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "800円（7〜8月は640円）"
+    },
+    {
+      "label": "中学生以下",
+      "price": "無料"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.city.chiba.jp/zoo/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "島状のカピバラ展示場を障害物なしの至近距離で観察・撮影できる。ふれあい・エサやりは不可"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.chiba.jp/zoo/guide/20240601kaitei.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-chiba.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

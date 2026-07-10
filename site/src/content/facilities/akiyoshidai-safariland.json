@@ -1,0 +1,47 @@
+{
+  "slug": "akiyoshidai-safariland",
+  "name": "秋吉台自然動物公園サファリランド",
+  "type": "zoo",
+  "prefecture": "山口県",
+  "region": "chugoku",
+  "lat": 34.252,
+  "lng": 131.33,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "2,400円"
+    },
+    {
+      "label": "小人（4歳以上）",
+      "price": "1,200円"
+    },
+    {
+      "label": "シルバー（65歳以上）",
+      "price": "1,800円"
+    }
+  ],
+  "hours": "4〜9月 9:30〜17:00（最終受付16:15）／10〜3月 9:30〜16:30（最終受付15:45）・年中無休",
+  "officialUrl": "https://www.safariland.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "動物ふれあい広場（キッズサファリ）でカピバラとふれあえる"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.safariland.jp/eigyou/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.jalan.net/kankou/spt_35461cc3310040133/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

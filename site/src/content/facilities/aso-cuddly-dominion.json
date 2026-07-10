@@ -1,0 +1,51 @@
+{
+  "slug": "aso-cuddly-dominion",
+  "name": "阿蘇カドリー・ドミニオン",
+  "type": "zoo",
+  "prefecture": "熊本県",
+  "region": "kyushu",
+  "lat": 32.931,
+  "lng": 131.0667,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上・平日）",
+      "price": "2,600円"
+    },
+    {
+      "label": "大人（土日祝・特定日）",
+      "price": "2,900円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "1,400円"
+    },
+    {
+      "label": "幼児（3歳以上）",
+      "price": "800円"
+    }
+  ],
+  "hours": "夏期（3月中旬〜10月中旬）9:30〜17:00（土日祝は〜17:30）／冬期10:00〜16:30・12〜2月の水曜休（冬休み・祝日を除く）",
+  "officialUrl": "https://www.cuddly.co.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "園内に「カピバラの池」があり、カピバラを間近で観察できる"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.cuddly.co.jp/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.cuddly.co.jp/schedule.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

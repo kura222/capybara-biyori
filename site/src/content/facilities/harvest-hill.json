@@ -1,0 +1,50 @@
+{
+  "slug": "harvest-hill",
+  "name": "堺・緑のミュージアム ハーベストの丘",
+  "type": "farm",
+  "prefecture": "大阪府",
+  "region": "kansai",
+  "lat": 34.456,
+  "lng": 135.5122,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "1,500円"
+    },
+    {
+      "label": "こども",
+      "price": "1,000円"
+    }
+  ],
+  "hours": "10:00〜17:00（最終入園16:00）※夏季など季節により変動",
+  "officialUrl": "https://farm.or.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "「カピバラふれあいタイム」を毎日開催（無料で撫でたりエサやり可）。冬季は「カピバラ温泉」開催"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2025-26シーズン",
+    "start": "2025-12-06",
+    "end": "2026-03-01",
+    "times": "入園料のみで観覧可。冬至（12/20〜22）はゆず風呂、12/24・25はリンゴ風呂",
+    "sourceUrl": "https://farm.or.jp/event/13354"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://farm.or.jp/event/13354",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://farm.or.jp/animal/%E3%82%AB%E3%83%94%E3%83%90%E3%83%A9%E3%81%B5%E3%82%8C%E3%81%82%E3%81%84%E3%82%BF%E3%82%A4%E3%83%A0",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

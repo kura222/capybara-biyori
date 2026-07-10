@@ -1,0 +1,54 @@
+{
+  "slug": "moff-aichi-togo",
+  "name": "Moff animal cafe ららぽーと愛知東郷店",
+  "type": "cafe",
+  "prefecture": "愛知県",
+  "region": "tokai",
+  "lat": 35.087,
+  "lng": 137.05,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "中学生以上",
+      "price": "1,450円（時間無制限）＋ドリンクバー380円必須"
+    },
+    {
+      "label": "4歳〜小学生",
+      "price": "950円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "10:00〜20:00（最終受付19:30）",
+  "officialUrl": "https://moff-moff.jp/archives/shop/ani-cafe_aichi-togo",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "「カピバラ広場」にカピバラ・キンカジュー・ナマケモノ。約40種の動物とふれあえるアニマルカフェ"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://moff-moff.jp/archives/shop/ani-cafe_aichi-togo",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://mitsui-shopping-park.com/lalaport/togo/shopguide/1630907.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

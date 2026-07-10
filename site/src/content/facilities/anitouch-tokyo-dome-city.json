@@ -1,0 +1,47 @@
+{
+  "slug": "anitouch-tokyo-dome-city",
+  "name": "アニタッチ東京ドームシティ",
+  "type": "indoor",
+  "prefecture": "東京都",
+  "region": "kanto",
+  "lat": 35.705,
+  "lng": 139.753,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（平日）",
+      "price": "1,800円"
+    },
+    {
+      "label": "大人（土日祝・繁忙期）",
+      "price": "2,000円"
+    },
+    {
+      "label": "4歳〜小学生（平日）",
+      "price": "800円"
+    }
+  ],
+  "hours": "10:30〜19:00（土日祝は〜20:00）",
+  "officialUrl": "https://www.tokyodomecity.anitouch.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "2024年7月開業の屋内型ふれあい動物園。都心ど真ん中でカピバラとふれあえる（渡辺克仁氏レポートあり）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.tokyodomecity.anitouch.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/nea5cdbad38e4",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

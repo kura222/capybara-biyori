@@ -1,0 +1,50 @@
+{
+  "slug": "hamamatsu-zoo",
+  "name": "浜松市動物園",
+  "type": "zoo",
+  "prefecture": "静岡県",
+  "region": "tokai",
+  "lat": 34.7647,
+  "lng": 137.6306,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "410円"
+    },
+    {
+      "label": "中学生以下・70歳以上",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:00〜16:30（入園16:00まで）",
+  "officialUrl": "https://hamazoo.net/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "カピバラを飼育・展示"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://hamazoo.net/information.php",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

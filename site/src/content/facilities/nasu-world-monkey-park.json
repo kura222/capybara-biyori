@@ -1,0 +1,34 @@
+{
+  "slug": "nasu-world-monkey-park",
+  "name": "那須ワールドモンキーパーク",
+  "type": "zoo",
+  "prefecture": "栃木県",
+  "region": "kanto",
+  "lat": 37.0166,
+  "lng": 140.0323,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://www.nasumonkey.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "サル中心の体験型パーク。カピバラを含む多くの動物にふれあい・エサやり可（来園者口コミ確認）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.nasumonkey.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://oyama-navi.com/nasu-monkey-park",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

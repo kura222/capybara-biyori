@@ -1,0 +1,58 @@
+{
+  "slug": "tobu-zoo",
+  "name": "東武動物公園",
+  "type": "zoo",
+  "prefecture": "埼玉県",
+  "region": "kanto",
+  "lat": 36.027,
+  "lng": 139.709,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園料 大人（18歳以上）",
+      "price": "2,300円"
+    },
+    {
+      "label": "入園料 中人（12〜17歳）",
+      "price": "1,800円"
+    },
+    {
+      "label": "入園料 小人（3〜11歳）",
+      "price": "1,000円"
+    },
+    {
+      "label": "入園料 シニア（60歳以上）",
+      "price": "1,500円"
+    }
+  ],
+  "hours": "10:00〜17:00目安（日により変動・公式カレンダー参照）",
+  "officialUrl": "https://www.tobuzoo.com/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "ほのぼのストリート「リスザルの楽園」エリアでリスザル・ペリカンと混合展示。通常のふれあい・エサやりは無し"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "冬季恒例（公式カピバラ紹介ページに「冬場は温泉につかる姿が見られる」と記載・今季日程未確認）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://www.tobuzoo.com/zoo/list/2220.html"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.tobuzoo.com/ticket/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.tobuzoo.com/zoo/list/2220.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

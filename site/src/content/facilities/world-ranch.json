@@ -1,0 +1,50 @@
+{
+  "slug": "world-ranch",
+  "name": "ワールド牧場",
+  "type": "farm",
+  "prefecture": "大阪府",
+  "region": "kansai",
+  "lat": 34.46,
+  "lng": 135.65,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "2,000円"
+    },
+    {
+      "label": "小人（3歳以上）",
+      "price": "1,000円"
+    }
+  ],
+  "hours": "10:00〜17:30（季節により変動）",
+  "officialUrl": "http://www.worldranch.co.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "園内にカピバラエリアあり"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://www.jalan.net/kankou/spt_27382cc3310040494/",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://osaka-info.jp/spot/world-ranch/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

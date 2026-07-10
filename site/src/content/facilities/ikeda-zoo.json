@@ -4,28 +4,59 @@
   "type": "zoo",
   "prefecture": "岡山県",
   "region": "chugoku",
-  "lat": 34.6803,
-  "lng": 133.9004,
-  "latlngApprox": true,
+  "lat": 34.6747,
+  "lng": 133.9053,
+  "latlngApprox": false,
   "status": "open",
-  "fees": [{ "label": "大人", "price": "1,300円" }],
-  "hours": null,
+  "fees": [
+    {
+      "label": "一般",
+      "price": "1,100円"
+    },
+    {
+      "label": "高校生",
+      "price": "880円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "660円"
+    },
+    {
+      "label": "幼児（3歳以上）",
+      "price": "330円"
+    }
+  ],
+  "hours": "9:30〜17:00（11〜3月は16:30まで）・入園受付は閉園1時間前まで・一部期間の水曜休園",
   "officialUrl": "https://ikedazoo.jp/",
-  "hasCafe": false,
-  "capybara": null,
+  "capybara": {
+    "fureai": null,
+    "esayari": true,
+    "note": "カピバラ「こう」「ふく」を飼育。エサやり体験イベントの開催実績あり"
+  },
   "onsen": {
     "has": true,
-    "seasonLabel": null,
-    "start": null,
-    "end": null,
+    "seasonLabel": "2025年冬至（カピバラのゆず湯）",
+    "start": "2025-12-22",
+    "end": "2025-12-22",
     "times": null,
-    "note": "冬至の「ゆず湯」イベント（2025年12月実績）。通期開催ではなく単発の変わり湯。",
-    "sourceUrl": "https://ikedazoo.jp/"
+    "sourceUrl": "https://www.okayama-kanko.jp/event/detail_100756.html"
   },
-  "live": null,
-  "affiliate": { "asoview": "", "rakutenTravel": "" },
   "sources": [
-    { "label": "公式サイト", "url": "https://ikedazoo.jp/", "official": true }
+    {
+      "label": "公式サイト",
+      "url": "https://ikedazoo.jp/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://ikedazoo.jp/about/fee/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.okayama-kanko.jp/event/detail_100756.html",
+      "official": false
+    }
   ],
   "lastVerified": "2026-07-10",
   "detail": true

@@ -1,0 +1,39 @@
+{
+  "slug": "shirotori-zoo",
+  "name": "しろとり動物園",
+  "type": "zoo",
+  "prefecture": "香川県",
+  "region": "shikoku",
+  "lat": 34.23,
+  "lng": 134.31,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "1,650円"
+    }
+  ],
+  "hours": "9:30〜17:00・休園日は月2回程度",
+  "officialUrl": "http://shirotorizoo.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "「自由すぎる動物園」。柵越しのエサやり・ふれあいができ、miniサファリエリアではカピバラが放し飼い。エサはバケツ販売（600円）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "http://shirotorizoo.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-sirotori.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "nihondaira-zoo",
+  "name": "静岡市立日本平動物園",
+  "type": "zoo",
+  "prefecture": "静岡県",
+  "region": "tokai",
+  "lat": 34.986,
+  "lng": 138.407,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "一般（高校生以上）",
+      "price": "620円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "150円"
+    },
+    {
+      "label": "未就学児",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:00〜16:30（最終入園16:00）※月曜休園（祝日の場合翌平日）",
+  "officialUrl": "https://www.nhdzoo.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "カピバラを飼育。冬季に市内温泉施設の温泉水を使った「カピバラ温泉」を開催"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2025-26シーズン（カピバラ温泉2026）",
+    "start": "2026-02-21",
+    "end": "2026-03-15",
+    "times": "期間中の土日に開催（用宗みなと温泉・おふろcafe bijinyu・しずもーる西ケ谷の温泉水を使用）",
+    "sourceUrl": "https://www.nhdzoo.jp/event/naka.php?id=598"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.nhdzoo.jp/event/naka.php?id=598",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.nhdzoo.jp/animals/naka.php?animal_uid=94",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

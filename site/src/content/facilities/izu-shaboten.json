@@ -4,32 +4,67 @@
   "type": "zoo",
   "prefecture": "静岡県",
   "region": "tokai",
-  "lat": 34.888,
-  "lng": 139.084,
+  "lat": 34.9072,
+  "lng": 139.1008,
   "latlngApprox": false,
   "status": "open",
-  "fees": [{ "label": "大人", "price": "2,700円" }],
-  "hours": "9:30〜16:00（季節変動）",
+  "fees": [
+    {
+      "label": "大人（中学生以上）平日",
+      "price": "2,800円"
+    },
+    {
+      "label": "大人（中学生以上）土日祝・長期休暇",
+      "price": "3,000円"
+    },
+    {
+      "label": "小学生 平日",
+      "price": "1,400円"
+    },
+    {
+      "label": "小学生 土日祝・長期休暇",
+      "price": "1,500円"
+    },
+    {
+      "label": "幼児（4歳以上）平日",
+      "price": "700円"
+    },
+    {
+      "label": "幼児（4歳以上）土日祝・長期休暇",
+      "price": "800円"
+    }
+  ],
+  "hours": "9:30〜17:00（3〜10月）／9:30〜16:00（11〜2月）※夏期・イベント時は延長あり",
   "officialUrl": "https://izushaboten.com/",
-  "hasCafe": false,
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "元祖カピバラの露天風呂（1982年〜）。全国に広がった冬の名物イベント発祥の地。"
+    "note": "元祖カピバラの露天風呂（1982年〜、2025-26で43周年）。カピバラとのふれあい・おやつあげ体験が可能。料金は2026/4/25改定後の新料金"
   },
   "onsen": {
     "has": true,
     "seasonLabel": "2025-26シーズン",
     "start": "2025-11-22",
     "end": "2026-04-05",
-    "times": "平日13:30／土日祝10:30・13:30",
-    "note": null,
-    "sourceUrl": "https://izushaboten.com/"
+    "times": "平日13:30〜14:30（1日1回）／土日祝・冬休み(12/20〜1/12)・春休み(3/20〜4/5)は10:30〜11:30と13:30〜14:30（1日2回）",
+    "sourceUrl": "https://izushaboten.com/animal/kapibara/kapiroten/"
   },
-  "live": null,
-  "affiliate": { "asoview": "", "rakutenTravel": "" },
   "sources": [
-    { "label": "公式サイト", "url": "https://izushaboten.com/", "official": true }
+    {
+      "label": "公式サイト",
+      "url": "https://izushaboten.com/animal/kapibara/kapiroten/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://izushaboten.com/information/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://izushaboten.com/news/entrance-fee/",
+      "official": true
+    }
   ],
   "lastVerified": "2026-07-10",
   "detail": true

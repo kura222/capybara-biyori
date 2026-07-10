@@ -1,0 +1,58 @@
+{
+  "slug": "aqua-totto-gifu",
+  "name": "世界淡水魚園水族館 アクア・トト ぎふ",
+  "type": "aquarium",
+  "prefecture": "岐阜県",
+  "region": "tokai",
+  "lat": 35.3717,
+  "lng": 136.8105,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "1,780円"
+    },
+    {
+      "label": "中学生・高校生",
+      "price": "1,400円"
+    },
+    {
+      "label": "小学生",
+      "price": "900円"
+    },
+    {
+      "label": "幼児（3歳以上）",
+      "price": "500円"
+    }
+  ],
+  "hours": "平日9:30〜17:00（最終入館16:00）／土日祝9:30〜18:00（最終入館17:00）",
+  "officialUrl": "https://aquatotto.com/",
+  "capybara": {
+    "fureai": null,
+    "esayari": true,
+    "note": "屋外カピバラテラスで展示。「カピバラもぐもぐタイム」（毎日開催・事前申込）で餌やり可"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "季節の風呂イベント（冬至の「ゆず風呂」、もみじ風呂・しょうぶ風呂など開催日ごとに告知）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://aquatotto.com/event/schedule/detail.php?p=17629"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://aquatotto.com/about/open",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://aquatotto.com/event/schedule/detail.php?p=17629",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

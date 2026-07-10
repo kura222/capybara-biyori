@@ -49,17 +49,21 @@ const facilities = defineCollection({
     // slug は spec §6 互換のため任意で保持（URL には entry.id=ファイル名を使う）
     slug: z.string().optional(),
     name: z.string(),
-    type: z.enum(['zoo', 'aquarium', 'cafe', 'farm']),
+    // P1: 収集データに合わせ種別を拡張（safari=サファリパーク / park=公園 /
+    // theme_park=レジャー・遊園地 / indoor=屋内ふれあい / other=その他）。
+    type: z.enum(['zoo', 'aquarium', 'cafe', 'farm', 'safari', 'park', 'theme_park', 'indoor', 'other']),
     prefecture: z.string(),
     // region は地方コード。未知コードも受け入れる（表示名は taxonomy 側で解決）。
     region: z.string(),
-    lat: z.number(),
-    lng: z.number(),
+    // 座標は nullable。簡易データで未確認の施設は null（地図にピンを打たずカード一覧のみ）。
+    lat: z.number().nullable().default(null),
+    lng: z.number().nullable().default(null),
     latlngApprox: z.boolean().default(false),
     status: z.enum(['open', 'closed', 'suspended']).default('open'),
     fees: z.array(feeSchema).default([]),
     hours: z.string().nullable().default(null),
-    officialUrl: z.string().url(),
+    // 公式サイトが未確認の施設は null（詳細・地図でリンクを非表示にする）。
+    officialUrl: z.string().url().nullable().default(null),
     // 施設内にカピバラカフェ等がある場合の任意フラグ（フィルタ「カフェ」は type==='cafe' || hasCafe）
     hasCafe: z.boolean().default(false),
     capybara: capybaraSchema.nullable().default(null),

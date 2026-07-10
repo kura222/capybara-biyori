@@ -1,0 +1,54 @@
+{
+  "slug": "blumen-hugel",
+  "name": "滋賀農業公園ブルーメの丘",
+  "type": "farm",
+  "prefecture": "滋賀県",
+  "region": "kansai",
+  "lat": 35.0134,
+  "lng": 136.2821,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "1,500円"
+    },
+    {
+      "label": "こども（4歳〜小学生）",
+      "price": "800円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "3〜11月: 平日10:00〜17:00・土日祝9:30〜17:00（水曜定休）／12〜2月: 10:00〜16:00（平日休園）",
+  "officialUrl": "https://www.blumenooka.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "カピバラとふれあえるイベントを開催"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.blumenooka.jp/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.biwako-visitors.jp/spot/detail/1186/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

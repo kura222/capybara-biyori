@@ -1,0 +1,55 @@
+{
+  "slug": "mother-farm",
+  "name": "マザー牧場",
+  "type": "farm",
+  "prefecture": "千葉県",
+  "region": "kanto",
+  "lat": 35.245,
+  "lng": 139.92,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "1,800円"
+    },
+    {
+      "label": "小人（4歳〜小学6年生）",
+      "price": "900円"
+    }
+  ],
+  "hours": "2〜11月: 土日祝9:00〜17:00／平日9:30〜16:30、12〜1月: 土日祝9:30〜16:00／平日10:00〜16:00",
+  "officialUrl": "https://www.motherfarm.co.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "ふれあいスポットでカピバラやマーラにさわれる。冬はカピバラ温泉イベントを開催"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2024-25実績（今季発表は秋頃）",
+    "start": "2024-11-23",
+    "end": "2025-03-31",
+    "times": null,
+    "sourceUrl": "https://www.motherfarm.co.jp/information/news/detail.php?CN=373599"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.motherfarm.co.jp/ticket/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.motherfarm.co.jp/animal/breed/detail.php?CN=199467",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.walkerplus.com/event/ar0312e530483/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

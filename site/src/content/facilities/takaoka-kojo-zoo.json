@@ -1,0 +1,46 @@
+{
+  "slug": "takaoka-kojo-zoo",
+  "name": "高岡古城公園動物園",
+  "type": "zoo",
+  "prefecture": "富山県",
+  "region": "hokuriku",
+  "lat": 36.7492,
+  "lng": 137.0206,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園料",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:00〜16:30 ※月曜休園（祝日の場合翌平日）・12/29〜1/3休園",
+  "officialUrl": "https://www.takaokakojyozoo.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "2013年にカピバラの飼育を11年ぶりに再開"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.takaokakojyozoo.jp/page-28/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.city.takaoka.toyama.jp/soshiki/keikammidorika/2/3/4386.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

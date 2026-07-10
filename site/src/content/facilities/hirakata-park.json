@@ -1,0 +1,41 @@
+{
+  "slug": "hirakata-park",
+  "name": "ひらかたパーク（わくわく動物村）",
+  "type": "park",
+  "prefecture": "大阪府",
+  "region": "kansai",
+  "lat": 34.814,
+  "lng": 135.648,
+  "latlngApprox": true,
+  "status": "closed",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://www.hirakatapark.co.jp/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "遊園地自体は営業中だが、動物展示施設「屋内型動物園 わくわく動物村」（旧どうぶつハグハグたうん）は2025年1月13日で営業終了。現在カピバラには会えない"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://www.keihan.co.jp/corporate/info/release/assets/241213_hirakata-park-2.pdf",
+      "official": false
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.hirakatapark.co.jp/animal/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

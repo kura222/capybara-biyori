@@ -1,0 +1,39 @@
+{
+  "slug": "kiryugaoka-zoo",
+  "name": "桐生が岡動物園",
+  "type": "zoo",
+  "prefecture": "群馬県",
+  "region": "kanto",
+  "lat": 36.418,
+  "lng": 139.326,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園",
+      "price": "無料"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.city.kiryu.lg.jp/zoo/index.html",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "2025年2月完成の新カピバラ舎（お風呂のようなプール付き屋外展示＋ガラス張り屋内展示）で「プーアル」「きなこ」の2頭を公開中"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.kiryu.lg.jp/zoo/1017854/index.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.jomo-news.co.jp/articles/-/630508",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

@@ -4,31 +4,55 @@
   "type": "zoo",
   "prefecture": "埼玉県",
   "region": "kanto",
-  "lat": 36.0323,
-  "lng": 139.4213,
+  "lat": 35.999,
+  "lng": 139.423,
   "latlngApprox": true,
   "status": "open",
   "fees": [
-    { "label": "大人", "price": "700円" },
-    { "label": "小・中学生", "price": "200円" }
+    {
+      "label": "大人（高校生以上）",
+      "price": "900円"
+    },
+    {
+      "label": "小人（小・中学生）",
+      "price": "200円"
+    },
+    {
+      "label": "未就学児",
+      "price": "無料"
+    }
   ],
-  "hours": null,
+  "hours": "9:30〜17:00（11/15〜1/31は9:30〜16:30）・月曜休（祝日は開園）",
   "officialUrl": "https://www.parks.or.jp/sczoo/",
-  "hasCafe": false,
-  "capybara": null,
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "カピバラ・ワラビー広場で飼育。打たせ湯付き岩風呂の「カピバラ温泉」は関東の冬の名物（みかん湯・ゆず湯など月替わり季節湯）。料金は2025年7月改定後"
+  },
   "onsen": {
     "has": true,
     "seasonLabel": "2025-26シーズン",
     "start": "2025-12-02",
     "end": "2026-03-15",
-    "times": null,
-    "note": "開催期間はzooリサーチ調べ（公式発表を要確認）。",
-    "sourceUrl": "https://www.parks.or.jp/sczoo/"
+    "times": "14:00〜16:00（カピバラが部屋に帰るまで）",
+    "sourceUrl": "https://tabi-mag.jp/sczoo-capybara/"
   },
-  "live": null,
-  "affiliate": { "asoview": "", "rakutenTravel": "" },
   "sources": [
-    { "label": "公式サイト", "url": "https://www.parks.or.jp/sczoo/", "official": true }
+    {
+      "label": "公式サイト",
+      "url": "https://www.parks.or.jp/sczoo/guide/000/000194.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.parks.or.jp/sczoo/blog/entry/005943.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://tabi-mag.jp/sczoo-capybara/",
+      "official": false
+    }
   ],
   "lastVerified": "2026-07-10",
   "detail": true

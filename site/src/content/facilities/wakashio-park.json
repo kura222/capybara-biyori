@@ -1,0 +1,39 @@
+{
+  "slug": "wakashio-park",
+  "name": "若潮公園",
+  "type": "park",
+  "prefecture": "千葉県",
+  "region": "kanto",
+  "lat": 35.651,
+  "lng": 139.911,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園",
+      "price": "無料"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.city.urayasu.lg.jp/shisetsu/kouen/kotsu/1005854.html",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "浦安市の無料公園内「動物広場」でカピバラを飼育。網越し約50cmの近さで観察できる（ふれあい・エサやり不可）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.urayasu.lg.jp/shisetsu/kouen/kotsu/1005854.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-wakasio.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

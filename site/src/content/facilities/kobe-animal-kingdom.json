@@ -1,0 +1,63 @@
+{
+  "slug": "kobe-animal-kingdom",
+  "name": "神戸どうぶつ王国",
+  "type": "zoo",
+  "prefecture": "兵庫県",
+  "region": "kansai",
+  "lat": 34.6542,
+  "lng": 135.2231,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "2,200円"
+    },
+    {
+      "label": "小学生",
+      "price": "1,200円"
+    },
+    {
+      "label": "幼児（4歳・5歳）",
+      "price": "500円"
+    },
+    {
+      "label": "シルバー（65歳以上）",
+      "price": "1,600円"
+    }
+  ],
+  "hours": "10:00〜17:00（入園締切16:30）※木曜休園（長期休暇期間は営業）、繁忙期は延長あり",
+  "officialUrl": "https://www.kobe-oukoku.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "2025年4月リニューアルの南米大湿原「パンタナール」エリアで距離ゼロの観察・ふれあい・エサやりが可能"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "冬季恒例（王国温泉〜カピバラの湯〜。冬至はゆず湯。2025-26の期間・時間は公式未確認）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://mintclub.kobe-np.co.jp/skip/event/4565.html"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.kobe-oukoku.com/information/fees",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.kobe-oukoku.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://mintclub.kobe-np.co.jp/skip/event/4565.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

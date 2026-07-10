@@ -1,0 +1,50 @@
+{
+  "slug": "beppu-rakutenchi",
+  "name": "別府ラクテンチ",
+  "type": "theme_park",
+  "prefecture": "大分県",
+  "region": "kyushu",
+  "lat": 33.2752,
+  "lng": 131.4813,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "1,300円"
+    },
+    {
+      "label": "小人（3歳〜中学生）",
+      "price": "600円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://rakutenchi.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "2025年2月8日オープンの常設「カピバラ温泉」でふれあい可。エサやり体験は土日祝限定 11:00〜11:30／14:00〜14:30・100円（体調により中止あり）。カピバラは7頭"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "常設（2025年2月8日オープン）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://rakutenchi.jp/archive/5707.html"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://rakutenchi.jp/archive/5707.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://rakutenchi.jp/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

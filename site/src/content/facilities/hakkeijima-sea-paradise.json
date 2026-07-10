@@ -1,0 +1,51 @@
+{
+  "slug": "hakkeijima-sea-paradise",
+  "name": "横浜・八景島シーパラダイス",
+  "type": "aquarium",
+  "prefecture": "神奈川県",
+  "region": "kanto",
+  "lat": 35.338,
+  "lng": 139.644,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "アクアリゾーツパス 大人・高校生",
+      "price": "3,500円"
+    },
+    {
+      "label": "同 小・中学生",
+      "price": "2,200円"
+    },
+    {
+      "label": "同 幼児（4歳以上）",
+      "price": "1,200円"
+    },
+    {
+      "label": "島への入島",
+      "price": "無料"
+    }
+  ],
+  "hours": "施設・日により変動（公式営業カレンダー参照）",
+  "officialUrl": "https://www.seaparadise.co.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": true,
+    "note": "「ふれあいラグーン」でカピバラ・マーラへのごはんタイム500円（Web事前予約制）。フォレストアクアリウムのガイドツアー1,500円でもエサやり可"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.seaparadise.co.jp/en/price/index.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.seaparadise.co.jp/en/taiken/index.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

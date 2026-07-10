@@ -1,0 +1,43 @@
+{
+  "slug": "picnica-republic",
+  "name": "ふれあい動物園 ピクニカ共和国",
+  "type": "zoo",
+  "prefecture": "福岡県",
+  "region": "kyushu",
+  "lat": 33.63,
+  "lng": 130.59,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "700円"
+    },
+    {
+      "label": "小人（3歳〜中学生）",
+      "price": "400円"
+    }
+  ],
+  "hours": "冬季は土日祝のみ開園（詳細は要確認）",
+  "officialUrl": null,
+  "capybara": {
+    "fureai": null,
+    "esayari": true,
+    "note": "約50種300頭羽を飼育するふれあい動物園。エサやりは1回200円"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://kankou-iizuka.jp/topic_285/",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://rurubu.jp/andmore/spot/80084145",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

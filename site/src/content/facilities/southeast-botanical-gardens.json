@@ -1,0 +1,39 @@
+{
+  "slug": "southeast-botanical-gardens",
+  "name": "東南植物楽園",
+  "type": "park",
+  "prefecture": "沖縄県",
+  "region": "okinawa",
+  "lat": 26.373,
+  "lng": 127.829,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（昼の部）",
+      "price": "2,000円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.southeast-botanical.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "水上楽園「なかよしチャンプルー広場」（リスザルと同居）と植物園入口付近の2カ所でカピバラを飼育"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.southeast-botanical.jp/information/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-tounann.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

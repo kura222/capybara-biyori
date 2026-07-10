@@ -1,0 +1,43 @@
+{
+  "slug": "neopark-okinawa",
+  "name": "ネオパークオキナワ",
+  "type": "zoo",
+  "prefecture": "沖縄県",
+  "region": "okinawa",
+  "lat": 26.6107,
+  "lng": 127.9915,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "1,600円"
+    },
+    {
+      "label": "小人（4歳〜小学生）",
+      "price": "800円"
+    }
+  ],
+  "hours": "9:30〜17:30（最終入場17:00）・年中無休",
+  "officialUrl": "https://www.neopark.co.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "ふれあい広場・とことこ広場でカピバラに直接触れられ、おやつあげ体験もできる（料金は2025年10月改定後）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.neopark.co.jp/animal/capybara/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.neopark.co.jp/topics/31487/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

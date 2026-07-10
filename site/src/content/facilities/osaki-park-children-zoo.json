@@ -1,0 +1,39 @@
+{
+  "slug": "osaki-park-children-zoo",
+  "name": "大崎公園子供動物園",
+  "type": "zoo",
+  "prefecture": "埼玉県",
+  "region": "kanto",
+  "lat": 35.871,
+  "lng": 139.718,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園",
+      "price": "無料"
+    }
+  ],
+  "hours": "10:00〜16:00",
+  "officialUrl": "https://www.city.saitama.lg.jp/008/004/001/index.html",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "さいたま市の無料小動物園。レッサーパンダとともにカピバラが人気（ふれあい広場の対象はモルモット・ヤギ等）"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.saitama.lg.jp/008/004/001/index.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

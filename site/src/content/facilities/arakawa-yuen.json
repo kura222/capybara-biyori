@@ -1,0 +1,47 @@
+{
+  "slug": "arakawa-yuen",
+  "name": "あらかわ遊園 どうぶつ広場",
+  "type": "park",
+  "prefecture": "東京都",
+  "region": "kanto",
+  "lat": 35.75,
+  "lng": 139.755,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園 大人",
+      "price": "800円"
+    },
+    {
+      "label": "入園 小学生",
+      "price": "200円"
+    },
+    {
+      "label": "未就学児（3歳以上）",
+      "price": "無料"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_02.html",
+  "capybara": {
+    "fureai": null,
+    "esayari": true,
+    "note": "リニューアル後のどうぶつ広場入口付近でカピバラがお出迎え。動物のえさは100円（のりもの券1枚）で販売"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/ryokin.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_02.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

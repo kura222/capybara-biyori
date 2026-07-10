@@ -1,0 +1,48 @@
+{
+  "slug": "yanbaru-lion",
+  "name": "やんばるライオン",
+  "type": "zoo",
+  "prefecture": "沖縄県",
+  "region": "okinawa",
+  "lat": 26.783,
+  "lng": 128.213,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "1,600円"
+    },
+    {
+      "label": "子ども",
+      "price": "800円"
+    }
+  ],
+  "hours": "9:30〜17:30",
+  "officialUrl": null,
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "2025年3月10日に国頭村謝敷にオープンしたふれあい動物園（17種56頭羽）。カピバラのいるエリアに入って自由にふれあえ、エサやり体験もできる"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://www.okinawatimes.co.jp/articles/-/1540750",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://ryukyushimpo.jp/news/national/entry-4134856.html",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://yambaru.keizai.biz/headline/767",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

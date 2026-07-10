@@ -1,0 +1,39 @@
+{
+  "slug": "kasumigaura-doubutsu-minna-no-ie",
+  "name": "霞ケ浦 どうぶつとみんなのいえ",
+  "type": "zoo",
+  "prefecture": "茨城県",
+  "region": "kanto",
+  "lat": 36.093,
+  "lng": 140.356,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://doubutsutominna.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "2024年7月31日開業の新施設（旧・霞ケ浦ふれあいランド）。旧階段部を転用したカピバラの水浴びエリアがあり間近で観察できる"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://doubutsutominna.jp/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.tokyo-np.co.jp/article/344910",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/nf87af8683ac3",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

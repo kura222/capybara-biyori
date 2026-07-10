@@ -1,0 +1,43 @@
+{
+  "slug": "utsunomiya-zoo",
+  "name": "宇都宮動物園",
+  "type": "zoo",
+  "prefecture": "栃木県",
+  "region": "kanto",
+  "lat": 36.6486,
+  "lng": 139.8735,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上・動物園+遊園地）",
+      "price": "1,600円"
+    },
+    {
+      "label": "小人（3歳〜小学生）",
+      "price": "800円"
+    }
+  ],
+  "hours": "9:00〜17:00（1〜2月は9:30〜16:30）・年中無休",
+  "officialUrl": "https://utsunomiya-zoo.com/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "カピバラはガラス・網越しに観察（ふれあい・エサやり不可）。キリンやゾウへのエサやりが名物の園"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://utsunomiya-zoo.com/information/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-utsunomiya.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

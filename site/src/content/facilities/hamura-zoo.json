@@ -1,0 +1,34 @@
+{
+  "slug": "hamura-zoo",
+  "name": "羽村市動物公園（ヒノトントンZOO）",
+  "type": "zoo",
+  "prefecture": "東京都",
+  "region": "kanto",
+  "lat": 35.769,
+  "lng": 139.321,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": "9:00〜16:30（3〜10月）／9:00〜16:00（11〜2月）・月曜休",
+  "officialUrl": "https://hamurazoo.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "公式「動物紹介」にカピバラ掲載。都内西部でカピバラに会える貴重な市営動物園"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://hamurazoo.jp/animals/detail.html?CN=336234",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-hamura.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

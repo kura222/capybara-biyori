@@ -1,0 +1,46 @@
+{
+  "slug": "asuwayama-happijan",
+  "name": "足羽山公園遊園地（屋内ミニ動物園ハピジャン）",
+  "type": "park",
+  "prefecture": "福井県",
+  "region": "hokuriku",
+  "lat": 36.0514,
+  "lng": 136.2006,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入場料",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:30〜16:30 ※月曜休園（祝日の場合翌平日）。遊園地は12/29〜2月末冬期休園（ハピジャンは12/29〜1/3のみ休み）",
+  "officialUrl": "https://www.city.fukui.lg.jp/kankou/zoo/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "屋内ミニ動物園「ハピジャン」でカピバラ3頭とふれあい可。笹の餌やり100円（数量限定）。水場の一部にお湯を張るお風呂設備あり"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://www.fuku-e.com/fukutabi/detail_60.html",
+      "official": false
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.fukui.lg.jp/kankou/zoo/sisetu/information.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

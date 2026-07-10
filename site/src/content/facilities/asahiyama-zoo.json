@@ -1,0 +1,43 @@
+{
+  "slug": "asahiyama-zoo",
+  "name": "旭川市旭山動物園",
+  "type": "zoo",
+  "prefecture": "北海道",
+  "region": "hokkaido",
+  "lat": 43.768,
+  "lng": 142.4798,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "1,000円（旭川市民700円）"
+    },
+    {
+      "label": "中学生以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "夏期9:30〜17:15（最終入園16:00）／冬期10:30〜15:30（開園期間は季節制・要公式カレンダー確認）",
+  "officialUrl": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "「くもざる・かぴばら館」でクモザルとの混合展示。水中を泳ぐ姿も観察できる"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/zuroku/south_america/d056458.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/generalinformation/d052849.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

@@ -59,12 +59,14 @@ const hasAffiliate = !!(
   (f.affiliate.asoview || f.affiliate.rakutenTravel || f.affiliate.jalan)
 );
 
-// 公式サイトのホスト名（表示用）
-let officialHost = f.officialUrl;
-try {
-  officialHost = new URL(f.officialUrl).hostname.replace(/^www\./, '');
-} catch {
-  /* URL パース失敗時はそのまま表示 */
+// 公式サイトのホスト名（表示用）。officialUrl が null の施設ではリンク自体を出さない。
+let officialHost = f.officialUrl ?? '';
+if (f.officialUrl) {
+  try {
+    officialHost = new URL(f.officialUrl).hostname.replace(/^www\./, '');
+  } catch {
+    /* URL パース失敗時はそのまま表示 */
+  }
 }
 
 const pageUrl = absoluteUrl(`/spots/${entry.id}/`);
@@ -76,17 +78,15 @@ const jsonLd = {
   name: f.name,
   description: `${f.prefecture}のカピバラに会える施設「${f.name}」の情報（料金・温泉イベント・ふれあい）。`,
   url: pageUrl,
-  sameAs: f.officialUrl,
+  ...(f.officialUrl ? { sameAs: f.officialUrl } : {}),
   address: {
     '@type': 'PostalAddress',
     addressRegion: f.prefecture,
     addressCountry: 'JP',
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: f.lat,
-    longitude: f.lng,
-  },
+  ...(f.lat != null && f.lng != null
+    ? { geo: { '@type': 'GeoCoordinates', latitude: f.lat, longitude: f.lng } }
+    : {}),
   ...(f.hours ? { openingHours: f.hours } : {}),
 };
 
@@ -250,15 +250,19 @@ const description = `${f.prefecture}の「${f.name}」でカピバラに会う�
             <th scope="row">都道府県</th>
             <td>{f.prefecture}</td>
           </tr>
-          <tr>
-            <th scope="row">公式サイト</th>
-            <td>
-              <a href={f.officialUrl} target="_blank" rel="noopener" class="infotable__link">
-                {officialHost}
-                <Icon name="ph:arrow-square-out" aria-hidden="true" />
-              </a>
-            </td>
-          </tr>
+          {
+            f.officialUrl && (
+              <tr>
+                <th scope="row">公式サイト</th>
+                <td>
+                  <a href={f.officialUrl} target="_blank" rel="noopener" class="infotable__link">
+                    {officialHost}
+                    <Icon name="ph:arrow-square-out" aria-hidden="true" />
+                  </a>
+                </td>
+              </tr>
+            )
+          }
         </tbody>
       </table>
     </section>
@@ -298,9 +302,12 @@ const description = `${f.prefecture}の「${f.name}」でカピバラに会う�
             近くのカピバラ施設
           </h2>
           <ul class="neighbors">
-            {neighbors.map((n) => (
-              <li class="neighbor">
-                <a href={n.detail ? `/spots/${n.id}/` : n.officialUrl} class="neighbor__link">
+            {neighbors.map((n) => {
+              // 詳細ページがあれば /spots/ へ、無ければ公式サイトへ。
+              // 公式サイトも無い簡易施設（officialUrl=null）はリンクにせず表示のみ。
+              const href = n.detail ? `/spots/${n.id}/` : n.officialUrl;
+              const body = (
+                <>
                   <span class="neighbor__type">
                     <Icon name={n.typeIcon} aria-hidden="true" />
                     {n.typeLabel}
@@ -311,9 +318,20 @@ const description = `${f.prefecture}の「${f.name}」でカピバラに会う�
                     {n.prefecture}
                     {n.hasOnsen && <span class="neighbor__onsen">温泉あり</span>}
                   </span>
-                </a>
-              </li>
-            ))}
+                </>
+              );
+              return (
+                <li class="neighbor">
+                  {href ? (
+                    <a href={href} class="neighbor__link">
+                      {body}
+                    </a>
+                  ) : (
+                    <div class="neighbor__link neighbor__link--plain">{body}</div>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </section>
       )
@@ -601,6 +619,13 @@ const description = `${f.prefecture}の「${f.name}」でカピバラに会う�
   .neighbor__link:hover {
     border-color: var(--accent);
     text-decoration: none;
+  }
+  /* 公式サイトも無い簡易施設は非リンク表示（hover のアフォーダンスを出さない） */
+  .neighbor__link--plain {
+    cursor: default;
+  }
+  .neighbor__link--plain:hover {
+    border-color: var(--line);
   }
   .neighbor__type {
     display: inline-flex;

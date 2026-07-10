@@ -1,0 +1,43 @@
+{
+  "slug": "moff-animal-world-inzai",
+  "name": "Moff animal world BIGHOPガーデンモール印西店",
+  "type": "indoor",
+  "prefecture": "千葉県",
+  "region": "kanto",
+  "lat": 35.806,
+  "lng": 140.113,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（時間無制限）",
+      "price": "1,450円"
+    },
+    {
+      "label": "3歳未満",
+      "price": "無料"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://moff-moff.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "県内最大級の屋内型動物園。カピバラ・アルパカ・ペンギン等とふれあい、おやつやり可"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://moff-moff.jp/en/animal-cafe/shop/moff-animal-watch/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.bighop.jp/shop/index.jsp?bf=1&fmt=6&shopid=2130",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

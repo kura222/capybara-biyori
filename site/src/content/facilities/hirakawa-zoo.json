@@ -1,0 +1,63 @@
+{
+  "slug": "hirakawa-zoo",
+  "name": "鹿児島市平川動物公園",
+  "type": "zoo",
+  "prefecture": "鹿児島県",
+  "region": "kyushu",
+  "lat": 31.4642,
+  "lng": 130.5014,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "一般（高校生以上・市外）",
+      "price": "1,000円"
+    },
+    {
+      "label": "一般（高校生以上・鹿児島市内）",
+      "price": "750円"
+    },
+    {
+      "label": "小・中学生（市外）",
+      "price": "200円"
+    },
+    {
+      "label": "小・中学生（市内）",
+      "price": "150円"
+    }
+  ],
+  "hours": "9:00〜17:00（入園16:30まで）・12/29〜1/1休",
+  "officialUrl": "https://hirakawazoo.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "カピバラとブラジルバクの混合展示。園内地下約1,500mから湧く天然温泉を使う日本で唯一の動物園で、冬はカピバラが温泉プールに入る"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "冬季（天然温泉・例年実施、冬至は12/20頃〜23頃にゆず湯実績）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://hirakawazoo.jp/zookan/%E3%82%AB%E3%83%94%E3%83%90%E3%83%A9/"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://hirakawazoo.jp/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://hirakawazoo.jp/zookan/%E3%82%AB%E3%83%94%E3%83%90%E3%83%A9/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-hirakawa.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

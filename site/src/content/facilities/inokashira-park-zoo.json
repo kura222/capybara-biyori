@@ -1,0 +1,51 @@
+{
+  "slug": "inokashira-park-zoo",
+  "name": "井の頭自然文化園",
+  "type": "zoo",
+  "prefecture": "東京都",
+  "region": "kanto",
+  "lat": 35.699,
+  "lng": 139.573,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "400円"
+    },
+    {
+      "label": "中学生",
+      "price": "150円"
+    },
+    {
+      "label": "65歳以上",
+      "price": "200円"
+    },
+    {
+      "label": "小学生以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:30〜17:00（入園は16:00まで）・月曜休",
+  "officialUrl": "https://www.tokyo-zoo.net/inokashira/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "2023年11月から途絶えていたカピバラ展示が、2025年6月に那須どうぶつ王国から来園したオスの「なえ」で再開"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.tokyo-zoo.net/topic/topics_detail?kind=news&inst=&link_num=29266",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.my.metro.tokyo.lg.jp/w/000-20250526-109513859",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

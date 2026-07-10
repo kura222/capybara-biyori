@@ -1,0 +1,47 @@
+{
+  "slug": "anitouch-park-ota",
+  "name": "アニタッチPARK イオンモール太田",
+  "type": "indoor",
+  "prefecture": "群馬県",
+  "region": "kanto",
+  "lat": 36.308,
+  "lng": 139.403,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（平日）",
+      "price": "1,300円"
+    },
+    {
+      "label": "大人（土日祝）",
+      "price": "1,600円"
+    },
+    {
+      "label": "4歳〜小学生（平日）",
+      "price": "800円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.ota.anitouch.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "屋内型ふれあい動物園。カピバラにふれあい・おやつ可（おやつ券6枚1,000円）。晴天時は屋外日光浴も"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.ota.anitouch.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://gunma-kanko.jp/features/282",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

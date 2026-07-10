@@ -1,0 +1,59 @@
+{
+  "slug": "himeji-central-park",
+  "name": "サファリリゾート姫路セントラルパーク",
+  "type": "safari",
+  "prefecture": "兵庫県",
+  "region": "kansai",
+  "lat": 34.8713,
+  "lng": 134.7644,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "3,600円"
+    },
+    {
+      "label": "小学生",
+      "price": "2,000円"
+    },
+    {
+      "label": "幼児（3歳以上）",
+      "price": "1,200円"
+    }
+  ],
+  "hours": "夏季10:00〜18:00／冬季10:00〜16:30（日により変動、営業カレンダー参照）",
+  "officialUrl": "https://www.central-park.co.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "約700平米の「カピバラガーデン」でカピバラを放し飼い、自由にふれあえる。プール・シャワー・打たせ湯付きのカピバラ専用スパあり"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "冬季恒例（カピバラ温泉、例年3月中旬頃まで。冬至はゆず湯、以降日替わり湯）",
+    "start": null,
+    "end": null,
+    "times": "11:00〜閉園30分前（過去開催時）",
+    "sourceUrl": "https://kisspress.jp/articles/25977/"
+  },
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://kisspress.jp/articles/25977/",
+      "official": false
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.central-park.co.jp/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.jalan.net/event/evt_333093/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

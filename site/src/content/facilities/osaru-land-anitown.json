@@ -1,0 +1,41 @@
+{
+  "slug": "osaru-land-anitown",
+  "name": "おさるランド＆アニタウン（日光さる軍団）",
+  "type": "zoo",
+  "prefecture": "栃木県",
+  "region": "kanto",
+  "lat": 36.818,
+  "lng": 139.715,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://www.osaruland.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "アニタウンに赤ちゃんカピバラ5頭が仲間入り。猫とカピバラのエリアで間近にふれあえる"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "通年（カピバラとおさるが一緒に入る温泉・公式サイト記載）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://www.osaruland.jp/anitown/"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.osaruland.jp/anitown/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.osaruland.jp/cast/anitown_animals/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

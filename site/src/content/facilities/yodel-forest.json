@@ -1,0 +1,54 @@
+{
+  "slug": "yodel-forest",
+  "name": "神崎農村公園ヨーデルの森",
+  "type": "farm",
+  "prefecture": "兵庫県",
+  "region": "kansai",
+  "lat": 35.04,
+  "lng": 134.84,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "1,200円"
+    },
+    {
+      "label": "小人（4歳以上）",
+      "price": "700円"
+    },
+    {
+      "label": "シルバー（65歳以上）",
+      "price": "1,000円"
+    }
+  ],
+  "hours": "季節により変動（毎週水曜休園、12〜2月は平日休園）",
+  "officialUrl": "https://yodel-forest.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": null,
+    "note": "アルパカ・カピバラなど約60種200頭羽の動物と間近にふれあえる農村公園"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://yodel-forest.jp/guide",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.kamikawa-navi.jp/guide/spot/650",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

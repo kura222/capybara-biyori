@@ -1,0 +1,52 @@
+{
+  "slug": "hitachi-kamine-zoo",
+  "name": "日立市かみね動物園",
+  "type": "zoo",
+  "prefecture": "茨城県",
+  "region": "kanto",
+  "lat": 36.6069,
+  "lng": 140.6531,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生〜64歳）",
+      "price": "520円"
+    },
+    {
+      "label": "こども（4歳〜中学生）",
+      "price": "100円"
+    },
+    {
+      "label": "65歳以上・3歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:00〜16:30（3〜10月）／9:00〜16:00（11〜2月）",
+  "officialUrl": "https://www.city.hitachi.lg.jp/zoo/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "太平洋を望む高台の老舗動物園でカピバラを飼育。カピバラ専門2リスト（カピバラJP・渡辺克仁氏）掲載"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.hitachi.lg.jp/zoo/annai/1004042.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybarajp.com/wheres-capybara/",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://iko-yo.net/facilities/4520/attractions/8483",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "kanazawa-zoo",
+  "name": "横浜市立金沢動物園",
+  "type": "zoo",
+  "prefecture": "神奈川県",
+  "region": "kanto",
+  "lat": 35.354,
+  "lng": 139.605,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://www.hama-midorinokyokai.or.jp/zoo/kanazawa/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "アメリカ区の幅20mの広い放飼場（最短約3m）でカピバラを展示。毎週土曜14:30から飼育係の解説トーク。キャラクター「カピバラさん」とのタイアップ実績あり"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "通年（月替わりの変わり湯「カピバラのほんわか打たせ湯」・公式ブログ連載）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://www.hama-midorinokyokai.or.jp/zoo/kanazawa/details/9102.php"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.hama-midorinokyokai.or.jp/zoo/kanazawa/details/9102.php",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/nc2e6ccceea09",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

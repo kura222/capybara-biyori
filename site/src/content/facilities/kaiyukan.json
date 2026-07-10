@@ -1,0 +1,46 @@
+{
+  "slug": "kaiyukan",
+  "name": "海遊館",
+  "type": "aquarium",
+  "prefecture": "大阪府",
+  "region": "kansai",
+  "lat": 34.6545,
+  "lng": 135.4289,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生・16歳以上）",
+      "price": "2,700円〜（日時により変動価格制）"
+    }
+  ],
+  "hours": "10:00〜20:00など日により変動（入館は閉館1時間前まで）",
+  "officialUrl": "https://www.kaiyukan.com/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "常設展示「エクアドル熱帯雨林」ゾーンの水槽でカピバラを展示（観覧のみ）"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.kaiyukan.com/area/exhibition/028.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.kaiyukan.com/info/hours/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

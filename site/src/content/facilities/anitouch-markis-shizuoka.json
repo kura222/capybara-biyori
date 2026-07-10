@@ -1,0 +1,57 @@
+{
+  "slug": "anitouch-markis-shizuoka",
+  "name": "アニタッチ MARK IS 静岡",
+  "type": "indoor",
+  "prefecture": "静岡県",
+  "region": "tokai",
+  "lat": 34.978,
+  "lng": 138.409,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人 平日",
+      "price": "1,200円"
+    },
+    {
+      "label": "大人 休日（土日祝・長期休暇）",
+      "price": "1,500円"
+    },
+    {
+      "label": "大人 特定日",
+      "price": "1,700円"
+    },
+    {
+      "label": "小人（4歳〜小学生）平日／休日／特定日",
+      "price": "700円／900円／1,000円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "平日11:00〜19:00（最終受付18:30）／休日10:00〜20:00（最終受付19:30）※MARK IS静岡休館日に準ずる",
+  "officialUrl": "https://www.shizuoka.anitouch.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "伊豆シャボテン動物公園グループ運営の屋内型ふれあい動物園。名物「カピバラの猫足風呂」。おやつあげ体験は別途有料"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.shizuoka.anitouch.com/",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

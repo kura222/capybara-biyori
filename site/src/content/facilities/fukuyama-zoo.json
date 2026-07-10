@@ -1,0 +1,43 @@
+{
+  "slug": "fukuyama-zoo",
+  "name": "福山市立動物園",
+  "type": "zoo",
+  "prefecture": "広島県",
+  "region": "chugoku",
+  "lat": 34.539,
+  "lng": 133.283,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（15歳以上）",
+      "price": "520円"
+    },
+    {
+      "label": "中学生以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:00〜16:30（入園16:00まで）・火曜休（祝日の場合は翌日）・12/29〜1/3休",
+  "officialUrl": "https://www.fukuyamazoo.jp/",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "園内奥の小獣舎で飼育。ふれあい・エサやりは不可だが、打たせ湯の実施実績あり"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.fukuyamazoo.jp/infomation.php",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-fukuyama.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

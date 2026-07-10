@@ -1,0 +1,54 @@
+{
+  "slug": "tokuyama-zoo",
+  "name": "周南市徳山動物園",
+  "type": "zoo",
+  "prefecture": "山口県",
+  "region": "chugoku",
+  "lat": 34.065,
+  "lng": 131.813,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "600円"
+    },
+    {
+      "label": "小人（小中高校生）",
+      "price": "300円"
+    },
+    {
+      "label": "幼児",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:00〜17:00（10/20〜2月末は16:30まで）・入園は閉園30分前まで",
+  "officialUrl": "https://tokuyama-zoo.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "南園でカピバラを飼育。湯野温泉の温泉水を使ったカピバラ温泉の実施実績あり"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "実施実績あり（湯野温泉の湯を提供・時期不定期）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://tokuyama-zoo.jp/as/cms/view.php?m=cel&k=A01uFiuS1L&id=221"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://tokuyama-zoo.jp/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://tokuyama-zoo.jp/info.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

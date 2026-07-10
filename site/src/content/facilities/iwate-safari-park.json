@@ -1,0 +1,43 @@
+{
+  "slug": "iwate-safari-park",
+  "name": "岩手サファリパーク",
+  "type": "zoo",
+  "prefecture": "岩手県",
+  "region": "tohoku",
+  "lat": 38.8099,
+  "lng": 141.2589,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "2,900円"
+    },
+    {
+      "label": "小人（3歳〜小学生）",
+      "price": "1,700円"
+    }
+  ],
+  "hours": "9:30〜17:00（最終入園16:00）／水曜・第2第4木曜休園",
+  "officialUrl": "https://www.iwate-safari.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "併設どうぶつランドの「カピバラ・ペンギン館」でカピバラを展示"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.iwate-safari.jp/parkguide",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.iwate-safari.jp/animal",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

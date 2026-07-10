@@ -1,0 +1,46 @@
+{
+  "slug": "toba-aquarium",
+  "name": "鳥羽水族館",
+  "type": "aquarium",
+  "prefecture": "三重県",
+  "region": "tokai",
+  "lat": 34.4815,
+  "lng": 136.8458,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "2,800円"
+    }
+  ],
+  "hours": "9:30〜17:00（最終入館16:00）※GW・夏季等は9:00〜17:30。年中無休",
+  "officialUrl": "https://aquarium.co.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "2階「ジャングルワールド」の水槽内と屋外ゾーンでカピバラを展示"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://aquarium.co.jp/eigyo/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

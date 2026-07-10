@@ -1,0 +1,50 @@
+{
+  "slug": "gokatsura-animal-park",
+  "name": "ごかつら池どうぶつパーク",
+  "type": "zoo",
+  "prefecture": "三重県",
+  "region": "tokai",
+  "lat": 34.4667,
+  "lng": 136.5546,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "おとな（中学生以上）",
+      "price": "900円"
+    },
+    {
+      "label": "こども（4歳〜小学生）",
+      "price": "500円"
+    }
+  ],
+  "hours": "10:00〜16:30（最終入園16:00）※火曜休園",
+  "officialUrl": "https://gokatsura.jp/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "2024年6月29日グランドオープン。「おいないぞーん」でカピバラを展示"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://gokatsura.jp/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.kankomie.or.jp/report/2075",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

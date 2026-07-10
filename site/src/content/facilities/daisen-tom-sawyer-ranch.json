@@ -1,0 +1,43 @@
+{
+  "slug": "daisen-tom-sawyer-ranch",
+  "name": "大山トム・ソーヤ牧場",
+  "type": "farm",
+  "prefecture": "鳥取県",
+  "region": "chugoku",
+  "lat": 35.408,
+  "lng": 133.363,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "1,000円"
+    },
+    {
+      "label": "子供（3歳以上）",
+      "price": "700円"
+    }
+  ],
+  "hours": "9:00〜17:00（最終入園16:30）・木曜休（時期により変動）",
+  "officialUrl": "http://tom.sanin.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "カピバラ広場に2頭。1日4回のふれあいタイムに中に入ってふれあい・エサやりができる"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "http://tom.sanin.jp/ja/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.jalan.net/kankou/spt_foomoojH000280411/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

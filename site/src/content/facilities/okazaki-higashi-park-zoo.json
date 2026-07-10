@@ -1,0 +1,46 @@
+{
+  "slug": "okazaki-higashi-park-zoo",
+  "name": "岡崎市東公園動物園",
+  "type": "zoo",
+  "prefecture": "愛知県",
+  "region": "tokai",
+  "lat": 34.953,
+  "lng": 137.1919,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園料",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:00〜16:30（動物展示は15:30まで）※月曜休園・年末年始休",
+  "officialUrl": "https://www.city.okazaki.lg.jp/zoo/index.html",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "入園無料の動物園でカピバラを飼育・展示"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://okazaki-kanko.jp/feature/animal/top",
+      "official": false
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.okazaki.lg.jp/zoo/index.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

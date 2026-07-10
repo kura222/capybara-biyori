@@ -1,0 +1,50 @@
+{
+  "slug": "himeji-city-zoo",
+  "name": "姫路市立動物園",
+  "type": "zoo",
+  "prefecture": "兵庫県",
+  "region": "kansai",
+  "lat": 34.8378,
+  "lng": 134.6939,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人",
+      "price": "210円"
+    },
+    {
+      "label": "5歳〜中学生",
+      "price": "30円"
+    }
+  ],
+  "hours": "9:00〜17:00（入園16:30まで）※12/29〜1/1休園",
+  "officialUrl": "https://www.city.himeji.lg.jp/dobutuen/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "姫路城に隣接する動物園でカピバラを飼育"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.himeji.lg.jp/dobutuen/0000007495.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

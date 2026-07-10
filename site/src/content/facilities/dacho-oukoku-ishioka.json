@@ -1,0 +1,43 @@
+{
+  "slug": "dacho-oukoku-ishioka",
+  "name": "ダチョウ王国 石岡ファーム",
+  "type": "farm",
+  "prefecture": "茨城県",
+  "region": "kanto",
+  "lat": 36.2226,
+  "lng": 140.2159,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "中学生以上（南のまきば）",
+      "price": "1,200円"
+    },
+    {
+      "label": "3歳以上",
+      "price": "700円"
+    }
+  ],
+  "hours": "10:00〜16:30（10〜2月は16:00閉園）・毎月第2水曜休",
+  "officialUrl": "https://dacho.co.jp/ishioka-farm",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "ふれあいエリア「南のまきば」でカピバラにエサやり・ふれあい可"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://dacho.co.jp/ishioka-farm",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.ibarakiguide.jp/spot.php?mode=detail&code=1293",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

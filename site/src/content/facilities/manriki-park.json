@@ -1,0 +1,51 @@
+{
+  "slug": "manriki-park",
+  "name": "万力公園 万葉の森ふれあい動物広場",
+  "type": "zoo",
+  "prefecture": "山梨県",
+  "region": "koshinetsu",
+  "lat": 35.695,
+  "lng": 138.688,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園料",
+      "price": "無料"
+    }
+  ],
+  "hours": "動物広場10:00〜17:00（11〜3月は〜16:30）／月曜休（祝日の場合翌日）・年末年始休",
+  "officialUrl": "https://www.city.yamanashi.yamanashi.jp/site/playground/2270.html",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "無料の動物広場の看板動物。夏はプールで泳ぎ、冬はお風呂に入る姿が見られる。JR山梨市駅から徒歩約5分"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "例年実績（万力林 カピバラの湯）",
+    "start": null,
+    "end": null,
+    "times": "11月〜3月の土日祝 10:30〜",
+    "sourceUrl": "https://www.jalan.net/news/article/419313/"
+  },
+  "sources": [
+    {
+      "label": "参考情報",
+      "url": "https://www.yamanashi-kankou.jp/kankou/spot/p_8063.html",
+      "official": false
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.yamanashi.yamanashi.jp/site/playground/2270.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.jalan.net/news/article/419313/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

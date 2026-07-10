@@ -183,10 +183,14 @@ const statusLabel: Record<string, string> = {
               </div>
 
               <h3 class="facil__name">
-                <a href={f.url}>
-                  {f.name}
-                  {!f.detail && <Icon name="ph:arrow-square-out" class="facil__extlink" aria-hidden="true" />}
-                </a>
+                {f.url ? (
+                  <a href={f.url}>
+                    {f.name}
+                    {!f.detail && <Icon name="ph:arrow-square-out" class="facil__extlink" aria-hidden="true" />}
+                  </a>
+                ) : (
+                  <span>{f.name}</span>
+                )}
               </h3>
 
               <p class="facil__pref">
@@ -261,15 +265,15 @@ const statusLabel: Record<string, string> = {
   type Facility = {
     id: string;
     name: string;
-    lat: number;
-    lng: number;
+    lat: number | null;
+    lng: number | null;
     pinClass: string;
     typeLabel: string;
     prefecture: string;
     region: string;
     status: string;
     detail: boolean;
-    url: string;
+    url: string | null;
     latlngApprox: boolean;
     fOnsen: boolean;
     fFureai: boolean;
@@ -303,6 +307,8 @@ const statusLabel: Record<string, string> = {
     const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string);
 
     for (const f of facilities) {
+      // 座標が無い施設はピンを打たない（下のカード一覧のみに出す）
+      if (f.lat == null || f.lng == null) continue;
       const icon = L.divIcon({
         className: 'pin-icon',
         html: `<span class="pin ${f.pinClass}"></span>`,
@@ -313,12 +319,16 @@ const statusLabel: Record<string, string> = {
       const marker = L.marker([f.lat, f.lng], { icon, title: f.name, keyboard: true });
       const approx = f.latlngApprox ? '<span class="pin-popup__approx">おおよその位置</span>' : '';
       const linkLabel = f.detail ? '詳細を見る' : '公式サイトを見る';
+      // 公式サイト未確認の簡易施設（url=null）はリンクを出さない
+      const linkHtml = f.url
+        ? `<a class="pin-popup__link" href="${esc(f.url)}">${linkLabel} →</a>`
+        : '';
       marker.bindPopup(
         `<div class="pin-popup">
           <p class="pin-popup__type">${esc(f.typeLabel)}・${esc(f.prefecture)}</p>
           <p class="pin-popup__name">${esc(f.name)}</p>
           ${approx}
-          <a class="pin-popup__link" href="${esc(f.url)}">${linkLabel} →</a>
+          ${linkHtml}
         </div>`,
       );
       records.set(f.id, { marker, data: f });
@@ -395,9 +405,12 @@ const statusLabel: Record<string, string> = {
 
     // 初期描画：まず全ピンを載せ（open のみ）、可視ピンに地図を合わせる
     apply();
-    const visible = facilities.filter(matches);
+    // 座標を持つ可視施設だけで地図の表示範囲を合わせる（座標なしは一覧のみ）
+    const visible = facilities.filter((f) => matches(f) && f.lat != null && f.lng != null);
     if (visible.length > 0) {
-      const bounds = L.latLngBounds(visible.map((f) => [f.lat, f.lng] as [number, number]));
+      const bounds = L.latLngBounds(
+        visible.map((f) => [f.lat as number, f.lng as number] as [number, number]),
+      );
       map.fitBounds(bounds, { padding: [48, 48], maxZoom: 7 });
     }
     // レイアウト確定後にサイズを再計算（コンテナ高さ確定のズレ対策）
@@ -797,6 +810,22 @@ const statusLabel: Record<string, string> = {
   }
   .pin--farm {
     --pin-color: var(--text-2);
+  }
+  /* P1 追加種別（トークン＋color-mixで既存と識別できる配色に） */
+  .pin--safari {
+    --pin-color: var(--live);
+  }
+  .pin--park {
+    --pin-color: color-mix(in srgb, var(--green) 72%, var(--accent));
+  }
+  .pin--themepark {
+    --pin-color: color-mix(in srgb, var(--live) 58%, var(--surface-deep));
+  }
+  .pin--indoor {
+    --pin-color: var(--text-1);
+  }
+  .pin--other {
+    --pin-color: var(--text-3);
   }
 
   /* Leaflet コントロール・帰属表示を生成りトーンに寄せる */

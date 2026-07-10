@@ -1,0 +1,63 @@
+{
+  "slug": "adventure-world",
+  "name": "アドベンチャーワールド",
+  "type": "safari",
+  "prefecture": "和歌山県",
+  "region": "kansai",
+  "lat": 33.6667,
+  "lng": 135.3729,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（18歳以上）",
+      "price": "5,300円"
+    },
+    {
+      "label": "セニア（65歳以上）",
+      "price": "4,800円"
+    },
+    {
+      "label": "中人（中高生・12〜17歳）",
+      "price": "4,300円"
+    },
+    {
+      "label": "小人（幼児・小学生 4〜11歳）",
+      "price": "3,300円"
+    }
+  ],
+  "hours": "10:00〜17:00（季節により変動・休園日あり、営業カレンダー参照）",
+  "officialUrl": "https://www.aws-s.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "ふれあい広場でカピバラが放し飼いになっており間近でふれあえる。有料の餌やりや、笹を手渡しできるカピバラのイベントあり"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.aws-s.com/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.aws-s.com/facility/introduction/friendship_village.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybarajp.com/category/aws-s/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

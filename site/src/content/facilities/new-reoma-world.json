@@ -1,0 +1,41 @@
+{
+  "slug": "new-reoma-world",
+  "name": "レオマリゾート（NEWレオマワールド）",
+  "type": "theme_park",
+  "prefecture": "香川県",
+  "region": "shikoku",
+  "lat": 34.213,
+  "lng": 133.858,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [],
+  "hours": null,
+  "officialUrl": "https://www.newreomaworld.com/",
+  "capybara": {
+    "fureai": false,
+    "esayari": null,
+    "note": "アドベンチャーエリアにガラス張りの常設カピバラ風呂（露天風呂・打たせ湯風の造作）があり、通年で入浴姿が見られる"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "通年（常設のカピバラ風呂）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://www.newreomaworld.com/event/67066-2/"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.newreomaworld.com/event/67066-2/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-reoma.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

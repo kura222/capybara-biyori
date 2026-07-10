@@ -1,0 +1,50 @@
+{
+  "slug": "izu-animal-kingdom",
+  "name": "伊豆アニマルキングダム",
+  "type": "zoo",
+  "prefecture": "静岡県",
+  "region": "tokai",
+  "lat": 34.7971,
+  "lng": 139.0395,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "2,600〜3,200円（A〜Dシーズンにより変動）"
+    },
+    {
+      "label": "子ども（4歳〜小学生）",
+      "price": "1,300〜1,600円（A〜Dシーズンにより変動）"
+    }
+  ],
+  "hours": "9:30〜17:00（4〜9月）／9:30〜16:00（10〜3月）※6月下旬・12月中旬に施設点検休園あり",
+  "officialUrl": "https://izu-animal-kingdom.com/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "わくわくふれあい広場でカピバラの餌やり可。2024/3/16に新施設アニマルパラダイス360オープン。隣接して「カピバラと泊まれるヴィラ」（伊豆リゾートヴィラ）あり"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://izu-animal-kingdom.com/calendar-tickets/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://izu-resort-villa.com/animal-villa/",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

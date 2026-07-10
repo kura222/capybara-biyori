@@ -1,0 +1,39 @@
+{
+  "slug": "hiratsuka-fureai-zoo",
+  "name": "平塚市総合公園 ふれあい動物園",
+  "type": "zoo",
+  "prefecture": "神奈川県",
+  "region": "kanto",
+  "lat": 35.34,
+  "lng": 139.335,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入場",
+      "price": "無料"
+    }
+  ],
+  "hours": "月曜休（祝日の場合は直近の平日）・年末年始休（12/28〜1/4）",
+  "officialUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00819.html",
+  "capybara": {
+    "fureai": false,
+    "esayari": null,
+    "note": "入場無料のふれあい動物園（約35種760頭）。2024年5月から新カピバラ「ガンモ」（オス）を公開中"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00819.html",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.townnews.co.jp/0606/2024/05/17/733300.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

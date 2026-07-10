@@ -1,0 +1,50 @@
+{
+  "slug": "takeshima-aquarium",
+  "name": "竹島水族館",
+  "type": "aquarium",
+  "prefecture": "愛知県",
+  "region": "tokai",
+  "lat": 34.817,
+  "lng": 137.2322,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "1,200円"
+    },
+    {
+      "label": "子ども（4歳〜中学生）",
+      "price": "500円"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.takesuideepsea.com/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "2024年10月12日の増設リニューアルでカピバラ展示が屋外に復活（「しんた」「めめ」の2頭）"
+  },
+  "onsen": {
+    "has": false,
+    "seasonLabel": null,
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.takesuideepsea.com/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://readyfor.jp/projects/takesui2024",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

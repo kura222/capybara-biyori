@@ -1,0 +1,55 @@
+{
+  "slug": "rakujuen",
+  "name": "三島市立公園 楽寿園",
+  "type": "park",
+  "prefecture": "静岡県",
+  "region": "tokai",
+  "lat": 35.1229,
+  "lng": 138.9118,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（15歳以上）",
+      "price": "300円"
+    },
+    {
+      "label": "15歳未満・学生",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:00〜17:00（4〜10月）／9:00〜16:30（11〜3月）※月曜休園",
+  "officialUrl": "https://www.city.mishima.shizuoka.jp/site/rakujyuen/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "どうぶつふれあい広場内にカピバラ舎。冬季の土日祝に「カピバラのお風呂」を実施"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2025-26シーズン",
+    "start": "2025-11-22",
+    "end": "2026-03-29",
+    "times": "土日祝のみ11:30〜（平日は実施なし、荒天・雨天中止）",
+    "sourceUrl": "https://www.city.mishima.shizuoka.jp/rakujyu/shousai061981.html"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.mishima.shizuoka.jp/rakujyu/shousai061981.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.mishima.shizuoka.jp/site/rakujyuen/5429.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.city.mishima.shizuoka.jp/rakujyu/shousai057591.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}

@@ -4,7 +4,16 @@
  * デザインガイドライン §5: アイコンは Phosphor、色は面積5%未満のアクセント体系に限定。
  */
 
-export type FacilityType = 'zoo' | 'aquarium' | 'cafe' | 'farm';
+export type FacilityType =
+  | 'zoo'
+  | 'aquarium'
+  | 'cafe'
+  | 'farm'
+  | 'safari'
+  | 'park'
+  | 'theme_park'
+  | 'indoor'
+  | 'other';
 
 export interface TypeMeta {
   /** 表示名 */
@@ -19,12 +28,22 @@ export interface TypeMeta {
  * 種別 → メタ。ピン色はデザインガイドラインのトークンに割り当てる:
  *   zoo=--green / aquarium=--accent / cafe=--accent-strong / farm=--text-2
  * （spec §4.2 の「水族館=青」はトークン体系に青が無いため、ガイドラインのアクセント系で代替）
+ *
+ * P1 追加の5種は、既存4種と識別できるようトークン（＋トークン同士の color-mix）で配色する:
+ *   safari=--live（朱） / park=green×accent（オリーブ） /
+ *   theme_park=live×surface-deep（ダスティ・サーモン） / indoor=--text-1（濃焦げ茶） /
+ *   other=--text-3（淡グレージュ）。実際の色は map の pin CSS で --pin-color に割当てる。
  */
 export const TYPE_META: Record<FacilityType, TypeMeta> = {
   zoo: { label: '動物園', icon: 'ph:paw-print', pinClass: 'pin--zoo' },
   aquarium: { label: '水族館', icon: 'ph:fish-simple', pinClass: 'pin--aquarium' },
   cafe: { label: 'カフェ', icon: 'ph:coffee', pinClass: 'pin--cafe' },
   farm: { label: '牧場', icon: 'ph:barn', pinClass: 'pin--farm' },
+  safari: { label: 'サファリパーク', icon: 'ph:jeep', pinClass: 'pin--safari' },
+  park: { label: '公園', icon: 'ph:park', pinClass: 'pin--park' },
+  theme_park: { label: 'レジャー・遊園地', icon: 'ph:balloon', pinClass: 'pin--themepark' },
+  indoor: { label: '屋内ふれあい', icon: 'ph:storefront', pinClass: 'pin--indoor' },
+  other: { label: 'その他', icon: 'ph:dots-three-circle', pinClass: 'pin--other' },
 };
 
 /** 未知の種別が来ても落ちないフォールバック付きアクセサ。 */

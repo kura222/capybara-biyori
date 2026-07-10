@@ -1,0 +1,43 @@
+{
+  "slug": "ibaraido",
+  "name": "こもれび森のイバライド",
+  "type": "farm",
+  "prefecture": "茨城県",
+  "region": "kanto",
+  "lat": 35.943,
+  "lng": 140.3395,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "1,500円"
+    },
+    {
+      "label": "こども（4歳〜）",
+      "price": "800円"
+    }
+  ],
+  "hours": "10:00〜17:00（3〜11月）／10:00〜16:30（12〜2月）・火曜休（10〜3月は火水休）",
+  "officialUrl": "https://www.ibaraido.co.jp/",
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "ふれあい牧場のふれあいハウスにカピバラ。エサあげ体験100円・柵越しのふれあい可"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.ibaraido.co.jp/price/",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://capybara.eek.jp/navi-ibaraido.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "oshima-park-zoo",
+  "name": "東京都立大島公園動物園",
+  "type": "zoo",
+  "prefecture": "東京都",
+  "region": "kanto",
+  "lat": 34.777,
+  "lng": 139.418,
+  "latlngApprox": true,
+  "status": "open",
+  "fees": [
+    {
+      "label": "入園",
+      "price": "無料"
+    }
+  ],
+  "hours": null,
+  "officialUrl": "https://www.soumu.metro.tokyo.lg.jp/11osima/osima/park/zoo/zoo",
+  "capybara": {
+    "fureai": false,
+    "esayari": false,
+    "note": "伊豆大島の無料動物園。大島の自然林を囲った大型ウォークインケージ内でカピバラやワラビーがのびのび暮らす"
+  },
+  "onsen": null,
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.soumu.metro.tokyo.lg.jp/11osima/osima/park/zoo/zoo",
+      "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://oshima-navi.com/zoo/index.html",
+      "official": false
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": false
+}

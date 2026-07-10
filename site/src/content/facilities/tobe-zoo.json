@@ -1,0 +1,63 @@
+{
+  "slug": "tobe-zoo",
+  "name": "愛媛県立とべ動物園",
+  "type": "zoo",
+  "prefecture": "愛媛県",
+  "region": "shikoku",
+  "lat": 33.7624,
+  "lng": 132.7928,
+  "latlngApprox": false,
+  "status": "open",
+  "fees": [
+    {
+      "label": "大人（18〜64歳）",
+      "price": "600円"
+    },
+    {
+      "label": "65歳以上",
+      "price": "300円"
+    },
+    {
+      "label": "高校生",
+      "price": "200円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "100円"
+    }
+  ],
+  "hours": "9:00〜17:00（入園16:30まで）・月曜休（祝日の場合は翌平日）・年末年始休",
+  "officialUrl": "https://www.tobezoo.com/",
+  "capybara": {
+    "fureai": null,
+    "esayari": null,
+    "note": "ウォーターストリートの「カピバラ舎」で飼育。冬の名物「カピバラの打たせ湯」が人気"
+  },
+  "onsen": {
+    "has": true,
+    "seasonLabel": "2025-26シーズン（カピバラの打たせ湯）",
+    "start": "2025-11-29",
+    "end": "2026-03-01",
+    "times": "土日祝 12:00〜14:00",
+    "sourceUrl": "https://www.tobezoo.com/tobetopics/2025/11/256706.html"
+  },
+  "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.tobezoo.com/",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.tobezoo.com/info/admission.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.tobezoo.com/tobetopics/2025/11/256706.html",
+      "official": true
+    }
+  ],
+  "lastVerified": "2026-07-10",
+  "detail": true
+}
