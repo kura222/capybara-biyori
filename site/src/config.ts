@@ -24,7 +24,7 @@ export const SITE_URL: string = (
  */
 export const LIVE_STATUS_URL: string =
   import.meta.env?.PUBLIC_LIVE_STATUS_URL ??
-  'https://raw.githubusercontent.com/OWNER/capybara-biyori/data/live-status.json';
+  'https://raw.githubusercontent.com/kura222/capybara-biyori/data/live-status.json';
 
 /** ローカル開発時のフォールバック（Astro が public/data/ を /data/ として配信） */
 export const LIVE_STATUS_FALLBACK_URL = '/data/live-status.json';
