@@ -154,6 +154,10 @@ const statusLabel: Record<string, string> = {
           <Icon name="ph:lock-simple" aria-hidden="true" />
           位置情報はお使いの端末内でのみ使われ、送信・保存されません。
         </p>
+        <p class="geobar__privacy">
+          <Icon name="ph:cursor-click" aria-hidden="true" />
+          パソコンでは現在地が数kmずれることがあります。地図を右クリック（スマホは長押し）すると、その地点を起点にできます。
+        </p>
         <p class="geo-msg" id="geo-msg" role="status" aria-live="polite" hidden></p>
       </div>
 
@@ -539,11 +543,20 @@ const statusLabel: Record<string, string> = {
 
     function onGeoSuccess(pos: GeolocationPosition) {
       const { latitude, longitude, accuracy } = pos.coords;
-      hasLocation = true;
-      showMsg('');
       try {
         localStorage.setItem(GEO_FLAG, '1');
       } catch {}
+      applyOrigin(latitude, longitude, accuracy, false);
+    }
+
+    /**
+     * 起点を設定して「近い順」に切り替える共通処理。
+     * manual=true は地図の右クリック（スマホは長押し）による手動起点
+     * （PCはIP由来で現在地が大きくずれることがあるため、その救済手段）。
+     */
+    function applyOrigin(latitude: number, longitude: number, accuracy: number | null, manual: boolean) {
+      hasLocation = true;
+      showMsg(manual ? 'この地点を起点に「近い順」で表示しています。' : '');
 
       // 距離を計算（座標のある施設のみ・座標なしは末尾扱い）
       distances.clear();
@@ -562,18 +575,21 @@ const statusLabel: Record<string, string> = {
         iconSize: [20, 20],
         iconAnchor: [10, 10],
       });
+      const originLabel = manual ? '起点（手動設定）' : '現在地';
       userMarker = L.marker([latitude, longitude], {
         icon: uicon,
         keyboard: false,
-        title: '現在地',
+        title: originLabel,
         zIndexOffset: 1000,
       }).addTo(map);
-      userMarker.bindPopup('<div class="pin-popup"><p class="pin-popup__name">現在地</p></div>');
-      accuracyCircle = L.circle([latitude, longitude], {
-        radius: Math.min(accuracy || 0, 20000),
-        className: 'user-accuracy',
-        interactive: false,
-      }).addTo(map);
+      userMarker.bindPopup(`<div class="pin-popup"><p class="pin-popup__name">${originLabel}</p></div>`);
+      if (accuracy != null) {
+        accuracyCircle = L.circle([latitude, longitude], {
+          radius: Math.min(accuracy || 0, 20000),
+          className: 'user-accuracy',
+          interactive: false,
+        }).addTo(map);
+      }
 
       // 近い順に並べ替え・距離表示・並び替えトグルを表示
       setSortMode('near');
@@ -643,7 +659,7 @@ const statusLabel: Record<string, string> = {
           onGeoSuccess(pos);
         },
         onGeoError,
-        { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 },
+        { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 },
       );
     }
 
@@ -694,6 +710,11 @@ const statusLabel: Record<string, string> = {
     // ボタン・トグルの配線
     locateBtn?.addEventListener('click', requestLocation);
     resetBtn?.addEventListener('click', resetToNational);
+    // 地図の右クリック（スマホは長押し）でその地点を起点にする
+    // （PCはIP由来で現在地が数km〜数十kmずれることがあるため、その救済手段）
+    map.on('contextmenu', (e: L.LeafletMouseEvent) => {
+      applyOrigin(e.latlng.lat, e.latlng.lng, null, true);
+    });
     for (const b of sortBtns) {
       b.addEventListener('click', () => setSortMode(b.dataset.sort === 'region' ? 'region' : 'near'));
     }
