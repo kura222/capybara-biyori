@@ -17,6 +17,7 @@
       "watchNote": "新着フィード等での短い独自解説（チャンネル単位）",
       "liveStreams": "24h/seasonal で動画IDが長期固定の常設カメラ群 [{videoId,label,note}]。event型は都度URLが変わるため空にし、live-status.json の動的検知に委ねる。24hでもID再起動で入れ替わるチャンネル（Roger Williams等）は登録IDをフォールバックにしつつ、フロントが live-status の同一チャンネルIDを自動採用する",
       "seasonalNote": "seasonal チャンネルの季節注記（夏季休止など・任意）",
+      "offSeasonMonths": "seasonal カメラが空舎になりやすい月の配列（例 [5,6,7,8,9]＝5〜9月）。閲覧時のクライアント現在月がこの配列に含まれると、ビューアは『季節休止中』バッジ表示＋切替リスト最下部へ降格＋初期自動選択から除外する（任意）",
       "linkOnly": "true=埋め込み不可でリンク紹介する外部カメラ（display:link と併用）。自前HLS等のストリームURLはコードに一切含めない（転載防止・security.md §4）",
       "linkUrl": "linkOnly カメラの視聴先（公式サイト）URL",
       "hoursNote": "linkOnly カメラの視聴可能時間帯の注記（現地時間・要登録など）"
@@ -187,6 +188,7 @@
       "tendency": "ラトビア・リガ動物園のカピバラ舎を、通信会社Bite Latvijaが2アングルで配信。毎日10:00〜12:00（現地）の清掃時間を除き終日視聴できます。",
       "watchNote": "リガ動物園のカピバラ舎を2アングルで映す、Bite Latvijaのライブ配信です。",
       "seasonalNote": "夏季は屋外展示に移りカメラが空舎になる場合があります（秋に屋内展示へ戻ると再開）。映っていないときはご容赦ください。",
+      "offSeasonMonths": [5, 6, 7, 8, 9],
       "liveStreams": [
         {
           "videoId": "NKV4x2RYeco",

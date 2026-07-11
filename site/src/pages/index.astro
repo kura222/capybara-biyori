@@ -57,6 +57,8 @@ const viewerCameras = channels
       type: c.type,
       country: c.country,
       seasonalNote: c.seasonalNote ?? '',
+      // @ts-ignore offSeasonMonths は seasonal カメラのみの拡張フィールド
+      offSeasonMonths: (c.offSeasonMonths as number[] | undefined) ?? null,
       embedChecked: c.embedChecked ?? '',
       videoId: s.videoId,
       label: s.label,
@@ -227,6 +229,7 @@ const articles = (await getCollection('articles'))
                 data-type={cam.type}
                 data-checked={cam.embedChecked}
                 data-seasonal={cam.seasonalNote}
+                data-offseason={cam.offSeasonMonths ? cam.offSeasonMonths.join(',') : ''}
                 data-live="false"
                 aria-pressed={i === 0 ? 'true' : 'false'}
               >
@@ -554,9 +557,20 @@ const articles = (await getCollection('articles'))
     return s;
   }
 
+  function makeDormantBadge(): HTMLElement {
+    const b = document.createElement('span');
+    b.className = 'badge badge--dormant';
+    b.textContent = '季節休止中';
+    return b;
+  }
+
   function setNowPlaying(card: HTMLElement): void {
     const d = card.dataset;
-    if (nowBadge) nowBadge.replaceChildren(makeBadge(d.live === 'true' ? 'live' : 'idle', d.type ?? ''));
+    if (nowBadge) {
+      nowBadge.replaceChildren(
+        d.dormant === 'true' ? makeDormantBadge() : makeBadge(d.live === 'true' ? 'live' : 'idle', d.type ?? ''),
+      );
+    }
     if (nowTitle) nowTitle.textContent = d.name ?? '';
     if (nowMeta) nowMeta.textContent = `${d.country ?? ''} ・ ${d.label ?? ''}`;
     if (nowNote) nowNote.textContent = d.note ?? '';
@@ -684,6 +698,51 @@ const articles = (await getCollection('articles'))
     if (img) (img as HTMLImageElement).src = thumb(newId);
   }
 
+  // 季節休止（オフシーズン）判定はビルド時でなく閲覧時のクライアント現在月で行う（静的サイトのため）。
+  // 該当カメラは「季節休止中」バッジ化＋解説に注記＋最下部へ降格＋初期自動選択から除外する。
+  const OFFSEASON_NOTE_PREFIX = 'いまは空舎の可能性が大きいカメラです（例年秋に再開）。';
+  function isOffSeasonNow(raw: string): boolean {
+    if (!raw) return false;
+    const month = new Date().getMonth() + 1; // 1〜12
+    return raw
+      .split(',')
+      .map((n) => parseInt(n, 10))
+      .includes(month);
+  }
+  function demoteDormantCards(): void {
+    if (!list) return;
+    const dormant = Array.from(list.querySelectorAll('.viewer-cam[data-dormant="true"]')) as HTMLElement[];
+    for (const card of dormant) list.appendChild(card);
+  }
+  function applySeasonalDormancy(): void {
+    if (!list) return;
+    const cards = Array.from(list.querySelectorAll('.viewer-cam')) as HTMLElement[];
+    let changed = false;
+    for (const card of cards) {
+      if (!isOffSeasonNow(card.dataset.offseason ?? '')) continue;
+      card.dataset.dormant = 'true';
+      changed = true;
+      // バッジを「季節休止中」（--text-3系・ドット無し）へ差し替え
+      const bw = card.querySelector('[data-badge]');
+      if (bw) bw.replaceChildren(makeDormantBadge());
+      // 解説の先頭に注記（dataset.note も更新して now パネルにも反映）
+      const base = card.dataset.note ?? '';
+      if (!base.startsWith(OFFSEASON_NOTE_PREFIX)) {
+        const merged = OFFSEASON_NOTE_PREFIX + base;
+        card.dataset.note = merged;
+        const noteEl = card.querySelector('.viewer-cam__note') as HTMLElement | null;
+        if (noteEl) noteEl.textContent = merged;
+      }
+    }
+    if (!changed) return;
+    demoteDormantCards();
+    // 初期選択が休止カメラに当たっていたら、休止でない先頭カメラへ寄せる（未操作時のみ）
+    if (!userInteracted) {
+      const active = list.querySelector('.viewer-cam:not([data-dormant="true"])') as HTMLElement | null;
+      if (active) selectCard(active);
+    }
+  }
+
   function reconcileViewer(status: Status | null): void {
     if (!status || !list) return;
     const baseCards = Array.from(list.querySelectorAll('.viewer-cam')) as HTMLElement[];
@@ -695,8 +754,9 @@ const articles = (await getCollection('articles'))
     const liveIds = new Set(liveItems.map((x) => x.videoId));
     const consumed = new Set<string>();
 
-    // 1) 既存カードの動画IDがそのままライブ → LIVE 昇格
+    // 1) 既存カードの動画IDがそのままライブ → LIVE 昇格（季節休止カメラは配信が生きていても空舎の可能性大なので昇格しない）
     for (const card of baseCards) {
+      if (card.dataset.dormant === 'true') continue;
       const vid = card.dataset.videoId ?? '';
       if (liveIds.has(vid)) {
         markCardLive(card);
@@ -705,7 +765,7 @@ const articles = (await getCollection('articles'))
     }
     // 2) ID再起動組（Roger Williams等）: 未ライブの常設カードに同一チャンネルの新IDを採用
     for (const card of baseCards) {
-      if (card.dataset.live === 'true') continue;
+      if (card.dataset.live === 'true' || card.dataset.dormant === 'true') continue;
       const slug = card.dataset.channel ?? '';
       const cand = liveItems.find((x) => x.channelSlug === slug && !consumed.has(x.videoId));
       if (cand) {
@@ -752,10 +812,15 @@ const articles = (await getCollection('articles'))
       list.appendChild(makeDyn(x, 'upcoming'));
     }
 
+    // 季節休止カメラは常に最下部（ライブ中→その他→季節休止の順）を保つため、動的合流後に再降格
+    demoteDormantCards();
+
     // 4) 初期選択: ライブ中の常設(always/24h)カメラの先頭（未操作時のみ）。国内イベントは最上位に出すが主役の初期選択にはしない。
+    //    季節休止カメラは初期自動選択の対象外（クリックすれば再生は可能）。
     if (!userInteracted) {
-      const firstLiveBase = baseCards.find((c) => c.dataset.live === 'true');
-      const target = firstLiveBase ?? (list.querySelector('.viewer-cam') as HTMLElement | null);
+      const firstLiveBase = baseCards.find((c) => c.dataset.live === 'true' && c.dataset.dormant !== 'true');
+      const target =
+        firstLiveBase ?? (list.querySelector('.viewer-cam:not([data-dormant="true"])') as HTMLElement | null);
       if (target) selectCard(target);
     }
   }
@@ -833,6 +898,9 @@ const articles = (await getCollection('articles'))
     }
     return null;
   }
+
+  // 季節休止カメラの降格・バッジ差し替えはライブ検知を待たず即時反映（クライアント現在月で判定）
+  applySeasonalDormancy();
 
   loadStatus().then((status) => {
     reconcileViewer(status);
@@ -1433,6 +1501,11 @@ const articles = (await getCollection('articles'))
   }
   .badge--neutral {
     color: var(--text-2);
+    background: var(--surface-soft);
+  }
+  /* 季節休止中バッジ（落ち着いた --text-3 系・ドット無し。LIVE と明確に区別） */
+  .badge--dormant {
+    color: var(--text-3);
     background: var(--surface-soft);
   }
 
