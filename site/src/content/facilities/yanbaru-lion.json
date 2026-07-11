@@ -4,8 +4,8 @@
   "type": "zoo",
   "prefecture": "沖縄県",
   "region": "okinawa",
-  "lat": 26.783,
-  "lng": 128.213,
+  "lat": 26.7802,
+  "lng": 128.2145,
   "latlngApprox": true,
   "status": "open",
   "fees": [
@@ -14,35 +14,44 @@
       "price": "1,600円"
     },
     {
-      "label": "子ども",
+      "label": "小人",
       "price": "800円"
+    },
+    {
+      "label": "シニア",
+      "price": "1,500円"
     }
   ],
-  "hours": "9:30〜17:30",
-  "officialUrl": null,
+  "hours": "9:30〜17:30・不定休（休園日はInstagramで告知）",
+  "officialUrl": "https://yannbaru-lion-zoo.com/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "2025年3月10日に国頭村謝敷にオープンしたふれあい動物園（17種56頭羽）。カピバラのいるエリアに入って自由にふれあえ、エサやり体験もできる"
+    "note": "2025年3月10日に国頭村謝敷にオープンしたふれあい動物園。カピバラのいるエリアに入って自由にふれあえ、エサやり体験もできる"
   },
   "onsen": null,
   "sources": [
     {
+      "label": "公式サイト",
+      "url": "https://yannbaru-lion-zoo.com/",
+      "official": true
+    },
+    {
+      "label": "公式Instagram",
+      "url": "https://www.instagram.com/yanbaru_lion_zoo/",
+      "official": true
+    },
+    {
       "label": "参考情報",
-      "url": "https://www.okinawatimes.co.jp/articles/-/1540750",
+      "url": "https://kunigami-kanko.com/sightseeing-spots/%E3%82%84%E3%82%93%E3%81%B0%E3%82%8B%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3/",
       "official": false
     },
     {
       "label": "参考情報",
-      "url": "https://ryukyushimpo.jp/news/national/entry-4134856.html",
-      "official": false
-    },
-    {
-      "label": "参考情報",
-      "url": "https://yambaru.keizai.biz/headline/767",
+      "url": "https://ryukyushimpo.jp/news/region/entry-4254173.html",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

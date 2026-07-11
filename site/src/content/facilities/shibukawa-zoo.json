@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "岡山県",
   "region": "chugoku",
-  "lat": 34.493,
-  "lng": 133.931,
-  "latlngApprox": true,
+  "lat": 34.4682,
+  "lng": 133.8941,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -14,15 +14,15 @@
       "price": "1,500円"
     },
     {
-      "label": "中人",
+      "label": "中人（小・中学生）",
       "price": "1,000円"
     },
     {
-      "label": "小人",
+      "label": "小人（2歳以上）",
       "price": "600円"
     }
   ],
-  "hours": "9:00〜17:00（入園16:30まで）・年中無休",
+  "hours": "9:00〜17:00（入園受付16:30まで）・年中無休",
   "officialUrl": "https://www.shibukawazoo.com/",
   "capybara": {
     "fureai": null,
@@ -37,11 +37,16 @@
       "official": true
     },
     {
+      "label": "公式サイト",
+      "url": "https://www.shibukawazoo.com/",
+      "official": true
+    },
+    {
       "label": "参考情報",
       "url": "https://www.jalan.net/kankou/spt_33204ae3312044285/",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

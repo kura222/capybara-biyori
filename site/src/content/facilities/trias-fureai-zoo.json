@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "福岡県",
   "region": "kyushu",
-  "lat": 33.647,
-  "lng": 130.503,
-  "latlngApprox": true,
+  "lat": 33.6532,
+  "lng": 130.4904,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -23,7 +23,7 @@
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "長崎バイオパーク運営のサテライトZOO。カピバラなどが放し飼いで、ふれあい・エサやりを楽しめる"
+    "note": "長崎バイオパーク運営のサテライトZOO。カピバラなどが放し飼いで、ふれあい・エサやり（ガチャポン販売のエサ100〜200円）を楽しめる"
   },
   "onsen": null,
   "sources": [
@@ -38,6 +38,6 @@
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

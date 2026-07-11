@@ -4,12 +4,17 @@
   "type": "aquarium",
   "prefecture": "栃木県",
   "region": "kanto",
-  "lat": 36.796,
-  "lng": 140.121,
-  "latlngApprox": true,
+  "lat": 36.78914,
+  "lng": 140.12869,
+  "latlngApprox": false,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "900円"
+    }
+  ],
+  "hours": "9:30〜16:30（入館は16:00まで）・月曜休（祝日の場合翌日）・第4木曜休（祝日の場合は開園）",
   "officialUrl": "https://tnap.jp/",
   "capybara": {
     "fureai": false,
@@ -19,16 +24,16 @@
   "onsen": null,
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（カピバラ）",
       "url": "https://tnap.jp/creature/detail.php?id=89",
       "official": true
     },
     {
-      "label": "公式サイト",
-      "url": "https://tnap.jp/topics/detail.php?id=3159",
+      "label": "公式サイト（利用案内）",
+      "url": "https://tnap.jp/park/userguide.php",
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

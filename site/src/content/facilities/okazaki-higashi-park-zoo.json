@@ -14,12 +14,12 @@
       "price": "無料"
     }
   ],
-  "hours": "9:00〜16:30（動物展示は15:30まで）※月曜休園・年末年始休",
+  "hours": "9:00〜16:30（動物展示は15:30まで）※月曜休園（祝日の場合は翌日以降最初の平日）・12/29〜1/2休園",
   "officialUrl": "https://www.city.okazaki.lg.jp/zoo/index.html",
   "capybara": {
     "fureai": null,
     "esayari": null,
-    "note": "入園無料の動物園でカピバラを飼育・展示"
+    "note": "入園無料の動物園でカピバラ「もみじ」を飼育・展示。「どうぶつにごはんをあげよう」などのイベントも開催"
   },
   "onsen": {
     "has": false,
@@ -31,16 +31,16 @@
   },
   "sources": [
     {
-      "label": "参考情報",
-      "url": "https://okazaki-kanko.jp/feature/animal/top",
-      "official": false
-    },
-    {
       "label": "公式サイト",
       "url": "https://www.city.okazaki.lg.jp/zoo/index.html",
       "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://okazaki-kanko.jp/feature/animal/top",
+      "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

@@ -22,12 +22,12 @@
       "price": "無料"
     }
   ],
-  "hours": "3〜11月: 平日10:00〜17:00・土日祝9:30〜17:00（水曜定休）／12〜2月: 10:00〜16:00（平日休園）",
+  "hours": "3〜11月: 10:00〜17:00（水曜定休）／12〜2月: 10:00〜16:00（平日休園）",
   "officialUrl": "https://www.blumenooka.jp/",
   "capybara": {
-    "fureai": true,
+    "fureai": null,
     "esayari": null,
-    "note": "カピバラとふれあえるイベントを開催"
+    "note": "どうぶつのエリア「みにまるランド」横のふれあい広場でカンガルー・カピバラのふれあい（入場無料・エサ200円）を実施してきたが、現在の公式イベントページはカンガルー中心の記載のため、カピバラふれあいの実施状況は来園前に要確認"
   },
   "onsen": {
     "has": false,
@@ -39,16 +39,21 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
-      "url": "https://www.blumenooka.jp/",
+      "label": "公式サイト（料金）",
+      "url": "https://www.blumenooka.jp/price/",
       "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://www.biwako-visitors.jp/spot/detail/1186/",
-      "official": false
+      "label": "公式サイト（営業案内）",
+      "url": "https://www.blumenooka.jp/news/news-853/",
+      "official": true
+    },
+    {
+      "label": "公式サイト（ふれあいイベント）",
+      "url": "https://www.blumenooka.jp/animal_events/%E3%82%AB%E3%83%B3%E3%82%AC%E3%83%AB%E3%83%BC%E3%82%AB%E3%83%94%E3%83%90%E3%83%A9%E3%81%A8%E3%81%B5%E3%82%8C%E3%81%82%E3%81%88%E3%82%8B/",
+      "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

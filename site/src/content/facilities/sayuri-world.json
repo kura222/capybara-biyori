@@ -4,31 +4,40 @@
   "type": "zoo",
   "prefecture": "千葉県",
   "region": "kanto",
-  "lat": 35.368,
-  "lng": 140.203,
+  "lat": 35.3548,
+  "lng": 140.1824,
   "latlngApprox": true,
   "status": "open",
   "fees": [
     {
-      "label": "大人",
-      "price": "1,500円"
+      "label": "大人（中学生以上）",
+      "price": "1,300円"
     },
     {
       "label": "小人（3歳〜小学生）",
       "price": "800円"
+    },
+    {
+      "label": "シニア（65歳以上）",
+      "price": "1,300円"
     }
   ],
-  "hours": null,
-  "officialUrl": "https://zounokuni.com/",
+  "hours": "3〜10月9:30〜16:30（最終入園受付15:30）／11〜2月10:00〜16:00（最終入園受付15:00）",
+  "officialUrl": "https://sayuri-world.com/",
   "capybara": {
-    "fureai": null,
-    "esayari": null,
-    "note": "市原ぞうの国の姉妹園。キリンなど動物を間近に感じられる放し飼いスタイルでカピバラも飼育（カピバラJP掲載）"
+    "fureai": true,
+    "esayari": true,
+    "note": "市原ぞうの国の姉妹園「究極のふれあい動物園」。中央広場でラマ・カンガルー・カピバラ・ウサギなどが放し飼いで暮らし、間近でふれあい・エサやり体験ができる"
   },
   "onsen": null,
   "sources": [
     {
       "label": "公式サイト",
+      "url": "https://sayuri-world.com/",
+      "official": true
+    },
+    {
+      "label": "公式サイト（営業時間・料金）",
       "url": "https://zounokuni.com/info/",
       "official": true
     },
@@ -38,6 +47,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

@@ -7,23 +7,45 @@
   "lat": 37.027,
   "lng": 140,
   "latlngApprox": true,
-  "status": "open",
-  "fees": [],
-  "hours": null,
+  "status": "suspended",
+  "fees": [
+    {
+      "label": "入園 大人（中学生以上）",
+      "price": "1,600円"
+    },
+    {
+      "label": "入園 小学生",
+      "price": "800円"
+    },
+    {
+      "label": "入園 3歳〜未就学児",
+      "price": "800円"
+    },
+    {
+      "label": "入園 シニア（65歳以上）",
+      "price": "1,100円"
+    }
+  ],
+  "hours": "おおむね9:30〜16:30（日により変動・公式営業カレンダー参照）",
   "officialUrl": "https://www.rindo.co.jp/",
   "capybara": {
     "fureai": null,
     "esayari": null,
-    "note": "公式「動物紹介」にカピバラ掲載。アルパカ・ジャージー牛などとともに飼育"
+    "note": "公式「動物紹介」ページ（2026年7月確認）にカピバラの記載がなく、飼育終了の可能性が高い。来園前に施設へ要確認"
   },
   "onsen": null,
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（動物紹介）",
       "url": "https://www.rindo.co.jp/animal/",
+      "official": true
+    },
+    {
+      "label": "公式サイト（料金）",
+      "url": "https://www.rindo.co.jp/charge/",
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

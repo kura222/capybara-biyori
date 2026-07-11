@@ -4,9 +4,9 @@
   "type": "aquarium",
   "prefecture": "高知県",
   "region": "shikoku",
-  "lat": 33.497,
-  "lng": 133.574,
-  "latlngApprox": true,
+  "lat": 33.4973,
+  "lng": 133.5737,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -22,7 +22,7 @@
       "price": "400円"
     }
   ],
-  "hours": "9:00〜17:00（季節・行事により変動）",
+  "hours": "9:00〜17:00・年中無休",
   "officialUrl": "https://katurahama-aq.jp/",
   "capybara": {
     "fureai": null,
@@ -47,6 +47,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

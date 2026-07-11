@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "栃木県",
   "region": "kanto",
-  "lat": 36.6486,
-  "lng": 139.8735,
-  "latlngApprox": true,
+  "lat": 36.63275,
+  "lng": 139.85358,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -38,6 +38,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

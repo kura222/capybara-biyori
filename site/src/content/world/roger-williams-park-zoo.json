@@ -1,0 +1,22 @@
+{
+  "slug": "roger-williams-park-zoo",
+  "name": "ロジャー・ウィリアムズ・パーク動物園",
+  "nameEn": "Roger Williams Park Zoo",
+  "country": "アメリカ",
+  "countryCode": "US",
+  "continent": "americas",
+  "city": "プロビデンス",
+  "lat": 41.7935,
+  "lng": -71.4187,
+  "latlngApprox": false,
+  "officialUrl": "https://www.rwpzoo.org/",
+  "capybaraNote": "2026年、同園154年の歴史で初のカピバラ「Carsie」が熱帯雨林館Faces of the Rainforestの旧オオカワウソ用大水槽に入居。カピバラプールを水中から映す常設ライブカメラ（2アングル）をYouTube配信する世界的にも珍しい園",
+  "liveChannelSlug": "roger-williams-zoo",
+  "type": "zoo",
+  "sources": [
+    "https://www.rwpzoo.org/animals/exhibits/faces-of-rainforest",
+    "https://www.wpri.com/video/roger-williams-park-zoo-now-home-to-capybara/11662892/",
+    "https://www.youtube.com/channel/UCvhS7elhxHIfvJuhb_331MA"
+  ],
+  "lastVerified": "2026-07-11"
+}

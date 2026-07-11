@@ -4,32 +4,55 @@
   "type": "indoor",
   "prefecture": "東京都",
   "region": "kanto",
-  "lat": 35.705,
-  "lng": 139.753,
-  "latlngApprox": true,
+  "lat": 35.70561,
+  "lng": 139.75189,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
       "label": "大人（平日）",
-      "price": "1,800円"
-    },
-    {
-      "label": "大人（土日祝・繁忙期）",
       "price": "2,000円"
     },
     {
-      "label": "4歳〜小学生（平日）",
-      "price": "800円"
+      "label": "大人（土日祝・長期休暇）",
+      "price": "2,200円"
+    },
+    {
+      "label": "大人（GW・お盆等の特定日）",
+      "price": "2,400円"
+    },
+    {
+      "label": "学生・中学生以上（平日）",
+      "price": "1,800円"
+    },
+    {
+      "label": "小人・4歳〜小学生（平日）",
+      "price": "1,200円"
+    },
+    {
+      "label": "小人・4歳〜小学生（土日祝）",
+      "price": "1,400円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
     }
   ],
-  "hours": "10:30〜19:00（土日祝は〜20:00）",
+  "hours": "平日10:30〜19:00（最終受付18:30）／土日祝10:30〜20:00（最終受付19:30）・年中無休（東京ドームシティ休園日に準ずる）",
   "officialUrl": "https://www.tokyodomecity.anitouch.com/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "2024年7月開業の屋内型ふれあい動物園。都心ど真ん中でカピバラとふれあえる（渡辺克仁氏レポートあり）"
+    "note": "2024年7月開業、文京区後楽の屋内型ふれあい動物園。都心ど真ん中でカピバラとふれあい・おやつあげができ、「カピバラの猫足風呂」（登録商標）も展示"
   },
-  "onsen": null,
+  "onsen": {
+    "has": true,
+    "seasonLabel": "通年（屋内展示「カピバラの猫足風呂」）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://www.tokyodomecity.anitouch.com/"
+  },
   "sources": [
     {
       "label": "公式サイト",
@@ -42,6 +65,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

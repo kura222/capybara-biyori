@@ -4,14 +4,27 @@
   "type": "farm",
   "prefecture": "宮城県",
   "region": "tohoku",
-  "lat": null,
-  "lng": null,
-  "latlngApprox": false,
+  "lat": 38.05,
+  "lng": 140.73,
+  "latlngApprox": true,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "動物広場（わんぱくの森）入場（参考情報）",
+      "price": "無料"
+    },
+    {
+      "label": "動物のエサ（参考情報）",
+      "price": "約80円"
+    }
+  ],
+  "hours": "本店10:00〜19:00・第3水曜休（祝日の場合翌日）※動物広場の利用時間は要確認",
   "officialUrl": "https://mochibuta.jp/",
-  "capybara": null,
+  "capybara": {
+    "fureai": null,
+    "esayari": true,
+    "note": "宮城県柴田郡大河原町の直売所併設レジャー施設。敷地内の動物広場「わんぱくの森」（16種約100匹）にカピバラが仲間入りし、エサやりができる（参考情報）。隣接して天然温泉「いい湯」あり"
+  },
   "onsen": null,
   "sources": [
     {
@@ -20,11 +33,16 @@
       "official": true
     },
     {
+      "label": "参考情報（宮城まるごと探訪）",
+      "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=21708",
+      "official": false
+    },
+    {
       "label": "参考情報",
       "url": "https://note.com/capybarahp/n/n314e89b6782f",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

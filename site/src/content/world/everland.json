@@ -1,0 +1,21 @@
+{
+  "slug": "everland",
+  "name": "エバーランド",
+  "nameEn": "Everland (Zootopia)",
+  "country": "韓国",
+  "countryCode": "KR",
+  "continent": "asia",
+  "city": "龍仁",
+  "lat": 37.2942,
+  "lng": 127.202,
+  "latlngApprox": false,
+  "officialUrl": "https://www.everland.com/web/multi/english/everland/main.html",
+  "capybaraNote": "動物ゾーン「ズートピア」でカピバラを飼育。冬季は37〜40度の温水を使った露天カピバラスパが名物で、運営元Samsung C&T公式ニュースルームも紹介。系列ウォーターパーク「カリビアンベイ」の冬季カピバラテーマイベントにも展開",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://news.samsungcnt.com/en/features/resort/2025-12-warm-waters-and-capybara-themed-escapes-winter-spa-cabi-returns-to-caribbean-bay/",
+    "https://news.samsungcnt.com/en/features/resort/2024-11-visting-everland-in-fall-a-guide-for-animal-lovers-and-thrill-seekers-alike/"
+  ],
+  "lastVerified": "2026-07-11"
+}

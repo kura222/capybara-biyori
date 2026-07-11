@@ -1,0 +1,22 @@
+{
+  "slug": "chimelong-ocean-kingdom",
+  "name": "珠海長隆海洋王国",
+  "nameEn": "Chimelong Ocean Kingdom",
+  "country": "中国",
+  "countryCode": "CN",
+  "continent": "asia",
+  "city": "珠海（横琴）",
+  "lat": 22.1027,
+  "lng": 113.5317,
+  "latlngApprox": true,
+  "officialUrl": "https://www.chimelong.com/zh/oceankingdom/baike/2679.html",
+  "capybaraNote": "公式サイトの動物百科に水豚（カピバラ）を掲載。1日数量限定の触れ合い・餌やり体験「約會卡皮巴拉」も公式提供。繁殖実績あり",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.chimelong.com/zh/oceankingdom/baike/2679.html",
+    "https://www.chimelong.com/zh/oceankingdom/interesting/7501.html",
+    "https://www.chimelong.com/zh/oceankingdom/interesting/3085.html"
+  ],
+  "lastVerified": "2026-07-11"
+}

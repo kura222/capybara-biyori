@@ -1,0 +1,22 @@
+{
+  "slug": "taronga-zoo",
+  "name": "タロンガ動物園",
+  "nameEn": "Taronga Zoo Sydney",
+  "country": "オーストラリア",
+  "countryCode": "AU",
+  "continent": "oceania",
+  "city": "シドニー",
+  "lat": -33.843,
+  "lng": 151.2413,
+  "latlngApprox": false,
+  "officialUrl": "https://taronga.org.au/animals/capybara",
+  "capybaraNote": "シドニー湾を望む名門動物園。カピバラ5兄弟（Carlos・Guillermo・Pedro・Rodney・Sanchez）を飼育し、公式Taronga TVでカピバラカムをライブ配信。キーパートークやカピバラ・エンカウンターも毎日開催",
+  "liveChannelSlug": "taronga",
+  "type": "zoo",
+  "sources": [
+    "https://taronga.org.au/animals/capybara",
+    "https://taronga.org.au/taronga-tv",
+    "https://www.taronga.org.au/sydney-zoo/encounters-and-experiences/animal-encounters/capybara"
+  ],
+  "lastVerified": "2026-07-11"
+}

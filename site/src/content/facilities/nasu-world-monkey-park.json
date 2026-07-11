@@ -8,13 +8,26 @@
   "lng": 140.0323,
   "latlngApprox": true,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "2,300円"
+    },
+    {
+      "label": "小人（3歳〜小学生）",
+      "price": "1,200円"
+    },
+    {
+      "label": "2歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "平日9:30〜16:00／土日9:30〜16:30（最終入園は閉園30分前）・水曜休 ※月により変動あり（公式営業案内参照）",
   "officialUrl": "https://www.nasumonkey.com/",
   "capybara": {
-    "fureai": true,
-    "esayari": true,
-    "note": "サル中心の体験型パーク。カピバラを含む多くの動物にふれあい・エサやり可（来園者口コミ確認）"
+    "fureai": null,
+    "esayari": null,
+    "note": "サル中心の体験型パーク。ふれあい広場でサル・インコ・ウサギ・モルモット等とふれあい可。カピバラのふれあい可否は公式サイトの主要案内では確認できず（参考サイトに可の情報あり）、来園前に要確認"
   },
   "onsen": null,
   "sources": [
@@ -24,11 +37,16 @@
       "official": true
     },
     {
+      "label": "公式サイト（営業案内）",
+      "url": "https://www.nasumonkey.com/guide/",
+      "official": true
+    },
+    {
       "label": "参考情報",
       "url": "https://oyama-navi.com/nasu-monkey-park",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

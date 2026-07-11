@@ -1,0 +1,675 @@
+---
+/**
+ * 世界のカピバラマップ（/world/）— P3。
+ * - /map/（国内マップ）の実装を流用したクライアント地図（Leaflet + OSM）。
+ *   初期ビューは世界全体（zoom 2）、zoomAnimation:false を踏襲（既知の setView 停止問題を根絶）。
+ * - ライブカメラ付き施設（liveChannelSlug≠null）は「カメラ付きピン」で明確に区別する。
+ * - 現在地機能は持たない（世界地図のため不要）。
+ * - 下部に大陸別の編集的カード一覧（国旗は使わず国名テキスト・デザインガイドライン §1/§5）。
+ */
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+
+// --- 大陸・種別のメタ（このページ専用・taxonomy には持たせない） ---
+const CONTINENT_LABEL: Record<string, string> = {
+  americas: '南北アメリカ',
+  europe: 'ヨーロッパ',
+  asia: 'アジア',
+  oceania: 'オセアニア',
+};
+const CONTINENT_ORDER = ['americas', 'europe', 'asia', 'oceania'] as const;
+
+const WORLD_TYPE_LABEL: Record<string, string> = {
+  zoo: '動物園',
+  sanctuary: '保護施設',
+  cafe: 'カフェ',
+  farm: '牧場',
+  'wild-spot': '野生観察',
+};
+
+// --- データ読み込み ---
+const worldEntries = await getCollection('worldFacilities');
+const jpCount = (await getCollection('facilities')).length;
+
+const spots = worldEntries
+  .map((e) => {
+    const d = e.data;
+    return {
+      id: e.id,
+      name: d.name,
+      nameEn: d.nameEn,
+      country: d.country,
+      countryCode: d.countryCode,
+      continent: d.continent,
+      city: d.city,
+      lat: d.lat,
+      lng: d.lng,
+      latlngApprox: d.latlngApprox,
+      officialUrl: d.officialUrl,
+      capybaraNote: d.capybaraNote,
+      hasLive: d.liveChannelSlug != null,
+      type: d.type,
+      typeLabel: WORLD_TYPE_LABEL[d.type] ?? d.type,
+    };
+  })
+  .sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+
+const liveCount = spots.filter((s) => s.hasLive).length;
+
+// 大陸別グループ（カード一覧用・大陸順→施設は名前順）
+const groups = CONTINENT_ORDER.map((cont) => ({
+  key: cont,
+  label: CONTINENT_LABEL[cont],
+  items: spots.filter((s) => s.continent === cont),
+})).filter((g) => g.items.length > 0);
+
+// クライアント地図へ渡す最小データ
+const mapData = spots.map((s) => ({
+  id: s.id,
+  name: s.name,
+  country: s.country,
+  city: s.city,
+  typeLabel: s.typeLabel,
+  lat: s.lat,
+  lng: s.lng,
+  latlngApprox: s.latlngApprox,
+  officialUrl: s.officialUrl,
+  capybaraNote: s.capybaraNote,
+  hasLive: s.hasLive,
+}));
+---
+
+<BaseLayout
+  title="世界のカピバラマップ｜海外でカピバラに会える施設とライブカメラ"
+  description="海外でカピバラに会える動物園・保護施設・カフェ・野生観察スポットを世界地図と大陸別一覧でまとめました。ライブカメラのある施設は地図上で区別して表示します。"
+>
+  <Section
+    index="04"
+    label="World Map"
+    title="世界のカピバラマップ"
+    description="海外でカピバラに会える施設を世界地図と一覧で。ライブカメラのある施設は地図上で区別しています。日本の施設は全国カピバラマップからどうぞ。"
+    moreHref="/map/"
+    moreLabel={`日本の${jpCount}施設は全国マップへ`}
+  >
+    <div class="worldview">
+      {/* 国内マップへの導線（冒頭・すみだ式の目的起点文言） */}
+      <a class="jp-lead" href="/map/">
+        <span class="jp-lead__icon" aria-hidden="true">
+          <Icon name="ph:map-trifold" />
+        </span>
+        <span class="jp-lead__text">
+          <span class="jp-lead__title">日本の{jpCount}施設は「全国カピバラマップ」へ</span>
+          <span class="jp-lead__sub">温泉・ふれあい・現在地から探すは国内マップで</span>
+        </span>
+        <Icon name="ph:arrow-right" class="jp-lead__arrow" aria-hidden="true" />
+      </a>
+
+      {/* 地図 */}
+      <div class="map-wrap">
+        <div id="wmap" class="map" role="application" aria-label="世界のカピバラ施設の地図">
+          <p class="map__fallback">地図を読み込んでいます…（読み込めない場合も、下の大陸別一覧から施設を探せます）</p>
+        </div>
+        <ul class="legend" aria-label="ピンの種類">
+          <li class="legend__item">
+            <span class="wpin wpin--legend" aria-hidden="true"></span>
+            <span>カピバラに会える施設</span>
+          </li>
+          <li class="legend__item">
+            <span class="wpin wpin--live wpin--legend" aria-hidden="true">
+              <Icon name="ph:broadcast" aria-hidden="true" />
+            </span>
+            <span>ライブカメラ付き（{liveCount}施設）</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* 大陸別カード一覧（編集的カード=罫線1px流派・国旗は使わず国名テキスト） */}
+      {
+        groups.map((g) => (
+          <div class="cont">
+            <div class="cont__head">
+              <h3 class="cont__title">{g.label}</h3>
+              <span class="cont__count num">{g.items.length}施設</span>
+            </div>
+            <ul class="wlist">
+              {g.items.map((s) => (
+                <li class:list={['wspot', { 'wspot--live': s.hasLive }]} data-id={s.id}>
+                  <div class="wspot__head">
+                    <span class="wspot__type">{s.typeLabel}・{s.country}</span>
+                    {s.hasLive && (
+                      <span class="wspot__live">
+                        <Icon name="ph:broadcast" aria-hidden="true" />
+                        カメラ
+                      </span>
+                    )}
+                  </div>
+                  <h4 class="wspot__name">
+                    <a href={s.officialUrl} target="_blank" rel="noopener">
+                      {s.name}
+                      <Icon name="ph:arrow-square-out" class="wspot__ext" aria-hidden="true" />
+                    </a>
+                  </h4>
+                  <p class="wspot__place">
+                    <Icon name="ph:map-pin" aria-hidden="true" />
+                    {s.city}
+                    {s.latlngApprox && <span class="wspot__approx">おおよその位置</span>}
+                  </p>
+                  <p class="wspot__note">{s.capybaraNote}</p>
+                  {s.hasLive && (
+                    <a class="wspot__watch" href="/#viewer">
+                      <Icon name="ph:play-circle" aria-hidden="true" />
+                      ライブを見る（トップのビューアへ）
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+
+  {/* カメラ付きピン用の映像アイコン（Phosphor SVG をクライアントで複製） */}
+  <template id="tmpl-live-pin-icon"><Icon name="ph:broadcast" aria-hidden="true" /></template>
+
+  {/* クライアント地図へ渡すデータ（JSON） */}
+  <script type="application/json" id="world-data" is:inline set:html={JSON.stringify(mapData)}></script>
+</BaseLayout>
+
+{/* 世界地図のクライアント処理（このページでのみ Leaflet を読込） */}
+<script>
+  import L from 'leaflet';
+  import 'leaflet/dist/leaflet.css';
+
+  type WorldSpot = {
+    id: string;
+    name: string;
+    country: string;
+    city: string;
+    typeLabel: string;
+    lat: number;
+    lng: number;
+    latlngApprox: boolean;
+    officialUrl: string;
+    capybaraNote: string;
+    hasLive: boolean;
+  };
+
+  const dataEl = document.getElementById('world-data');
+  const mapEl = document.getElementById('wmap');
+  if (dataEl && mapEl) {
+    const spots: WorldSpot[] = JSON.parse(dataEl.textContent || '[]');
+    const liveIconHtml =
+      (document.getElementById('tmpl-live-pin-icon') as HTMLTemplateElement | null)?.innerHTML ?? '';
+
+    // --- 地図の初期化（世界全体・zoom 2） ---
+    mapEl.innerHTML = '';
+    const map = L.map(mapEl, {
+      scrollWheelZoom: false, // 誤スクロール防止（フォーカス時のみ有効化）
+      zoomControl: true,
+      worldCopyJump: true,
+      // ズームアニメーション無効: /map/ と同じ理由（非表示タブ等で _animatingZoom が残留し
+      // 以後の setView が無視される Leaflet の既知挙動を根絶する）。
+      zoomAnimation: false,
+    }).setView([20, 10], 2);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+      noWrap: false,
+    }).addTo(map);
+
+    map.on('focus', () => map.scrollWheelZoom.enable());
+    map.on('blur', () => map.scrollWheelZoom.disable());
+
+    const esc = (s: string) =>
+      s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string);
+
+    // カメラ付きは最前面（zIndexOffset）＋映像アイコン入りの目立つピンで区別する
+    for (const s of spots) {
+      const icon = L.divIcon({
+        className: 'wpin-icon',
+        html: s.hasLive
+          ? `<span class="wpin wpin--live">${liveIconHtml}</span>`
+          : '<span class="wpin"></span>',
+        iconSize: s.hasLive ? [28, 28] : [20, 20],
+        iconAnchor: s.hasLive ? [14, 14] : [10, 10],
+        popupAnchor: [0, s.hasLive ? -15 : -12],
+      });
+      const marker = L.marker([s.lat, s.lng], {
+        icon,
+        title: s.name,
+        keyboard: true,
+        zIndexOffset: s.hasLive ? 1000 : 0,
+      }).addTo(map);
+
+      const approx = s.latlngApprox
+        ? '<span class="pin-popup__approx">おおよその位置</span>'
+        : '';
+      const liveBadge = s.hasLive
+        ? '<p class="pin-popup__live"><span class="pin-popup__live-dot"></span>ライブカメラ付き</p>'
+        : '';
+      const watch = s.hasLive
+        ? '<a class="pin-popup__watch" href="/#viewer">ライブを見る（トップのビューアへ） →</a>'
+        : '';
+      marker.bindPopup(
+        `<div class="pin-popup">
+          <p class="pin-popup__type">${esc(s.typeLabel)}・${esc(s.country)}・${esc(s.city)}</p>
+          <p class="pin-popup__name">${esc(s.name)}</p>
+          ${approx}
+          ${liveBadge}
+          <p class="pin-popup__note">${esc(s.capybaraNote)}</p>
+          <a class="pin-popup__link" href="${esc(s.officialUrl)}" target="_blank" rel="noopener">公式サイトを見る →</a>
+          ${watch}
+        </div>`,
+      );
+    }
+
+    // レイアウト確定後にサイズを再計算（コンテナ高さ確定のズレ対策）
+    setTimeout(() => map.invalidateSize(), 0);
+  }
+</script>
+
+<style>
+  .worldview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  /* ---- 国内マップへの導線（親しみカード=surface-soft・角丸m） ---- */
+  .jp-lead {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    background: var(--surface-soft);
+    border-radius: var(--radius-m);
+    color: var(--text-1);
+    transition:
+      transform var(--motion-fast),
+      box-shadow var(--motion-fast);
+  }
+  .jp-lead:hover {
+    text-decoration: none;
+    box-shadow: var(--shadow-2);
+  }
+  .jp-lead__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: var(--surface);
+    color: var(--accent);
+  }
+  .jp-lead__icon :global(svg) {
+    font-size: 1.25rem;
+  }
+  .jp-lead__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .jp-lead__title {
+    font-weight: 700;
+    font-size: 0.9375rem;
+  }
+  .jp-lead__sub {
+    color: var(--text-3);
+    font-size: 0.8125rem;
+  }
+  .jp-lead__arrow {
+    margin-left: auto;
+    flex-shrink: 0;
+    color: var(--accent);
+    transition: transform var(--motion-fast);
+  }
+  .jp-lead:hover .jp-lead__arrow {
+    transform: translateX(3px);
+  }
+
+  /* ---- 地図 ---- */
+  .map-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .map {
+    height: clamp(380px, 58vh, 560px);
+    border-radius: var(--radius-m);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    background: var(--surface-soft);
+    z-index: 0; /* Leaflet ペインが sticky ヘッダーへ被らないように */
+  }
+  .map__fallback {
+    margin: 0;
+    padding: var(--space-6);
+    color: var(--text-3);
+    font-size: 0.9375rem;
+    text-align: center;
+  }
+
+  /* 凡例 */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+  .legend__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.8125rem;
+    color: var(--text-2);
+  }
+  .wpin--legend {
+    position: static;
+  }
+
+  /* ---- 大陸別カード一覧 ---- */
+  .cont {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  .cont__head {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--line);
+  }
+  .cont__title {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--text-1);
+  }
+  .cont__count {
+    color: var(--text-3);
+    font-size: 0.8125rem;
+  }
+
+  .wlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-4);
+  }
+
+  /* 編集的カード（罫線1px・角丸s・影なし。hoverで罫線と見出しが accent 化） */
+  .wspot {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-s);
+    transition: border-color var(--motion-fast);
+  }
+  .wspot:hover {
+    border-color: var(--accent);
+  }
+  /* カメラ付きは左に朱の細い標識（色を抜いても “なにか特別” が伝わる） */
+  .wspot--live {
+    border-left: 3px solid var(--live);
+  }
+
+  .wspot__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+  .wspot__type {
+    color: var(--text-3);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+  .wspot__live {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 9px;
+    border-radius: var(--radius-full);
+    background: var(--live-soft);
+    color: var(--live);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  .wspot__live :global(svg) {
+    font-size: 1.05em;
+  }
+
+  .wspot__name {
+    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.4;
+  }
+  .wspot__name a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    color: var(--text-1);
+    transition: color var(--motion-fast);
+  }
+  .wspot:hover .wspot__name a {
+    color: var(--accent-ink);
+  }
+  .wspot__name a:hover {
+    text-decoration: none;
+  }
+  .wspot__ext {
+    font-size: 0.72em;
+    color: var(--text-3);
+    align-self: center;
+  }
+
+  .wspot__place {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    color: var(--text-2);
+    font-size: 0.8125rem;
+  }
+  .wspot__place :global(svg) {
+    font-size: 1.05em;
+    color: var(--text-3);
+  }
+  .wspot__approx {
+    margin-left: 4px;
+    padding: 1px 7px;
+    border-radius: var(--radius-full);
+    background: var(--surface-soft);
+    color: var(--text-3);
+    font-size: 0.6875rem;
+  }
+
+  .wspot__note {
+    margin: 2px 0 0;
+    color: var(--text-2);
+    font-size: 0.8125rem;
+    line-height: 1.7;
+  }
+
+  .wspot__watch {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+    padding-top: 4px;
+    color: var(--live);
+    font-weight: 700;
+    font-size: 0.8125rem;
+  }
+  .wspot__watch :global(svg) {
+    font-size: 1.15em;
+  }
+  .wspot__watch:hover {
+    text-decoration: none;
+    color: var(--accent-strong);
+  }
+
+  @media (max-width: 640px) {
+    .jp-lead {
+      padding: var(--space-3) var(--space-4);
+    }
+  }
+</style>
+
+{/* Leaflet が生成する要素・自作ピン・ポップアップはスコープ外のため is:global で装飾 */}
+<style is:global>
+  /* 世界マップの自作ピン（通常＝アクセント地の丸） */
+  .wpin {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: var(--radius-full);
+    background: var(--accent);
+    border: 2px solid var(--surface);
+    box-shadow: 0 1px 3px hsl(33 30% 20% / 0.35);
+    transition: transform var(--motion-fast);
+  }
+  .wpin-icon:hover .wpin {
+    transform: scale(1.2);
+  }
+
+  /* カメラ付きピン（朱・大きめ・映像アイコン入り＝目立つ区別） */
+  .wpin--live {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: var(--live);
+    border: 2px solid var(--surface);
+    box-shadow:
+      0 0 0 3px var(--live-soft),
+      0 1px 4px hsl(6 55% 25% / 0.4);
+  }
+  .wpin--live :global(svg),
+  .wpin--live svg {
+    width: 14px;
+    height: 14px;
+    color: #fff;
+  }
+  /* 凡例内のピンはレイアウト内寸に合わせる */
+  .wpin--legend.wpin {
+    width: 16px;
+    height: 16px;
+  }
+  .wpin--legend.wpin--live {
+    width: 22px;
+    height: 22px;
+    box-shadow: 0 0 0 2px var(--live-soft);
+  }
+  .wpin--legend.wpin--live svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Leaflet コントロール・帰属表示を生成りトーンに寄せる（/map/ と統一） */
+  .leaflet-container {
+    font-family: var(--font-sans);
+    background: var(--surface-soft);
+  }
+  .leaflet-bar a,
+  .leaflet-control-zoom a {
+    background: var(--surface);
+    color: var(--text-1);
+    border-color: var(--line);
+  }
+  .leaflet-bar a:hover {
+    background: var(--surface-soft);
+  }
+  .leaflet-control-attribution {
+    background: color-mix(in srgb, var(--surface) 85%, transparent) !important;
+    color: var(--text-3);
+    font-size: 0.6875rem;
+  }
+  .leaflet-control-attribution a {
+    color: var(--accent-ink);
+  }
+
+  /* ポップアップ */
+  .leaflet-popup-content-wrapper {
+    background: var(--surface);
+    color: var(--text-1);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-2);
+  }
+  .leaflet-popup-tip {
+    background: var(--surface);
+  }
+  .leaflet-popup-content {
+    margin: 12px 14px;
+    line-height: 1.6;
+    width: 240px !important;
+  }
+  .pin-popup__type {
+    margin: 0 0 2px;
+    color: var(--text-3);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+  .pin-popup__name {
+    margin: 0 0 6px;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-1);
+  }
+  .pin-popup__approx {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 1px 7px;
+    border-radius: var(--radius-full);
+    background: var(--surface-soft);
+    color: var(--text-3);
+    font-size: 0.68rem;
+  }
+  .pin-popup__live {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0 0 6px;
+    color: var(--live);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+  .pin-popup__live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: var(--radius-full);
+    background: var(--live);
+  }
+  .pin-popup__note {
+    margin: 0 0 8px;
+    color: var(--text-2);
+    font-size: 0.78rem;
+    line-height: 1.7;
+  }
+  .pin-popup__link {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    color: var(--accent-ink);
+  }
+  .pin-popup__watch {
+    display: block;
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    color: var(--live);
+  }
+</style>

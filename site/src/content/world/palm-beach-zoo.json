@@ -1,0 +1,20 @@
+{
+  "slug": "palm-beach-zoo",
+  "name": "パームビーチ動物園",
+  "nameEn": "Palm Beach Zoo",
+  "country": "アメリカ",
+  "countryCode": "US",
+  "continent": "americas",
+  "city": "ウェストパームビーチ",
+  "lat": 26.681,
+  "lng": -80.0665,
+  "latlngApprox": false,
+  "officialUrl": "https://www.palmbeachzoo.org/animals",
+  "capybaraNote": "「Tropics of the Americas」エリアでベアードバクと混合展示。AZAの種保存計画（SSP）参加園で、2026年にはIyariとZeusの間に三つ子が誕生",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.palmbeachzoo.org/zoo-news/posts/meet-our-new-capybara"
+  ],
+  "lastVerified": "2026-07-11"
+}

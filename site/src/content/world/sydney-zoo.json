@@ -1,0 +1,21 @@
+{
+  "slug": "sydney-zoo",
+  "name": "シドニー動物園",
+  "nameEn": "Sydney Zoo",
+  "country": "オーストラリア",
+  "countryCode": "AU",
+  "continent": "oceania",
+  "city": "シドニー（バンガリビー）",
+  "lat": -33.8474,
+  "lng": 150.8355,
+  "latlngApprox": true,
+  "officialUrl": "https://sydneyzoo.com/animals/capybara",
+  "capybaraNote": "シドニー西部の新しい動物園。公式動物リストにカピバラを掲載し、餌やりとふれあいができるカピバラ・エンカウンターを1日2回開催",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://sydneyzoo.com/animals/capybara",
+    "https://sydneyzoo.com/experiences/capybara-encounter"
+  ],
+  "lastVerified": "2026-07-11"
+}

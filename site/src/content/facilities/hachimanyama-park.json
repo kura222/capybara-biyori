@@ -14,26 +14,31 @@
       "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "公園は常時開放・動物舎はおおむね9:00〜16:30（参考情報）。有料施設は月曜・12/29〜1/3休",
   "officialUrl": "https://hatimanyama.jp/",
   "capybara": {
     "fureai": false,
     "esayari": false,
-    "note": "宇都宮市中心部の無料公園。2016年10月公開のカピバラ舎（幅・奥行約15m、1/3が池）で水鳥と同居。ふれあい・エサやり不可"
+    "note": "宇都宮市中心部の無料公園。2016年10月公開のカピバラ舎（幅・奥行約15m、1/3が池）で水鳥と同居。最短約1.5mで観察でき、ふれあい・エサやりは不可"
   },
   "onsen": null,
   "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://hatimanyama.jp/",
+      "official": true
+    },
     {
       "label": "参考情報",
       "url": "https://capybara.eek.jp/navi-hachimann.html",
       "official": false
     },
     {
-      "label": "公式サイト",
-      "url": "https://hatimanyama.jp/",
-      "official": true
+      "label": "参考情報",
+      "url": "https://sp.jorudan.co.jp/zoo_aqua/spot_13616.html",
+      "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

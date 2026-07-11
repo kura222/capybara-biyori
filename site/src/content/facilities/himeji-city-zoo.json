@@ -11,19 +11,19 @@
   "fees": [
     {
       "label": "大人",
-      "price": "210円"
+      "price": "250円"
     },
     {
-      "label": "5歳〜中学生",
-      "price": "30円"
+      "label": "小人（5歳〜中学3年生）",
+      "price": "50円"
     }
   ],
-  "hours": "9:00〜17:00（入園16:30まで）※12/29〜1/1休園",
+  "hours": "9:00〜17:00（入園16:30まで）※定休日なし・12/29〜1/1休園",
   "officialUrl": "https://www.city.himeji.lg.jp/dobutuen/",
   "capybara": {
     "fureai": null,
     "esayari": null,
-    "note": "姫路城に隣接する動物園でカピバラを飼育"
+    "note": "姫路城に隣接する動物園でカピバラを飼育。姫路市は老朽化等を理由に動物園の城外移転方針を決定しており、将来的に移転予定（時期未定）"
   },
   "onsen": {
     "has": false,
@@ -35,16 +35,16 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（開園時間・料金）",
       "url": "https://www.city.himeji.lg.jp/dobutuen/0000007495.html",
       "official": true
     },
     {
       "label": "参考情報",
-      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "url": "https://ja.wikipedia.org/wiki/%E5%A7%AB%E8%B7%AF%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

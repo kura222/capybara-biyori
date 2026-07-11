@@ -1,0 +1,21 @@
+{
+  "slug": "zoo-berlin",
+  "name": "ベルリン動物園",
+  "nameEn": "Zoo Berlin",
+  "country": "ドイツ",
+  "countryCode": "DE",
+  "continent": "europe",
+  "city": "ベルリン",
+  "lat": 52.508,
+  "lng": 13.3376,
+  "latlngApprox": false,
+  "officialUrl": "https://www.zoo-berlin.de/de/zoo-erleben/tiere-erlebniswelten/capybara",
+  "capybaraNote": "公式サイトにカピバラ専用ページあり。拡張エリアで9頭のカピバラ家族を飼育し、四つ子誕生のニュースも公式発表",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.zoo-berlin.de/de/zoo-erleben/tiere-erlebniswelten/capybara",
+    "https://www.zoo-berlin.de/de/aktuelles/alle-news/artikel/capybara-vierlinge"
+  ],
+  "lastVerified": "2026-07-11"
+}

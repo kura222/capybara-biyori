@@ -4,31 +4,49 @@
   "type": "aquarium",
   "prefecture": "茨城県",
   "region": "kanto",
-  "lat": 36.3186,
-  "lng": 140.5772,
-  "latlngApprox": true,
+  "lat": 36.33333,
+  "lng": 140.59389,
+  "latlngApprox": false,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "大人",
+      "price": "2,300円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "1,100円"
+    },
+    {
+      "label": "幼児（3歳以上）",
+      "price": "400円"
+    }
+  ],
+  "hours": "通常9:00〜17:00（入場は16:00まで）※冬季は〜16:00・曜日定休なし（6月・12月にメンテナンス休館あり）",
   "officialUrl": "https://www.aquaworld-oarai.com/",
   "capybara": {
-    "fureai": false,
-    "esayari": false,
-    "note": "2011年からカピバラを展示（カピバラJP掲載）。水族館では珍しい飼育例。最新の個体情報は公式SNS参照"
+    "fureai": null,
+    "esayari": null,
+    "note": "2011年からカピバラを飼育した実績のある水族館（公式スタッフブログ掲載）。冬季の「カピバラ銭湯」開催実績もあるが、現在の展示状況は公式サイト・SNSで要確認"
   },
   "onsen": null,
   "sources": [
     {
-      "label": "参考情報",
-      "url": "https://capybarajp.com/wheres-capybara/",
-      "official": false
+      "label": "公式サイト（料金）",
+      "url": "https://en.aquaworld-oarai.com/guide/admission/",
+      "official": true
+    },
+    {
+      "label": "公式スタッフブログ",
+      "url": "https://www.aquaworld-oarai.com/staff-blog/secret/20110915-821",
+      "official": true
     },
     {
       "label": "参考情報",
-      "url": "https://www.jalan.net/kankou/spt_08309cc3320040578/kuchikomi/0000378879/",
+      "url": "https://capybarajp.com/wheres-capybara/",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

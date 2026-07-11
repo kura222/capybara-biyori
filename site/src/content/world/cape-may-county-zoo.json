@@ -1,0 +1,21 @@
+{
+  "slug": "cape-may-county-zoo",
+  "name": "ケープメイ郡動物園",
+  "nameEn": "Cape May County Zoo",
+  "country": "アメリカ",
+  "countryCode": "US",
+  "continent": "americas",
+  "city": "ケープメイコートハウス",
+  "lat": 39.0956,
+  "lng": -74.8235,
+  "latlngApprox": false,
+  "officialUrl": "https://capemaycountynj.gov/1687/Capybara",
+  "capybaraNote": "入園無料の郡立動物園。公式サイトにカピバラ専用ページを持ち、近年は複数の母親から相次いで子どもが誕生する繁殖好調園。夏季には餌やり体験も実施",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://capemaycountynj.gov/1687/Capybara",
+    "https://capemaycountynj.gov/CivicAlerts.aspx?AID=1648"
+  ],
+  "lastVerified": "2026-07-11"
+}

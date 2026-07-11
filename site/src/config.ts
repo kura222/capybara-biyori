@@ -56,6 +56,7 @@ export const SITE = {
  */
 export const NAV_ITEMS = [
   { label: '会いに行く', href: '/map/', icon: 'ph:map-trifold' },
+  { label: '世界', href: '/world/', icon: 'ph:globe-hemisphere-west' },
   { label: '温泉ごよみ', href: '/onsen/', icon: 'ph:calendar-dots' },
   { label: 'よみもの', href: '/articles/', icon: 'ph:notebook' },
 ] as const;

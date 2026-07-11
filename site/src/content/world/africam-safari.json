@@ -1,0 +1,22 @@
+{
+  "slug": "africam-safari",
+  "name": "アフリカム・サファリ",
+  "nameEn": "Africam Safari",
+  "country": "メキシコ",
+  "countryCode": "MX",
+  "continent": "americas",
+  "city": "プエブラ",
+  "lat": 18.97,
+  "lng": -98.09,
+  "latlngApprox": true,
+  "officialUrl": "https://africamsafari.com/",
+  "capybaraNote": "自家用車やバスで回るメキシコ最大級のサファリパーク。オカバンゴ・デルタ区画などでカピバラを飼育し、公式SNSでも頻繁に発信",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://africamsafari.com/",
+    "https://www.facebook.com/africamsafari/posts/10159936661744100",
+    "https://visitmexico.com/en/destino/17908/africam-safari"
+  ],
+  "lastVerified": "2026-07-11"
+}

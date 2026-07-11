@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "埼玉県",
   "region": "kanto",
-  "lat": 35.918,
-  "lng": 139.632,
-  "latlngApprox": true,
+  "lat": 35.91902,
+  "lng": 139.63082,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -34,6 +34,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

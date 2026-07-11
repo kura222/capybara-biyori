@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "山口県",
   "region": "chugoku",
-  "lat": 34.065,
-  "lng": 131.813,
-  "latlngApprox": true,
+  "lat": 34.0621,
+  "lng": 131.8158,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -14,15 +14,15 @@
       "price": "600円"
     },
     {
-      "label": "小人（小中高校生）",
+      "label": "小人（小・中・高校生）",
       "price": "300円"
     },
     {
-      "label": "幼児",
+      "label": "未就学児",
       "price": "無料"
     }
   ],
-  "hours": "9:00〜17:00（10/20〜2月末は16:30まで）・入園は閉園30分前まで",
+  "hours": "3/1〜10/19 9:00〜17:00／10/20〜2月末 9:00〜16:30（入園は閉園30分前まで）・火曜休（祝日の場合は翌日）・12/29〜31休・1月下旬〜2月上旬に臨時休園あり",
   "officialUrl": "https://tokuyama-zoo.jp/",
   "capybara": {
     "fureai": null,
@@ -49,6 +49,6 @@
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

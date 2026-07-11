@@ -1,0 +1,21 @@
+{
+  "slug": "zooparc-de-beauval",
+  "name": "ボーバル動物園",
+  "nameEn": "ZooParc de Beauval",
+  "country": "フランス",
+  "countryCode": "FR",
+  "continent": "europe",
+  "city": "サンテニャン",
+  "lat": 47.2482,
+  "lng": 1.3537,
+  "latlngApprox": false,
+  "officialUrl": "https://www.zoobeauval.com/en/zooparc/territories/the-south-american-pampas",
+  "capybaraNote": "フランス随一の規模を誇る動物園。「南米パンパス」ゾーンでローランドバク・パタゴニアマラ等と混合展示され、公式ページの動物リストにカピバラを明記。2007年から飼育・繁殖を継続",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.zoobeauval.com/en/zooparc/territories/the-south-american-pampas",
+    "https://actus.zoobeauval.com/vote-45e-parrainage-beauval/"
+  ],
+  "lastVerified": "2026-07-11"
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "prague-zoo",
+  "name": "プラハ動物園",
+  "nameEn": "Prague Zoo",
+  "country": "チェコ",
+  "countryCode": "CZ",
+  "continent": "europe",
+  "city": "プラハ",
+  "lat": 50.1173,
+  "lng": 14.4059,
+  "latlngApprox": false,
+  "officialUrl": "https://www.zoopraha.cz/",
+  "capybaraNote": "公式の動物レキシコンにカピバラを掲載。繁殖実績があり四つ子誕生の記録も。カピバラと触れ合える有料プログラムも公式eショップで提供",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.zoopraha.cz/zvirata-a-expozice/lexikon-zvirat/183-aktualne-ze-zoo-praha?d=847-kapybara&start=",
+    "https://eshop.zoopraha.cz/poznejte-se-s-kapybarami.html"
+  ],
+  "lastVerified": "2026-07-11"
+}

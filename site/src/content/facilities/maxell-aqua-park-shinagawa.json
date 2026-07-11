@@ -4,34 +4,42 @@
   "type": "aquarium",
   "prefecture": "東京都",
   "region": "kanto",
-  "lat": 35.628,
-  "lng": 139.734,
-  "latlngApprox": true,
+  "lat": 35.62797,
+  "lng": 139.73531,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
       "label": "大人（高校生以上）",
       "price": "2,500円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "1,300円"
+    },
+    {
+      "label": "幼児（4歳以上）",
+      "price": "800円"
     }
   ],
-  "hours": null,
+  "hours": "10:00〜20:00（最終入場19:00）※季節・日により変動あり",
   "officialUrl": "https://www.aqua-park.jp/",
   "capybara": {
     "fureai": false,
     "esayari": true,
-    "note": "都市型水族館でカピバラを展示。トングで笹をあげる有料体験「カピバラにごはん」（各回8名）を開催。2025年6月に飼育個体1頭の死亡を公式発表"
+    "note": "品川プリンスホテル内の都市型水族館でカピバラを展示。トングで笹をあげる有料体験「カピバラにごはん」（各回8名）を開催。2025年6月に飼育個体1頭の死亡を公式発表"
   },
   "onsen": null,
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（カピバラ）",
       "url": "https://www.aqua-park.jp/en/aqua/animals/capybara.html",
       "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://www.asoview.com/channel/ticket/VetzKvXoxw/ticket0000010049/",
-      "official": false
+      "label": "公式サイト（営業時間・料金）",
+      "url": "https://www.aqua-park.jp/en/aqua/info/index.html",
+      "official": true
     },
     {
       "label": "参考情報",
@@ -39,6 +47,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

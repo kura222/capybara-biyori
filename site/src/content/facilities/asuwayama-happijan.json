@@ -12,14 +12,18 @@
     {
       "label": "入場料",
       "price": "無料"
+    },
+    {
+      "label": "エサやり体験",
+      "price": "1回100円"
     }
   ],
-  "hours": "9:30〜16:30 ※月曜休園（祝日の場合翌平日）。遊園地は12/29〜2月末冬期休園（ハピジャンは12/29〜1/3のみ休み）",
+  "hours": "9:30〜16:30・月曜休（祝日の場合翌平日）。遊園地は12/29〜2月末冬期休園（ハピジャンは12/29〜1/3のみ休み）",
   "officialUrl": "https://www.city.fukui.lg.jp/kankou/zoo/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "屋内ミニ動物園「ハピジャン」でカピバラ3頭とふれあい可。笹の餌やり100円（数量限定）。水場の一部にお湯を張るお風呂設備あり"
+    "note": "屋内ミニ動物園「ハピジャン」でカピバラとふれあい可。カピバラのエサやり体験1回100円（数量限定）。水場の一部にお湯を張るお風呂設備あり"
   },
   "onsen": {
     "has": false,
@@ -31,16 +35,16 @@
   },
   "sources": [
     {
-      "label": "参考情報",
-      "url": "https://www.fuku-e.com/fukutabi/detail_60.html",
-      "official": false
-    },
-    {
       "label": "公式サイト",
       "url": "https://www.city.fukui.lg.jp/kankou/zoo/sisetu/information.html",
       "official": true
+    },
+    {
+      "label": "参考情報",
+      "url": "https://www.fuku-e.com/fukutabi/detail_60.html",
+      "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

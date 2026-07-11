@@ -4,17 +4,21 @@
   "type": "safari",
   "prefecture": "栃木県",
   "region": "kanto",
-  "lat": 37.041,
-  "lng": 140.018,
-  "latlngApprox": true,
+  "lat": 37.05917,
+  "lng": 140.00583,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
       "label": "大人（中学生以上）",
       "price": "3,200円"
+    },
+    {
+      "label": "子ども（3歳〜小学生）",
+      "price": "1,900円"
     }
   ],
-  "hours": null,
+  "hours": "季節・日により変動（おおむね9:00前後〜16:30/17:00・公式営業カレンダー参照）",
   "officialUrl": "https://www.nasusafari.com/",
   "capybara": {
     "fureai": true,
@@ -34,6 +38,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

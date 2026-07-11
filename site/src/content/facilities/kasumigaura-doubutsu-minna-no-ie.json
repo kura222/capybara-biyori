@@ -8,13 +8,26 @@
   "lng": 140.356,
   "latlngApprox": true,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "大人・高校生以上（参考情報）",
+      "price": "1,650円"
+    },
+    {
+      "label": "小人・4歳〜中学生（参考情報）",
+      "price": "1,100円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "10:00〜16:00（最終入園15:30）・水曜休",
   "officialUrl": "https://doubutsutominna.jp/",
   "capybara": {
     "fureai": true,
     "esayari": null,
-    "note": "2024年7月31日開業の新施設（旧・霞ケ浦ふれあいランド）。旧階段部を転用したカピバラの水浴びエリアがあり間近で観察できる"
+    "note": "2024年7月31日開業の新施設（旧・霞ケ浦ふれあいランド、行方市玉造甲1234）。キリン・ペンギン等約19種80頭を飼育し、旧階段部を転用したカピバラの水浴びエリアを間近で観察できる"
   },
   "onsen": null,
   "sources": [
@@ -24,16 +37,16 @@
       "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://www.tokyo-np.co.jp/article/344910",
+      "label": "参考情報（料金）",
+      "url": "https://www.asoview.com/item/ticket/ticket0000031804/",
       "official": false
     },
     {
       "label": "参考情報",
-      "url": "https://note.com/capybarahp/n/nf87af8683ac3",
+      "url": "https://www.ibarakiguide.jp/spot.php?mode=detail&code=1682",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "千葉県",
   "region": "kanto",
-  "lat": 35.762,
-  "lng": 139.954,
-  "latlngApprox": true,
+  "lat": 35.76478,
+  "lng": 139.96522,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -16,9 +16,13 @@
     {
       "label": "小人",
       "price": "110円"
+    },
+    {
+      "label": "未就学児",
+      "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "9:30〜16:30（入園は16:00まで）・月曜休（祝日の場合翌日）・年末年始休",
   "officialUrl": "https://www.city.ichikawa.lg.jp/site/zoo/",
   "capybara": {
     "fureai": false,
@@ -38,6 +42,6 @@
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

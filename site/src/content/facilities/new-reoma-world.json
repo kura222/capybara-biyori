@@ -4,21 +4,38 @@
   "type": "theme_park",
   "prefecture": "香川県",
   "region": "shikoku",
-  "lat": 34.213,
-  "lng": 133.858,
-  "latlngApprox": true,
+  "lat": 34.2112,
+  "lng": 133.8779,
+  "latlngApprox": false,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "入園券 大人（中学生以上）",
+      "price": "2,000円"
+    },
+    {
+      "label": "入園券 小人（3歳〜小学生）",
+      "price": "1,500円"
+    },
+    {
+      "label": "フリーパス 大人",
+      "price": "4,300円"
+    },
+    {
+      "label": "フリーパス 小人",
+      "price": "3,800円"
+    }
+  ],
+  "hours": "季節・曜日により変動（休園日あり・公式営業カレンダー要確認）",
   "officialUrl": "https://www.newreomaworld.com/",
   "capybara": {
     "fureai": false,
     "esayari": null,
-    "note": "アドベンチャーエリアにガラス張りの常設カピバラ風呂（露天風呂・打たせ湯風の造作）があり、通年で入浴姿が見られる"
+    "note": "アドベンチャーエリア「バトルビースト前」に常設の「カピバラ温泉」があり、カピバラの「キャンディ」が暮らす。ガラス越しに入浴姿を通年観察できる"
   },
   "onsen": {
     "has": true,
-    "seasonLabel": "通年（常設のカピバラ風呂）",
+    "seasonLabel": "通年（アドベンチャーエリア常設の「カピバラ温泉」）",
     "start": null,
     "end": null,
     "times": null,
@@ -31,11 +48,16 @@
       "official": true
     },
     {
+      "label": "公式サイト",
+      "url": "https://www.newreomaworld.com/guide_of_charge/",
+      "official": true
+    },
+    {
       "label": "参考情報",
       "url": "https://capybara.eek.jp/navi-reoma.html",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

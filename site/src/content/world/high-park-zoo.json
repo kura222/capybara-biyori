@@ -1,0 +1,21 @@
+{
+  "slug": "high-park-zoo",
+  "name": "ハイパーク動物園",
+  "nameEn": "High Park Zoo",
+  "country": "カナダ",
+  "countryCode": "CA",
+  "continent": "americas",
+  "city": "トロント",
+  "lat": 43.6465,
+  "lng": -79.4637,
+  "latlngApprox": false,
+  "officialUrl": "https://www.highparkzoo.ca/visit-the-zoo/meet-the-animals/capybara",
+  "capybaraNote": "カナダ最古の動物展示施設で入園無料。2016年に脱走して市の名物になったカピバラ夫婦「ボニーとクライド」とその子どもたちで有名",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.highparkzoo.ca/visit-the-zoo/meet-the-animals/capybara",
+    "https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/beaches-gardens-attractions/zoos-farms/high-park-animal-display/"
+  ],
+  "lastVerified": "2026-07-11"
+}

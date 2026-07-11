@@ -1,0 +1,23 @@
+{
+  "slug": "riga-zoo",
+  "name": "リガ動物園",
+  "nameEn": "Riga Zoo",
+  "country": "ラトビア",
+  "countryCode": "LV",
+  "continent": "europe",
+  "city": "リガ",
+  "lat": 57.0177,
+  "lng": 24.1568,
+  "latlngApprox": false,
+  "officialUrl": "https://rigazoo.lv/en/",
+  "capybaraNote": "通信会社Bite Latvija（カピバラのゴッドペアレント）提供のライブカメラを公式サイトで配信。カピバラが屋内展示となる秋〜春が配信期で、清掃時間帯（10〜12時）を除きほぼ終日視聴可。2026年1月には赤ちゃんが誕生し公募で命名",
+  "liveChannelSlug": "riga-zoo-bite",
+  "type": "zoo",
+  "sources": [
+    "https://rigazoo.lv/en/capybara-webcam/",
+    "https://rigazoo.lv/kapibaru-tiesraide/",
+    "https://eng.lsm.lv/article/society/environment/02.12.2025-watch-capybaras-live-from-riga-zoo.a624654/",
+    "https://eng.lsm.lv/article/society/environment/26.01.2026-riga-zoo-wants-your-baby-capybara-names.a631563/"
+  ],
+  "lastVerified": "2026-07-11"
+}

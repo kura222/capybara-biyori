@@ -11,19 +11,23 @@
   "fees": [
     {
       "label": "大人（高校生以上）",
-      "price": "1,200円"
+      "price": "1,200円（蒲郡市民500円）"
     },
     {
       "label": "子ども（4歳〜中学生）",
-      "price": "500円"
+      "price": "500円（蒲郡市民200円）"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "9:00〜17:00（入館16:30まで）※休館日なし（設備メンテナンスのため6月に臨時休館の場合あり）",
   "officialUrl": "https://www.takesuideepsea.com/",
   "capybara": {
     "fureai": null,
     "esayari": null,
-    "note": "2024年10月12日の増設リニューアルでカピバラ展示が屋外に復活（「しんた」「めめ」の2頭）"
+    "note": "2024年10月の増設リニューアルで屋外カピバラ展示が復活。「しんた」「めめ」ペアに2025年10月生まれの5頭（みたらし・くろまめ・くろごま・もも・みみ）が加わった。カピバラショーは一時休止中（2026年6月公式発表）"
   },
   "onsen": {
     "has": false,
@@ -35,16 +39,21 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
-      "url": "https://www.takesuideepsea.com/",
+      "label": "公式サイト（営業時間・料金）",
+      "url": "https://www.takesuideepsea.com/%E5%96%B6%E6%A5%AD%E6%99%82%E9%96%93-%E6%96%99%E9%87%91",
       "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://readyfor.jp/projects/takesui2024",
-      "official": false
+      "label": "公式サイト（カピバラの赤ちゃん誕生）",
+      "url": "https://www.takesuideepsea.com/news-1/a9a413ee-a1cc-4641-b198-ac45c6ce7394",
+      "official": true
+    },
+    {
+      "label": "公式サイト",
+      "url": "https://www.takesuideepsea.com/",
+      "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

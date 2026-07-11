@@ -17,9 +17,9 @@
   "hours": "9:00〜16:30 ※月曜休園（祝日の場合翌平日）・12/29〜1/3休園",
   "officialUrl": "https://www.takaokakojyozoo.jp/",
   "capybara": {
-    "fureai": null,
+    "fureai": false,
     "esayari": null,
-    "note": "2013年にカピバラの飼育を11年ぶりに再開"
+    "note": "約50種165点の小動物中心の無料動物園。2013年にカピバラの飼育を11年ぶりに再開。ふれあい広場（毎日開催）の対象はヒヨコ・ウサギ・テンジクネズミ等でカピバラは観察展示"
   },
   "onsen": {
     "has": false,
@@ -41,6 +41,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

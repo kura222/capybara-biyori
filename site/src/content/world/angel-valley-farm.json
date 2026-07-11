@@ -1,0 +1,23 @@
+{
+  "slug": "angel-valley-farm",
+  "name": "エンジェルバレー・ファーム",
+  "nameEn": "Angel Valley Farm",
+  "country": "ラトビア",
+  "countryCode": "LV",
+  "continent": "europe",
+  "city": "リガ近郊（Siguldaエリア）",
+  "lat": 57.1,
+  "lng": 24.7,
+  "latlngApprox": true,
+  "officialUrl": "https://www.angel-valley-farm.com/",
+  "capybaraNote": "保護されたカピバラたちが暮らす家族経営の牧場・セラピーファーム。カピバラプールの24時間YouTubeライブを公式に配信。リガから約35kmの田園地帯。見学は事前予約制の少人数制",
+  "liveChannelSlug": "angel-valley-farm",
+  "type": "farm",
+  "sources": [
+    "https://www.angel-valley-farm.com/",
+    "https://www.angel-valley-farm.com/services",
+    "https://www.youtube.com/watch?v=Q5FdRuwzIbE",
+    "https://www.webcamtaxi.com/en/latvia/sigulda-district.html"
+  ],
+  "lastVerified": "2026-07-11"
+}

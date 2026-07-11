@@ -11,14 +11,18 @@
   "fees": [
     {
       "label": "大人（高校生以上）",
-      "price": "410円"
+      "price": "500円"
     },
     {
-      "label": "中学生以下・70歳以上",
+      "label": "中学生以下",
+      "price": "無料"
+    },
+    {
+      "label": "満70歳以上・障がい者",
       "price": "無料"
     }
   ],
-  "hours": "9:00〜16:30（入園16:00まで）",
+  "hours": "9:00〜16:30（入園16:00まで）※12〜2月は10:00〜16:00・12/29〜31休園",
   "officialUrl": "https://hamazoo.net/",
   "capybara": {
     "fureai": null,
@@ -35,16 +39,11 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（利用案内）",
       "url": "https://hamazoo.net/information.php",
       "official": true
-    },
-    {
-      "label": "参考情報",
-      "url": "https://note.com/capybarahp/n/n314e89b6782f",
-      "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

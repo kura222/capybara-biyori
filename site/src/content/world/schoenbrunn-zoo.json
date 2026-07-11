@@ -1,0 +1,21 @@
+{
+  "slug": "schoenbrunn-zoo",
+  "name": "シェーンブルン動物園",
+  "nameEn": "Tiergarten Schoenbrunn (Vienna Zoo)",
+  "country": "オーストリア",
+  "countryCode": "AT",
+  "continent": "europe",
+  "city": "ウィーン",
+  "lat": 48.1822,
+  "lng": 16.3036,
+  "latlngApprox": false,
+  "officialUrl": "https://www.zoovienna.at/tiere/saeugetiere/wasserschwein/",
+  "capybaraNote": "世界最古の動物園の南米パークで、アリクイ・ビクーニャ・シリーマ・レアと混合展示。4つ子誕生の繁殖実績あり",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.zoovienna.at/tiere/saeugetiere/wasserschwein/",
+    "https://www.zoovienna.at/de/news/wasserschwein-quartett-im-tiergarten-schonbrunn/"
+  ],
+  "lastVerified": "2026-07-11"
+}

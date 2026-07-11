@@ -11,18 +11,18 @@
   "fees": [
     {
       "label": "大人（高校生以上）",
-      "price": "600円"
+      "price": "600円（前売480円）"
     },
     {
       "label": "小・中学生",
-      "price": "100円"
+      "price": "100円（前売80円）"
     },
     {
       "label": "未就学児",
       "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "9:00〜16:30（入園は16:00まで）※月曜休園（祝日の場合は翌平日）",
   "officialUrl": "https://www.nonhoi.jp/",
   "capybara": {
     "fureai": null,
@@ -39,8 +39,13 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（動物紹介）",
       "url": "https://www.nonhoi.jp/animal/p612/",
+      "official": true
+    },
+    {
+      "label": "公式サイト（営業案内）",
+      "url": "https://www.nonhoi.jp/information/",
       "official": true
     },
     {
@@ -49,6 +54,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

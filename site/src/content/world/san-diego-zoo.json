@@ -1,0 +1,21 @@
+{
+  "slug": "san-diego-zoo",
+  "name": "サンディエゴ動物園",
+  "nameEn": "San Diego Zoo",
+  "country": "アメリカ",
+  "countryCode": "US",
+  "continent": "americas",
+  "city": "サンディエゴ",
+  "lat": 32.7353,
+  "lng": -117.149,
+  "latlngApprox": false,
+  "officialUrl": "https://zoo.sandiegozoo.org/animals/capybara",
+  "capybaraNote": "エレファント・オデッセイ内でベアードバクや水鳥と混合展示。プール付きハビタットで、園内での繁殖実績（4頭誕生）もある",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://zoo.sandiegozoo.org/animals/capybara",
+    "https://animals.sandiegozoo.org/animals/capybara"
+  ],
+  "lastVerified": "2026-07-11"
+}

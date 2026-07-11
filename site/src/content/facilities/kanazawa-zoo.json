@@ -8,8 +8,29 @@
   "lng": 139.605,
   "latlngApprox": true,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "一般",
+      "price": "500円"
+    },
+    {
+      "label": "高校生",
+      "price": "300円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "200円"
+    },
+    {
+      "label": "小学生未満",
+      "price": "無料"
+    },
+    {
+      "label": "毎週土曜の小・中・高校生（要学生証等）",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:30〜16:30（入園は16:00まで、8月の土日祝は夜間開園あり）・月曜休（祝日の場合翌日、5月・10月は無休）・12/29〜1/1休",
   "officialUrl": "https://www.hama-midorinokyokai.or.jp/zoo/kanazawa/",
   "capybara": {
     "fureai": false,
@@ -31,11 +52,16 @@
       "official": true
     },
     {
+      "label": "公式サイト（料金）",
+      "url": "https://www.hama-midorinokyokai.or.jp/zoo/kanazawa/fee.php",
+      "official": true
+    },
+    {
       "label": "参考情報",
       "url": "https://note.com/capybarahp/n/nc2e6ccceea09",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

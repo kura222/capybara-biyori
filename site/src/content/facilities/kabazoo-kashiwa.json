@@ -8,13 +8,26 @@
   "lng": 139.999,
   "latlngApprox": true,
   "status": "open",
-  "fees": [],
-  "hours": "平日11:00〜17:00／土日祝10:00〜19:00",
+  "fees": [
+    {
+      "label": "大人・中学生以上（再入場可・参考情報）",
+      "price": "1,100円"
+    },
+    {
+      "label": "小学生（再入場可・参考情報）",
+      "price": "880円"
+    },
+    {
+      "label": "未就学児",
+      "price": "無料"
+    }
+  ],
+  "hours": "平日11:00〜17:00（最終入場16:30）／土日祝10:00〜19:00（最終入場18:30）・セブンパークアリオ柏の休館日に準ずる",
   "officialUrl": "https://kabazoo-kashiwa.amebaownd.com/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "2019年開業の屋内型動物園。1日2回の「カピバラさんのお散歩」でエサやりができる"
+    "note": "2019年開業の屋内型動物園。カピバラのふれあい・おやつあげ可（カピバラの体調によりふれあい・おやつを休止する場合あり、公式サイト・SNSで告知）"
   },
   "onsen": null,
   "sources": [
@@ -24,11 +37,16 @@
       "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://iko-yo.net/facilities/154200/experiences",
+      "label": "アリオ柏フロアガイド",
+      "url": "https://sevenpark-kashiwa.ario.jp/shop/2300000037/",
+      "official": true
+    },
+    {
+      "label": "参考情報（料金）",
+      "url": "https://machitto.jp/kashiwa/30231/",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

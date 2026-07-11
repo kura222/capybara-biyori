@@ -1,0 +1,20 @@
+{
+  "slug": "hellabrunn-zoo",
+  "name": "ヘラブルン動物園（ミュンヘン）",
+  "nameEn": "Tierpark Hellabrunn",
+  "country": "ドイツ",
+  "countryCode": "DE",
+  "continent": "europe",
+  "city": "ミュンヘン",
+  "lat": 48.0973,
+  "lng": 11.5549,
+  "latlngApprox": false,
+  "officialUrl": "https://www.hellabrunn.de/tiere/amerika/wasserschwein-capybara",
+  "capybaraNote": "地理別展示「ジオズー」のアメリカゾーンでカピバラを飼育。公式サイトの動物一覧に掲載",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.hellabrunn.de/tiere/amerika/wasserschwein-capybara"
+  ],
+  "lastVerified": "2026-07-11"
+}

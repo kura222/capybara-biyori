@@ -11,10 +11,22 @@
   "fees": [
     {
       "label": "大人（高校生・16歳以上）",
-      "price": "2,700円〜（日時により変動価格制）"
+      "price": "2,700円〜3,500円（日時により変動価格制）"
+    },
+    {
+      "label": "こども（小・中学生）",
+      "price": "1,400円〜1,800円"
+    },
+    {
+      "label": "幼児（3歳以上）",
+      "price": "700円〜900円"
+    },
+    {
+      "label": "2歳以下",
+      "price": "無料"
     }
   ],
-  "hours": "10:00〜20:00など日により変動（入館は閉館1時間前まで）",
+  "hours": "10:00〜20:00など日により変動（入館は閉館1時間前まで）※休館日は公式カレンダー参照",
   "officialUrl": "https://www.kaiyukan.com/",
   "capybara": {
     "fureai": false,
@@ -31,16 +43,16 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（展示）",
       "url": "https://www.kaiyukan.com/area/exhibition/028.html",
       "official": true
     },
     {
-      "label": "公式サイト",
+      "label": "公式サイト（営業時間・料金）",
       "url": "https://www.kaiyukan.com/info/hours/",
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

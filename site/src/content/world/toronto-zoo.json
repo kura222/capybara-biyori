@@ -1,0 +1,21 @@
+{
+  "slug": "toronto-zoo",
+  "name": "トロント動物園",
+  "nameEn": "Toronto Zoo",
+  "country": "カナダ",
+  "countryCode": "CA",
+  "continent": "americas",
+  "city": "トロント",
+  "lat": 43.8177,
+  "lng": -79.1859,
+  "latlngApprox": false,
+  "officialUrl": "https://www.torontozoo.com/animals/Capybara",
+  "capybaraNote": "カナダ最大級の動物園。アメリカ大陸パビリオンのマヤ遺跡エリアでフラミンゴやクモザルと共に展示され、有料のWild Encounter（カピバラ）も公式販売",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.torontozoo.com/animals/Capybara",
+    "https://www.torontozoo.com/tickets/wecapybara"
+  ],
+  "lastVerified": "2026-07-11"
+}

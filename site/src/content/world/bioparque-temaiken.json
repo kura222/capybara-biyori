@@ -1,0 +1,21 @@
+{
+  "slug": "bioparque-temaiken",
+  "name": "ビオパルケ・テマイケン",
+  "nameEn": "Bioparque Temaikèn",
+  "country": "アルゼンチン",
+  "countryCode": "AR",
+  "continent": "americas",
+  "city": "ベレン・デ・エスコバル（ブエノスアイレス州）",
+  "lat": -34.3968,
+  "lng": -58.7796,
+  "latlngApprox": false,
+  "officialUrl": "https://www.temaiken.org.ar/bioparque",
+  "capybaraNote": "ブエノスアイレス近郊34haのバイオパーク。在来種エリアでカルピンチョ（カピバラ）をヤカレカイマンやタテガミオオカミと共に展示。公式サイトにカルピンチョの解説ページを常設",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.temaiken.org.ar/ficha-tecnica-carpincho-16",
+    "https://www.temaiken.org.ar/bioparque"
+  ],
+  "lastVerified": "2026-07-11"
+}

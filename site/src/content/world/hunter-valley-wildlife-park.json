@@ -1,0 +1,20 @@
+{
+  "slug": "hunter-valley-wildlife-park",
+  "name": "ハンターバレー・ワイルドライフパーク",
+  "nameEn": "Hunter Valley Wildlife Park",
+  "country": "オーストラリア",
+  "countryCode": "AU",
+  "continent": "oceania",
+  "city": "ヌルカバ（NSW州）",
+  "lat": -32.809,
+  "lng": 151.348,
+  "latlngApprox": true,
+  "officialUrl": "https://huntervalleywildlifepark.com.au/encounters/capybara-encounter/",
+  "capybaraNote": "ワイン産地ハンターバレーの動物園。カピバラのDylanとIsabelleを飼育し、キーパー同伴で餌やりできる公式カピバラ・エンカウンターを開催",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://huntervalleywildlifepark.com.au/encounters/capybara-encounter/"
+  ],
+  "lastVerified": "2026-07-11"
+}

@@ -8,17 +8,30 @@
   "lng": 139.39,
   "latlngApprox": true,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "大人（高校生以上）",
+      "price": "500円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "無料"
+    },
+    {
+      "label": "未就学児",
+      "price": "無料"
+    }
+  ],
+  "hours": "9:30〜16:30（入園は16:00まで）・月曜休（祝日の場合は翌日以降最初の平日）・12/29〜1/1休",
   "officialUrl": "https://www.parks.or.jp/chikozan/",
   "capybara": {
     "fureai": null,
     "esayari": null,
-    "note": "狭山市の里山の動物園。小動物舎（カピバラ舎）で飼育し、冬季のカピバラ温泉（12月はゆず湯）が名物"
+    "note": "狭山市の里山の動物園。小動物舎（カピバラ舎）で飼育し、冬季のカピバラ温泉（バラの花びらやゆずの変わり湯あり）が名物"
   },
   "onsen": {
     "has": true,
-    "seasonLabel": "例年11月下旬〜2月末（公式ページ記載・今季日程未発表）",
+    "seasonLabel": "例年11月下旬〜翌2月末日（時期によりバラ湯・ゆず湯等の変わり湯）",
     "start": null,
     "end": null,
     "times": null,
@@ -26,16 +39,16 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（カピバラ温泉）",
       "url": "https://www.parks.or.jp/chikozan/guide/001/001264.html",
       "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://www.jalan.net/news/article/419313/",
-      "official": false
+      "label": "公式サイト（利用案内）",
+      "url": "https://www.parks.or.jp/chikozan/guide/000/000849.html",
+      "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

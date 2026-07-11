@@ -4,14 +4,35 @@
   "type": "farm",
   "prefecture": "長野県",
   "region": "koshinetsu",
-  "lat": null,
-  "lng": null,
-  "latlngApprox": false,
+  "lat": 36.27,
+  "lng": 138.53,
+  "latlngApprox": true,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "大人",
+      "price": "1,000円"
+    },
+    {
+      "label": "小学生以下",
+      "price": "500円"
+    },
+    {
+      "label": "1歳未満",
+      "price": "無料"
+    },
+    {
+      "label": "ふれあい広場入場（参考情報）",
+      "price": "1人200円"
+    }
+  ],
+  "hours": "平日10:00〜16:00／土日祝10:00〜16:30・水曜休（GW・夏季は無休）・1〜2月は平日と元旦が休園",
   "officialUrl": "https://www.bokujo.co.jp/",
-  "capybara": null,
+  "capybara": {
+    "fureai": true,
+    "esayari": true,
+    "note": "佐久市志賀の乗馬・動物牧場（住所：長野県佐久市志賀31）。カピバラの飼育・繁殖を行い、園内のふれあいコーナーでカピバラともふれあえる（エサ200円・参考情報）"
+  },
   "onsen": null,
   "sources": [
     {
@@ -20,11 +41,16 @@
       "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://capybarajp.com/wheres-capybara/",
+      "label": "公式サイト（動物の販売）",
+      "url": "https://www.bokujo.co.jp/ani/",
+      "official": true
+    },
+    {
+      "label": "参考情報（佐久広域連合）",
+      "url": "https://www.areasaku.or.jp/kankou/spot/19081.html",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

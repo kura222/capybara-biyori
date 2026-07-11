@@ -14,7 +14,7 @@
       "price": "1,500円"
     },
     {
-      "label": "小人（4歳〜中学3年生）",
+      "label": "小人（4歳〜中学生）",
       "price": "500円"
     },
     {
@@ -22,12 +22,12 @@
       "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "平日9:30〜17:00／土日祝9:30〜17:30（4〜9月）・9:30〜17:00（10〜3月）※最終入場は閉園30分前。火曜定休（GW・祝日は営業）・年末年始・冬季メンテナンス休園",
   "officialUrl": "https://www.england-hill.com/",
   "capybara": {
     "fureai": null,
     "esayari": null,
-    "note": "グリーンヒルエリアでカピバラを展示（コアラなど約30種の動物）"
+    "note": "グリーンヒルエリアに2021年新設のカピバラ専用エリア（土と池あり）があり、コアラなど約30種の動物とともに展示。カピバラのえさやり体験イベントが開催されることがある"
   },
   "onsen": {
     "has": false,
@@ -39,16 +39,16 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（料金・営業時間）",
       "url": "https://www.england-hill.com/price/",
       "official": true
     },
     {
       "label": "参考情報",
-      "url": "https://note.com/capybarahp/n/n314e89b6782f",
+      "url": "https://awajikanko.com/englandhill/",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

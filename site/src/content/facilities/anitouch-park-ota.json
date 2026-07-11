@@ -4,9 +4,9 @@
   "type": "indoor",
   "prefecture": "群馬県",
   "region": "kanto",
-  "lat": 36.308,
-  "lng": 139.403,
-  "latlngApprox": true,
+  "lat": 36.29403,
+  "lng": 139.40044,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -14,22 +14,45 @@
       "price": "1,300円"
     },
     {
-      "label": "大人（土日祝）",
+      "label": "大人（土日祝・長期休暇）",
       "price": "1,600円"
     },
     {
-      "label": "4歳〜小学生（平日）",
+      "label": "大人（GW・お盆等の特定日）",
+      "price": "1,800円"
+    },
+    {
+      "label": "学生・中学生以上（平日）",
+      "price": "1,000円"
+    },
+    {
+      "label": "小人・4歳〜小学生（平日）",
       "price": "800円"
+    },
+    {
+      "label": "小人・4歳〜小学生（土日祝）",
+      "price": "1,000円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "10:00〜19:00（最終受付18:30）・イオンモール太田の営業日に準ずる",
   "officialUrl": "https://www.ota.anitouch.com/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "屋内型ふれあい動物園。カピバラにふれあい・おやつ可（おやつ券6枚1,000円）。晴天時は屋外日光浴も"
+    "note": "イオンモール太田WEST MALL1階の屋内型ふれあい動物園。カピバラへのおやつあげ体験ができ、「カピバラの猫足風呂」（登録商標）も見どころ"
   },
-  "onsen": null,
+  "onsen": {
+    "has": true,
+    "seasonLabel": "通年（屋内展示「カピバラの猫足風呂」）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://www.ota.anitouch.com/"
+  },
   "sources": [
     {
       "label": "公式サイト",
@@ -42,6 +65,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

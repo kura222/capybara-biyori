@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "宮崎県",
   "region": "kyushu",
-  "lat": 31.975,
-  "lng": 131.468,
-  "latlngApprox": true,
+  "lat": 31.9825,
+  "lng": 131.4788,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -20,6 +20,10 @@
     {
       "label": "小学生",
       "price": "310円"
+    },
+    {
+      "label": "未就学児",
+      "price": "無料"
     }
   ],
   "hours": "9:00〜17:00（入園16:30まで）・水曜休（春・夏・冬休み期間は開園）・12/31休",
@@ -40,8 +44,13 @@
       "label": "公式サイト",
       "url": "https://www.miyazaki-city-zoo.jp/user-guide/",
       "official": true
+    },
+    {
+      "label": "参考情報（座標）",
+      "url": "https://ja.wikipedia.org/wiki/%E5%AE%AE%E5%B4%8E%E5%B8%82%E3%83%95%E3%82%A7%E3%83%8B%E3%83%83%E3%82%AF%E3%82%B9%E8%87%AA%E7%84%B6%E5%8B%95%E7%89%A9%E5%9C%92",
+      "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

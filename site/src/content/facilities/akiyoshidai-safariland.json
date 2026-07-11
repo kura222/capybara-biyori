@@ -4,25 +4,41 @@
   "type": "zoo",
   "prefecture": "山口県",
   "region": "chugoku",
-  "lat": 34.252,
-  "lng": 131.33,
-  "latlngApprox": true,
+  "lat": 34.2847,
+  "lng": 131.3315,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
-      "label": "大人（中学生以上）",
-      "price": "2,400円"
+      "label": "マイカー入園 大人（高校生以上）",
+      "price": "2,600円"
     },
     {
-      "label": "小人（4歳以上）",
-      "price": "1,200円"
+      "label": "マイカー入園 子ども（3歳以上）",
+      "price": "1,600円"
     },
     {
-      "label": "シルバー（65歳以上）",
-      "price": "1,800円"
+      "label": "マイカー入園 シニア（70歳以上）",
+      "price": "2,300円"
+    },
+    {
+      "label": "エサやりバス 大人",
+      "price": "3,700円"
+    },
+    {
+      "label": "エサやりバス 子ども",
+      "price": "2,700円"
+    },
+    {
+      "label": "ふれあい広場 大人",
+      "price": "1,500円"
+    },
+    {
+      "label": "ふれあい広場 子ども",
+      "price": "1,000円"
     }
   ],
-  "hours": "4〜9月 9:30〜17:00（最終受付16:15）／10〜3月 9:30〜16:30（最終受付15:45）・年中無休",
+  "hours": "4〜9月 9:30〜16:45／10〜3月 9:30〜16:15（サファリゾーン・ふれあい広場）・年中無休",
   "officialUrl": "https://www.safariland.jp/",
   "capybara": {
     "fureai": true,
@@ -42,6 +58,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

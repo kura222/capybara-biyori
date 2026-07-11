@@ -1,0 +1,21 @@
+{
+  "slug": "chapultepec-zoo",
+  "name": "チャプルテペック動物園",
+  "nameEn": "Zoológico de Chapultepec",
+  "country": "メキシコ",
+  "countryCode": "MX",
+  "continent": "americas",
+  "city": "メキシコシティ",
+  "lat": 19.4238,
+  "lng": -99.1907,
+  "latlngApprox": false,
+  "officialUrl": "http://data.sedema.cdmx.gob.mx/zoo_chapultepec/",
+  "capybaraNote": "メキシコシティ環境局（SEDEMA）運営の入園無料の動物園。熱帯林エリアでカピバラを飼育し、SEDEMA公式アカウントも紹介",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "http://data.sedema.cdmx.gob.mx/zoo_chapultepec/",
+    "https://x.com/SEDEMA_CDMX/status/1226566430994452488"
+  ],
+  "lastVerified": "2026-07-11"
+}

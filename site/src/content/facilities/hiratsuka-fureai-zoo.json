@@ -10,16 +10,20 @@
   "status": "open",
   "fees": [
     {
-      "label": "入場",
+      "label": "展示・ふれあいコーナー",
       "price": "無料"
+    },
+    {
+      "label": "ポニー乗馬",
+      "price": "1回100円"
     }
   ],
-  "hours": "月曜休（祝日の場合は直近の平日）・年末年始休（12/28〜1/4）",
+  "hours": "展示コーナー9:30〜17:00（ふれあいコーナーは10:00〜11:30・13:30〜16:00※10〜3月は〜15:30）・月曜休（祝日の場合は直近の平日）・12/28〜1/4休",
   "officialUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00819.html",
   "capybara": {
     "fureai": false,
-    "esayari": null,
-    "note": "入場無料のふれあい動物園（約35種760頭）。2024年5月から新カピバラ「ガンモ」（オス）を公開中"
+    "esayari": false,
+    "note": "入場無料のふれあい動物園。2024年5月から公開のカピバラ「ガンモ」（オス）を展示。ふれあいコーナーの対象はヤギ・ヒツジ・ウサギ・モルモット等でカピバラは観察展示"
   },
   "onsen": null,
   "sources": [
@@ -34,6 +38,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "山口県",
   "region": "chugoku",
-  "lat": 33.954,
-  "lng": 131.276,
-  "latlngApprox": true,
+  "lat": 33.9454,
+  "lng": 131.2837,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -20,9 +20,13 @@
     {
       "label": "70歳以上",
       "price": "250円"
+    },
+    {
+      "label": "3歳未満",
+      "price": "無料"
     }
   ],
-  "hours": "9:00〜17:00（最終入園16:30）・火曜休（祝日の場合は翌日）",
+  "hours": "9:30〜16:30（最終入園16:00）・火曜休（祝日の場合は翌日）・12/29〜1/1休（開園する場合あり）",
   "officialUrl": "https://www.tokiwapark.jp/zoo/",
   "capybara": {
     "fureai": null,
@@ -42,6 +46,6 @@
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

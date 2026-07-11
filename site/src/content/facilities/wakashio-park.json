@@ -14,18 +14,23 @@
       "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "9:00〜16:30・月曜休（祝日の場合翌日）・12/28〜1/4休",
   "officialUrl": "https://www.city.urayasu.lg.jp/shisetsu/kouen/kotsu/1005854.html",
   "capybara": {
     "fureai": false,
     "esayari": false,
-    "note": "浦安市の無料公園内「動物広場」でカピバラを飼育。網越し約50cmの近さで観察できる（ふれあい・エサやり不可）"
+    "note": "浦安市の無料公園（交通公園と一体）内「動物広場」でカピバラ・ヤギ・カンガルー等を飼育。網越し約50cmの近さで観察できる（ふれあい・エサやり不可）"
   },
   "onsen": null,
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（動物広場）",
       "url": "https://www.city.urayasu.lg.jp/shisetsu/kouen/kotsu/1005854.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト（交通公園）",
+      "url": "https://www.city.urayasu.lg.jp/shisetsu/kouen/1005633.html",
       "official": true
     },
     {
@@ -34,6 +39,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

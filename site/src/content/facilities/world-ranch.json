@@ -4,26 +4,30 @@
   "type": "farm",
   "prefecture": "大阪府",
   "region": "kansai",
-  "lat": 34.46,
-  "lng": 135.65,
-  "latlngApprox": true,
+  "lat": 34.4755,
+  "lng": 135.6417,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
-      "label": "大人（高校生以上）",
+      "label": "大人",
       "price": "2,000円"
     },
     {
-      "label": "小人（3歳以上）",
+      "label": "小人（3歳〜小学生）",
       "price": "1,000円"
+    },
+    {
+      "label": "ペット",
+      "price": "500円"
     }
   ],
-  "hours": "10:00〜17:30（季節により変動）",
+  "hours": "春〜秋 10:00〜17:30／秋〜冬 10:00〜17:00 ※火曜定休（祝日の場合は翌日）。春休み・夏休み期間は無休、冬期（12/1〜2月末）は年末年始の冬休みを除き土日祝のみ営業",
   "officialUrl": "http://www.worldranch.co.jp/",
   "capybara": {
-    "fureai": null,
+    "fureai": false,
     "esayari": null,
-    "note": "園内にカピバラエリアあり"
+    "note": "園内でカピバラを飼育。公式サイトによるとカピバラのふれあいは現在休止中"
   },
   "onsen": {
     "has": false,
@@ -35,16 +39,21 @@
   },
   "sources": [
     {
-      "label": "参考情報",
-      "url": "https://www.jalan.net/kankou/spt_27382cc3310040494/",
-      "official": false
+      "label": "公式サイト（料金一覧）",
+      "url": "http://www.worldranch.co.jp/contents/price.html",
+      "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://osaka-info.jp/spot/world-ranch/",
-      "official": false
+      "label": "公式サイト（営業案内）",
+      "url": "http://www.worldranch.co.jp/contents/schedule.html",
+      "official": true
+    },
+    {
+      "label": "公式サイト（カピバラ）",
+      "url": "http://www.worldranch.co.jp/contents/capybara.html",
+      "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

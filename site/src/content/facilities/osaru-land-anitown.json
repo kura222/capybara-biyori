@@ -8,13 +8,26 @@
   "lng": 139.715,
   "latlngApprox": true,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "パスポート 大人（中学生以上）",
+      "price": "3,000円（前売2,700円）"
+    },
+    {
+      "label": "パスポート 小人（4歳以上）",
+      "price": "1,800円（前売1,600円）"
+    },
+    {
+      "label": "パスポート シニア（65歳以上）",
+      "price": "2,500円"
+    }
+  ],
+  "hours": "平日10:00〜16:00／休日・祝日9:00〜16:00",
   "officialUrl": "https://www.osaruland.jp/",
   "capybara": {
     "fureai": true,
     "esayari": null,
-    "note": "アニタウンに赤ちゃんカピバラ5頭が仲間入り。猫とカピバラのエリアで間近にふれあえる"
+    "note": "アニタウン（日光市柄倉763）に赤ちゃんカピバラ5頭が仲間入り。猫とカピバラのエリアで間近にふれあえる"
   },
   "onsen": {
     "has": true,
@@ -26,16 +39,21 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（アニタウン）",
       "url": "https://www.osaruland.jp/anitown/",
       "official": true
     },
     {
-      "label": "公式サイト",
+      "label": "公式サイト（動物紹介）",
       "url": "https://www.osaruland.jp/cast/anitown_animals/",
+      "official": true
+    },
+    {
+      "label": "公式サイト（料金）",
+      "url": "https://www.osaruland.jp/",
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

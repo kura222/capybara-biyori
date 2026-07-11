@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "大分県",
   "region": "kyushu",
-  "lat": 33.433,
-  "lng": 131.39,
-  "latlngApprox": true,
+  "lat": 33.354,
+  "lng": 131.4115,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -16,9 +16,13 @@
     {
       "label": "小人（4歳〜中学生）",
       "price": "1,500円"
+    },
+    {
+      "label": "ジャングルバス（4歳以上・1名）",
+      "price": "1,500円"
     }
   ],
-  "hours": null,
+  "hours": "3/1〜10/31 9:15〜16:30（受付8:50〜16:00）／11/1〜2月末 9:15〜16:00（受付8:50〜15:30）",
   "officialUrl": "https://africansafari.co.jp/",
   "capybara": {
     "fureai": false,
@@ -41,8 +45,13 @@
       "label": "公式サイト",
       "url": "https://africansafari.co.jp/faq/",
       "official": true
+    },
+    {
+      "label": "参考情報（座標）",
+      "url": "https://ja.wikipedia.org/wiki/%E4%B9%9D%E5%B7%9E%E8%87%AA%E7%84%B6%E5%8B%95%E7%89%A9%E5%85%AC%E5%9C%92",
+      "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

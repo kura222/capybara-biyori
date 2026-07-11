@@ -4,17 +4,25 @@
   "type": "park",
   "prefecture": "沖縄県",
   "region": "okinawa",
-  "lat": 26.373,
-  "lng": 127.829,
-  "latlngApprox": true,
+  "lat": 26.3763,
+  "lng": 127.8068,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
-      "label": "大人（昼の部）",
+      "label": "昼の部 大人（15歳以上）",
       "price": "2,000円"
+    },
+    {
+      "label": "昼の部 小人（4〜14歳）",
+      "price": "800円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "昼の部9:30〜17:00／夜の部17:00〜22:00（10月下旬〜5月下旬のイルミネーション期間）",
   "officialUrl": "https://www.southeast-botanical.jp/",
   "capybara": {
     "fureai": null,
@@ -34,6 +42,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

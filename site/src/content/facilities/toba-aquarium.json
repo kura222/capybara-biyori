@@ -12,9 +12,17 @@
     {
       "label": "大人",
       "price": "2,800円"
+    },
+    {
+      "label": "小・中学生",
+      "price": "1,600円"
+    },
+    {
+      "label": "幼児（3歳以上）",
+      "price": "800円"
     }
   ],
-  "hours": "9:30〜17:00（最終入館16:00）※GW・夏季等は9:00〜17:30。年中無休",
+  "hours": "9:30〜17:00（最終入館16:00）※GW・夏季・SWは9:00〜17:30（最終入館16:30）。年中無休",
   "officialUrl": "https://aquarium.co.jp/",
   "capybara": {
     "fureai": null,
@@ -31,16 +39,16 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（営業時間）",
       "url": "https://aquarium.co.jp/eigyo/",
       "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://note.com/capybarahp/n/n314e89b6782f",
-      "official": false
+      "label": "公式サイト（料金）",
+      "url": "https://aquarium.co.jp/ryoukin/",
+      "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

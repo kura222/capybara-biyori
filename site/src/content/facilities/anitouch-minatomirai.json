@@ -4,9 +4,9 @@
   "type": "indoor",
   "prefecture": "神奈川県",
   "region": "kanto",
-  "lat": 35.455,
-  "lng": 139.638,
-  "latlngApprox": true,
+  "lat": 35.45425,
+  "lng": 139.63856,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -14,20 +14,36 @@
       "price": "1,500円"
     },
     {
-      "label": "大人（土日祝・繁忙期）",
+      "label": "大人（土日祝・長期休暇）",
       "price": "1,800円"
     },
     {
-      "label": "4歳〜小学生（平日）",
+      "label": "大人（GW・夏休み等の特定日）",
+      "price": "2,000円"
+    },
+    {
+      "label": "学生（平日）",
+      "price": "1,300円"
+    },
+    {
+      "label": "小人・4歳〜小学生（平日）",
       "price": "800円"
+    },
+    {
+      "label": "小人・4歳〜小学生（土日祝）",
+      "price": "1,000円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
     }
   ],
-  "hours": "平日10:30〜19:00／土日祝10:30〜20:00・年中無休",
+  "hours": "平日10:30〜19:00（最終受付18:30）／土日祝10:30〜20:00（最終受付19:30）・年中無休",
   "officialUrl": "https://www.anitouch.jp/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "横浜ワールドポーターズ2階の屋内型ふれあい動物園。カピバラの三つ子誕生実績もあり間近でふれあえる"
+    "note": "横浜ワールドポーターズ2階の屋内型ふれあい動物園。足元をカピバラが歩き回り、有料のおやつあげ体験も人気。カピバラの三つ子誕生実績あり"
   },
   "onsen": null,
   "sources": [
@@ -42,6 +58,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

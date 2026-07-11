@@ -1,0 +1,22 @@
+{
+  "slug": "bella-allatpark-siofok",
+  "name": "ベッラ動物パーク（シオーフォク）",
+  "nameEn": "Bella Allatpark Siofok",
+  "country": "ハンガリー",
+  "countryCode": "HU",
+  "continent": "europe",
+  "city": "シオーフォク",
+  "lat": 46.86,
+  "lng": 18.05,
+  "latlngApprox": true,
+  "officialUrl": "https://bellapuszta.hu/en/",
+  "capybaraNote": "バラトン湖畔の動物パーク。専用サイトcam.siofokzoo.comで複数のライブカメラを配信し、ボタン操作でカピバラに遠隔餌やりができる珍しいシステム（収益は全額動物のケアに充当）。2025年5月にプール付きの飼育場へカピバラのペア「Bandi & Barbi」が入園",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://cam.siofokzoo.com/",
+    "https://bellapuszta.hu/en/",
+    "https://www.zaol.hu/helyi-kozelet/2025/05/kapibarak-siofok-allatpark"
+  ],
+  "lastVerified": "2026-07-11"
+}

@@ -16,9 +16,13 @@
     {
       "label": "中学生以下",
       "price": "無料"
+    },
+    {
+      "label": "兵庫県在住65歳以上・障がい者",
+      "price": "無料"
     }
   ],
-  "hours": "9:00〜17:00（3〜10月）／9:00〜16:30（11〜2月）※水曜休園・12/29〜1/1休園",
+  "hours": "9:00〜17:00（3〜10月・入園16:30まで）／9:00〜16:30（11〜2月・入園16:00まで）※水曜休園（祝日は開園）・12/29〜1/1休園",
   "officialUrl": "https://www.kobe-ojizoo.jp/",
   "capybara": {
     "fureai": false,
@@ -35,7 +39,7 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（開園時間・料金）",
       "url": "https://www.kobe-ojizoo.jp/guide/hour_charge/",
       "official": true
     },
@@ -45,6 +49,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

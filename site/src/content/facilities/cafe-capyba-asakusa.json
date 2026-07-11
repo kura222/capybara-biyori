@@ -23,7 +23,7 @@
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "2025年10月11日オープンの2号店（台東区千束1-1-4・浅草駅徒歩5分）。曳舟本店と同じ完全事前予約制・6歳以上対象"
+    "note": "2025年10月11日オープンの2号店（台東区千束1-1-4・浅草駅徒歩5分）。完全事前予約制・6歳以上対象。店内でカピバラ用おやつを販売（体調管理のため販売制限の場合あり）"
   },
   "onsen": null,
   "sources": [
@@ -33,11 +33,11 @@
       "official": true
     },
     {
-      "label": "参考情報",
+      "label": "予約サイト",
       "url": "https://cafecapyba-asakusa.rsvsys.jp/",
-      "official": false
+      "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

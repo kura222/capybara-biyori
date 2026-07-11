@@ -4,9 +4,9 @@
   "type": "park",
   "prefecture": "福岡県",
   "region": "kyushu",
-  "lat": 33.659,
-  "lng": 130.346,
-  "latlngApprox": true,
+  "lat": 33.6592,
+  "lng": 130.3535,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -22,7 +22,7 @@
       "price": "無料"
     }
   ],
-  "hours": "3〜10月 9:30〜17:30／11〜2月 9:30〜17:00・動物の森は閉園30分前まで・年末年始等休園日あり",
+  "hours": "3〜10月 9:30〜17:30／11〜2月 9:30〜17:00（入園は閉園1時間前まで・動物の森は閉園30分前まで）・12/31・1/1休、1月中旬のメンテナンス休園やオフシーズンの火曜休園あり",
   "officialUrl": "https://uminaka-park.jp/",
   "capybara": {
     "fureai": null,
@@ -40,8 +40,13 @@
       "label": "公式サイト",
       "url": "https://uminaka-park.jp/guide/open-hour/",
       "official": true
+    },
+    {
+      "label": "参考情報（座標）",
+      "url": "https://ja.wikipedia.org/wiki/%E6%B5%B7%E3%81%AE%E4%B8%AD%E9%81%93%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92",
+      "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

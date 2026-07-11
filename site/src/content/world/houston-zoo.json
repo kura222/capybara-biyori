@@ -1,0 +1,21 @@
+{
+  "slug": "houston-zoo",
+  "name": "ヒューストン動物園",
+  "nameEn": "Houston Zoo",
+  "country": "アメリカ",
+  "countryCode": "US",
+  "continent": "americas",
+  "city": "ヒューストン",
+  "lat": 29.7145,
+  "lng": -95.3905,
+  "latlngApprox": false,
+  "officialUrl": "https://www.houstonzoo.org/explore/animals/capybara/",
+  "capybaraNote": "約1.7haの大型展示「南米パンタナール」の草原ハビタットで、バク・オオアリクイ・レアなどと共に群れで暮らす。繁殖実績も多数",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.houstonzoo.org/explore/animals/capybara/",
+    "https://www.houstonzoo.org/explore/exhibits/south-americas-pantanal/"
+  ],
+  "lastVerified": "2026-07-11"
+}

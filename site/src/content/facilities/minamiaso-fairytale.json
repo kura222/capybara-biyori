@@ -4,17 +4,17 @@
   "type": "zoo",
   "prefecture": "熊本県",
   "region": "kyushu",
-  "lat": 32.825,
-  "lng": 131.13,
+  "lat": 32.8572,
+  "lng": 131.1213,
   "latlngApprox": true,
   "status": "open",
   "fees": [
     {
-      "label": "入園（1日出入り自由）",
-      "price": "500円"
+      "label": "入園（3歳以上・1人）",
+      "price": "700円"
     }
   ],
-  "hours": "10:00〜17:00（11〜3月の平日は16:30まで）・木曜休（11〜3月は水・木曜休）",
+  "hours": "10:00〜17:00（最終受付16:30）・木曜休（春・夏・冬休み期間、祝日を除く）",
   "officialUrl": "https://fairytale-zoo.com/",
   "capybara": {
     "fureai": true,
@@ -23,6 +23,11 @@
   },
   "onsen": null,
   "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://fairytale-zoo.com/about.html",
+      "official": true
+    },
     {
       "label": "公式サイト",
       "url": "https://fairytale-zoo.com/",
@@ -34,6 +39,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

@@ -4,40 +4,49 @@
   "type": "zoo",
   "prefecture": "福岡県",
   "region": "kyushu",
-  "lat": 33.63,
-  "lng": 130.59,
+  "lat": 33.6337,
+  "lng": 130.6021,
   "latlngApprox": true,
   "status": "open",
   "fees": [
     {
       "label": "大人",
-      "price": "700円"
+      "price": "800円"
     },
     {
       "label": "小人（3歳〜中学生）",
-      "price": "400円"
+      "price": "500円"
+    },
+    {
+      "label": "2歳以下",
+      "price": "無料"
     }
   ],
-  "hours": "冬季は土日祝のみ開園（詳細は要確認）",
-  "officialUrl": null,
+  "hours": "10:00〜17:00（最終入園16:30・7〜8月の土日祝は〜18:00）・水・木曜休（GW・春休み・夏休みは無休）・12〜2月は土日祝のみ開園",
+  "officialUrl": "https://piknica.com/",
   "capybara": {
     "fureai": null,
     "esayari": true,
-    "note": "約50種300頭羽を飼育するふれあい動物園。エサやりは1回200円"
+    "note": "ふれあい動物園でカピバラを飼育。動物のおやつ（1つ200円〜）でエサやりができる"
   },
   "onsen": null,
   "sources": [
     {
+      "label": "公式サイト",
+      "url": "https://piknica.com/",
+      "official": true
+    },
+    {
       "label": "参考情報",
-      "url": "https://kankou-iizuka.jp/topic_285/",
+      "url": "https://iko-yo.net/facilities/17066",
       "official": false
     },
     {
       "label": "参考情報",
-      "url": "https://rurubu.jp/andmore/spot/80084145",
+      "url": "https://kankou-iizuka.jp/topic_285/",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

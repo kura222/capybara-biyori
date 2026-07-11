@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "静岡県",
   "region": "tokai",
-  "lat": 34.986,
-  "lng": 138.407,
-  "latlngApprox": true,
+  "lat": 34.9799,
+  "lng": 138.4394,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -22,7 +22,7 @@
       "price": "無料"
     }
   ],
-  "hours": "9:00〜16:30（最終入園16:00）※月曜休園（祝日の場合翌平日）",
+  "hours": "9:00〜16:30（最終入園16:00）※月曜休園（祝日の場合は翌平日）・年末年始休園",
   "officialUrl": "https://www.nhdzoo.jp/",
   "capybara": {
     "fureai": null,
@@ -39,16 +39,21 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（カピバラ温泉）",
       "url": "https://www.nhdzoo.jp/event/naka.php?id=598",
       "official": true
     },
     {
-      "label": "公式サイト",
+      "label": "公式サイト（動物紹介）",
       "url": "https://www.nhdzoo.jp/animals/naka.php?animal_uid=94",
+      "official": true
+    },
+    {
+      "label": "公式サイト（総合案内）",
+      "url": "https://www.nhdzoo.jp/info/index.html",
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

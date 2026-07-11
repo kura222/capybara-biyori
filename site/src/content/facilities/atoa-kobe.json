@@ -4,30 +4,34 @@
   "type": "aquarium",
   "prefecture": "兵庫県",
   "region": "kansai",
-  "lat": 34.682,
-  "lng": 135.193,
-  "latlngApprox": true,
+  "lat": 34.6832,
+  "lng": 135.1936,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
       "label": "大人（中学生以上）",
-      "price": "2,600円（時期により変動）"
+      "price": "2,600円（特定日2,800円）"
     },
     {
-      "label": "子ども（小学生）",
-      "price": "1,500円"
+      "label": "小学生",
+      "price": "1,500円（特定日1,600円）"
     },
     {
       "label": "幼児（3歳以上）",
-      "price": "500円"
+      "price": "大人1名につき1名無料（2人目以降500円）"
+    },
+    {
+      "label": "3歳未満",
+      "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "10:00〜19:00（最終入場は閉館30分前）※年中無休（メンテナンス休館あり）",
   "officialUrl": "https://atoa-kobe.jp/",
   "capybara": {
-    "fureai": null,
-    "esayari": null,
-    "note": "劇場型アクアリウム。屋上「空辺の庭」でカピバラを飼育、飼育員の餌やり・解説を毎日開催"
+    "fureai": false,
+    "esayari": false,
+    "note": "劇場型アクアリウム。屋上「空辺の庭（SKYSHORE）」でカピバラを飼育し、飼育員による餌やり・解説を毎日開催。来館者向けのカピバラ餌やり・ふれあいプログラムはなし"
   },
   "onsen": {
     "has": false,
@@ -39,16 +43,16 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（営業案内）",
       "url": "https://atoa-kobe.jp/information/",
       "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://note.com/capybarahp/n/n314e89b6782f",
-      "official": false
+      "label": "公式サイト（体験プログラム）",
+      "url": "https://atoa-kobe.jp/experience/",
+      "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

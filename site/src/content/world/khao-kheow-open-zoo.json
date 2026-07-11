@@ -1,0 +1,22 @@
+{
+  "slug": "khao-kheow-open-zoo",
+  "name": "カオキアオ・オープン動物園",
+  "nameEn": "Khao Kheow Open Zoo",
+  "country": "タイ",
+  "countryCode": "TH",
+  "continent": "asia",
+  "city": "シラチャ（チョンブリー県）",
+  "lat": 13.213,
+  "lng": 101.056,
+  "latlngApprox": true,
+  "officialUrl": "https://khaokheow.zoothailand.org/en/index.php",
+  "capybaraNote": "タイ動物園機構（ZPO）運営のオープン型動物園。「Giant Rodent - Capybara」展示で毎日観覧でき、間近での餌やり・撮影体験も提供。人気者の「Ging・Gong・Kaew」に続き2026年3月に三つ子が誕生",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://khaokheow.zoothailand.org/en/index.php",
+    "https://www.pattayamail.com/thailandnews/khao-kheow-zoo-welcomes-trio-of-new-capybara-babies-ahead-of-songkran-rush-543228",
+    "https://en.thairath.co.th/news/local/2925799"
+  ],
+  "lastVerified": "2026-07-11"
+}

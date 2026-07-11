@@ -1,0 +1,22 @@
+{
+  "slug": "moscow-zoo",
+  "name": "モスクワ動物園",
+  "nameEn": "Moscow Zoo",
+  "country": "ロシア",
+  "countryCode": "RU",
+  "continent": "europe",
+  "city": "モスクワ",
+  "lat": 55.7614,
+  "lng": 37.578,
+  "latlngApprox": false,
+  "officialUrl": "https://moscowzoo.ru/animals/kinds/kapibara",
+  "capybaraNote": "市公式ポータルmos.ru上の動物園公式ページでカピバラ舎の自前ライブカメラを配信（開園時間の9〜17時が生中継、夜間は録画再生）。ビクーニャ・ラマ・グアナコとの混合展示",
+  "liveChannelSlug": "moscow-zoo",
+  "type": "zoo",
+  "sources": [
+    "https://zoo.mos.ru/kapibara/",
+    "https://moscowzoo.ru/animals/kinds/kapibara",
+    "https://www.mos.ru/news/item/151793073/"
+  ],
+  "lastVerified": "2026-07-11"
+}

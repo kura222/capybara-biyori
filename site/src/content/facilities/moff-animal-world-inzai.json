@@ -18,12 +18,12 @@
       "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "平日11:00〜18:00／土日祝10:00〜18:00（最終受付17:30）",
   "officialUrl": "https://moff-moff.jp/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "県内最大級の屋内型動物園。カピバラ・アルパカ・ペンギン等とふれあい、おやつやり可"
+    "note": "県内最大級の屋内型動物園（BIGHOPガーデンモール印西2階）。カピバラ・アルパカ・ペンギン等とふれあい、おやつやり可"
   },
   "onsen": null,
   "sources": [
@@ -33,11 +33,11 @@
       "official": true
     },
     {
-      "label": "参考情報",
+      "label": "BIGHOP公式ショップ情報",
       "url": "https://www.bighop.jp/shop/index.jsp?bf=1&fmt=6&shopid=2130",
-      "official": false
+      "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

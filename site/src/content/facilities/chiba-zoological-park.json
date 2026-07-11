@@ -4,21 +4,21 @@
   "type": "zoo",
   "prefecture": "千葉県",
   "region": "kanto",
-  "lat": 35.648,
-  "lng": 140.14,
-  "latlngApprox": true,
+  "lat": 35.64444,
+  "lng": 140.1255,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
       "label": "大人（高校生以上）",
-      "price": "800円（7〜8月は640円）"
+      "price": "800円"
     },
     {
       "label": "中学生以下",
       "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "9:30〜16:30（最終入園16:00）・水曜休（祝日の場合翌日）・12/29〜1/1休",
   "officialUrl": "https://www.city.chiba.jp/zoo/",
   "capybara": {
     "fureai": false,
@@ -29,7 +29,7 @@
   "sources": [
     {
       "label": "公式サイト",
-      "url": "https://www.city.chiba.jp/zoo/guide/20240601kaitei.html",
+      "url": "https://www.city.chiba.jp/zoo/guide/index.html",
       "official": true
     },
     {
@@ -38,6 +38,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

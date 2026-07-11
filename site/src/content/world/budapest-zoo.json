@@ -1,0 +1,21 @@
+{
+  "slug": "budapest-zoo",
+  "name": "ブダペスト動物園",
+  "nameEn": "Budapest Zoo and Botanical Garden",
+  "country": "ハンガリー",
+  "countryCode": "HU",
+  "continent": "europe",
+  "city": "ブダペスト",
+  "lat": 47.5211,
+  "lng": 19.077,
+  "latlngApprox": false,
+  "officialUrl": "https://zoobudapest.com/en/home/",
+  "capybaraNote": "南米展示（Dél-Amerika kifutó）でカピバラを飼育し定期的に繁殖。公式サイトのウェブカメラページに「South America Enclosure」カメラが掲載されている（配信状況は変動あり・要監視）",
+  "liveChannelSlug": "budapest-zoo",
+  "type": "zoo",
+  "sources": [
+    "https://zoobudapest.com/en/for-visitors/webcams/",
+    "https://zoobudapest.com/ezt-latnod-kell/hirek/csaladi-oromok-a-vizidisznoknal"
+  ],
+  "lastVerified": "2026-07-11"
+}

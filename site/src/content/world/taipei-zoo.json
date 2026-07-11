@@ -1,0 +1,21 @@
+{
+  "slug": "taipei-zoo",
+  "name": "台北市立動物園",
+  "nameEn": "Taipei Zoo",
+  "country": "台湾",
+  "countryCode": "TW",
+  "continent": "asia",
+  "city": "台北",
+  "lat": 24.9983,
+  "lng": 121.581,
+  "latlngApprox": false,
+  "officialUrl": "https://www.zoo.gov.taipei/News_Content.aspx?n=468E81F307502E43&sms=782334A7A9EFEEAC&s=383B92E63378A6FD",
+  "capybaraNote": "熱帯雨林区でカピバラを展示（公式動物図鑑に掲載）。2018年に台南の頑皮世界から4頭を導入し、2021年以降繁殖にも成功",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.zoo.gov.taipei/News_Content.aspx?n=468E81F307502E43&sms=782334A7A9EFEEAC&s=383B92E63378A6FD",
+    "https://www.zoo.gov.taipei/News_Content.aspx?n=BD065B2FA7782989&sms=72544237BBE4C5F6&s=436E25CB241E5353"
+  ],
+  "lastVerified": "2026-07-11"
+}

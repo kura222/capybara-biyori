@@ -4,14 +4,18 @@
   "type": "park",
   "prefecture": "東京都",
   "region": "kanto",
-  "lat": 35.75,
-  "lng": 139.755,
-  "latlngApprox": true,
+  "lat": 35.75361,
+  "lng": 139.75861,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
       "label": "入園 大人",
       "price": "800円"
+    },
+    {
+      "label": "入園 65歳以上・中学生",
+      "price": "400円"
     },
     {
       "label": "入園 小学生",
@@ -22,12 +26,12 @@
       "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "9:00〜17:00（夜間開園日は〜20:00）・どうぶつ広場は10:00〜15:30・火曜休（祝日の場合は翌日、学校長期休み期間は無休）・年末年始休",
   "officialUrl": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_02.html",
   "capybara": {
-    "fureai": null,
+    "fureai": false,
     "esayari": true,
-    "note": "リニューアル後のどうぶつ広場入口付近でカピバラがお出迎え。動物のえさは100円（のりもの券1枚）で販売"
+    "note": "リニューアル後のどうぶつ広場でカピバラやアルパカを展示。動物のえさは100円（のりもの券1枚）で販売。直接さわるふれあいはウサギ・ヒツジ等が対象"
   },
   "onsen": null,
   "sources": [
@@ -42,6 +46,6 @@
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

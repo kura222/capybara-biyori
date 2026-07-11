@@ -8,27 +8,40 @@
   "lng": 139.321,
   "latlngApprox": true,
   "status": "open",
-  "fees": [],
-  "hours": "9:00〜16:30（3〜10月）／9:00〜16:00（11〜2月）・月曜休",
+  "fees": [
+    {
+      "label": "18歳未満",
+      "price": "無料"
+    },
+    {
+      "label": "18歳以上65歳未満",
+      "price": "500円"
+    },
+    {
+      "label": "65歳以上（証明書提示）",
+      "price": "200円"
+    }
+  ],
+  "hours": "9:00〜16:30（3〜10月・最終入園16:00）／9:00〜16:00（11〜2月・最終入園15:30）・月曜休（祝日や繁忙期は開園）・1/1休",
   "officialUrl": "https://hamurazoo.jp/",
   "capybara": {
-    "fureai": null,
-    "esayari": null,
-    "note": "公式「動物紹介」にカピバラ掲載。都内西部でカピバラに会える貴重な市営動物園"
+    "fureai": false,
+    "esayari": false,
+    "note": "公式「動物紹介」にカピバラ掲載。ふれあい・エサやりイベントの対象はサル・モルモット等で、カピバラは観察展示。18歳未満入園無料の市営動物園"
   },
   "onsen": null,
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（動物紹介）",
       "url": "https://hamurazoo.jp/animals/detail.html?CN=336234",
       "official": true
     },
     {
-      "label": "参考情報",
-      "url": "https://capybara.eek.jp/navi-hamura.html",
-      "official": false
+      "label": "公式サイト（利用案内）",
+      "url": "https://hamurazoo.jp/info/",
+      "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

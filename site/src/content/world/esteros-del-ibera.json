@@ -1,0 +1,21 @@
+{
+  "slug": "esteros-del-ibera",
+  "name": "イベラ湿地（エステロス・デル・イベラ）",
+  "nameEn": "Esteros del Iberá",
+  "country": "アルゼンチン",
+  "countryCode": "AR",
+  "continent": "americas",
+  "city": "コロニア・カルロス・ペジェグリーニ（コリエンテス州）",
+  "lat": -28.54,
+  "lng": -57.17,
+  "latlngApprox": true,
+  "officialUrl": "https://corrientes.tur.ar/esteros-del-ibera/",
+  "capybaraNote": "アルゼンチン最大の保護区で世界有数の湿地。州観光公式が「カルピンチョ（カピバラ）に1mまで近づける」と紹介する野生観察の聖地。ボートツアーやカヤックで観察でき、5〜10月が見やすい",
+  "liveChannelSlug": null,
+  "type": "wild-spot",
+  "sources": [
+    "https://corrientes.tur.ar/esteros-del-ibera/",
+    "https://turismo.corrientes.gob.ar/noticia/la-magia-de-los-esteros-del-ibera-se-exhibe-en-un-recorrido-virtual"
+  ],
+  "lastVerified": "2026-07-11"
+}

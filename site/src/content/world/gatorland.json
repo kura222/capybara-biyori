@@ -1,0 +1,20 @@
+{
+  "slug": "gatorland",
+  "name": "ゲーターランド",
+  "nameEn": "Gatorland",
+  "country": "アメリカ",
+  "countryCode": "US",
+  "continent": "americas",
+  "city": "オーランド",
+  "lat": 28.36,
+  "lng": -81.407,
+  "latlngApprox": false,
+  "officialUrl": "https://www.gatorland.com/animals/meet-a-capybara/",
+  "capybaraNote": "ワニで有名なテーマパークの「フラミンゴ島」でMochi・Boba・Chai・Latteの4頭を飼育。島に上陸してふれあえるCapybara Encounterが人気",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.gatorland.com/animals/meet-a-capybara/"
+  ],
+  "lastVerified": "2026-07-11"
+}

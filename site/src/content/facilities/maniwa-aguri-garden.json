@@ -4,17 +4,17 @@
   "type": "farm",
   "prefecture": "岡山県",
   "region": "chugoku",
-  "lat": 35.023,
-  "lng": 133.754,
-  "latlngApprox": true,
+  "lat": 35.0587,
+  "lng": 133.7526,
+  "latlngApprox": false,
   "status": "open",
   "fees": [],
-  "hours": "ショップ10:00〜18:00・水曜休（施設により異なる）",
+  "hours": "ショップ10:00〜18:00（店舗により異なる）・水曜休",
   "officialUrl": "https://maniwa-agurigarden.com/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "園内に「カピバラふれあいパーク」があり、ふれあい・エサやりができる"
+    "note": "園内の「ふれあいガーデン（カピバラふれあいパーク）」でカピバラとのふれあい・エサやりができる"
   },
   "onsen": null,
   "sources": [
@@ -25,10 +25,15 @@
     },
     {
       "label": "参考情報",
-      "url": "https://capybara.eek.jp/navi-maniwa.html",
+      "url": "https://www.setouchi.travel/jp/trip-ideas/ph2-jp-st-080/",
+      "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://iko-yo.net/facilities/91945",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

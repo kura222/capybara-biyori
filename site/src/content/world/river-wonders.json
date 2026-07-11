@@ -1,0 +1,21 @@
+{
+  "slug": "river-wonders",
+  "name": "リバーワンダーズ",
+  "nameEn": "River Wonders (Mandai Wildlife Reserve)",
+  "country": "シンガポール",
+  "countryCode": "SG",
+  "continent": "asia",
+  "city": "シンガポール",
+  "lat": 1.403,
+  "lng": 103.79,
+  "latlngApprox": false,
+  "officialUrl": "https://www.mandai.com/en/river-wonders/animals-and-zones/capybara.html",
+  "capybaraNote": "アジア唯一の川テーマ動物園。来園者が動物と同じ空間に入れる「Amazonian Encounters」でカピバラに接近でき、ボートライドやプレゼンテーションでも登場。2026年時点で12頭を飼育（同年生まれの子を含む）",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.mandai.com/en/river-wonders/animals-and-zones/capybara.html",
+    "https://mothership.sg/2026/04/meet-river-wonders-capybara-themed-activities/"
+  ],
+  "lastVerified": "2026-07-11"
+}

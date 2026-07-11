@@ -4,9 +4,9 @@
   "type": "farm",
   "prefecture": "茨城県",
   "region": "kanto",
-  "lat": 35.943,
-  "lng": 140.3395,
-  "latlngApprox": true,
+  "lat": 35.94042,
+  "lng": 140.26969,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -38,6 +38,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

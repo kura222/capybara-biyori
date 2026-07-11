@@ -1,0 +1,21 @@
+{
+  "slug": "wellington-zoo",
+  "name": "ウェリントン動物園",
+  "nameEn": "Wellington Zoo",
+  "country": "ニュージーランド",
+  "countryCode": "NZ",
+  "continent": "oceania",
+  "city": "ウェリントン",
+  "lat": -41.3195,
+  "lng": 174.784,
+  "latlngApprox": false,
+  "officialUrl": "https://www.wellingtonzoo.com/animals/meet-the-animals/show/capybara-2",
+  "capybaraNote": "NZの首都にある同国有数のカピバラ飼育園。公式動物リストにカピバラを掲載し、飼育エリア内に入れるCapybara Close Encounterを開催。繁殖目的でオスのFernandoも合流",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.wellingtonzoo.com/animals/meet-the-animals/show/capybara-2",
+    "https://www.wellingtonzoo.com/visit/plan-your-day/things-to-do/close-encounters/capybara"
+  ],
+  "lastVerified": "2026-07-11"
+}

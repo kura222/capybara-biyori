@@ -4,17 +4,38 @@
   "type": "cafe",
   "prefecture": "兵庫県",
   "region": "kansai",
-  "lat": 34.722,
-  "lng": 135.267,
-  "latlngApprox": true,
+  "lat": 34.7219,
+  "lng": 135.2741,
+  "latlngApprox": false,
   "status": "open",
-  "fees": [],
-  "hours": "11:00〜18:00（最終受付17:30）※動物の体調により変動あり",
+  "fees": [
+    {
+      "label": "大人 60分／90分／120分",
+      "price": "1,980円／2,530円／3,080円（おやつあげ体験込み・要ワンオーダー）"
+    },
+    {
+      "label": "子ども 60分／90分／120分",
+      "price": "1,650円／2,200円／2,750円"
+    },
+    {
+      "label": "お試し30分",
+      "price": "1,650円"
+    },
+    {
+      "label": "延長30分",
+      "price": "550円"
+    },
+    {
+      "label": "2歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "ふれあい11:00〜18:00（最終受付17:30）／カフェ10:00〜19:00 ※不定休・動物の体調により変動あり",
   "officialUrl": "https://mofiina.cafe/",
   "capybara": {
     "fureai": true,
-    "esayari": null,
-    "note": "神戸市東灘区のふれあいカフェ。カピバラ「フィーナ」ほかフクロモモンガ・フェネック等とふれあえる。2歳以下無料"
+    "esayari": true,
+    "note": "神戸市東灘区のふれあいカフェ。カピバラ「フィーナ」（メス）ほかフェネック・フクロモモンガなど約60種の動物とふれあえる。各時間パックにおやつあげ体験込み"
   },
   "onsen": {
     "has": false,
@@ -29,8 +50,13 @@
       "label": "公式サイト",
       "url": "https://mofiina.cafe/",
       "official": true
+    },
+    {
+      "label": "公式サイト（料金＆注意事項）",
+      "url": "https://mofiina.cafe/%E6%96%99%E9%87%91%EF%BC%86%E3%83%AB%E3%83%BC%E3%83%AB/",
+      "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

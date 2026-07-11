@@ -1,0 +1,20 @@
+{
+  "slug": "henry-vilas-zoo",
+  "name": "ヘンリー・ビラス動物園",
+  "nameEn": "Henry Vilas Zoo",
+  "country": "アメリカ",
+  "countryCode": "US",
+  "continent": "americas",
+  "city": "マディソン",
+  "lat": 43.0605,
+  "lng": -89.41,
+  "latlngApprox": false,
+  "officialUrl": "https://www.henryvilaszoo.gov/animal/capybara/",
+  "capybaraNote": "入園無料で知られる公営動物園。公式動物リストにカピバラ専用ページを掲載",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.henryvilaszoo.gov/animal/capybara/"
+  ],
+  "lastVerified": "2026-07-11"
+}

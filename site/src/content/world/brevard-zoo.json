@@ -1,0 +1,20 @@
+{
+  "slug": "brevard-zoo",
+  "name": "ブレバード動物園",
+  "nameEn": "Brevard Zoo",
+  "country": "アメリカ",
+  "countryCode": "US",
+  "continent": "americas",
+  "city": "メルボルン（フロリダ州）",
+  "lat": 28.1553,
+  "lng": -80.671,
+  "latlngApprox": false,
+  "officialUrl": "https://brevardzoo.org/",
+  "capybaraNote": "熱帯エリア「Rainforest Revealed」で飼育。泳げる水場付きのオープンエア型ハビタットで、バクなど南米種との混合展示",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://brevardzoo.org/news/welcome-our-first-new-rainforest-revealed-resident/"
+  ],
+  "lastVerified": "2026-07-11"
+}

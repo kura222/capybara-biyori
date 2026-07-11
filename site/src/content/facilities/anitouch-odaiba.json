@@ -4,31 +4,72 @@
   "type": "indoor",
   "prefecture": "東京都",
   "region": "kanto",
-  "lat": 35.628,
-  "lng": 139.774,
-  "latlngApprox": true,
+  "lat": 35.62781,
+  "lng": 139.77356,
+  "latlngApprox": false,
   "status": "open",
-  "fees": [],
-  "hours": null,
-  "officialUrl": "https://www.anitouch.com/",
+  "fees": [
+    {
+      "label": "大人（平日）",
+      "price": "1,500円"
+    },
+    {
+      "label": "大人（土日祝・長期休暇）",
+      "price": "1,800円"
+    },
+    {
+      "label": "大人（GW・夏休み等の特定日）",
+      "price": "2,000円"
+    },
+    {
+      "label": "学生（平日）",
+      "price": "1,300円"
+    },
+    {
+      "label": "小人・4歳〜小学生（平日）",
+      "price": "800円"
+    },
+    {
+      "label": "小人・4歳〜小学生（土日祝）",
+      "price": "1,000円"
+    },
+    {
+      "label": "3歳以下",
+      "price": "無料"
+    }
+  ],
+  "hours": "平日11:00〜19:00（最終受付18:30）／土日祝11:00〜21:00（最終受付20:00）・不定休（アクアシティお台場に準ずる）",
+  "officialUrl": "https://www.odaiba.anitouch.com/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "アクアシティお台場3階の屋内型ふれあい動物園。2025年にはカピバラの赤ちゃんが誕生"
+    "note": "アクアシティお台場3階の屋内型ふれあい動物園。約30種以上の動物とふれあえ、2025年にはカピバラの赤ちゃんが誕生。名物「カピバラの猫足風呂」（登録商標）を展示"
   },
-  "onsen": null,
+  "onsen": {
+    "has": true,
+    "seasonLabel": "通年（屋内展示「カピバラの猫足風呂」）",
+    "start": null,
+    "end": null,
+    "times": null,
+    "sourceUrl": "https://www.odaiba.anitouch.com/"
+  },
   "sources": [
     {
       "label": "公式サイト",
-      "url": "https://www.anitouch.com/",
+      "url": "https://www.odaiba.anitouch.com/",
       "official": true
     },
     {
       "label": "参考情報",
       "url": "https://report.iko-yo.net/articles/26227",
       "official": false
+    },
+    {
+      "label": "参考情報",
+      "url": "https://tokyobay.keizai.biz/headline/2308/",
+      "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

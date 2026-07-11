@@ -1,0 +1,20 @@
+{
+  "slug": "copenhagen-zoo",
+  "name": "コペンハーゲン動物園",
+  "nameEn": "Copenhagen Zoo",
+  "country": "デンマーク",
+  "countryCode": "DK",
+  "continent": "europe",
+  "city": "コペンハーゲン",
+  "lat": 55.6726,
+  "lng": 12.5216,
+  "latlngApprox": false,
+  "officialUrl": "https://www.zoo.dk/da/dyrene-i-zoo/flodsvin/",
+  "capybaraNote": "公式サイトの動物一覧にカピバラ（デンマーク語でflodsvin）を掲載。北欧でカピバラに会える代表的な園",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.zoo.dk/da/dyrene-i-zoo/flodsvin/"
+  ],
+  "lastVerified": "2026-07-11"
+}

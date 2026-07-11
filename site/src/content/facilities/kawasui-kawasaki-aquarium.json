@@ -4,9 +4,9 @@
   "type": "aquarium",
   "prefecture": "神奈川県",
   "region": "kanto",
-  "lat": 35.53,
-  "lng": 139.699,
-  "latlngApprox": true,
+  "lat": 35.52961,
+  "lng": 139.69631,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -31,7 +31,7 @@
   "capybara": {
     "fureai": true,
     "esayari": null,
-    "note": "川崎駅前の都市型水族館。カピバラやナマケモノ等も展示し、カピバラふれあい体験（20分800円・入館料別、12:00〜18:00）を実施"
+    "note": "川崎駅前・川崎ルフロン内の都市型水族館。カピバラやナマケモノ等も展示し、カピバラふれあい体験（20分800円・入館料別、12:00〜18:00）を実施"
   },
   "onsen": null,
   "sources": [
@@ -46,6 +46,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

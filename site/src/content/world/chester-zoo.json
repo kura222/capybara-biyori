@@ -1,0 +1,21 @@
+{
+  "slug": "chester-zoo",
+  "name": "チェスター動物園",
+  "nameEn": "Chester Zoo",
+  "country": "イギリス",
+  "countryCode": "GB",
+  "continent": "europe",
+  "city": "チェスター",
+  "lat": 53.227,
+  "lng": -2.8843,
+  "latlngApprox": false,
+  "officialUrl": "https://www.chesterzoo.org/animals/capybara",
+  "capybaraNote": "英国最大級の動物園。Islandsエリア入口前のパドックでオオアリクイと同居展示。有料の「カピバラ・エンカウンター」体験やアニマルアドプト制度も公式提供",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.chesterzoo.org/animals/capybara",
+    "https://www.chesterzoo.org/support-our-charity/adopt-an-animal/adopt-a-capybara"
+  ],
+  "lastVerified": "2026-07-11"
+}

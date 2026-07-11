@@ -1,0 +1,23 @@
+{
+  "slug": "zamosc-zoo",
+  "name": "ザモシチ動物園",
+  "nameEn": "Zamosc Zoo (Stefan Miler Zoological Garden)",
+  "country": "ポーランド",
+  "countryCode": "PL",
+  "continent": "europe",
+  "city": "ザモシチ",
+  "lat": 50.7115,
+  "lng": 23.2355,
+  "latlngApprox": true,
+  "officialUrl": "https://www.zoo.zamosc.pl/page/365-kapibara",
+  "capybaraNote": "コビトカバ「Fupi」・バク・カピバラのペアが同じパビリオンと段状の池で暮らすユニークな混合展示。園のウェブカメラ（カバ×カピバラ）がWindyに掲載されている",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.zoo.zamosc.pl/page/365-kapibara",
+    "https://www.zoo.zamosc.pl/page/377-hipopotam-karlowaty",
+    "https://www.dziennikwschodni.pl/zamosc/zoo-w-zamosciu-hipopotam-fupi-i-kapibary-maja-nowy-dom,n,1000169378.html",
+    "https://www.windy.com/pl/-Kamery-internetowe/Polska/Lubelskie/Zamo%C5%9B%C4%87/Rzeczpospolita-%E2%88%92-zoo-zamosc-pl-%E2%88%92-hipopotam-kapibara-%E2%88%92-azymut-WN/webcams/1446403087"
+  ],
+  "lastVerified": "2026-07-11"
+}

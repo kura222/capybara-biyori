@@ -1,0 +1,21 @@
+{
+  "slug": "pantanal",
+  "name": "パンタナール（エストラーダ・パルケ周辺）",
+  "nameEn": "Pantanal",
+  "country": "ブラジル",
+  "countryCode": "BR",
+  "continent": "americas",
+  "city": "コルンバ（マットグロッソ・ド・スル州）",
+  "lat": -19,
+  "lng": -57.5,
+  "latlngApprox": true,
+  "officialUrl": "https://www.turismo.ms.gov.br/conheca-ms/pantanal/",
+  "capybaraNote": "世界最大の湿地でユネスコ生物圏保護区。野生カピバラの遭遇率が世界で最も高いエリアの一つで、州観光公式もエストラーダ・パルケ沿いのカピバラ・カイマン観察を紹介。乾季（4〜10月）がベストシーズン",
+  "liveChannelSlug": null,
+  "type": "wild-spot",
+  "sources": [
+    "https://www.turismo.ms.gov.br/conheca-ms/pantanal/",
+    "https://visitbrasil.com/en/location/pantanal-en/"
+  ],
+  "lastVerified": "2026-07-11"
+}

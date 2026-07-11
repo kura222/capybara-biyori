@@ -22,7 +22,7 @@
       "price": "2,400円"
     }
   ],
-  "hours": null,
+  "hours": "3/1〜11/3は9:30〜17:00（最終入園16:00）／11/4〜3月中旬は9:30〜16:30（最終入園15:30）・水曜休（祝日・春休み・GW・夏休み・年末年始を除く）",
   "officialUrl": "https://safari.co.jp/",
   "capybara": {
     "fureai": false,
@@ -32,13 +32,13 @@
   "onsen": null,
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（カピバラ）",
       "url": "https://safari.co.jp/animal/capybara/",
       "official": true
     },
     {
-      "label": "公式サイト",
-      "url": "https://www.safari.co.jp/park/system/",
+      "label": "公式サイト（料金）",
+      "url": "https://safari.co.jp/admission/",
       "official": true
     },
     {
@@ -47,6 +47,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

@@ -14,12 +14,12 @@
       "price": "無料"
     }
   ],
-  "hours": "9:00〜17:00 ※火曜休園（祝日の場合翌日、3〜5月・10月・11月は無休）",
+  "hours": "9:00〜17:00 ※6〜9月・12〜2月の火曜休園（祝日の場合は直後の平日）",
   "officialUrl": "https://wakayamajo.jp/animal/index.html",
   "capybara": {
     "fureai": null,
     "esayari": null,
-    "note": "和歌山城内にある大正4年開園の無料動物園。「童話園」エリアでカピバラを飼育"
+    "note": "和歌山城内にある大正4年（1915年）開園の無料動物園。ほ乳類中心の「童話園」エリアでカピバラを飼育・展示"
   },
   "onsen": {
     "has": false,
@@ -36,11 +36,16 @@
       "official": true
     },
     {
+      "label": "公式サイト（動物マップ）",
+      "url": "https://wakayamajo.jp/animal/map.html",
+      "official": true
+    },
+    {
       "label": "参考情報",
-      "url": "https://note.com/capybarahp/n/nb6abc8f1902e",
+      "url": "https://www.wakayama-kanko.or.jp/spots/detail_3309.html",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

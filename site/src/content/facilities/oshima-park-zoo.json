@@ -14,12 +14,12 @@
       "price": "無料"
     }
   ],
-  "hours": null,
+  "hours": "8:30〜17:00・年中無休",
   "officialUrl": "https://www.soumu.metro.tokyo.lg.jp/11osima/osima/park/zoo/zoo",
   "capybara": {
     "fureai": false,
     "esayari": false,
-    "note": "伊豆大島の無料動物園。大島の自然林を囲った大型ウォークインケージ内でカピバラやワラビーがのびのび暮らす"
+    "note": "伊豆大島の無料動物園（約60種350点・溶岩を生かした展示）。大島の自然林を囲った大型ウォークインケージ内でカピバラやワラビーがのびのび暮らす"
   },
   "onsen": null,
   "sources": [
@@ -34,6 +34,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

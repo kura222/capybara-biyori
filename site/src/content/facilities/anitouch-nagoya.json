@@ -4,22 +4,18 @@
   "type": "indoor",
   "prefecture": "愛知県",
   "region": "tokai",
-  "lat": 35.093,
-  "lng": 136.883,
-  "latlngApprox": true,
+  "lat": 35.1091,
+  "lng": 136.8827,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
-      "label": "大人 平日",
-      "price": "1,200円"
+      "label": "大人 平日／休日／特定日",
+      "price": "1,200円／1,500円／1,700円"
     },
     {
-      "label": "大人 休日（土日祝・長期休暇）",
-      "price": "1,500円"
-    },
-    {
-      "label": "大人 特定日",
-      "price": "1,700円"
+      "label": "学生（中学生以上）平日／休日／特定日",
+      "price": "1,000円／1,300円／1,400円"
     },
     {
       "label": "小人（4歳〜小学生）平日／休日／特定日",
@@ -30,12 +26,12 @@
       "price": "無料"
     }
   ],
-  "hours": "平日10:00〜19:00／土日祝10:00〜20:00（ららぽーとの営業時間に準ずる）",
+  "hours": "平日10:00〜19:00（最終受付18:30）／土日祝10:00〜20:00（最終受付19:30）※不定休（ららぽーと名古屋みなとアクルス休館日に準ずる）",
   "officialUrl": "https://www.nagoya.anitouch.com/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "屋内型ふれあい動物園。「カピバラの猫足風呂」あり。おやつあげ体験は別途有料。カピバラの5つ子誕生実績あり"
+    "note": "屋内型ふれあい動物園。「カピバラの猫足風呂」（登録商標）あり。おやつあげ体験は別途有料。カピバラの5つ子誕生実績あり"
   },
   "onsen": {
     "has": false,
@@ -57,6 +53,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

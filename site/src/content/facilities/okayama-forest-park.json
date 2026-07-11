@@ -4,12 +4,25 @@
   "type": "theme_park",
   "prefecture": "岡山県",
   "region": "chugoku",
-  "lat": 34.86,
-  "lng": 134.04,
-  "latlngApprox": true,
+  "lat": 34.8674,
+  "lng": 134.0137,
+  "latlngApprox": false,
   "status": "open",
-  "fees": [],
-  "hours": null,
+  "fees": [
+    {
+      "label": "大人（中学生以上）",
+      "price": "1,500円"
+    },
+    {
+      "label": "小人（4歳〜小学生）",
+      "price": "1,000円"
+    },
+    {
+      "label": "犬",
+      "price": "500円"
+    }
+  ],
+  "hours": "平日10:00〜17:00／土日祝9:30〜17:00（季節により変動）・水曜休（12〜2月は水・木曜休、祝日・大型連休・年末年始は営業）",
   "officialUrl": "https://www.farmpark.co.jp/doitsunomori/",
   "capybara": {
     "fureai": true,
@@ -18,6 +31,11 @@
   },
   "onsen": null,
   "sources": [
+    {
+      "label": "公式サイト",
+      "url": "https://www.farmpark.co.jp/doitsunomori/park-guide/",
+      "official": true
+    },
     {
       "label": "公式サイト",
       "url": "https://www.farmpark.co.jp/doitsunomori/activity/touch-animal/",
@@ -29,6 +47,6 @@
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

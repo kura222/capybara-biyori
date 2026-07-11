@@ -4,34 +4,38 @@
   "type": "cafe",
   "prefecture": "大阪府",
   "region": "kansai",
-  "lat": 34.674,
+  "lat": 34.6728,
   "lng": 135.498,
-  "latlngApprox": true,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
-      "label": "大人 60分（ワンドリンク制）",
-      "price": "1,980円"
+      "label": "大人（13歳以上）60分",
+      "price": "2,200円（おやつセット付・ドリンク別途注文制）"
     },
     {
-      "label": "大人 90分",
-      "price": "2,530円"
+      "label": "大人 90分／120分",
+      "price": "2,800円／3,300円"
     },
     {
       "label": "小人（4〜12歳）",
-      "price": "990円"
+      "price": "990円（プチおやつ付）"
     },
     {
       "label": "幼児（0〜3歳）",
-      "price": "無料"
+      "price": "無料（20歳以上の有料同伴者必須）"
+    },
+    {
+      "label": "延長30分（平日のみ）",
+      "price": "1,100円"
     }
   ],
-  "hours": "12:00〜19:00（最終受付18:00）※火曜定休（祝日は営業）",
+  "hours": "12:00〜19:00（最終受付18:00）※火曜定休（祝日は通常営業）",
   "officialUrl": "https://animeal.jp/shinsaibashi/",
   "capybara": {
     "fureai": true,
     "esayari": true,
-    "note": "都市型ふれあい動物園。カピバラのお風呂「アニミル湯」あり。おやつ込みの時間パックあり"
+    "note": "都市型ふれあい動物園。時間パックに動物のおやつセット付き。カピバラのお風呂「アニミル湯」あり"
   },
   "onsen": {
     "has": false,
@@ -43,7 +47,7 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（料金・システム）",
       "url": "https://animeal.jp/shinsaibashi/system.html",
       "official": true
     },
@@ -53,6 +57,6 @@
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

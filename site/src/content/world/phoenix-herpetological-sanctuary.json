@@ -1,0 +1,21 @@
+{
+  "slug": "phoenix-herpetological-sanctuary",
+  "name": "フェニックス爬虫類サンクチュアリ",
+  "nameEn": "Phoenix Herpetological Sanctuary",
+  "country": "アメリカ",
+  "countryCode": "US",
+  "continent": "americas",
+  "city": "スコッツデール",
+  "lat": 33.75,
+  "lng": -111.79,
+  "latlngApprox": true,
+  "officialUrl": "https://www.phoenixherp.com/",
+  "capybaraNote": "爬虫類保護施設ながらカピバラを飼育し、双方向配信サービスzoolifeで現地9:00〜16:00（MST）にカピバラカメラを公式配信。現地では「カピバラ体験」も開催",
+  "liveChannelSlug": "zoolife-phoenix",
+  "type": "sanctuary",
+  "sources": [
+    "https://www.phoenixherp.com/visit/live-cameras-test.html",
+    "https://zoolife.tv/phoenixherp"
+  ],
+  "lastVerified": "2026-07-11"
+}

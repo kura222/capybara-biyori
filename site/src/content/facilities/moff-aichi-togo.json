@@ -4,9 +4,9 @@
   "type": "cafe",
   "prefecture": "愛知県",
   "region": "tokai",
-  "lat": 35.087,
-  "lng": 137.05,
-  "latlngApprox": true,
+  "lat": 35.0993,
+  "lng": 137.0467,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -15,14 +15,14 @@
     },
     {
       "label": "4歳〜小学生",
-      "price": "950円"
+      "price": "950円（時間無制限）"
     },
     {
       "label": "3歳以下",
       "price": "無料"
     }
   ],
-  "hours": "10:00〜20:00（最終受付19:30）",
+  "hours": "10:00〜20:00（最終入園19:30・カフェL.O.19:30）",
   "officialUrl": "https://moff-moff.jp/archives/shop/ani-cafe_aichi-togo",
   "capybara": {
     "fureai": true,
@@ -49,6 +49,6 @@
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

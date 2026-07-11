@@ -4,9 +4,9 @@
   "type": "farm",
   "prefecture": "兵庫県",
   "region": "kansai",
-  "lat": 35.04,
-  "lng": 134.84,
-  "latlngApprox": true,
+  "lat": 35.1372,
+  "lng": 134.7913,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -22,12 +22,12 @@
       "price": "1,000円"
     }
   ],
-  "hours": "季節により変動（毎週水曜休園、12〜2月は平日休園）",
+  "hours": "季節により変動 ※水曜休園（長期休暇中は営業）・12月〜2月末は平日休園",
   "officialUrl": "https://yodel-forest.jp/",
   "capybara": {
     "fureai": true,
     "esayari": null,
-    "note": "アルパカ・カピバラなど約60種200頭羽の動物と間近にふれあえる農村公園"
+    "note": "アルパカ・カピバラなど約60種200頭羽の動物と間近にふれあえる農村公園。カピバラへのエサやりはイベント開催時に可能な場合あり"
   },
   "onsen": {
     "has": false,
@@ -39,16 +39,16 @@
   },
   "sources": [
     {
-      "label": "公式サイト",
+      "label": "公式サイト（ご利用案内）",
       "url": "https://yodel-forest.jp/guide",
       "official": true
     },
     {
       "label": "参考情報",
-      "url": "https://www.kamikawa-navi.jp/guide/spot/650",
+      "url": "https://capybara.eek.jp/navi-yodel.html",
       "official": false
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }

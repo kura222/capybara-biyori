@@ -1,0 +1,22 @@
+{
+  "slug": "capybara-taiwan",
+  "name": "CapybaraTaiwan 水豚君",
+  "nameEn": "CapybaraTaiwan",
+  "country": "台湾",
+  "countryCode": "TW",
+  "continent": "asia",
+  "city": "台湾（海辺・詳細所在地は非公開）",
+  "lat": 23.7,
+  "lng": 121,
+  "latlngApprox": true,
+  "officialUrl": "https://www.youtube.com/@CapybaraTaiwan",
+  "capybaraNote": "台湾の海辺のカピバラカフェから配信するYouTubeチャンネル。17頭のカピバラの日常（餌やり・水浴び・リラックス）を動画とライブで発信。不定期〜高頻度でライブ配信を実施",
+  "liveChannelSlug": "capybara-taiwan",
+  "type": "cafe",
+  "sources": [
+    "https://www.youtube.com/@CapybaraTaiwan",
+    "https://www.youtube.com/watch?v=mypElolG0YI",
+    "https://www.youtube.com/watch?v=5PnUFqs3PD0"
+  ],
+  "lastVerified": "2026-07-11"
+}

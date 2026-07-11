@@ -1,0 +1,21 @@
+{
+  "slug": "santa-barbara-zoo",
+  "name": "サンタバーバラ動物園",
+  "nameEn": "Santa Barbara Zoo",
+  "country": "アメリカ",
+  "countryCode": "US",
+  "continent": "americas",
+  "city": "サンタバーバラ",
+  "lat": 34.4208,
+  "lng": -119.663,
+  "latlngApprox": false,
+  "officialUrl": "https://www.sbzoo.org/zoo-animals/species/capybara",
+  "capybaraNote": "公式動物リストにカピバラを掲載。間近で会える有料の「カピバラ・エンカウンター」を週2回開催",
+  "liveChannelSlug": null,
+  "type": "zoo",
+  "sources": [
+    "https://www.sbzoo.org/zoo-animals/species/capybara",
+    "https://www.sbzoo.org/wildlife-experiences"
+  ],
+  "lastVerified": "2026-07-11"
+}

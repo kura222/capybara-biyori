@@ -84,6 +84,37 @@ const facilities = defineCollection({
 });
 
 /**
+ * 世界のカピバラ施設コレクション（P3・/world/ 用）。
+ * ファイル名（拡張子なし）が施設スラッグ = 内部キー。
+ * 国内 facilities とは別系統（海外は料金・温泉などの詳細を持たず、
+ * 「会える場所」と「ライブカメラの有無」に絞った軽量スキーマ）。
+ */
+const worldFacilities = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/world' }),
+  schema: z.object({
+    // slug は任意保持（URL/照合には entry.id=ファイル名を使う）
+    slug: z.string().optional(),
+    name: z.string(), // 日本語表示名
+    nameEn: z.string(), // 英語表記
+    country: z.string(), // 国名（日本語）
+    countryCode: z.string(), // ISO 3166-1 alpha-2（US/AU など）
+    continent: z.enum(['americas', 'europe', 'asia', 'oceania']),
+    city: z.string(),
+    lat: z.number(),
+    lng: z.number(),
+    latlngApprox: z.boolean().default(false),
+    officialUrl: z.string().url(),
+    capybaraNote: z.string(), // その施設のカピバラ事情（独自解説）
+    // 対応するライブ配信チャンネル（src/data/channels.json の channels[].slug）。
+    // カメラの無い施設は null。
+    liveChannelSlug: z.string().nullable().default(null),
+    type: z.enum(['zoo', 'sanctuary', 'cafe', 'farm', 'wild-spot']),
+    sources: z.array(z.string()).default([]),
+    lastVerified: z.string(), // YYYY-MM-DD
+  }),
+});
+
+/**
  * 記事コレクション（Markdown・仕様 §4.5 / P4）。
  * ファイル名（拡張子なし）が記事スラッグ = URL になる（例: onsen-season-guide.md → /articles/onsen-season-guide/）。
  * 本文は Markdown（目次は render() が返す headings から自動生成する）。
@@ -107,4 +138,4 @@ const articles = defineCollection({
   }),
 });
 
-export const collections = { facilities, articles };
+export const collections = { facilities, worldFacilities, articles };

@@ -4,9 +4,9 @@
   "type": "zoo",
   "prefecture": "福岡県",
   "region": "kyushu",
-  "lat": 33.029,
-  "lng": 130.464,
-  "latlngApprox": true,
+  "lat": 33.0197,
+  "lng": 130.4442,
+  "latlngApprox": false,
   "status": "open",
   "fees": [
     {
@@ -16,9 +16,17 @@
     {
       "label": "小・中学生",
       "price": "100円"
+    },
+    {
+      "label": "高校生（土日祝）",
+      "price": "100円"
+    },
+    {
+      "label": "未就学児",
+      "price": "無料"
     }
   ],
-  "hours": "9:30〜17:00（12〜2月は16:30まで）・第2・第4月曜休（祝日の場合は翌日）・12/29〜1/1休",
+  "hours": "9:30〜17:00（12〜2月は16:30まで・入園は閉園1時間前まで）・第2・第4月曜休（祝日の場合は翌日）・12/29〜1/1休",
   "officialUrl": "https://omutacityzoo.org/",
   "capybara": {
     "fureai": null,
@@ -38,6 +46,6 @@
       "official": true
     }
   ],
-  "lastVerified": "2026-07-10",
-  "detail": false
+  "lastVerified": "2026-07-11",
+  "detail": true
 }
