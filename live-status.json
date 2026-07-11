@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T17:54:01.756Z",
+  "updatedAt": "2026-07-11T18:59:08.760Z",
   "degraded": false,
   "live": [
     {
@@ -106,6 +106,14 @@
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
+      "videoId": "83ud9cUMYCM",
+      "title": "ビーバーの赤ちゃんでてくるかな？",
+      "published": "2026-07-11T18:08:42+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
       "videoId": "pP0r0-UiGa4",
       "title": "【個体識別】どの子が推し？モルモットの特徴と見分け方を徹底解説！",
       "published": "2026-07-11T10:00:06+00:00"
@@ -157,14 +165,6 @@
       "videoId": "om_EIl2KUdc",
       "title": "Live Capybara Feeding Cozy Typhoon Day in Taiwan",
       "published": "2026-07-11T04:54:03+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "83ud9cUMYCM",
-      "title": "ビーバーの赤ちゃんでてくるかな？",
-      "published": "2026-07-11T00:31:33+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
