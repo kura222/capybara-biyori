@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T01:03:47.502Z",
+  "updatedAt": "2026-07-12T04:51:06.006Z",
   "degraded": false,
   "live": [
     {
@@ -37,6 +37,12 @@
       "videoId": "R4Ak7UOzduA",
       "title": "Capybara Underwater Livestream Cam 2",
       "startedAt": "2026-07-08T14:21:48Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "McdD6YhW0ZM",
+      "title": "赤ちゃんビーバーを見ようの会",
+      "startedAt": "2026-07-12T04:33:32Z"
     },
     {
       "channelSlug": "taronga",
@@ -106,17 +112,25 @@
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
+      "videoId": "a3IOeAOsg7k",
+      "title": "I Found the Baby Capybaras' Secret Hideout 🥹",
+      "published": "2026-07-12T03:25:15+00:00"
+    },
+    {
+      "channelSlug": "uminonakamichi-doubutsu-no-mori",
+      "channelName": "海の中道「動物の森」",
+      "facilitySlug": "uminonakamichi-park",
+      "videoId": "47AhH_JBPEo",
+      "title": "シャワー後のルーティン #pony #routines",
+      "published": "2026-07-12T01:05:36+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
       "videoId": "om_EIl2KUdc",
       "title": "Live Capybara Feeding Cozy Typhoon Day in Taiwan",
       "published": "2026-07-11T20:55:04+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "83ud9cUMYCM",
-      "title": "ビーバーの赤ちゃんでてくるかな？",
-      "published": "2026-07-11T18:08:42+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -167,6 +181,14 @@
       "published": "2026-07-11T07:22:47+00:00"
     },
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "McdD6YhW0ZM",
+      "title": "赤ちゃんビーバーを見ようの会",
+      "published": "2026-07-11T04:44:51+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -181,14 +203,6 @@
       "videoId": "G1gNlexWxPc",
       "title": "スイカの食べ方が可愛い長老じいさん♫#shorts #猿 #動物園",
       "published": "2026-07-10T08:19:25+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "LQd0VH3du0c",
-      "title": "Celebrating the world's cutest little capybaras. Happy Capybara Day! 🦫💚",
-      "published": "2026-07-10T04:20:24+00:00"
     },
     {
       "channelSlug": "saitama-childrens-zoo",
@@ -325,14 +339,6 @@
       "videoId": "2i9M_vFecdU",
       "title": "生後3か月のクモザルベイビー",
       "published": "2026-06-17T05:53:53+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "KebrxJBWXxg",
-      "title": "トカラヤギが産まれました！",
-      "published": "2026-06-14T02:32:31+00:00"
     },
     {
       "channelSlug": "utsunomiya-zoo",
