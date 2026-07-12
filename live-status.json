@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T07:27:04.903Z",
+  "updatedAt": "2026-07-12T09:27:28.663Z",
   "degraded": false,
   "live": [
     {
@@ -103,6 +103,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "McdD6YhW0ZM",
+      "title": "赤ちゃんビーバーを見ようの会",
+      "published": "2026-07-12T08:18:47+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "-VKhyLWkx7I",
+      "title": "口紅つけた？？#shorts #おばあちゃん #猿",
+      "published": "2026-07-12T08:05:48+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -175,28 +191,12 @@
       "published": "2026-07-11T07:22:47+00:00"
     },
     {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "McdD6YhW0ZM",
-      "title": "赤ちゃんビーバーを見ようの会",
-      "published": "2026-07-11T04:44:51+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
-      "videoId": "Yhd0Pn6qxPU",
-      "title": "National Capybara Day or Appreciation Day Live From Taiwan",
-      "published": "2026-07-10T19:11:55+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "G1gNlexWxPc",
-      "title": "スイカの食べ方が可愛い長老じいさん♫#shorts #猿 #動物園",
-      "published": "2026-07-10T08:19:25+00:00"
+      "videoId": "maUD0TTVGyE",
+      "title": "Up Close with Baby Capybaras|Peaceful Live Feeding in Taiwan",
+      "published": "2026-07-11T06:19:23+00:00"
     },
     {
       "channelSlug": "saitama-childrens-zoo",
