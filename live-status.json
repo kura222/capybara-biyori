@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T14:54:06.651Z",
+  "updatedAt": "2026-07-12T15:57:35.183Z",
   "degraded": false,
   "live": [
     {
@@ -103,6 +103,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "tSZOwXO5VHk",
+      "title": "🎉 Thank you for helping us reach 1,000 subscribers! ❤️",
+      "published": "2026-07-12T14:55:36+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -165,14 +173,6 @@
       "videoId": "4xmD37AA5-U",
       "title": "ツルたちの日常🐤#池田動物園 #zoo #岡山 #マナヅル #ホオジロカンムリヅル",
       "published": "2026-07-11T09:00:14+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "Sww2C7ThuEA",
-      "title": "Baby Capybara Came Too Close… 😂❤️",
-      "published": "2026-07-11T08:15:18+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
