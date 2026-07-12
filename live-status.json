@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T04:51:06.006Z",
+  "updatedAt": "2026-07-12T07:27:04.903Z",
   "degraded": false,
   "live": [
     {
@@ -37,12 +37,6 @@
       "videoId": "R4Ak7UOzduA",
       "title": "Capybara Underwater Livestream Cam 2",
       "startedAt": "2026-07-08T14:21:48Z"
-    },
-    {
-      "channelSlug": "biopark",
-      "videoId": "McdD6YhW0ZM",
-      "title": "赤ちゃんビーバーを見ようの会",
-      "startedAt": "2026-07-12T04:33:32Z"
     },
     {
       "channelSlug": "taronga",
