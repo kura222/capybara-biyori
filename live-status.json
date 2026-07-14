@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T12:09:21.429Z",
+  "updatedAt": "2026-07-14T14:23:35.711Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "54ImteLmJM0",
+      "title": "The Sweet Sound of a Capybara Eating Grass 🦫🌿 ASMR",
+      "published": "2026-07-14T12:45:03+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -153,14 +161,6 @@
       "videoId": "gBbc1m-byqg",
       "title": "ドアップもたまにゃ見て #池田動物園 #岡山 #コツメカワウソ",
       "published": "2026-07-13T08:00:22+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "r_cJnSkakqw",
-      "title": "Baby Capybara Model Walk 🥹✨",
-      "published": "2026-07-13T07:25:15+00:00"
     },
     {
       "channelSlug": "biopark",
