@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T08:35:23.751Z",
+  "updatedAt": "2026-07-14T10:43:13.452Z",
   "degraded": false,
   "live": [
     {
@@ -63,12 +63,6 @@
       "startedAt": "2025-11-04T09:28:46Z"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "videoId": "E6GunM9cy1I",
-      "title": "After POC I arrived different place",
-      "startedAt": "2026-07-14T07:49:17Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "i3kmj2b8zkA",
       "title": "Állatkert Budapest szívében - Elefánt kifutó ÉLŐ",
@@ -96,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "WbiKPVipp3Q",
+      "title": "※動画です。暑すぎて溶けてるププ #レッサーパンダ",
+      "published": "2026-07-14T10:00:12+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -223,14 +225,6 @@
       "videoId": "Iue4MURcLmE",
       "title": "【ASMR】アルダブラゾウガメ、きゅうりを食べる",
       "published": "2026-07-09T10:00:02+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "xlGR6KSnlQ8",
-      "title": "飼育員さんが大好きすぎて完全にネコと化したライオンが可愛すぎた！🦁【平川動物公園】",
-      "published": "2026-07-08T10:00:06+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
