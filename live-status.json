@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T09:30:34.153Z",
+  "updatedAt": "2026-07-15T11:27:15.638Z",
   "degraded": false,
   "live": [
     {
@@ -89,12 +89,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "YlWHB_QCPTI",
-      "title": "話を聞いただけで名前が！？チンパンジーを愛しすぎる園長がすごすぎた！【平川動物公園】",
-      "scheduledAt": "2026-07-15T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -102,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "YlWHB_QCPTI",
+      "title": "話を聞いただけで名前が！？チンパンジーを愛しすぎる園長がすごすぎた！【平川動物公園】",
+      "published": "2026-07-15T10:00:07+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -115,7 +117,7 @@
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
       "videoId": "IhcFWvd4v3o",
-      "title": "Angel & Demon 天使&惡魔 寵物互動園區",
+      "title": "Capybara Café Live 🦫 | Meeting Taiwan's Cutest Animals!",
       "published": "2026-07-15T06:45:22+00:00"
     },
     {
@@ -125,14 +127,6 @@
       "videoId": "R3K0e0pt4pU",
       "title": "新チャンネル開設します！",
       "published": "2026-07-15T03:21:21+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "YlWHB_QCPTI",
-      "title": "話を聞いただけで名前が！？チンパンジーを愛しすぎる園長がすごすぎた！【平川動物公園】",
-      "published": "2026-07-15T02:02:04+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
