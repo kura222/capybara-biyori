@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T12:52:46.673Z",
+  "updatedAt": "2026-07-15T14:47:48.479Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "J_I23ZAUQUg",
+      "title": "This Capybara Loved Chin Scratches 🥹❤️",
+      "published": "2026-07-15T13:10:07+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -143,14 +151,6 @@
       "videoId": "Hs3D0W8IltY",
       "title": "🔴 LIVE | Paradise of Capybara Taiwan 🦫 | Tour + Swimming with Capybaras! 💦",
       "published": "2026-07-14T18:46:47+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "54ImteLmJM0",
-      "title": "The Sweet Sound of a Capybara Eating Grass 🦫🌿 ASMR",
-      "published": "2026-07-14T12:45:03+00:00"
     },
     {
       "channelSlug": "biopark",
