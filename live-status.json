@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T21:57:45.519Z",
+  "updatedAt": "2026-07-15T23:01:02.586Z",
   "degraded": false,
   "live": [
     {
@@ -100,6 +100,14 @@
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
+      "videoId": "Cr3jGWhDa44",
+      "title": "The Laziest Capybaras I Met Today 😂🦫",
+      "published": "2026-07-15T22:00:18+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
       "videoId": "IhcFWvd4v3o",
       "title": "Capybara Café Live 🦫 | Meeting Taiwan's Cutest Animals!",
       "published": "2026-07-15T21:23:03+00:00"
@@ -143,14 +151,6 @@
       "videoId": "E6GunM9cy1I",
       "title": "After POC I arrived different place",
       "published": "2026-07-14T22:26:04+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "Hs3D0W8IltY",
-      "title": "🔴 LIVE | Paradise of Capybara Taiwan 🦫 | Tour + Swimming with Capybaras! 💦",
-      "published": "2026-07-14T18:46:47+00:00"
     },
     {
       "channelSlug": "biopark",
