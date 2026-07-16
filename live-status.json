@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T04:07:13.251Z",
+  "updatedAt": "2026-07-16T06:41:36.806Z",
   "degraded": false,
   "live": [
     {
@@ -28,38 +28,5 @@
     }
   ],
   "upcoming": [],
-  "latestVideos": [
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "5OcNfz5v0-0",
-      "title": "光のナイトズー2026 #池田動物園 #ナイトズー #岡山 #夏休み",
-      "published": "2026-07-14T08:00:31+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "gBbc1m-byqg",
-      "title": "ドアップもたまにゃ見て #池田動物園 #岡山 #コツメカワウソ",
-      "published": "2026-07-13T08:00:22+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "4xmD37AA5-U",
-      "title": "ツルたちの日常🐤#池田動物園 #zoo #岡山 #マナヅル #ホオジロカンムリヅル",
-      "published": "2026-07-11T09:00:14+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "A-po_t3AhtI",
-      "title": "サンちゃんお気に入りの丸太🪵#池田動物園 #岡山 #ホワイトタイガー #tiger",
-      "published": "2026-07-05T09:00:34+00:00"
-    }
-  ]
+  "latestVideos": []
 }
