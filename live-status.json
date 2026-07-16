@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T09:11:45.766Z",
+  "updatedAt": "2026-07-16T11:16:17.229Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "z4YJ_86N1Mw",
+      "title": "This Baby Capybara Had One Mission… 🌿🥹",
+      "published": "2026-07-16T10:00:31+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -159,14 +167,6 @@
       "videoId": "R3K0e0pt4pU",
       "title": "新チャンネル開設します！",
       "published": "2026-07-15T03:21:21+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "E6GunM9cy1I",
-      "title": "After POC I arrived different place",
-      "published": "2026-07-14T22:26:04+00:00"
     },
     {
       "channelSlug": "biopark",
