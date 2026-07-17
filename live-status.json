@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T21:21:34.837Z",
+  "updatedAt": "2026-07-17T22:13:53.035Z",
   "degraded": false,
   "live": [
     {
@@ -103,6 +103,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "tLcVqn-Vdbg",
+      "title": "Live Rainy Day | Boring Capybaras 😂😂",
+      "published": "2026-07-17T21:59:31+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -157,14 +165,6 @@
       "videoId": "Cr3jGWhDa44",
       "title": "The Laziest Capybaras I Met Today 😂🦫",
       "published": "2026-07-15T22:00:18+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "tLcVqn-Vdbg",
-      "title": "Live Rainy Day | Boring Capybaras 😂😂",
-      "published": "2026-07-15T12:54:42+00:00"
     },
     {
       "channelSlug": "biopark",
