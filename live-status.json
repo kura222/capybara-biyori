@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T04:14:53.636Z",
+  "updatedAt": "2026-07-17T06:37:06.348Z",
   "degraded": false,
   "live": [
     {
@@ -27,24 +27,70 @@
       "startedAt": "2025-11-05T14:22:02Z"
     },
     {
-      "channelSlug": "kiryugaoka-zoo",
-      "videoId": "N4kcIlIr66k",
-      "title": "西エリア",
-      "startedAt": "2026-07-03T00:30:28Z"
+      "channelSlug": "adventure-world",
+      "videoId": "sDi4kIajaFE",
+      "title": "【コガタペンギンの赤ちゃん 24時間見守りカメラ】",
+      "startedAt": "2026-07-15T04:28:19Z"
     },
     {
-      "channelSlug": "kiryugaoka-zoo",
-      "videoId": "vCyw44Xuldo",
-      "title": "東エリア ワイド",
-      "startedAt": "2026-03-20T03:04:10Z"
+      "channelSlug": "budapest-zoo",
+      "videoId": "i3kmj2b8zkA",
+      "title": "Állatkert Budapest szívében - Elefánt kifutó ÉLŐ",
+      "startedAt": "2026-05-21T12:16:41Z"
     },
     {
-      "channelSlug": "kiryugaoka-zoo",
-      "videoId": "mbmp7hmMG_Q",
-      "title": "東エリア スポット",
-      "startedAt": "2026-03-20T03:04:08Z"
+      "channelSlug": "budapest-zoo",
+      "videoId": "KwiMj0VvQpg",
+      "title": "Állatkert Budapest szívében - Fóka medence ÉLŐ",
+      "startedAt": "2025-05-15T13:04:56Z"
+    },
+    {
+      "channelSlug": "budapest-zoo",
+      "videoId": "bo6yE8iIpNE",
+      "title": "Állatkert Budapest szívében - Cápasuli ÉLŐ",
+      "startedAt": "2023-05-18T11:24:48Z"
     }
   ],
-  "upcoming": [],
-  "latestVideos": []
+  "upcoming": [
+    {
+      "channelSlug": "budapest-zoo",
+      "videoId": "-lNW4F9VIlE",
+      "title": "Budapesti Állatkert élő közvetítése",
+      "scheduledAt": null
+    }
+  ],
+  "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "43fGQWmeXAA",
+      "title": "癒しのくるみおばあちゃん♪#shorts #癒し #猿",
+      "published": "2026-07-16T08:43:58+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "QWKjVeooKlI",
+      "title": "くるみおばあちゃんファン必見！当園に引き取られたお猿さん。タラポアンくるみおばあちゃんのストーリーです。",
+      "published": "2026-07-16T08:16:54+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "VlyOcIweb5Q",
+      "title": "レタスを頬張るヨザルのよっちゃん♪#shorts #猿 #動物",
+      "published": "2026-07-15T08:04:45+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "R3K0e0pt4pU",
+      "title": "新チャンネル開設します！",
+      "published": "2026-07-15T03:21:21+00:00"
+    }
+  ]
 }
