@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T09:07:06.328Z",
+  "updatedAt": "2026-07-17T11:04:50.303Z",
   "degraded": false,
   "live": [
     {
@@ -81,12 +81,6 @@
       "startedAt": "2026-07-16T15:33:31Z"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "videoId": "tLcVqn-Vdbg",
-      "title": "Live Rainy Day | Boring Capybaras 😂😂",
-      "startedAt": "2026-07-17T08:28:47Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "i3kmj2b8zkA",
       "title": "Állatkert Budapest szívében - Elefánt kifutó ÉLŐ",
@@ -129,6 +123,14 @@
       "videoId": "DwgOBOGfjU4",
       "title": "Sweet Capybara Grooming Moment 🥹",
       "published": "2026-07-17T08:00:08+00:00"
+    },
+    {
+      "channelSlug": "uminonakamichi-doubutsu-no-mori",
+      "channelName": "海の中道「動物の森」",
+      "facilitySlug": "uminonakamichi-park",
+      "videoId": "Mg_7F4_HJcM",
+      "title": "ふれあい舎がバードエリアに！？",
+      "published": "2026-07-17T01:24:28+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -337,14 +339,6 @@
       "videoId": "E7Q_od9vm6s",
       "title": "W杯「日本vsチュニジア」グンディに予想してもらいました！",
       "published": "2026-06-20T05:58:24+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "2i9M_vFecdU",
-      "title": "生後3か月のクモザルベイビー",
-      "published": "2026-06-17T05:53:53+00:00"
     },
     {
       "channelSlug": "utsunomiya-zoo",
