@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T06:02:52.040Z",
+  "updatedAt": "2026-07-18T08:18:17.915Z",
   "degraded": false,
   "live": [
     {
@@ -89,6 +89,12 @@
   ],
   "upcoming": [
     {
+      "channelSlug": "biopark",
+      "videoId": "ZMYg_WDh9qM",
+      "title": "【入社1年目】笑顔が素敵な新人飼育員ふうかちゃんのお仕事に密着！",
+      "scheduledAt": "2026-07-18T10:00:00Z"
+    },
+    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -97,12 +103,28 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "aXZB9_hCszg",
+      "title": "水の中を飛んどるが🐧✨ #池田動物園 #マゼランペンギン #岡山",
+      "published": "2026-07-18T08:00:27+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
       "videoId": "LjYMxXn5g2g",
       "title": "Capybara and Black Swan Share a Peaceful Snack 🌿🍉",
       "published": "2026-07-18T05:15:05+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "ZMYg_WDh9qM",
+      "title": "【入社1年目】笑顔が素敵な新人飼育員ふうかちゃんのお仕事に密着！",
+      "published": "2026-07-18T02:15:08+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -209,14 +231,6 @@
       "published": "2026-07-12T10:00:40+00:00"
     },
     {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "McdD6YhW0ZM",
-      "title": "赤ちゃんビーバーを見ようの会",
-      "published": "2026-07-12T08:18:47+00:00"
-    },
-    {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
       "facilitySlug": "uminonakamichi-park",
@@ -255,14 +269,6 @@
       "videoId": "5mjgMPaFlac",
       "title": "【ASMR】ケヅメリクガメ、ゴーヤを食べる",
       "published": "2026-07-07T10:00:36+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "A-po_t3AhtI",
-      "title": "サンちゃんお気に入りの丸太🪵#池田動物園 #岡山 #ホワイトタイガー #tiger",
-      "published": "2026-07-05T09:00:34+00:00"
     },
     {
       "channelSlug": "utsunomiya-zoo",
