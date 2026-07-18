@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T08:18:17.915Z",
+  "updatedAt": "2026-07-18T09:55:13.628Z",
   "degraded": false,
   "live": [
     {
@@ -103,6 +103,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "omlXEJsmf34",
+      "title": "カピバラベビー達に大きなスイカを丸ごと与えてみました♫初めての丸ごとスイカに苦戦！？",
+      "published": "2026-07-18T08:18:29+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -189,14 +197,6 @@
       "videoId": "YlWHB_QCPTI",
       "title": "話を聞いただけで名前が！？チンパンジーを愛しすぎる園長がすごすぎた！【平川動物公園】",
       "published": "2026-07-15T10:00:07+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "VlyOcIweb5Q",
-      "title": "レタスを頬張るヨザルのよっちゃん♪#shorts #猿 #動物",
-      "published": "2026-07-15T08:04:45+00:00"
     },
     {
       "channelSlug": "biopark",
