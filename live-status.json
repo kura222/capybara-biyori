@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T09:55:13.628Z",
+  "updatedAt": "2026-07-18T11:01:28.551Z",
   "degraded": false,
   "live": [
     {
@@ -51,12 +51,6 @@
       "startedAt": "2026-03-20T03:04:08Z"
     },
     {
-      "channelSlug": "adventure-world",
-      "videoId": "sDi4kIajaFE",
-      "title": "【コガタペンギンの赤ちゃん 24時間見守りカメラ】",
-      "startedAt": "2026-07-15T04:28:19Z"
-    },
-    {
       "channelSlug": "kumamoto-city-zoo-livecam",
       "videoId": "iLsJ1R8iz78",
       "title": "【熊本市動植物園】アフリカゾウ | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Elephant)",
@@ -89,12 +83,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "ZMYg_WDh9qM",
-      "title": "【入社1年目】笑顔が素敵な新人飼育員ふうかちゃんのお仕事に密着！",
-      "scheduledAt": "2026-07-18T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -102,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "ZMYg_WDh9qM",
+      "title": "【入社1年目】笑顔が素敵な新人飼育員ふうかちゃんのお仕事に密着！",
+      "published": "2026-07-18T10:00:06+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -125,14 +121,6 @@
       "videoId": "LjYMxXn5g2g",
       "title": "Capybara and Black Swan Share a Peaceful Snack 🌿🍉",
       "published": "2026-07-18T05:15:05+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "ZMYg_WDh9qM",
-      "title": "【入社1年目】笑顔が素敵な新人飼育員ふうかちゃんのお仕事に密着！",
-      "published": "2026-07-18T02:15:08+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
