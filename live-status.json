@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T10:53:19.290Z",
+  "updatedAt": "2026-07-19T11:55:56.775Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "Ig7Dtvzk2r4",
+      "title": "POV: You Forgot the Capybara Snacks 🥲😂",
+      "published": "2026-07-19T11:00:28+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -185,14 +193,6 @@
       "videoId": "Mg_7F4_HJcM",
       "title": "ふれあい舎がバードエリアに！？",
       "published": "2026-07-17T01:24:28+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "z4YJ_86N1Mw",
-      "title": "This Baby Capybara Had One Mission… 🌿🥹",
-      "published": "2026-07-16T10:00:31+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
