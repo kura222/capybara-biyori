@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T07:25:13.222Z",
+  "updatedAt": "2026-07-19T09:26:24.129Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "M0dc01YoDhI",
+      "title": "コモンおばあちゃんの大好物のスイカ♫#shorts #コモンマーモセット #おばあちゃん",
+      "published": "2026-07-19T08:17:45+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "Kl1yWuVx_Ys",
+      "title": "撮っとったんか！ #池田動物園 #岡山 #レッサーパンダ",
+      "published": "2026-07-19T08:00:02+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -179,14 +195,6 @@
       "published": "2026-07-16T08:43:58+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "QWKjVeooKlI",
-      "title": "くるみおばあちゃんファン必見！当園に引き取られたお猿さん。タラポアンくるみおばあちゃんのストーリーです。",
-      "published": "2026-07-16T08:16:54+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -225,14 +233,6 @@
       "videoId": "47AhH_JBPEo",
       "title": "シャワー後のルーティン #pony #routines",
       "published": "2026-07-12T01:05:36+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "4xmD37AA5-U",
-      "title": "ツルたちの日常🐤#池田動物園 #zoo #岡山 #マナヅル #ホオジロカンムリヅル",
-      "published": "2026-07-11T09:00:14+00:00"
     },
     {
       "channelSlug": "saitama-childrens-zoo",
