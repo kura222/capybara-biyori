@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T09:26:24.129Z",
+  "updatedAt": "2026-07-19T10:53:19.290Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "EseYR-sD8VQ",
+      "title": "#平川動物公園",
+      "published": "2026-07-19T10:00:25+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -201,14 +209,6 @@
       "videoId": "YlWHB_QCPTI",
       "title": "話を聞いただけで名前が！？チンパンジーを愛しすぎる園長がすごすぎた！【平川動物公園】",
       "published": "2026-07-15T10:00:07+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "WbiKPVipp3Q",
-      "title": "※動画です。暑すぎて溶けてるププ #レッサーパンダ",
-      "published": "2026-07-14T10:00:12+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
