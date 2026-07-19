@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T01:00:11.825Z",
+  "updatedAt": "2026-07-19T04:46:20.998Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "cD68Q8bMkt4",
+      "title": "カピバラのジャンボスイカ",
+      "startedAt": "2026-07-19T04:22:12Z"
     },
     {
       "channelSlug": "taronga",
@@ -203,20 +209,20 @@
       "published": "2026-07-14T08:00:31+00:00"
     },
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "cD68Q8bMkt4",
+      "title": "カピバラのジャンボスイカ",
+      "published": "2026-07-14T07:41:27+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
       "videoId": "gBbc1m-byqg",
       "title": "ドアップもたまにゃ見て #池田動物園 #岡山 #コツメカワウソ",
       "published": "2026-07-13T08:00:22+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "nJzgItoGwGI",
-      "title": "偵察中...#ミーアキャット",
-      "published": "2026-07-12T10:00:40+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
