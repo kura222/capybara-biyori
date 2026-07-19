@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T04:46:20.998Z",
+  "updatedAt": "2026-07-19T07:25:13.222Z",
   "degraded": false,
   "live": [
     {
@@ -25,12 +25,6 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "biopark",
-      "videoId": "cD68Q8bMkt4",
-      "title": "カピバラのジャンボスイカ",
-      "startedAt": "2026-07-19T04:22:12Z"
     },
     {
       "channelSlug": "taronga",
@@ -96,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "cD68Q8bMkt4",
+      "title": "カピバラのジャンボスイカ",
+      "published": "2026-07-19T07:10:10+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -207,14 +209,6 @@
       "videoId": "5OcNfz5v0-0",
       "title": "光のナイトズー2026 #池田動物園 #ナイトズー #岡山 #夏休み",
       "published": "2026-07-14T08:00:31+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "cD68Q8bMkt4",
-      "title": "カピバラのジャンボスイカ",
-      "published": "2026-07-14T07:41:27+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
