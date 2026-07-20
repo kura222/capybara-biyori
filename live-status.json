@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T01:06:43.075Z",
+  "updatedAt": "2026-07-20T05:04:07.613Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "hOAMTQvIz3E",
+      "title": "ビーバー🦫観察会",
+      "startedAt": "2026-07-20T04:33:26Z"
     },
     {
       "channelSlug": "taronga",
@@ -127,8 +133,16 @@
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "cD68Q8bMkt4",
-      "title": "カピバラのジャンボスイカ",
+      "title": "【LIVE】カピバラのジャンボスイカ～ビーバーの赤ちゃん Capybara huge watermelon & Beaver babies",
       "published": "2026-07-19T07:10:10+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "hOAMTQvIz3E",
+      "title": "ビーバー🦫観察会",
+      "published": "2026-07-19T04:30:06+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -201,14 +215,6 @@
       "videoId": "43fGQWmeXAA",
       "title": "癒しのくるみおばあちゃん♪#shorts #癒し #猿",
       "published": "2026-07-16T08:43:58+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "YlWHB_QCPTI",
-      "title": "話を聞いただけで名前が！？チンパンジーを愛しすぎる園長がすごすぎた！【平川動物公園】",
-      "published": "2026-07-15T10:00:07+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
