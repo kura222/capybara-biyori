@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T13:25:21.868Z",
+  "updatedAt": "2026-07-20T15:28:03.258Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "rirAvtijmBQ",
+      "title": "When Every Capybara Looks at You… 👀🩶",
+      "published": "2026-07-20T14:45:05+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -217,14 +225,6 @@
       "videoId": "tLcVqn-Vdbg",
       "title": "Live Rainy Day | Boring Capybaras 😂😂",
       "published": "2026-07-17T21:59:31+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "DwgOBOGfjU4",
-      "title": "Sweet Capybara Grooming Moment 🥹",
-      "published": "2026-07-17T08:00:08+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
