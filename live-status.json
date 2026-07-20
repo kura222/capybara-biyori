@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T08:23:59.003Z",
+  "updatedAt": "2026-07-20T11:21:41.462Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,46 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "jXEIA5Ipdqs",
+      "title": "#ストロベリーキャンドル",
+      "published": "2026-07-20T10:00:32+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "nj8U_Fg_kpo",
+      "title": "ワニガメが誘ってきた！#shorts #動物園 #爬虫類",
+      "published": "2026-07-20T09:01:32+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "ZhMUla88-Ms",
+      "title": "【池田動物園公式】動物たちの食べるシーンまとめ②",
+      "published": "2026-07-20T09:00:20+00:00"
+    },
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "xaJUpR1-vOw",
+      "title": "🌵伊豆シャボテン動物公園来たら、ここ行って🌵",
+      "published": "2026-07-20T09:00:17+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "b-dFv2VxrIU",
+      "title": "コモンおばあちゃんファン必見！！実は表に出る予定ではなかった？コモンおばあちゃんのこれまで！",
+      "published": "2026-07-20T08:56:31+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -147,14 +187,6 @@
       "published": "2026-07-19T07:10:10+00:00"
     },
     {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "ZMYg_WDh9qM",
-      "title": "【入社1年目】笑顔が素敵な新人飼育員ふうかちゃんのお仕事に密着！",
-      "published": "2026-07-18T10:00:06+00:00"
-    },
-    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -187,14 +219,6 @@
       "published": "2026-07-17T21:59:31+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "mr81DbtZx6s",
-      "title": "アルマジロむっちゃんのお散歩がしばらくお休みになります。#shorts #アルマジロ #armadillo",
-      "published": "2026-07-17T08:41:43+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -209,22 +233,6 @@
       "videoId": "Mg_7F4_HJcM",
       "title": "ふれあい舎がバードエリアに！？",
       "published": "2026-07-17T01:24:28+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "43fGQWmeXAA",
-      "title": "癒しのくるみおばあちゃん♪#shorts #癒し #猿",
-      "published": "2026-07-16T08:43:58+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "5OcNfz5v0-0",
-      "title": "光のナイトズー2026 #池田動物園 #ナイトズー #岡山 #夏休み",
-      "published": "2026-07-14T08:00:31+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
@@ -305,14 +313,6 @@
       "videoId": "KLEARSKYvxM",
       "title": "フェルトでつくるハダカデバネズミ",
       "published": "2026-06-21T04:00:05+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "AK7Wxx5QYN0",
-      "title": "サボテン博士のサボテン豆知識【Part3】🌵",
-      "published": "2026-06-20T10:00:22+00:00"
     },
     {
       "channelSlug": "saitama-childrens-zoo",
