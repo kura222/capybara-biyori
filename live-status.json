@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T15:02:38.041Z",
+  "updatedAt": "2026-07-21T16:53:53.234Z",
   "degraded": false,
   "live": [
     {
@@ -279,14 +279,6 @@
       "published": "2026-07-07T10:00:36+00:00"
     },
     {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "u0ofOfPxKmk",
-      "title": "【宇都宮動物園】迫力満点！カバの歯磨きタイム🦛 歯磨きの大切さと豪快なスイカの食べっぷり！",
-      "published": "2026-06-30T15:00:06+00:00"
-    },
-    {
       "channelSlug": "shabotengroup",
       "channelName": "伊豆シャボテン公園グループ",
       "facilitySlug": "izu-shaboten",
@@ -333,30 +325,6 @@
       "videoId": "E7Q_od9vm6s",
       "title": "W杯「日本vsチュニジア」グンディに予想してもらいました！",
       "published": "2026-06-20T05:58:24+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "UzTpl2o9dkY",
-      "title": "「【園内初の室内展示場が完成！】ナマケモノの新しいおうちに潜入🌿｜宇都宮動物園",
-      "published": "2026-05-30T15:00:05+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "A26Lpp2J_yw",
-      "title": "【宇都宮動物園】初登場！ナマケモノの愛らしさと驚きの生態を紹介🦥",
-      "published": "2026-04-30T15:00:06+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "pCw1EiDtHvU",
-      "title": "【宇都宮動物園】キリン×桜の絶景！春限定フォトスポット＆キリンの秘密を解説🌸🦒",
-      "published": "2026-04-02T13:45:35+00:00"
     }
   ]
 }
