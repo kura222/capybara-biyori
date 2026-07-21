@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T09:09:12.686Z",
+  "updatedAt": "2026-07-21T11:22:28.054Z",
   "degraded": false,
   "live": [
     {
@@ -102,6 +102,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "5pHk-d3qgWo",
+      "title": "Real Baby Capybara Sounds ❤️",
+      "published": "2026-07-21T10:30:38+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -229,14 +237,6 @@
       "videoId": "LjYMxXn5g2g",
       "title": "Capybara and Black Swan Share a Peaceful Snack 🌿🍉",
       "published": "2026-07-18T05:15:05+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "tLcVqn-Vdbg",
-      "title": "Live Rainy Day | Boring Capybaras 😂😂",
-      "published": "2026-07-17T21:59:31+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
