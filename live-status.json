@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T09:57:56.355Z",
+  "updatedAt": "2026-07-22T11:51:12.202Z",
   "degraded": false,
   "live": [
     {
@@ -95,12 +95,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "y-TdFWVeFjo",
-      "title": "プレーリードッグ「どんぐり」をまるまる1本大特集！魅力をたくさん詰め込みました【※乱入者あり】",
-      "scheduledAt": "2026-07-22T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -108,6 +102,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "y-TdFWVeFjo",
+      "title": "プレーリードッグ「どんぐり」をまるまる1本大特集！魅力をたくさん詰め込みました【※乱入者あり】",
+      "published": "2026-07-22T10:00:07+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -131,14 +133,6 @@
       "videoId": "Ze5rTmltFq8",
       "title": "I Swam with Capybaras… and Hugged One! 🩵🥹",
       "published": "2026-07-22T06:35:29+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "y-TdFWVeFjo",
-      "title": "プレーリードッグ「どんぐり」をまるまる1本大特集！魅力をたくさん詰め込みました【※乱入者あり】",
-      "published": "2026-07-22T05:19:03+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
