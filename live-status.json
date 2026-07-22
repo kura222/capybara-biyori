@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T07:08:46.489Z",
+  "updatedAt": "2026-07-22T09:57:56.355Z",
   "degraded": false,
   "live": [
     {
@@ -95,6 +95,12 @@
   ],
   "upcoming": [
     {
+      "channelSlug": "biopark",
+      "videoId": "y-TdFWVeFjo",
+      "title": "プレーリードッグ「どんぐり」をまるまる1本大特集！魅力をたくさん詰め込みました【※乱入者あり】",
+      "scheduledAt": "2026-07-22T10:00:00Z"
+    },
+    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -103,12 +109,36 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "UJZ8MZmgxck",
+      "title": "#setlog",
+      "published": "2026-07-22T09:30:02+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "82KYEqVR5lw",
+      "title": "全国的に暑い日が続きますが、ナマケモノは暑かろうと何があろうとのんびり過ごしています🦥#動物園 #ナマケモノ #sloth #イグアナ #iguana",
+      "published": "2026-07-22T08:59:28+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
       "videoId": "Ze5rTmltFq8",
       "title": "I Swam with Capybaras… and Hugged One! 🩵🥹",
       "published": "2026-07-22T06:35:29+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "y-TdFWVeFjo",
+      "title": "プレーリードッグ「どんぐり」をまるまる1本大特集！魅力をたくさん詰め込みました【※乱入者あり】",
+      "published": "2026-07-22T05:19:03+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -199,36 +229,12 @@
       "published": "2026-07-19T11:00:28+00:00"
     },
     {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "EseYR-sD8VQ",
-      "title": "#平川動物公園",
-      "published": "2026-07-19T10:00:25+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "M0dc01YoDhI",
-      "title": "コモンおばあちゃんの大好物のスイカ♫#shorts #コモンマーモセット #おばあちゃん",
-      "published": "2026-07-19T08:17:45+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
       "videoId": "Kl1yWuVx_Ys",
       "title": "撮っとったんか！ #池田動物園 #岡山 #レッサーパンダ",
       "published": "2026-07-19T08:00:02+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "cD68Q8bMkt4",
-      "title": "【LIVE】カピバラのジャンボスイカ～ビーバーの赤ちゃん Capybara huge watermelon & Beaver babies",
-      "published": "2026-07-19T07:10:10+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
