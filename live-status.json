@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T11:51:12.202Z",
+  "updatedAt": "2026-07-22T13:46:28.157Z",
   "degraded": false,
   "live": [
     {
@@ -64,15 +64,15 @@
     },
     {
       "channelSlug": "roger-williams-zoo",
-      "videoId": "q2gO4MYIXWU",
+      "videoId": "xvBXFDjaUZI",
       "title": "Capybara Underwater Livestream Cam 1",
-      "startedAt": "2026-07-20T18:59:26Z"
+      "startedAt": "2026-07-22T12:34:41Z"
     },
     {
       "channelSlug": "roger-williams-zoo",
-      "videoId": "i2qREDEM3oY",
+      "videoId": "k8t1JI8MfRY",
       "title": "Capybara Underwater Livestream Cam 2",
-      "startedAt": "2026-07-20T18:59:17Z"
+      "startedAt": "2026-07-22T12:25:44Z"
     },
     {
       "channelSlug": "budapest-zoo",
