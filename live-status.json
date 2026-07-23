@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T03:53:31.571Z",
+  "updatedAt": "2026-07-23T06:28:32.133Z",
   "degraded": false,
   "live": [
     {
@@ -25,47 +25,8 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "taronga",
-      "videoId": "RzasUXCTStM",
-      "title": "Capybara Live stream",
-      "startedAt": "2026-07-03T21:00:26Z"
     }
   ],
   "upcoming": [],
-  "latestVideos": [
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "Iue4MURcLmE",
-      "title": "【ASMR】アルダブラゾウガメ、きゅうりを食べる",
-      "published": "2026-07-09T10:00:02+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "5mjgMPaFlac",
-      "title": "【ASMR】ケヅメリクガメ、ゴーヤを食べる",
-      "published": "2026-07-07T10:00:36+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "KLEARSKYvxM",
-      "title": "フェルトでつくるハダカデバネズミ",
-      "published": "2026-06-21T04:00:05+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "E7Q_od9vm6s",
-      "title": "W杯「日本vsチュニジア」グンディに予想してもらいました！",
-      "published": "2026-06-20T05:58:24+00:00"
-    }
-  ]
+  "latestVideos": []
 }
