@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T19:54:48.190Z",
+  "updatedAt": "2026-07-23T21:01:12.531Z",
   "degraded": false,
   "live": [
     {
@@ -109,6 +109,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "SnsUPDU2E3Q",
+      "title": "🦫 Capybara Live | Relax & Watch – I'm Away from the Phone",
+      "published": "2026-07-23T20:36:52+00:00"
+    },
+    {
       "channelSlug": "utsunomiya-zoo",
       "channelName": "宇都宮動物園",
       "facilitySlug": "utsunomiya-zoo",
@@ -139,14 +147,6 @@
       "videoId": "30te9x_LZzo",
       "title": "宗春の必殺技【連続肉球】🐶エサ前の機嫌のいい時しかやってくれません😅#動物園 #草津熱帯圏 #犬 #dog #zoo",
       "published": "2026-07-23T08:32:31+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "SnsUPDU2E3Q",
-      "title": "🦫 Capybara Live | Relax & Watch – I'm Away from the Phone",
-      "published": "2026-07-23T05:06:35+00:00"
     },
     {
       "channelSlug": "biopark",
