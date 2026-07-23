@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T16:56:40.808Z",
+  "updatedAt": "2026-07-23T18:13:46.784Z",
   "degraded": false,
   "live": [
     {
@@ -95,6 +95,12 @@
   ],
   "upcoming": [
     {
+      "channelSlug": "utsunomiya-zoo",
+      "videoId": "Ye9LzfbAVqk",
+      "title": "【栃木・夏休み特集】動物園・夜の遊園地・プール！宇都宮動物園",
+      "scheduledAt": "2026-07-24T01:00:00Z"
+    },
+    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -102,6 +108,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "Ye9LzfbAVqk",
+      "title": "【栃木・夏休み特集】動物園・夜の遊園地・プール！宇都宮動物園",
+      "published": "2026-07-23T17:19:40+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -349,14 +363,6 @@
       "videoId": "A26Lpp2J_yw",
       "title": "【宇都宮動物園】初登場！ナマケモノの愛らしさと驚きの生態を紹介🦥",
       "published": "2026-04-30T15:00:06+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "pCw1EiDtHvU",
-      "title": "【宇都宮動物園】キリン×桜の絶景！春限定フォトスポット＆キリンの秘密を解説🌸🦒",
-      "published": "2026-04-02T13:45:35+00:00"
     }
   ]
 }
