@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T09:02:58.349Z",
+  "updatedAt": "2026-07-24T11:15:46.518Z",
   "degraded": false,
   "live": [
     {
@@ -103,6 +103,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "qc2Qh8M_bdg",
+      "title": "Baby Capybara Couldn't Stop Staring at Me Underwater 👀💦 ⭐",
+      "published": "2026-07-24T10:45:25+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -181,14 +189,6 @@
       "videoId": "Ze5rTmltFq8",
       "title": "I Swam with Capybaras… and Hugged One! 🩵🥹",
       "published": "2026-07-22T06:35:29+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "5pHk-d3qgWo",
-      "title": "Real Baby Capybara Sounds ❤️",
-      "published": "2026-07-21T10:30:38+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
