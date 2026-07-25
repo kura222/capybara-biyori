@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T09:44:06.928Z",
+  "updatedAt": "2026-07-25T11:07:19.392Z",
   "degraded": false,
   "live": [
     {
@@ -89,12 +89,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "58qskymz1aA",
-      "title": "生まれて初めての爪切り！緊張でフリーズしちゃうモルモットの赤ちゃん",
-      "scheduledAt": "2026-07-25T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -102,6 +96,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "uminonakamichi-doubutsu-no-mori",
+      "channelName": "海の中道「動物の森」",
+      "facilitySlug": "uminonakamichi-park",
+      "videoId": "zo4XYmjgez8",
+      "title": "楽しくエサをゲット！2026",
+      "published": "2026-07-25T10:00:13+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "58qskymz1aA",
+      "title": "生まれて初めての爪切り！緊張でフリーズしちゃうモルモットの赤ちゃん",
+      "published": "2026-07-25T10:00:06+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -141,14 +151,6 @@
       "videoId": "alC5AFAFH8M",
       "title": "ナイトズーくらげランタンづくりにチャレンジしてみた#岡山 #池田動物園 #ハンドメイド",
       "published": "2026-07-25T03:00:16+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "58qskymz1aA",
-      "title": "生まれて初めての爪切り！緊張でフリーズしちゃうモルモットの赤ちゃん",
-      "published": "2026-07-25T01:11:39+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -317,14 +319,6 @@
       "videoId": "okevk-5qGlQ",
       "title": "伊豆シャボテン動物公園公式チャンネル がライブ配信中！",
       "published": "2026-06-26T07:55:42+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "x5-MJP257EI",
-      "title": "先住ヒツジ、双子の仔ヒツジと初対面！",
-      "published": "2026-06-24T09:03:23+00:00"
     },
     {
       "channelSlug": "saitama-childrens-zoo",
