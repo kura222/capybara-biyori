@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T07:33:41.622Z",
+  "updatedAt": "2026-07-25T09:44:06.928Z",
   "degraded": false,
   "live": [
     {
@@ -103,6 +103,30 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "7iY3g6-T9Zc",
+      "title": "Baby capybara fell asleep during chin scratches 🥹💦 ⭐",
+      "published": "2026-07-25T08:30:05+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "oxA6XAXGZJQ",
+      "title": "メロンを頬張るハクビシン♫#shorts #ハクビシン #動物園",
+      "published": "2026-07-25T08:26:22+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "r8hJwNdTtsA",
+      "title": "キャッツアイならぬレムールアイ参上👀 #池田動物園 #エリマキキツネザル",
+      "published": "2026-07-25T08:00:35+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -115,7 +139,7 @@
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
       "videoId": "alC5AFAFH8M",
-      "title": "ナイトズーくらげランタンづくりにチャレンジしてみた#岡山 #池田動物園",
+      "title": "ナイトズーくらげランタンづくりにチャレンジしてみた#岡山 #池田動物園 #ハンドメイド",
       "published": "2026-07-25T03:00:16+00:00"
     },
     {
@@ -199,22 +223,6 @@
       "published": "2026-07-22T09:30:02+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "82KYEqVR5lw",
-      "title": "全国的に暑い日が続きますが、ナマケモノは暑かろうと何があろうとのんびり過ごしています🦥#動物園 #ナマケモノ #sloth #イグアナ #iguana",
-      "published": "2026-07-22T08:59:28+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "Ze5rTmltFq8",
-      "title": "I Swam with Capybaras… and Hugged One! 🩵🥹",
-      "published": "2026-07-22T06:35:29+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -237,14 +245,6 @@
       "videoId": "d9zz4FzBB08",
       "title": "ナイトズーで待ってるよ!!! #池田動物園 #岡山 #ナイトズー",
       "published": "2026-07-20T08:00:06+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "Kl1yWuVx_Ys",
-      "title": "撮っとったんか！ #池田動物園 #岡山 #レッサーパンダ",
-      "published": "2026-07-19T08:00:02+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
