@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T07:34:13.478Z",
+  "updatedAt": "2026-07-26T09:56:34.651Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "KqwLo-hmrYE",
+      "title": "Following three capybaras...",
+      "published": "2026-07-26T08:40:22+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "MK2jDdq1jPQ",
+      "title": "梅雨の晴れ間は気持ちがええな🌞 ※梅雨時期に撮影 #池田動物園 #ジェフロイクモザル #岡山",
+      "published": "2026-07-26T08:00:08+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -223,22 +239,6 @@
       "videoId": "SnsUPDU2E3Q",
       "title": "🦫 Capybara Live | Relax & Watch – I'm Away from the Phone",
       "published": "2026-07-23T20:36:52+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "CHd_J_Ye3oE",
-      "title": "Curious Capybaras Came Right Up to Me! 🦫❤️",
-      "published": "2026-07-23T11:10:23+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "ZhMUla88-Ms",
-      "title": "【池田動物園公式】動物たちの食べるシーンまとめ②",
-      "published": "2026-07-20T09:00:20+00:00"
     },
     {
       "channelSlug": "shabotengroup",
