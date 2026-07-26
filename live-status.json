@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T04:55:55.046Z",
+  "updatedAt": "2026-07-26T07:34:13.478Z",
   "degraded": false,
   "live": [
     {
@@ -25,12 +25,6 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "biopark",
-      "videoId": "HaLp1KXWZRA",
-      "title": "カピバラのスイカ早食いライブ",
-      "startedAt": "2026-07-26T04:21:31Z"
     },
     {
       "channelSlug": "taronga",
@@ -95,12 +89,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "tobu-zookeeper",
-      "videoId": "6Zp_9ltu4yY",
-      "title": "世界トラの日特別ガイド LIVE配信　東武動物公園　公式YouTubeチャンネル",
-      "scheduledAt": "2026-07-26T05:30:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -108,6 +96,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "etwmKqRd60w",
+      "title": "顔だけなく手も可愛いヨザルのよっちゃん♪#shorts #猿 #動物園",
+      "published": "2026-07-26T07:31:14+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "HaLp1KXWZRA",
+      "title": "カピバラのスイカ早食いライブ",
+      "published": "2026-07-26T06:10:31+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -131,14 +135,6 @@
       "videoId": "9_YqPhe1mM8",
       "title": "ナイトズーワンコイングルメフェス🍴",
       "published": "2026-07-26T03:00:30+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "HaLp1KXWZRA",
-      "title": "カピバラのスイカ早食いライブ",
-      "published": "2026-07-26T02:49:41+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
@@ -235,14 +231,6 @@
       "videoId": "CHd_J_Ye3oE",
       "title": "Curious Capybaras Came Right Up to Me! 🦫❤️",
       "published": "2026-07-23T11:10:23+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "1qeiVmY2qIw",
-      "title": "新チャンネル開設いたしました！",
-      "published": "2026-07-23T09:10:29+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
