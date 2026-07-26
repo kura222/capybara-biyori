@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T01:09:03.399Z",
+  "updatedAt": "2026-07-26T04:55:55.046Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "HaLp1KXWZRA",
+      "title": "カピバラのスイカ早食いライブ",
+      "startedAt": "2026-07-26T04:21:31Z"
     },
     {
       "channelSlug": "taronga",
@@ -89,6 +95,12 @@
   ],
   "upcoming": [
     {
+      "channelSlug": "tobu-zookeeper",
+      "videoId": "6Zp_9ltu4yY",
+      "title": "世界トラの日特別ガイド LIVE配信　東武動物公園　公式YouTubeチャンネル",
+      "scheduledAt": "2026-07-26T05:30:00Z"
+    },
+    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -96,6 +108,38 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "f38pagorpFo",
+      "title": "マーラ姉妹のフォーメーション♫#shorts #動物園 #動物",
+      "published": "2026-07-26T04:45:49+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "r16w4XU3PWk",
+      "title": "100kg越えのスイカをカピバラにあげてみた🍉",
+      "published": "2026-07-26T03:08:05+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "9_YqPhe1mM8",
+      "title": "ナイトズーワンコイングルメフェス🍴",
+      "published": "2026-07-26T03:00:30+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "HaLp1KXWZRA",
+      "title": "カピバラのスイカ早食いライブ",
+      "published": "2026-07-26T02:49:41+00:00"
+    },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
@@ -201,30 +245,6 @@
       "published": "2026-07-23T09:10:29+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "30te9x_LZzo",
-      "title": "宗春の必殺技【連続肉球】🐶エサ前の機嫌のいい時しかやってくれません😅#動物園 #草津熱帯圏 #犬 #dog #zoo",
-      "published": "2026-07-23T08:32:31+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "y-TdFWVeFjo",
-      "title": "プレーリードッグ「どんぐり」をまるまる1本大特集！魅力をたくさん詰め込みました【※乱入者あり】",
-      "published": "2026-07-22T10:00:07+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "UJZ8MZmgxck",
-      "title": "#setlog",
-      "published": "2026-07-22T09:30:02+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -239,14 +259,6 @@
       "videoId": "xaJUpR1-vOw",
       "title": "🌵伊豆シャボテン動物公園来たら、ここ行って🌵",
       "published": "2026-07-20T09:00:17+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "d9zz4FzBB08",
-      "title": "ナイトズーで待ってるよ!!! #池田動物園 #岡山 #ナイトズー",
-      "published": "2026-07-20T08:00:06+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
