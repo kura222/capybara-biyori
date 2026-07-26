@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T14:27:16.976Z",
+  "updatedAt": "2026-07-26T15:39:42.744Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "GXP0AdfJHPk",
+      "title": "Everyone loves capybaras…But baby capybaras are something else 🥹",
+      "published": "2026-07-26T15:00:05+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -231,14 +239,6 @@
       "videoId": "Ye9LzfbAVqk",
       "title": "【栃木・夏休み特集】動物園・夜の遊園地・プール！宇都宮動物園",
       "published": "2026-07-24T01:00:06+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "SnsUPDU2E3Q",
-      "title": "🦫 Capybara Live | Relax & Watch – I'm Away from the Phone",
-      "published": "2026-07-23T20:36:52+00:00"
     },
     {
       "channelSlug": "shabotengroup",
