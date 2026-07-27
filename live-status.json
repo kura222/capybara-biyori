@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27T05:09:02.216Z",
+  "updatedAt": "2026-07-27T08:53:53.395Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "bWF91qeCEC8",
+      "title": "とんでもない格好で寝るフェネックのゴン君😴#草津熱帯圏 #フェネック #fennecfox #動物園 #animal",
+      "published": "2026-07-27T08:20:44+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -199,14 +207,6 @@
       "videoId": "r8hJwNdTtsA",
       "title": "キャッツアイならぬレムールアイ参上👀 #池田動物園 #エリマキキツネザル",
       "published": "2026-07-25T08:00:35+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "1H0QR4jsmpE",
-      "title": "ハクビシンだけどアイドル並みの可愛さ！？ハクビシンのハクちゃんの可愛いところを集めました♫",
-      "published": "2026-07-25T06:21:12+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
