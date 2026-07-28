@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T09:16:48.056Z",
+  "updatedAt": "2026-07-28T11:35:02.182Z",
   "degraded": false,
   "live": [
     {
@@ -102,6 +102,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "Mu8Z8e9R1W0",
+      "title": "🌿 Baby Capybara Couldn't Resist the Fresh Grass 🥹",
+      "published": "2026-07-28T10:55:26+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -213,14 +221,6 @@
       "videoId": "58qskymz1aA",
       "title": "生まれて初めての爪切り！緊張でフリーズしちゃうモルモットの赤ちゃん",
       "published": "2026-07-25T10:00:06+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "7iY3g6-T9Zc",
-      "title": "Baby capybara fell asleep during chin scratches 🥹💦 ⭐",
-      "published": "2026-07-25T08:30:05+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
