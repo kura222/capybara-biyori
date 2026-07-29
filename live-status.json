@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T07:40:29.851Z",
+  "updatedAt": "2026-07-29T10:36:08.217Z",
   "degraded": false,
   "live": [
     {
@@ -102,6 +102,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "RMFp9kbOyOM",
+      "title": "バイオパークに警察が？園内にいる〇〇を捜索してもらいました　【長崎県警察コラボ】",
+      "published": "2026-07-29T10:00:06+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -229,14 +237,6 @@
       "videoId": "r8hJwNdTtsA",
       "title": "キャッツアイならぬレムールアイ参上👀 #池田動物園 #エリマキキツネザル",
       "published": "2026-07-25T08:00:35+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "Amf3m39hZlU",
-      "title": "【LIVE】ビーバーの赤ちゃん見ながら雑談",
-      "published": "2026-07-24T06:23:16+00:00"
     },
     {
       "channelSlug": "utsunomiya-zoo",
