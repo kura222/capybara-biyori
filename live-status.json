@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T10:36:08.217Z",
+  "updatedAt": "2026-07-29T12:58:36.786Z",
   "degraded": false,
   "live": [
     {
@@ -103,11 +103,27 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "TD42ekNT9kI",
+      "title": "The Whole Capybara Family Enjoying Lunch 🥬🧡",
+      "published": "2026-07-29T11:45:40+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "ILY5HoploJs",
+      "title": "ナイトズーアニマルイベントのご紹介🌕 #岡山 #池田動物園 #ナイトズー",
+      "published": "2026-07-29T11:00:31+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "RMFp9kbOyOM",
-      "title": "バイオパークに警察が？園内にいる〇〇を捜索してもらいました　【長崎県警察コラボ】",
+      "title": "バイオパークに警察が！カピバラが取り調べを受けることに…？【長崎県警察コラボ】",
       "published": "2026-07-29T10:00:06+00:00"
     },
     {
@@ -175,14 +191,6 @@
       "published": "2026-07-27T11:20:30+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "GXP0AdfJHPk",
-      "title": "Everyone loves capybaras…But baby capybaras are something else 🥹",
-      "published": "2026-07-26T15:00:05+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -229,14 +237,6 @@
       "videoId": "58qskymz1aA",
       "title": "生まれて初めての爪切り！緊張でフリーズしちゃうモルモットの赤ちゃん",
       "published": "2026-07-25T10:00:06+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "r8hJwNdTtsA",
-      "title": "キャッツアイならぬレムールアイ参上👀 #池田動物園 #エリマキキツネザル",
-      "published": "2026-07-25T08:00:35+00:00"
     },
     {
       "channelSlug": "utsunomiya-zoo",
