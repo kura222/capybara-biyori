@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-30T09:13:17.583Z",
+  "updatedAt": "2026-07-30T11:28:02.302Z",
   "degraded": false,
   "live": [
     {
@@ -103,6 +103,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "SZgLxTrENZo",
+      "title": "Why are they both staring at me? 👀🦫",
+      "published": "2026-07-30T09:40:26+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -181,14 +189,6 @@
       "videoId": "yfJrAEL5LnQ",
       "title": "ナイトズーメインイベントのご紹介🌕 #岡山 #池田動物園",
       "published": "2026-07-28T03:00:13+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "PmEdH66h8Hk",
-      "title": "POV: One baby capybara is relaxing... while chaos happens behind 😅",
-      "published": "2026-07-27T11:20:30+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
