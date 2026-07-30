@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-30T15:30:29.527Z",
+  "updatedAt": "2026-07-30T17:23:55.711Z",
   "degraded": false,
   "live": [
     {
@@ -67,12 +67,6 @@
       "videoId": "GveR8ZPwbEU",
       "title": "Capybara Underwater Livestream Cam 2",
       "startedAt": "2026-07-27T17:43:27Z"
-    },
-    {
-      "channelSlug": "roger-williams-zoo",
-      "videoId": "xvBXFDjaUZI",
-      "title": "Capybara Underwater Livestream Cam 1",
-      "startedAt": "2026-07-22T12:34:41Z"
     },
     {
       "channelSlug": "budapest-zoo",
