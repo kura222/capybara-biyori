@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T20:48:30.049Z",
+  "updatedAt": "2026-08-01T21:52:32.199Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "B4WldWBkmUY",
+      "title": "リスザルの展示場おくよ～　Part14",
+      "published": "2026-08-01T20:56:51+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -143,14 +151,6 @@
       "videoId": "V8Ou6qYvyJU",
       "title": "桃を堪能する動物園のお猿さん達♫",
       "published": "2026-08-01T08:05:04+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "B4WldWBkmUY",
-      "title": "リスザルの展示場おくよ～　Part14",
-      "published": "2026-08-01T07:41:19+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
