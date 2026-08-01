@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T09:04:04.975Z",
+  "updatedAt": "2026-08-01T10:56:47.813Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "br3a6HvRbb0",
+      "title": "今年も夏がやってきた！カバに丸ごと1玉スイカあげてみた🍉",
+      "startedAt": "2026-08-01T10:35:51Z"
     },
     {
       "channelSlug": "taronga",
@@ -96,6 +102,30 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "br3a6HvRbb0",
+      "title": "今年も夏がやってきた！カバに丸ごと1玉スイカあげてみた🍉",
+      "published": "2026-08-01T10:35:51+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "LFTng4uXqgE",
+      "title": "When a Capybara Breaks Your Heart 💔😂",
+      "published": "2026-08-01T10:15:10+00:00"
+    },
+    {
+      "channelSlug": "uminonakamichi-doubutsu-no-mori",
+      "channelName": "海の中道「動物の森」",
+      "facilitySlug": "uminonakamichi-park",
+      "videoId": "c5K_-ptmn5M",
+      "title": "青草ビュッフェを満喫中！　 #ラマ",
+      "published": "2026-08-01T10:00:11+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -177,14 +207,6 @@
       "published": "2026-07-29T10:00:06+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "ZvrPr6db9k8",
-      "title": "A tiny kid vs. a capybara army! 😂",
-      "published": "2026-07-29T01:30:38+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -207,14 +229,6 @@
       "videoId": "HaLp1KXWZRA",
       "title": "【LIVE】カピバラのスイカ早食い～ビーバーの赤ちゃん観察",
       "published": "2026-07-26T06:10:31+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "r16w4XU3PWk",
-      "title": "100kg越えのスイカをカピバラにあげてみた🍉",
-      "published": "2026-07-26T03:08:05+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
@@ -271,14 +285,6 @@
       "videoId": "Iue4MURcLmE",
       "title": "【ASMR】アルダブラゾウガメ、きゅうりを食べる",
       "published": "2026-07-09T10:00:02+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "M8mChnI7ILY",
-      "title": "リスザルの赤ちゃん 2026",
-      "published": "2026-07-08T05:01:28+00:00"
     },
     {
       "channelSlug": "saitama-childrens-zoo",
