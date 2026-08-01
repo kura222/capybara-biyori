@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T10:56:47.813Z",
+  "updatedAt": "2026-08-01T12:03:18.188Z",
   "degraded": false,
   "live": [
     {
@@ -25,12 +25,6 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "biopark",
-      "videoId": "br3a6HvRbb0",
-      "title": "今年も夏がやってきた！カバに丸ごと1玉スイカあげてみた🍉",
-      "startedAt": "2026-08-01T10:35:51Z"
     },
     {
       "channelSlug": "taronga",
@@ -102,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "eY9twvyRQEY",
+      "title": "てとてと🐧 #池田動物園 #動物 #マゼランペンギン",
+      "published": "2026-08-01T11:00:29+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -229,14 +231,6 @@
       "videoId": "HaLp1KXWZRA",
       "title": "【LIVE】カピバラのスイカ早食い～ビーバーの赤ちゃん観察",
       "published": "2026-07-26T06:10:31+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "9_YqPhe1mM8",
-      "title": "ナイトズーワンコイングルメフェス🍴",
-      "published": "2026-07-26T03:00:30+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
