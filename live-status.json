@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T02:32:29.033Z",
+  "updatedAt": "2026-08-02T05:54:43.468Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "I11XcsYqhbo",
+      "title": "長崎県警コラボイベント👮　と日陰からビーバー🦫",
+      "startedAt": "2026-08-02T04:33:21Z"
     },
     {
       "channelSlug": "taronga",
@@ -89,12 +95,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "tobu-zookeeper",
-      "videoId": "Py7v3G1Twcs",
-      "title": "東武動物公園　公式YouTubeチャンネル　夏だ！コタハク氷祭り開催！",
-      "scheduledAt": "2026-08-02T05:30:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -102,6 +102,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "Db7Da52KvAc",
+      "title": "可愛い肉球を見せてくれたハクちゃん♫#shorts #ハクビシン #動物園",
+      "published": "2026-08-02T04:44:27+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "I11XcsYqhbo",
+      "title": "長崎県警コラボイベント👮　と日陰からビーバー🦫",
+      "published": "2026-08-02T04:25:31+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -183,14 +199,6 @@
       "published": "2026-07-30T09:40:26+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "M2kMnLhNn78",
-      "title": "狙ったトマトは逃さない！！#shorts #猿 #lemur",
-      "published": "2026-07-30T08:18:41+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -229,14 +237,6 @@
       "videoId": "MK2jDdq1jPQ",
       "title": "梅雨の晴れ間は気持ちがええな🌞 ※梅雨時期に撮影 #池田動物園 #ジェフロイクモザル #岡山",
       "published": "2026-07-26T08:00:08+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "HaLp1KXWZRA",
-      "title": "【LIVE】カピバラのスイカ早食い～ビーバーの赤ちゃん観察",
-      "published": "2026-07-26T06:10:31+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
