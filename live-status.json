@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T23:55:03.908Z",
+  "updatedAt": "2026-08-02T02:32:29.033Z",
   "degraded": false,
   "live": [
     {
@@ -88,6 +88,12 @@
     }
   ],
   "upcoming": [
+    {
+      "channelSlug": "tobu-zookeeper",
+      "videoId": "Py7v3G1Twcs",
+      "title": "東武動物公園　公式YouTubeチャンネル　夏だ！コタハク氷祭り開催！",
+      "scheduledAt": "2026-08-02T05:30:00Z"
+    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
