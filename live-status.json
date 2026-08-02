@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T13:15:09.224Z",
+  "updatedAt": "2026-08-02T14:46:28.642Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "7vU2pMJIiAg",
+      "title": "POV: You accidentally woke up a hungry capybara 😂",
+      "published": "2026-08-02T13:36:06+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -207,14 +215,6 @@
       "videoId": "SZgLxTrENZo",
       "title": "Why are they both staring at me? 👀🦫",
       "published": "2026-07-30T09:40:26+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "TD42ekNT9kI",
-      "title": "The Whole Capybara Family Enjoying Lunch 🥬🧡",
-      "published": "2026-07-29T11:45:40+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
