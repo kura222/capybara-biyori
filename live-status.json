@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T05:54:43.468Z",
+  "updatedAt": "2026-08-02T08:20:22.011Z",
   "degraded": false,
   "live": [
     {
@@ -25,12 +25,6 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "biopark",
-      "videoId": "I11XcsYqhbo",
-      "title": "長崎県警コラボイベント👮　と日陰からビーバー🦫",
-      "startedAt": "2026-08-02T04:33:21Z"
     },
     {
       "channelSlug": "taronga",
@@ -103,20 +97,20 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "I11XcsYqhbo",
+      "title": "長崎県警コラボイベント👮　と日陰からビーバー🦫",
+      "published": "2026-08-02T07:11:20+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
       "videoId": "Db7Da52KvAc",
       "title": "可愛い肉球を見せてくれたハクちゃん♫#shorts #ハクビシン #動物園",
       "published": "2026-08-02T04:44:27+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "I11XcsYqhbo",
-      "title": "長崎県警コラボイベント👮　と日陰からビーバー🦫",
-      "published": "2026-08-02T04:25:31+00:00"
     },
     {
       "channelSlug": "biopark",
