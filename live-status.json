@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T10:14:14.537Z",
+  "updatedAt": "2026-08-02T11:41:26.199Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "pwIZ7FcDfqE",
+      "title": "タケノコで入れ食いじゃな☺ #池田動物園 #岡山 #カピバラ",
+      "published": "2026-08-02T11:00:21+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -223,14 +231,6 @@
       "videoId": "RMFp9kbOyOM",
       "title": "バイオパークに警察が？園内にいる〇〇を捜索してもらいました　【長崎県警察コラボ】",
       "published": "2026-07-29T10:00:06+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "yfJrAEL5LnQ",
-      "title": "ナイトズーメインイベントのご紹介🌕 #岡山 #池田動物園",
-      "published": "2026-07-28T03:00:13+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
