@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T08:20:22.011Z",
+  "updatedAt": "2026-08-02T10:14:14.537Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "IESXPUcXt9E",
+      "title": "8/1ナイトズー初日の様子です。 #岡山 #池田動物園 #ナイトズー",
+      "published": "2026-08-02T09:00:26+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "zwjolTeglH4",
+      "title": "今年の夏の主役はおじいちゃん、おばあちゃん達♫#shorts #動物園 #イベント",
+      "published": "2026-08-02T08:24:10+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -169,14 +185,6 @@
       "published": "2026-08-01T08:05:04+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "sCAcdlttzy8",
-      "title": "大好物のみかんはギリギリまで食べるくるみおばあちゃん♫#shorts #猿 #動物",
-      "published": "2026-07-31T08:20:27+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -223,14 +231,6 @@
       "videoId": "yfJrAEL5LnQ",
       "title": "ナイトズーメインイベントのご紹介🌕 #岡山 #池田動物園",
       "published": "2026-07-28T03:00:13+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "MK2jDdq1jPQ",
-      "title": "梅雨の晴れ間は気持ちがええな🌞 ※梅雨時期に撮影 #池田動物園 #ジェフロイクモザル #岡山",
-      "published": "2026-07-26T08:00:08+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
