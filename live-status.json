@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T23:56:32.281Z",
+  "updatedAt": "2026-08-03T02:51:42.411Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "h3gDM2vJovA",
+      "title": "ビーバーの赤ちゃん大接近🦫",
+      "published": "2026-08-03T00:23:22+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -223,14 +231,6 @@
       "videoId": "ILY5HoploJs",
       "title": "ナイトズーアニマルイベントのご紹介🌕 #岡山 #池田動物園 #ナイトズー",
       "published": "2026-07-29T11:00:31+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "RMFp9kbOyOM",
-      "title": "バイオパークに警察が？園内にいる〇〇を捜索してもらいました　【長崎県警察コラボ】",
-      "published": "2026-07-29T10:00:06+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
