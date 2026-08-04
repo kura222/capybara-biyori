@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T03:47:17.737Z",
+  "updatedAt": "2026-08-04T06:25:17.453Z",
   "degraded": false,
   "live": [
     {
@@ -25,8 +25,115 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "kiryugaoka-zoo",
+      "videoId": "N4kcIlIr66k",
+      "title": "西エリア",
+      "startedAt": "2026-07-03T00:30:28Z"
+    },
+    {
+      "channelSlug": "kiryugaoka-zoo",
+      "videoId": "vCyw44Xuldo",
+      "title": "東エリア ワイド",
+      "startedAt": "2026-03-20T03:04:10Z"
+    },
+    {
+      "channelSlug": "kiryugaoka-zoo",
+      "videoId": "mbmp7hmMG_Q",
+      "title": "東エリア スポット",
+      "startedAt": "2026-03-20T03:04:08Z"
+    },
+    {
+      "channelSlug": "kumamoto-city-zoo-livecam",
+      "videoId": "iLsJ1R8iz78",
+      "title": "【熊本市動植物園】アフリカゾウ | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Elephant)",
+      "startedAt": "2026-03-31T00:45:06Z"
+    },
+    {
+      "channelSlug": "kumamoto-city-zoo-livecam",
+      "videoId": "EeU_fG7pmX4",
+      "title": "【熊本市動植物園】マサイキリン | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Giraffe)",
+      "startedAt": "2025-11-04T09:28:46Z"
+    },
+    {
+      "channelSlug": "roger-williams-zoo",
+      "videoId": "dvY9XsJMiM0",
+      "title": "Capybara Underwater Livestream Cam 2",
+      "startedAt": "2026-08-03T15:56:16Z"
+    },
+    {
+      "channelSlug": "roger-williams-zoo",
+      "videoId": "rPT8jDwgOxI",
+      "title": "Capybara Underwater Livestream Cam 1",
+      "startedAt": "2026-08-03T15:55:49Z"
     }
   ],
   "upcoming": [],
-  "latestVideos": []
+  "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "pwIZ7FcDfqE",
+      "title": "タケノコで入れ食いじゃな☺ #池田動物園 #岡山 #カピバラ",
+      "published": "2026-08-02T11:00:21+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "IESXPUcXt9E",
+      "title": "8/1ナイトズー初日の様子です。 #岡山 #池田動物園 #ナイトズー",
+      "published": "2026-08-02T09:00:26+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "eY9twvyRQEY",
+      "title": "てとてと🐧 #池田動物園 #動物 #マゼランペンギン",
+      "published": "2026-08-01T11:00:29+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "ILY5HoploJs",
+      "title": "ナイトズーアニマルイベントのご紹介🌕 #岡山 #池田動物園 #ナイトズー",
+      "published": "2026-07-29T11:00:31+00:00"
+    },
+    {
+      "channelSlug": "saitama-childrens-zoo",
+      "channelName": "埼玉県こども動物自然公園",
+      "facilitySlug": "saitama-childrens-zoo",
+      "videoId": "Iue4MURcLmE",
+      "title": "【ASMR】アルダブラゾウガメ、きゅうりを食べる",
+      "published": "2026-07-09T10:00:02+00:00"
+    },
+    {
+      "channelSlug": "saitama-childrens-zoo",
+      "channelName": "埼玉県こども動物自然公園",
+      "facilitySlug": "saitama-childrens-zoo",
+      "videoId": "5mjgMPaFlac",
+      "title": "【ASMR】ケヅメリクガメ、ゴーヤを食べる",
+      "published": "2026-07-07T10:00:36+00:00"
+    },
+    {
+      "channelSlug": "saitama-childrens-zoo",
+      "channelName": "埼玉県こども動物自然公園",
+      "facilitySlug": "saitama-childrens-zoo",
+      "videoId": "KLEARSKYvxM",
+      "title": "フェルトでつくるハダカデバネズミ",
+      "published": "2026-06-21T04:00:05+00:00"
+    },
+    {
+      "channelSlug": "saitama-childrens-zoo",
+      "channelName": "埼玉県こども動物自然公園",
+      "facilitySlug": "saitama-childrens-zoo",
+      "videoId": "E7Q_od9vm6s",
+      "title": "W杯「日本vsチュニジア」グンディに予想してもらいました！",
+      "published": "2026-06-20T05:58:24+00:00"
+    }
+  ]
 }
