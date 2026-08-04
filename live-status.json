@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T09:19:37.964Z",
+  "updatedAt": "2026-08-04T11:38:24.559Z",
   "degraded": false,
   "live": [
     {
@@ -103,6 +103,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "42BypAbNjME",
+      "title": "飼育員と赤ちゃんビーバーの... #癒し",
+      "published": "2026-08-04T10:00:09+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -205,14 +213,6 @@
       "videoId": "eY9twvyRQEY",
       "title": "てとてと🐧 #池田動物園 #動物 #マゼランペンギン",
       "published": "2026-08-01T11:00:29+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "br3a6HvRbb0",
-      "title": "今年も夏がやってきた！カバに丸ごと1玉スイカあげてみた🍉",
-      "published": "2026-08-01T10:35:51+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
