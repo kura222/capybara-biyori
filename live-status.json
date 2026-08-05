@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-05T09:35:20.868Z",
+  "updatedAt": "2026-08-05T11:57:57.598Z",
   "degraded": false,
   "live": [
     {
@@ -95,12 +95,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "NJIqynmwwAg",
-      "title": "新人広報の1日ってどんな感じ？動物たちの魅力を届ける裏側に完全密着！",
-      "scheduledAt": "2026-08-05T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -108,6 +102,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "NJIqynmwwAg",
+      "title": "新人広報の1日ってどんな感じ？動物たちの魅力を届ける裏側に完全密着！",
+      "published": "2026-08-05T10:00:07+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "2XbRmlMoXDc",
+      "title": "5 августа 2026 г.",
+      "published": "2026-08-05T10:00:05+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -147,14 +157,6 @@
       "videoId": "If1j2Lv13hs",
       "title": "Tiny Girl Feeds Two Baby Capybaras 🌿🤎",
       "published": "2026-08-04T05:10:29+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "NJIqynmwwAg",
-      "title": "新人広報の1日ってどんな感じ？動物たちの魅力を届ける裏側に完全密着！",
-      "published": "2026-08-04T01:58:20+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
@@ -219,14 +221,6 @@
       "videoId": "eY9twvyRQEY",
       "title": "てとてと🐧 #池田動物園 #動物 #マゼランペンギン",
       "published": "2026-08-01T11:00:29+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "LFTng4uXqgE",
-      "title": "When a Capybara Breaks Your Heart 💔😂",
-      "published": "2026-08-01T10:15:10+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
