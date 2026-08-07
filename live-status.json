@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T08:11:10.233Z",
+  "updatedAt": "2026-08-07T09:30:41.023Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "oPiYh6akvOk",
+      "title": "8/8のキッチンカー情報🌝 #池田動物園 #岡山 #ナイトズー",
+      "published": "2026-08-07T09:00:32+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "T7Bp205nVIs",
+      "title": "暑くても食欲が落ちないパワフルおばあちゃん猿♫#shorts #猿 #おばあちゃん",
+      "published": "2026-08-07T08:21:12+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -151,14 +167,6 @@
       "videoId": "EEXUxgwimzU",
       "title": "きゅうりを抱えて食べるニホンザルのモン吉くん♫#shorts #ニホンザル #猿",
       "published": "2026-08-05T08:13:08+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "kwWV-erEGVI",
-      "title": "頼んでいたのとは違って・・・やって来たのはまさかのヒナ！？",
-      "published": "2026-08-05T07:55:48+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -223,14 +231,6 @@
       "videoId": "c5K_-ptmn5M",
       "title": "青草ビュッフェを満喫中！　 #ラマ",
       "published": "2026-08-01T10:00:11+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "ILY5HoploJs",
-      "title": "ナイトズーアニマルイベントのご紹介🌕 #岡山 #池田動物園 #ナイトズー",
-      "published": "2026-07-29T11:00:31+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
