@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T16:23:11.624Z",
+  "updatedAt": "2026-08-07T17:22:21.923Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "7UIV7PorKrI",
+      "title": "🌿 The Grass Never Ends… 😂 #babycapybara #shorts",
+      "published": "2026-08-07T16:32:10+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -183,14 +191,6 @@
       "videoId": "If1j2Lv13hs",
       "title": "Tiny Girl Feeds Two Baby Capybaras 🌿🤎",
       "published": "2026-08-04T05:10:29+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "j1bwpvZj0vc",
-      "title": "This Capybara Climbed Onto Her Lap for Grass! 🥹🌿",
-      "published": "2026-08-03T05:20:15+00:00"
     },
     {
       "channelSlug": "biopark",
