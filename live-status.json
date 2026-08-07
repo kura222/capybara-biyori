@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T00:23:12.189Z",
+  "updatedAt": "2026-08-07T03:27:15.001Z",
   "degraded": false,
   "live": [
     {
@@ -33,36 +33,6 @@
       "startedAt": "2026-07-03T21:00:26Z"
     },
     {
-      "channelSlug": "kiryugaoka-zoo",
-      "videoId": "N4kcIlIr66k",
-      "title": "西エリア",
-      "startedAt": "2026-07-03T00:30:28Z"
-    },
-    {
-      "channelSlug": "kiryugaoka-zoo",
-      "videoId": "vCyw44Xuldo",
-      "title": "東エリア ワイド",
-      "startedAt": "2026-03-20T03:04:10Z"
-    },
-    {
-      "channelSlug": "kiryugaoka-zoo",
-      "videoId": "mbmp7hmMG_Q",
-      "title": "東エリア スポット",
-      "startedAt": "2026-03-20T03:04:08Z"
-    },
-    {
-      "channelSlug": "kumamoto-city-zoo-livecam",
-      "videoId": "iLsJ1R8iz78",
-      "title": "【熊本市動植物園】アフリカゾウ | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Elephant)",
-      "startedAt": "2026-03-31T00:45:06Z"
-    },
-    {
-      "channelSlug": "kumamoto-city-zoo-livecam",
-      "videoId": "EeU_fG7pmX4",
-      "title": "【熊本市動植物園】マサイキリン | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Giraffe)",
-      "startedAt": "2025-11-04T09:28:46Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "i3kmj2b8zkA",
       "title": "Állatkert Budapest szívében - Elefánt kifutó ÉLŐ",
@@ -83,12 +53,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "tobu-zookeeper",
-      "videoId": "cjeZ_P-RuDk",
-      "title": "キャットワールド ハープの夕べ LIVE配信　東武動物公園　公式YouTubeチャンネル",
-      "scheduledAt": "2026-08-09T08:55:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -97,28 +61,12 @@
   ],
   "latestVideos": [
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "Z7XoDB_8hE4",
-      "title": "The Capybara Judgment Committee 😂",
-      "published": "2026-08-06T10:15:12+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "xW1Qyb7e3z0",
       "title": "こちらの様子が気になるカワウソ",
       "published": "2026-08-06T10:00:05+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "TL_Vl0BR5B0",
-      "title": "きゅうりが似合うくるみおばあちゃん♫#shorts #猿 #動物",
-      "published": "2026-08-06T08:47:34+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -129,60 +77,12 @@
       "published": "2026-08-05T10:00:07+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "2XbRmlMoXDc",
-      "title": "5 августа 2026 г.",
-      "published": "2026-08-05T10:00:05+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "EEXUxgwimzU",
-      "title": "きゅうりを抱えて食べるニホンザルのモン吉くん♫#shorts #ニホンザル #猿",
-      "published": "2026-08-05T08:13:08+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "kwWV-erEGVI",
-      "title": "頼んでいたのとは違って・・・やって来たのはまさかのヒナ！？",
-      "published": "2026-08-05T07:55:48+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "42BypAbNjME",
       "title": "飼育員と赤ちゃんビーバーの... #癒し",
       "published": "2026-08-04T10:00:09+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "KGJ0DVazElE",
-      "title": "ブラウンキツネザルのマッキーのごはんの食べ方♫#shorts #動物園 #猿",
-      "published": "2026-08-04T08:12:26+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "If1j2Lv13hs",
-      "title": "Tiny Girl Feeds Two Baby Capybaras 🌿🤎",
-      "published": "2026-08-04T05:10:29+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "j1bwpvZj0vc",
-      "title": "This Capybara Climbed Onto Her Lap for Grass! 🥹🌿",
-      "published": "2026-08-03T05:20:15+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -241,22 +141,6 @@
       "published": "2026-07-25T10:00:13+00:00"
     },
     {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "Ye9LzfbAVqk",
-      "title": "【栃木・夏休み特集】動物園・夜の遊園地・プール！宇都宮動物園",
-      "published": "2026-07-24T01:00:06+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "xaJUpR1-vOw",
-      "title": "🌵伊豆シャボテン動物公園来たら、ここ行って🌵",
-      "published": "2026-07-20T09:00:17+00:00"
-    },
-    {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
       "facilitySlug": "uminonakamichi-park",
@@ -271,86 +155,6 @@
       "videoId": "47AhH_JBPEo",
       "title": "シャワー後のルーティン #pony #routines",
       "published": "2026-07-12T01:05:36+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "Iue4MURcLmE",
-      "title": "【ASMR】アルダブラゾウガメ、きゅうりを食べる",
-      "published": "2026-07-09T10:00:02+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "5mjgMPaFlac",
-      "title": "【ASMR】ケヅメリクガメ、ゴーヤを食べる",
-      "published": "2026-07-07T10:00:36+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "u0ofOfPxKmk",
-      "title": "【宇都宮動物園】迫力満点！カバの歯磨きタイム🦛 歯磨きの大切さと豪快なスイカの食べっぷり！",
-      "published": "2026-06-30T15:00:06+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "_nht6WFjdjc",
-      "title": "アメリカビーバーのごはんタイムASMR🦫",
-      "published": "2026-06-30T09:30:11+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "uPlJjBcrawk",
-      "title": "飼育員が作るごはん【アメリカビーバー編】🦫",
-      "published": "2026-06-29T10:30:25+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "okevk-5qGlQ",
-      "title": "伊豆シャボテン動物公園公式チャンネル がライブ配信中！",
-      "published": "2026-06-26T07:55:42+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "KLEARSKYvxM",
-      "title": "フェルトでつくるハダカデバネズミ",
-      "published": "2026-06-21T04:00:05+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "E7Q_od9vm6s",
-      "title": "W杯「日本vsチュニジア」グンディに予想してもらいました！",
-      "published": "2026-06-20T05:58:24+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "UzTpl2o9dkY",
-      "title": "「【園内初の室内展示場が完成！】ナマケモノの新しいおうちに潜入🌿｜宇都宮動物園",
-      "published": "2026-05-30T15:00:05+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "A26Lpp2J_yw",
-      "title": "【宇都宮動物園】初登場！ナマケモノの愛らしさと驚きの生態を紹介🦥",
-      "published": "2026-04-30T15:00:06+00:00"
     }
   ]
 }
