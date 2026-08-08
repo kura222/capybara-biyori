@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T13:42:54.347Z",
+  "updatedAt": "2026-08-08T14:29:12.173Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "qOUZg0CoqNM",
+      "title": "Caught them on a date 😂",
+      "published": "2026-08-08T13:55:09+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -201,14 +209,6 @@
       "videoId": "42BypAbNjME",
       "title": "飼育員と赤ちゃんビーバーの... #癒し",
       "published": "2026-08-04T10:00:09+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "If1j2Lv13hs",
-      "title": "Tiny Girl Feeds Two Baby Capybaras 🌿🤎",
-      "published": "2026-08-04T05:10:29+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
