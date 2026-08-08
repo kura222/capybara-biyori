@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T10:29:14.767Z",
+  "updatedAt": "2026-08-08T11:02:11.894Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "kGFOcLaRMVU",
+      "title": "毛繕いは日課じゃ🐾#池田動物園 #岡山 #レッサーパンダ #しずく",
+      "published": "2026-08-08T11:00:36+00:00"
+    },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
@@ -217,14 +225,6 @@
       "videoId": "IESXPUcXt9E",
       "title": "8/1ナイトズー初日の様子です。 #岡山 #池田動物園 #ナイトズー",
       "published": "2026-08-02T09:00:26+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "eY9twvyRQEY",
-      "title": "てとてと🐧 #池田動物園 #動物 #マゼランペンギン",
-      "published": "2026-08-01T11:00:29+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
