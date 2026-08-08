@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T01:55:45.788Z",
+  "updatedAt": "2026-08-08T03:24:14.787Z",
   "degraded": false,
   "live": [
     {
@@ -82,12 +82,6 @@
     }
   ],
   "upcoming": [
-    {
-      "channelSlug": "tobu-zookeeper",
-      "videoId": "cjeZ_P-RuDk",
-      "title": "キャットワールド ハープの夕べ LIVE配信　東武動物公園　公式YouTubeチャンネル",
-      "scheduledAt": "2026-08-09T08:55:00Z"
-    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
