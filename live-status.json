@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T08:38:43.674Z",
+  "updatedAt": "2026-08-09T09:36:20.911Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "d-Rdycdf5Hc",
+      "title": "頑張って採って来たで☺美味いか？ #池田動物園 #岡山 #アミメキリン",
+      "published": "2026-08-09T09:00:38+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -217,14 +225,6 @@
       "videoId": "pwIZ7FcDfqE",
       "title": "タケノコで入れ食いじゃな☺ #池田動物園 #岡山 #カピバラ",
       "published": "2026-08-02T11:00:21+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "IESXPUcXt9E",
-      "title": "8/1ナイトズー初日の様子です。 #岡山 #池田動物園 #ナイトズー",
-      "published": "2026-08-02T09:00:26+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
