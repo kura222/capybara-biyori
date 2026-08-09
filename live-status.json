@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T03:16:34.078Z",
+  "updatedAt": "2026-08-09T04:45:51.373Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "wDVZmxcw9Ds",
+      "title": "のんびりビーバー🦫",
+      "startedAt": "2026-08-09T04:31:21Z"
     },
     {
       "channelSlug": "taronga",
@@ -82,6 +88,12 @@
     }
   ],
   "upcoming": [
+    {
+      "channelSlug": "tobu-zookeeper",
+      "videoId": "3oDNZyab0nc",
+      "title": "ゾウさんのもぐもぐアイス東武動物公園　公式YouTubeチャンネル",
+      "scheduledAt": "2026-08-09T05:55:00Z"
+    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
@@ -195,20 +207,20 @@
       "published": "2026-08-06T08:47:34+00:00"
     },
     {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "NJIqynmwwAg",
-      "title": "新人広報の1日ってどんな感じ？動物たちの魅力を届ける裏側に完全密着！",
-      "published": "2026-08-05T10:00:07+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
       "videoId": "2XbRmlMoXDc",
       "title": "5 августа 2026 г.",
       "published": "2026-08-05T10:00:05+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "wDVZmxcw9Ds",
+      "title": "のんびりビーバー🦫",
+      "published": "2026-08-03T00:16:10+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
