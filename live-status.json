@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T10:31:15.600Z",
+  "updatedAt": "2026-08-09T11:25:59.544Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "lRqSHTpB-hQ",
+      "title": "How Long Can a Capybara Wear Sunglasses? 😎🦫",
+      "published": "2026-08-09T11:00:30+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -209,14 +217,6 @@
       "videoId": "xW1Qyb7e3z0",
       "title": "こちらの様子が気になるカワウソ",
       "published": "2026-08-06T10:00:05+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "2XbRmlMoXDc",
-      "title": "5 августа 2026 г.",
-      "published": "2026-08-05T10:00:05+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
