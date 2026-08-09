@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T01:26:27.100Z",
+  "updatedAt": "2026-08-09T03:16:34.078Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "G2wHgfbeJtY",
+      "title": "カボチャを食べる赤ちゃんビーバー🦫",
+      "published": "2026-08-09T03:15:20+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -201,14 +209,6 @@
       "videoId": "2XbRmlMoXDc",
       "title": "5 августа 2026 г.",
       "published": "2026-08-05T10:00:05+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "42BypAbNjME",
-      "title": "飼育員と赤ちゃんビーバーの... #癒し",
-      "published": "2026-08-04T10:00:09+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
