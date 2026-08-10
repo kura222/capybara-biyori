@@ -1,7 +1,37 @@
 {
-  "updatedAt": "2026-08-09T23:59:56.075Z",
+  "updatedAt": "2026-08-10T02:26:41.787Z",
   "degraded": false,
   "live": [
+    {
+      "channelSlug": "angel-valley-farm",
+      "videoId": "TyhwIiMDEbY",
+      "title": "Watch Capybaras 24/7 – Angel Valley Farm Live",
+      "startedAt": "2026-02-15T13:13:39Z"
+    },
+    {
+      "channelSlug": "angel-valley-farm",
+      "videoId": "Q5FdRuwzIbE",
+      "title": "Angel Valley Farm LIVE 24/7 🟢 Relaxing Capybara Pool Stream 🐹💦",
+      "startedAt": "2026-02-15T13:20:06Z"
+    },
+    {
+      "channelSlug": "riga-zoo-bite",
+      "videoId": "NKV4x2RYeco",
+      "title": "Bite Latvija - Kapibaras 1",
+      "startedAt": "2025-11-13T11:40:57Z"
+    },
+    {
+      "channelSlug": "riga-zoo-bite",
+      "videoId": "Fr7dCV4fGIo",
+      "title": "Bite Latvija - Kapibaras 2",
+      "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "taronga",
+      "videoId": "RzasUXCTStM",
+      "title": "Capybara Live stream",
+      "startedAt": "2026-07-03T21:00:26Z"
+    },
     {
       "channelSlug": "kiryugaoka-zoo",
       "videoId": "N4kcIlIr66k",
@@ -213,6 +243,14 @@
       "published": "2026-07-25T10:00:13+00:00"
     },
     {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "Ye9LzfbAVqk",
+      "title": "【栃木・夏休み特集】動物園・夜の遊園地・プール！宇都宮動物園",
+      "published": "2026-07-24T01:00:06+00:00"
+    },
+    {
       "channelSlug": "shabotengroup",
       "channelName": "伊豆シャボテン公園グループ",
       "facilitySlug": "izu-shaboten",
@@ -243,6 +281,14 @@
       "videoId": "5mjgMPaFlac",
       "title": "【ASMR】ケヅメリクガメ、ゴーヤを食べる",
       "published": "2026-07-07T10:00:36+00:00"
+    },
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "u0ofOfPxKmk",
+      "title": "【宇都宮動物園】迫力満点！カバの歯磨きタイム🦛 歯磨きの大切さと豪快なスイカの食べっぷり！",
+      "published": "2026-06-30T15:00:06+00:00"
     },
     {
       "channelSlug": "shabotengroup",
@@ -283,6 +329,22 @@
       "videoId": "E7Q_od9vm6s",
       "title": "W杯「日本vsチュニジア」グンディに予想してもらいました！",
       "published": "2026-06-20T05:58:24+00:00"
+    },
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "UzTpl2o9dkY",
+      "title": "「【園内初の室内展示場が完成！】ナマケモノの新しいおうちに潜入🌿｜宇都宮動物園",
+      "published": "2026-05-30T15:00:05+00:00"
+    },
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "A26Lpp2J_yw",
+      "title": "【宇都宮動物園】初登場！ナマケモノの愛らしさと驚きの生態を紹介🦥",
+      "published": "2026-04-30T15:00:06+00:00"
     }
   ]
 }
