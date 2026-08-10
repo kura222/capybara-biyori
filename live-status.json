@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T08:57:53.768Z",
+  "updatedAt": "2026-08-10T10:21:11.559Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "FSpHPwTPdpE",
+      "title": "【デグー特集】デグーに誕生日プレゼントを渡したらリアクションが可愛すぎた🐹【お誕生日】",
+      "startedAt": "2026-08-10T10:00:06Z"
     },
     {
       "channelSlug": "taronga",
@@ -83,12 +89,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "FSpHPwTPdpE",
-      "title": "【デグー特集】デグーに誕生日プレゼントを渡したらリアクションが可愛すぎた🐹【お誕生日】",
-      "scheduledAt": "2026-08-10T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -97,20 +97,28 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "FSpHPwTPdpE",
+      "title": "【デグー特集】デグーに誕生日プレゼントを渡したらリアクションが可愛すぎた🐹【お誕生日】",
+      "published": "2026-08-10T10:00:06+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "BBueAIFgv_0",
+      "title": "降りるのかい！？降りないのかい？！#アカハナグマ",
+      "published": "2026-08-10T09:00:19+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
       "videoId": "K0FYBqGbJXo",
       "title": "ナマケモノだって座って休みたい時があるんですよ🦥#ナマケモノ #sloth #動物園 #zoo #草津熱帯圏",
       "published": "2026-08-10T08:56:10+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "FSpHPwTPdpE",
-      "title": "【デグー特集】デグーに誕生日プレゼントを渡したらリアクションが可愛すぎた🐹【お誕生日】",
-      "published": "2026-08-10T05:15:41+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -175,14 +183,6 @@
       "videoId": "Ipc8wY_Vg-0",
       "title": "甘え上手なヒツジのサクレ",
       "published": "2026-08-08T10:00:19+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "WOeVmEdtJrI",
-      "title": "【飼育員のお仕事】レッサーパンダの池の水を抜いてピカピカに！底に潜んでいたカメさんたちを救出🐢",
-      "published": "2026-08-08T10:00:06+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
