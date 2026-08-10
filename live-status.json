@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T12:11:13.002Z",
+  "updatedAt": "2026-08-10T13:54:40.452Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "jj9cOp07NHk",
+      "title": "She wanted the snack… but walked backwards 😂",
+      "published": "2026-08-10T12:30:10+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -209,14 +217,6 @@
       "videoId": "T7Bp205nVIs",
       "title": "暑くても食欲が落ちないパワフルおばあちゃん猿♫#shorts #猿 #おばあちゃん",
       "published": "2026-08-07T08:21:12+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "Z7XoDB_8hE4",
-      "title": "The Capybara Judgment Committee 😂",
-      "published": "2026-08-06T10:15:12+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
