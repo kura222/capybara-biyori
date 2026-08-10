@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T07:27:07.736Z",
+  "updatedAt": "2026-08-10T08:57:53.768Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "K0FYBqGbJXo",
+      "title": "ナマケモノだって座って休みたい時があるんですよ🦥#ナマケモノ #sloth #動物園 #zoo #草津熱帯圏",
+      "published": "2026-08-10T08:56:10+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -207,14 +215,6 @@
       "videoId": "T7Bp205nVIs",
       "title": "暑くても食欲が落ちないパワフルおばあちゃん猿♫#shorts #猿 #おばあちゃん",
       "published": "2026-08-07T08:21:12+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "s15NntxgUOA",
-      "title": "涼しさ満点の白く輝くアリゲーターガー♫#shorts #動物園 #淡水魚",
-      "published": "2026-08-07T05:02:02+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
