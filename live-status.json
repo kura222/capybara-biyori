@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11T07:02:16.607Z",
+  "updatedAt": "2026-08-11T08:29:36.621Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "LC8drzg4BFk",
+      "title": "ベタ馴れなウロコインコ♫#shorts #インコ #動物園",
+      "published": "2026-08-11T08:13:49+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "bG0BjBIicgE",
+      "title": "ビーバー見ながら周辺観光情報",
+      "published": "2026-08-11T07:04:03+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -121,14 +137,6 @@
       "videoId": "K0FYBqGbJXo",
       "title": "ナマケモノだって座って休みたい時があるんですよ🦥#ナマケモノ #sloth #動物園 #zoo #草津熱帯圏",
       "published": "2026-08-10T08:56:10+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "bG0BjBIicgE",
-      "title": "ビーバー見ながら周辺観光情報",
-      "published": "2026-08-10T07:04:33+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -209,14 +217,6 @@
       "videoId": "oPiYh6akvOk",
       "title": "8/8のキッチンカー情報🌝 #池田動物園 #岡山 #ナイトズー",
       "published": "2026-08-07T09:00:32+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "T7Bp205nVIs",
-      "title": "暑くても食欲が落ちないパワフルおばあちゃん猿♫#shorts #猿 #おばあちゃん",
-      "published": "2026-08-07T08:21:12+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
