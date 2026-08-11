@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11T04:48:12.736Z",
+  "updatedAt": "2026-08-11T05:51:48.468Z",
   "degraded": false,
   "live": [
     {
@@ -28,5 +28,38 @@
     }
   ],
   "upcoming": [],
-  "latestVideos": []
+  "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "jj9cOp07NHk",
+      "title": "She wanted the snack… but walked backwards 😂",
+      "published": "2026-08-10T12:30:10+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "lRqSHTpB-hQ",
+      "title": "How Long Can a Capybara Wear Sunglasses? 😎🦫",
+      "published": "2026-08-09T11:00:30+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "qOUZg0CoqNM",
+      "title": "Caught them on a date 😂",
+      "published": "2026-08-08T13:55:09+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "7UIV7PorKrI",
+      "title": "🌿 The Grass Never Ends… 😂 #babycapybara #shorts",
+      "published": "2026-08-07T16:32:10+00:00"
+    }
+  ]
 }
