@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11T08:29:36.621Z",
+  "updatedAt": "2026-08-11T09:33:14.270Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "BDLbbzEOVy0",
+      "title": "トビの鳴き声、どこかで聞いたことがあるんじゃないかな？#岡山 #池田動物園 #トビ #トンビ",
+      "published": "2026-08-11T09:00:21+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -217,14 +225,6 @@
       "videoId": "oPiYh6akvOk",
       "title": "8/8のキッチンカー情報🌝 #池田動物園 #岡山 #ナイトズー",
       "published": "2026-08-07T09:00:32+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "pwIZ7FcDfqE",
-      "title": "タケノコで入れ食いじゃな☺ #池田動物園 #岡山 #カピバラ",
-      "published": "2026-08-02T11:00:21+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
