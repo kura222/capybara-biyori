@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T10:00:18.084Z",
+  "updatedAt": "2026-08-12T11:21:01.677Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "qi8Z4Ner6NU",
+      "title": "A Little Gift from Her VIP Mama 🐾❤️ | Okonomiyaki",
+      "published": "2026-08-12T11:00:38+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -209,14 +217,6 @@
       "videoId": "Ipc8wY_Vg-0",
       "title": "甘え上手なヒツジのサクレ",
       "published": "2026-08-08T10:00:19+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "7UIV7PorKrI",
-      "title": "🌿 The Grass Never Ends… 😂 #babycapybara #shorts",
-      "published": "2026-08-07T16:32:10+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
