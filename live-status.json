@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T07:20:32.276Z",
+  "updatedAt": "2026-08-12T08:46:46.261Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,30 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "kELGy2tmqJI",
+      "title": "19歳になっても元気なおじいちゃん猿♫#shorts #猿 #おじいちゃん",
+      "published": "2026-08-12T08:31:06+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "xdaUmyj6GmQ",
+      "title": "チビーバーの相撲 【ライブ ハイライト】",
+      "published": "2026-08-12T08:20:47+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "GKaQdFFKFbo",
+      "title": "きゅうりをポリポリと食べる動物達♫美味しそうな音が沢山録れました！！",
+      "published": "2026-08-12T08:10:37+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -163,22 +187,6 @@
       "published": "2026-08-09T09:00:38+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "LsAq_5ogkgo",
-      "title": "「いいもん持ってんじゃねぇか。それよこせ！」と言わんばかりに腕時計に興味津々のアルマジロ#アルマジロ #動物園 #草津熱帯圏 #armadillo #zoo",
-      "published": "2026-08-09T08:26:14+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "wDVZmxcw9Ds",
-      "title": "のんびりビーバー🦫",
-      "published": "2026-08-09T07:22:50+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -201,14 +209,6 @@
       "videoId": "Ipc8wY_Vg-0",
       "title": "甘え上手なヒツジのサクレ",
       "published": "2026-08-08T10:00:19+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "ILvDf6OFFsE",
-      "title": "癒しのヨザルのよっちゃん♪きゅうりを食べる音がまた癒しの音でした♫",
-      "published": "2026-08-08T06:25:18+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
