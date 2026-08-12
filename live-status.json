@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T14:56:03.044Z",
+  "updatedAt": "2026-08-12T15:58:16.160Z",
   "degraded": false,
   "live": [
     {
@@ -113,14 +113,6 @@
       "published": "2026-08-12T08:31:06+00:00"
     },
     {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "xdaUmyj6GmQ",
-      "title": "チビーバーの相撲 【ライブ ハイライト】",
-      "published": "2026-08-12T08:20:47+00:00"
-    },
-    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -199,6 +191,14 @@
       "videoId": "d-Rdycdf5Hc",
       "title": "頑張って採って来たで☺美味いか？ #池田動物園 #岡山 #アミメキリン",
       "published": "2026-08-09T09:00:38+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "wDVZmxcw9Ds",
+      "title": "のんびりビーバー🦫",
+      "published": "2026-08-09T07:22:50+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
