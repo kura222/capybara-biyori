@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T07:23:31.183Z",
+  "updatedAt": "2026-08-13T08:50:09.367Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "Ke46egVceWY",
+      "title": "頬袋いっぱいに詰め込むくるみおばあちゃん♪#shorts #猿 #かわいい",
+      "published": "2026-08-13T08:19:13+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -169,14 +177,6 @@
       "videoId": "BBueAIFgv_0",
       "title": "降りるのかい！？降りないのかい？！#アカハナグマ",
       "published": "2026-08-10T09:00:19+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "K0FYBqGbJXo",
-      "title": "ナマケモノだって座って休みたい時があるんですよ🦥#ナマケモノ #sloth #動物園 #zoo #草津熱帯圏",
-      "published": "2026-08-10T08:56:10+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
