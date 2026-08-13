@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T23:37:39.068Z",
+  "updatedAt": "2026-08-13T01:46:01.468Z",
   "degraded": false,
   "live": [
     {
@@ -82,12 +82,6 @@
     }
   ],
   "upcoming": [
-    {
-      "channelSlug": "adventure-world",
-      "videoId": "8BEjDJyMb6o",
-      "title": "命名発表ライブ配信🐧 E004（かわいいおばあちゃん）",
-      "scheduledAt": "2026-08-13T01:15:00Z"
-    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
