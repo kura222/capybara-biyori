@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T08:50:09.367Z",
+  "updatedAt": "2026-08-13T10:01:52.965Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "Jzju6LPKjwM",
+      "title": "動物たちの大好物を木からぶら下げてバイキングを開催してみた",
+      "startedAt": "2026-08-13T10:00:06Z"
     },
     {
       "channelSlug": "taronga",
@@ -90,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "Jzju6LPKjwM",
+      "title": "動物たちの大好物を木からぶら下げてバイキングを開催してみた",
+      "published": "2026-08-13T10:00:06+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -193,14 +207,6 @@
       "videoId": "d-Rdycdf5Hc",
       "title": "頑張って採って来たで☺美味いか？ #池田動物園 #岡山 #アミメキリン",
       "published": "2026-08-09T09:00:38+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "wDVZmxcw9Ds",
-      "title": "のんびりビーバー🦫",
-      "published": "2026-08-09T07:22:50+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
