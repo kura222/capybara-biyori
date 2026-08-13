@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T04:09:20.218Z",
+  "updatedAt": "2026-08-13T05:55:20.881Z",
   "degraded": false,
   "live": [
     {
@@ -25,41 +25,20 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "kumamoto-city-zoo-livecam",
+      "videoId": "iLsJ1R8iz78",
+      "title": "【熊本市動植物園】アフリカゾウ | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Elephant)",
+      "startedAt": "2026-03-31T00:45:06Z"
+    },
+    {
+      "channelSlug": "kumamoto-city-zoo-livecam",
+      "videoId": "EeU_fG7pmX4",
+      "title": "【熊本市動植物園】マサイキリン | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Giraffe)",
+      "startedAt": "2025-11-04T09:28:46Z"
     }
   ],
   "upcoming": [],
-  "latestVideos": [
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "kELGy2tmqJI",
-      "title": "19歳になっても元気なおじいちゃん猿♫#shorts #猿 #おじいちゃん",
-      "published": "2026-08-12T08:31:06+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "GKaQdFFKFbo",
-      "title": "きゅうりをポリポリと食べる動物達♫美味しそうな音が沢山録れました！！",
-      "published": "2026-08-12T08:10:37+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "LC8drzg4BFk",
-      "title": "ベタ馴れなウロコインコ♫#shorts #インコ #動物園",
-      "published": "2026-08-11T08:13:49+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "K0FYBqGbJXo",
-      "title": "ナマケモノだって座って休みたい時があるんですよ🦥#ナマケモノ #sloth #動物園 #zoo #草津熱帯圏",
-      "published": "2026-08-10T08:56:10+00:00"
-    }
-  ]
+  "latestVideos": []
 }
