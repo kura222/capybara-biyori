@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T10:01:52.965Z",
+  "updatedAt": "2026-08-13T11:20:42.430Z",
   "degraded": false,
   "live": [
     {
@@ -25,12 +25,6 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "biopark",
-      "videoId": "Jzju6LPKjwM",
-      "title": "動物たちの大好物を木からぶら下げてバイキングを開催してみた",
-      "startedAt": "2026-08-13T10:00:06Z"
     },
     {
       "channelSlug": "taronga",
@@ -89,6 +83,12 @@
   ],
   "upcoming": [
     {
+      "channelSlug": "adventure-world",
+      "videoId": "I815YAtFpeE",
+      "title": "命名ライブ配信🐧 E005（ビッグファザー）",
+      "scheduledAt": "2026-08-14T01:15:00Z"
+    },
+    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "XqlEeIoqhb4",
+      "title": "POOL SECURITY 🚨😂 | Capybara Drama",
+      "published": "2026-08-13T11:00:31+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -207,14 +215,6 @@
       "videoId": "d-Rdycdf5Hc",
       "title": "頑張って採って来たで☺美味いか？ #池田動物園 #岡山 #アミメキリン",
       "published": "2026-08-09T09:00:38+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "qOUZg0CoqNM",
-      "title": "Caught them on a date 😂",
-      "published": "2026-08-08T13:55:09+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
