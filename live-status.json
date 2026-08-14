@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T23:38:06.167Z",
+  "updatedAt": "2026-08-14T01:43:57.034Z",
   "degraded": false,
   "live": [
     {
@@ -82,12 +82,6 @@
     }
   ],
   "upcoming": [
-    {
-      "channelSlug": "adventure-world",
-      "videoId": "I815YAtFpeE",
-      "title": "命名ライブ配信🐧 E005（ビッグファザー）",
-      "scheduledAt": "2026-08-14T01:15:00Z"
-    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
