@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T07:20:15.079Z",
+  "updatedAt": "2026-08-14T08:43:16.835Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "Q3HtxENyw1o",
+      "title": "カピバラのリコッタが天国へと旅立ちました。",
+      "published": "2026-08-14T08:35:26+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -177,14 +185,6 @@
       "videoId": "BDLbbzEOVy0",
       "title": "トビの鳴き声、どこかで聞いたことがあるんじゃないかな？#岡山 #池田動物園 #トビ #トンビ",
       "published": "2026-08-11T09:00:21+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "LC8drzg4BFk",
-      "title": "ベタ馴れなウロコインコ♫#shorts #インコ #動物園",
-      "published": "2026-08-11T08:13:49+00:00"
     },
     {
       "channelSlug": "biopark",
