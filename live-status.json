@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T11:43:50.153Z",
+  "updatedAt": "2026-08-15T12:32:09.210Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "qEM0DJC1ihA",
+      "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
+      "published": "2026-08-15T12:00:18+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "dVp8fQVHHLA",
+      "title": "That Side-Eye While Eating 🌿😂",
+      "published": "2026-08-15T11:55:05+00:00"
+    },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
@@ -225,14 +241,6 @@
       "published": "2026-08-10T12:30:10+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "lRqSHTpB-hQ",
-      "title": "How Long Can a Capybara Wear Sunglasses? 😎🦫",
-      "published": "2026-08-09T11:00:30+00:00"
-    },
-    {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
       "facilitySlug": "uminonakamichi-park",
@@ -311,14 +319,6 @@
       "videoId": "uPlJjBcrawk",
       "title": "飼育員が作るごはん【アメリカビーバー編】🦫",
       "published": "2026-06-29T10:30:25+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "okevk-5qGlQ",
-      "title": "伊豆シャボテン動物公園公式チャンネル がライブ配信中！",
-      "published": "2026-06-26T07:55:42+00:00"
     },
     {
       "channelSlug": "saitama-childrens-zoo",
