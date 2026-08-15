@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T02:31:27.888Z",
+  "updatedAt": "2026-08-15T03:35:47.761Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "os65U5j3pX8",
+      "title": "本日15日ナイトズー出店店舗🌝 #池田動物園 #岡山 #ナイトズー",
+      "published": "2026-08-15T03:00:27+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -177,14 +185,6 @@
       "videoId": "GKaQdFFKFbo",
       "title": "きゅうりをポリポリと食べる動物達♫美味しそうな音が沢山録れました！！",
       "published": "2026-08-12T08:10:37+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "BDLbbzEOVy0",
-      "title": "トビの鳴き声、どこかで聞いたことがあるんじゃないかな？#岡山 #池田動物園 #トビ #トンビ",
-      "published": "2026-08-11T09:00:21+00:00"
     },
     {
       "channelSlug": "biopark",
