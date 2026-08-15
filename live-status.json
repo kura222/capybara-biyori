@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T09:49:38.083Z",
+  "updatedAt": "2026-08-15T10:18:59.925Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "CMM6VQhuW3A",
+      "title": "【夏の風物詩】スイカ🍉に夢中！モルモットたちの可愛いお食事シーンをご覧ください",
+      "startedAt": "2026-08-15T10:00:06Z"
     },
     {
       "channelSlug": "taronga",
@@ -83,12 +89,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "CMM6VQhuW3A",
-      "title": "【夏の風物詩】スイカ🍉に夢中！モルモットたちの可愛いお食事シーンをご覧ください",
-      "scheduledAt": "2026-08-15T10:00:00Z"
-    },
-    {
       "channelSlug": "adventure-world",
       "videoId": "6WzJTcUVrx8",
       "title": "ライブ配信🐧 E014（ビッグマザー）名前発表",
@@ -102,6 +102,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "uminonakamichi-doubutsu-no-mori",
+      "channelName": "海の中道「動物の森」",
+      "facilitySlug": "uminonakamichi-park",
+      "videoId": "MSvTQkGxILU",
+      "title": "きゅうりがおいしすぎる！　#ケヅメリクガメ #ムツアシガメ",
+      "published": "2026-08-15T10:00:17+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "CMM6VQhuW3A",
+      "title": "【夏の風物詩】スイカ🍉に夢中！モルモットたちの可愛いお食事シーンをご覧ください",
+      "published": "2026-08-15T10:00:06+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -141,14 +157,6 @@
       "videoId": "os65U5j3pX8",
       "title": "本日15日ナイトズー出店店舗🌝 #池田動物園 #岡山 #ナイトズー",
       "published": "2026-08-15T03:00:27+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "CMM6VQhuW3A",
-      "title": "【夏の風物詩】スイカ🍉に夢中！モルモットたちの可愛いお食事シーンをご覧ください",
-      "published": "2026-08-15T02:36:57+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
@@ -269,14 +277,6 @@
       "videoId": "xaJUpR1-vOw",
       "title": "🌵伊豆シャボテン動物公園来たら、ここ行って🌵",
       "published": "2026-07-20T09:00:17+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "Mg_7F4_HJcM",
-      "title": "ふれあい舎がバードエリアに！？",
-      "published": "2026-07-17T01:24:28+00:00"
     },
     {
       "channelSlug": "saitama-childrens-zoo",
