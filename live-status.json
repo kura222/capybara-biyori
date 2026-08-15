@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T08:54:43.756Z",
+  "updatedAt": "2026-08-15T09:22:31.414Z",
   "degraded": false,
   "live": [
     {
@@ -103,6 +103,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "pY3RMWPYH5o",
+      "title": "ワニの歯🦷🐊 #池田動物園 #岡山 #メガネカイマン",
+      "published": "2026-08-15T09:00:05+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -165,14 +173,6 @@
       "videoId": "Fnq_bnDk3rI",
       "title": "今日もナイトズーあるから待ってるよ😸 #池田動物園 #岡山 #ナイトズー",
       "published": "2026-08-14T04:00:31+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "ae9dMwBdYx8",
-      "title": "本日14日ナイトズー出店店舗🌝#ナイトズー #池田動物園 #岡山",
-      "published": "2026-08-14T03:00:05+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
