@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T01:04:26.265Z",
+  "updatedAt": "2026-08-15T02:31:27.888Z",
   "degraded": false,
   "live": [
     {
@@ -83,12 +83,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "adventure-world",
-      "videoId": "ePxOlGsJcgk",
-      "title": "ライブ配信🐧 E007（イケおじ）名前発表",
-      "scheduledAt": "2026-08-15T01:15:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -109,7 +103,7 @@
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "dCMTNvvy-5s",
-      "title": "ビーバーみながら雑談",
+      "title": "【LIVE】ビーバーみながら雑談",
       "published": "2026-08-14T06:59:09+00:00"
     },
     {
