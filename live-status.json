@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T10:19:58.697Z",
+  "updatedAt": "2026-08-16T10:47:56.045Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "-amSDOEbvbE",
+      "title": "I Brought Them Grass… They Still Judged Me 😂🦫",
+      "published": "2026-08-16T10:25:31+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -225,14 +233,6 @@
       "videoId": "qi8Z4Ner6NU",
       "title": "A Little Gift from Her VIP Mama 🐾❤️ | Okonomiyaki",
       "published": "2026-08-12T11:00:38+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "jj9cOp07NHk",
-      "title": "She wanted the snack… but walked backwards 😂",
-      "published": "2026-08-10T12:30:10+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
