@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T06:34:59.597Z",
+  "updatedAt": "2026-08-16T07:28:25.274Z",
   "degraded": false,
   "live": [
     {
@@ -37,12 +37,6 @@
       "videoId": "N4kcIlIr66k",
       "title": "西エリア",
       "startedAt": "2026-07-03T00:30:28Z"
-    },
-    {
-      "channelSlug": "kiryugaoka-zoo",
-      "videoId": "vCyw44Xuldo",
-      "title": "東エリア ワイド",
-      "startedAt": "2026-03-20T03:04:10Z"
     },
     {
       "channelSlug": "kiryugaoka-zoo",
@@ -96,7 +90,7 @@
       "facilitySlug": "nagasaki-biopark",
       "videoId": "uUGC-2m5feo",
       "title": "カピバラの部屋",
-      "published": "2026-08-16T02:05:14+00:00"
+      "published": "2026-08-16T06:44:22+00:00"
     },
     {
       "channelSlug": "shabotengroup",
