@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T03:45:15.507Z",
+  "updatedAt": "2026-08-16T04:32:45.936Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "uUGC-2m5feo",
+      "title": "カピバラの部屋",
+      "startedAt": "2026-08-16T04:31:22Z"
     },
     {
       "channelSlug": "taronga",
@@ -90,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "uUGC-2m5feo",
+      "title": "カピバラの部屋",
+      "published": "2026-08-16T02:05:14+00:00"
+    },
     {
       "channelSlug": "shabotengroup",
       "channelName": "伊豆シャボテン公園グループ",
@@ -193,14 +207,6 @@
       "videoId": "XqlEeIoqhb4",
       "title": "POOL SECURITY 🚨😂 | Capybara Drama",
       "published": "2026-08-13T11:00:31+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "Jzju6LPKjwM",
-      "title": "動物たちの大好物を木からぶら下げてバイキングを開催してみた",
-      "published": "2026-08-13T10:00:06+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
