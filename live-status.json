@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T05:52:57.508Z",
+  "updatedAt": "2026-08-16T06:34:59.597Z",
   "degraded": false,
   "live": [
     {
@@ -25,12 +25,6 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "biopark",
-      "videoId": "uUGC-2m5feo",
-      "title": "カピバラの部屋",
-      "startedAt": "2026-08-16T04:31:22Z"
     },
     {
       "channelSlug": "taronga",
