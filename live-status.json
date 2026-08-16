@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T01:07:47.212Z",
+  "updatedAt": "2026-08-16T02:40:30.374Z",
   "degraded": false,
   "live": [
     {
@@ -82,12 +82,6 @@
     }
   ],
   "upcoming": [
-    {
-      "channelSlug": "adventure-world",
-      "videoId": "6WzJTcUVrx8",
-      "title": "ライブ配信🐧 E014（ビッグマザー）名前発表",
-      "scheduledAt": "2026-08-16T01:15:00Z"
-    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
