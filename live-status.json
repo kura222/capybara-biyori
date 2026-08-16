@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T08:56:28.857Z",
+  "updatedAt": "2026-08-16T09:27:17.343Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "810ZG2jOSew",
+      "title": "サツマイモおいちぃ❤ #池田動物園 #岡山 #パルマワラビー",
+      "published": "2026-08-16T09:00:23+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -193,14 +201,6 @@
       "videoId": "dCMTNvvy-5s",
       "title": "【LIVE】ビーバーみながら雑談",
       "published": "2026-08-14T06:59:09+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "Fnq_bnDk3rI",
-      "title": "今日もナイトズーあるから待ってるよ😸 #池田動物園 #岡山 #ナイトズー",
-      "published": "2026-08-14T04:00:31+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
