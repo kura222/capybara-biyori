@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T07:55:00.678Z",
+  "updatedAt": "2026-08-16T08:24:56.303Z",
   "degraded": false,
   "live": [
     {
@@ -77,6 +77,12 @@
   ],
   "upcoming": [
     {
+      "channelSlug": "adventure-world",
+      "videoId": "vR536OK0CIk",
+      "title": "命名ライブ配信🐧 E015（まるまるボディ）名前発表",
+      "scheduledAt": "2026-08-17T01:15:00Z"
+    },
+    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -84,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "r_oCnpBAOAo",
+      "title": "とうもろこしを大事そうに抱えて頬張るモン次君♫#shorts #ニホンザル #猿",
+      "published": "2026-08-16T08:05:37+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -211,14 +225,6 @@
       "videoId": "qi8Z4Ner6NU",
       "title": "A Little Gift from Her VIP Mama 🐾❤️ | Okonomiyaki",
       "published": "2026-08-12T11:00:38+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "kELGy2tmqJI",
-      "title": "19歳になっても元気なおじいちゃん猿♫#shorts #猿 #おじいちゃん",
-      "published": "2026-08-12T08:31:06+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
