@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T09:52:00.625Z",
+  "updatedAt": "2026-08-16T10:19:58.697Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "r02h54cBQak",
+      "title": "なかよしこどもたち",
+      "published": "2026-08-16T10:00:06+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -193,14 +201,6 @@
       "videoId": "Q3HtxENyw1o",
       "title": "カピバラのリコッタが天国へと旅立ちました。",
       "published": "2026-08-14T08:35:26+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "dCMTNvvy-5s",
-      "title": "【LIVE】ビーバーみながら雑談",
-      "published": "2026-08-14T06:59:09+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
