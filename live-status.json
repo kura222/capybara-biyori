@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T07:50:34.360Z",
+  "updatedAt": "2026-08-17T08:39:34.394Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "PzSWPAjkfRk",
+      "title": "ちょーだい！ちょーだい！ちょーだい！とねだるも一歩も譲らないマーラでした。#草津熱帯圏 #動物園 #マーラ #animal #zoo",
+      "published": "2026-08-17T08:21:58+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -217,14 +225,6 @@
       "videoId": "XqlEeIoqhb4",
       "title": "POOL SECURITY 🚨😂 | Capybara Drama",
       "published": "2026-08-13T11:00:31+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "Ke46egVceWY",
-      "title": "頬袋いっぱいに詰め込むくるみおばあちゃん♪#shorts #猿 #かわいい",
-      "published": "2026-08-13T08:19:13+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
