@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T23:43:04.113Z",
+  "updatedAt": "2026-08-17T01:05:55.281Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "YsUFY9md3bY",
+      "title": "音量注意...？【ライブハイライト】",
+      "published": "2026-08-17T00:57:32+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -177,14 +185,6 @@
       "videoId": "oyzW-lHCb7I",
       "title": "コモンおばあちゃんの可愛いクシャ顔♫#shorts #猿 #おばあちゃん",
       "published": "2026-08-15T08:31:46+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "Pgb1y70O6J0",
-      "title": "今日のビーバー🦫",
-      "published": "2026-08-15T06:17:03+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
