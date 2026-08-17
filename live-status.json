@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T01:05:55.281Z",
+  "updatedAt": "2026-08-17T02:39:54.151Z",
   "degraded": false,
   "live": [
     {
@@ -77,12 +77,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "adventure-world",
-      "videoId": "vR536OK0CIk",
-      "title": "命名ライブ配信🐧 E015（まるまるボディ）名前発表",
-      "scheduledAt": "2026-08-17T01:15:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -95,7 +89,7 @@
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "YsUFY9md3bY",
-      "title": "音量注意...？【ライブハイライト】",
+      "title": "マイクを向けたら喋らなくなったエジプー【ライブハイライト】",
       "published": "2026-08-17T00:57:32+00:00"
     },
     {
