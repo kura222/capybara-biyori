@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T07:35:00.830Z",
+  "updatedAt": "2026-08-18T08:33:01.428Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "9FjvzDUH6Xg",
+      "title": "抱っこで眠るハクビシンのハクちゃん♫#shorts #ハクビシン #動物園",
+      "published": "2026-08-18T08:19:39+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -215,14 +223,6 @@
       "videoId": "os65U5j3pX8",
       "title": "本日15日ナイトズー出店店舗🌝 #池田動物園 #岡山 #ナイトズー",
       "published": "2026-08-15T03:00:27+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "Q3HtxENyw1o",
-      "title": "カピバラのリコッタが天国へと旅立ちました。",
-      "published": "2026-08-14T08:35:26+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
