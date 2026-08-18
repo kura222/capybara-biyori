@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T01:03:46.517Z",
+  "updatedAt": "2026-08-18T02:34:25.910Z",
   "degraded": false,
   "live": [
     {
@@ -89,12 +89,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "adventure-world",
-      "videoId": "MRDv30LFEOg",
-      "title": "命名ライブ配信🐧 E016（プールおじさん）名前発表",
-      "scheduledAt": "2026-08-18T01:15:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -102,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "o2bwS_e5c4M",
+      "title": "応募はこちらから→ https://forms.gle/RdMR172vJUFkXvf66",
+      "published": "2026-08-18T01:23:06+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -181,14 +183,6 @@
       "videoId": "MSvTQkGxILU",
       "title": "きゅうりがおいしすぎる！　#ケヅメリクガメ #ムツアシガメ",
       "published": "2026-08-15T10:00:17+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "CMM6VQhuW3A",
-      "title": "【夏の風物詩】うちで一番食いしん坊のゴールデンレトリバーにスイカ🍉をあげてみたらwww",
-      "published": "2026-08-15T10:00:06+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
