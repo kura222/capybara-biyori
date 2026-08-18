@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T11:22:30.947Z",
+  "updatedAt": "2026-08-18T11:50:21.530Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "ClSpNOdlwy8",
+      "title": "When Summer Vacation Is a Family Affair 😂🦫",
+      "published": "2026-08-18T11:25:19+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -231,14 +239,6 @@
       "videoId": "XqlEeIoqhb4",
       "title": "POOL SECURITY 🚨😂 | Capybara Drama",
       "published": "2026-08-13T11:00:31+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "qi8Z4Ner6NU",
-      "title": "A Little Gift from Her VIP Mama 🐾❤️ | Okonomiyaki",
-      "published": "2026-08-12T11:00:38+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
