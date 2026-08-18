@@ -1,37 +1,7 @@
 {
-  "updatedAt": "2026-08-18T15:28:28.359Z",
+  "updatedAt": "2026-08-18T15:58:24.435Z",
   "degraded": false,
   "live": [
-    {
-      "channelSlug": "angel-valley-farm",
-      "videoId": "TyhwIiMDEbY",
-      "title": "Watch Capybaras 24/7 – Angel Valley Farm Live",
-      "startedAt": "2026-02-15T13:13:39Z"
-    },
-    {
-      "channelSlug": "angel-valley-farm",
-      "videoId": "Q5FdRuwzIbE",
-      "title": "Angel Valley Farm LIVE 24/7 🟢 Relaxing Capybara Pool Stream 🐹💦",
-      "startedAt": "2026-02-15T13:20:06Z"
-    },
-    {
-      "channelSlug": "riga-zoo-bite",
-      "videoId": "NKV4x2RYeco",
-      "title": "Bite Latvija - Kapibaras 1",
-      "startedAt": "2025-11-13T11:40:57Z"
-    },
-    {
-      "channelSlug": "riga-zoo-bite",
-      "videoId": "Fr7dCV4fGIo",
-      "title": "Bite Latvija - Kapibaras 2",
-      "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "taronga",
-      "videoId": "RzasUXCTStM",
-      "title": "Capybara Live stream",
-      "startedAt": "2026-07-03T21:00:26Z"
-    },
     {
       "channelSlug": "kiryugaoka-zoo",
       "videoId": "N4kcIlIr66k",
@@ -97,14 +67,6 @@
   ],
   "latestVideos": [
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "ClSpNOdlwy8",
-      "title": "When Summer Vacation Is a Family Affair 😂🦫",
-      "published": "2026-08-18T11:25:19+00:00"
-    },
-    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -135,14 +97,6 @@
       "videoId": "YsUFY9md3bY",
       "title": "マイクを向けたら喋らなくなったエジプー【ライブハイライト】",
       "published": "2026-08-17T00:57:32+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "-amSDOEbvbE",
-      "title": "I Brought Them Grass… They Still Judged Me 😂🦫",
-      "published": "2026-08-16T10:25:31+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -185,14 +139,6 @@
       "published": "2026-08-15T12:00:18+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "dVp8fQVHHLA",
-      "title": "That Side-Eye While Eating 🌿😂",
-      "published": "2026-08-15T11:55:05+00:00"
-    },
-    {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
       "facilitySlug": "uminonakamichi-park",
@@ -231,14 +177,6 @@
       "videoId": "os65U5j3pX8",
       "title": "本日15日ナイトズー出店店舗🌝 #池田動物園 #岡山 #ナイトズー",
       "published": "2026-08-15T03:00:27+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "XqlEeIoqhb4",
-      "title": "POOL SECURITY 🚨😂 | Capybara Drama",
-      "published": "2026-08-13T11:00:31+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
