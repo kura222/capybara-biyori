@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T01:04:40.137Z",
+  "updatedAt": "2026-08-19T02:37:21.947Z",
   "degraded": false,
   "live": [
     {
@@ -88,12 +88,6 @@
     }
   ],
   "upcoming": [
-    {
-      "channelSlug": "adventure-world",
-      "videoId": "4Zv5cR427lI",
-      "title": "命名ライブ配信🐧 E020（うつ伏せマドンナ）名前発表",
-      "scheduledAt": "2026-08-19T01:15:00Z"
-    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
