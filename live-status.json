@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T14:30:03.331Z",
+  "updatedAt": "2026-08-19T15:03:39.128Z",
   "degraded": false,
   "live": [
     {
@@ -108,6 +108,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "myqParVTaY0",
+      "title": "Capybara ASMR Crunch crunch",
+      "published": "2026-08-19T14:35:06+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -243,14 +251,6 @@
       "videoId": "os65U5j3pX8",
       "title": "本日15日ナイトズー出店店舗🌝 #池田動物園 #岡山 #ナイトズー",
       "published": "2026-08-15T03:00:27+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "XqlEeIoqhb4",
-      "title": "POOL SECURITY 🚨😂 | Capybara Drama",
-      "published": "2026-08-13T11:00:31+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
