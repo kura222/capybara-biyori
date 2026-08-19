@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T07:35:20.940Z",
+  "updatedAt": "2026-08-19T08:33:35.485Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "htJQ6RQzFNw",
+      "title": "夏の終わりを感じさせるお届けもの・・・。人工哺育で育ったニホンザル達も喜んで食べました♪",
+      "published": "2026-08-19T07:42:25+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -201,14 +209,6 @@
       "videoId": "pY3RMWPYH5o",
       "title": "ワニの歯🦷🐊 #池田動物園 #岡山 #メガネカイマン",
       "published": "2026-08-15T09:00:05+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "oyzW-lHCb7I",
-      "title": "コモンおばあちゃんの可愛いクシャ顔♫#shorts #猿 #おばあちゃん",
-      "published": "2026-08-15T08:31:46+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
