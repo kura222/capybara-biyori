@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T23:45:56.579Z",
+  "updatedAt": "2026-08-19T01:04:40.137Z",
   "degraded": false,
   "live": [
     {
@@ -34,6 +34,12 @@
     },
     {
       "channelSlug": "kiryugaoka-zoo",
+      "videoId": "t57gEiPO5LY",
+      "title": "東エリア ワイド",
+      "startedAt": "2026-08-19T00:41:35Z"
+    },
+    {
+      "channelSlug": "kiryugaoka-zoo",
       "videoId": "N4kcIlIr66k",
       "title": "西エリア",
       "startedAt": "2026-07-03T00:30:28Z"
@@ -55,12 +61,6 @@
       "videoId": "EeU_fG7pmX4",
       "title": "【熊本市動植物園】マサイキリン | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Giraffe)",
       "startedAt": "2025-11-04T09:28:46Z"
-    },
-    {
-      "channelSlug": "roger-williams-zoo",
-      "videoId": "azkWeWa3kDY",
-      "title": "Capybara Underwater Livestream Cam 2",
-      "startedAt": "2026-08-17T11:56:08Z"
     },
     {
       "channelSlug": "roger-williams-zoo",
@@ -88,6 +88,12 @@
     }
   ],
   "upcoming": [
+    {
+      "channelSlug": "adventure-world",
+      "videoId": "4Zv5cR427lI",
+      "title": "命名ライブ配信🐧 E020（うつ伏せマドンナ）名前発表",
+      "scheduledAt": "2026-08-19T01:15:00Z"
+    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
