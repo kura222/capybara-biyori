@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T03:43:08.406Z",
+  "updatedAt": "2026-08-19T04:33:59.394Z",
   "degraded": false,
   "live": [
     {
@@ -28,38 +28,5 @@
     }
   ],
   "upcoming": [],
-  "latestVideos": [
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "MSvTQkGxILU",
-      "title": "きゅうりがおいしすぎる！　#ケヅメリクガメ #ムツアシガメ",
-      "published": "2026-08-15T10:00:17+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "Ipc8wY_Vg-0",
-      "title": "甘え上手なヒツジのサクレ",
-      "published": "2026-08-08T10:00:19+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "c5K_-ptmn5M",
-      "title": "青草ビュッフェを満喫中！　 #ラマ",
-      "published": "2026-08-01T10:00:11+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "zo4XYmjgez8",
-      "title": "楽しくエサをゲット！2026",
-      "published": "2026-07-25T10:00:13+00:00"
-    }
-  ]
+  "latestVideos": []
 }
