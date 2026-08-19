@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T11:49:43.049Z",
+  "updatedAt": "2026-08-19T12:40:05.298Z",
   "degraded": false,
   "live": [
     {
@@ -87,6 +87,12 @@
       "videoId": "df-tFSI1_-k",
       "title": "命名ライブ配信🐧 E025（お父さん似の長男）名前発表",
       "scheduledAt": "2026-08-20T01:15:00Z"
+    },
+    {
+      "channelSlug": "roger-williams-zoo",
+      "videoId": "KHkH47lE3q4",
+      "title": "Capybara Underwater Livestream Cam 1",
+      "scheduledAt": "2026-08-19T12:40:00Z"
     },
     {
       "channelSlug": "budapest-zoo",
