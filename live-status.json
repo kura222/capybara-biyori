@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T12:44:21.305Z",
+  "updatedAt": "2026-08-20T13:43:10.726Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "dU7jCqUcfOI",
+      "title": "They All Knew I Had Snacks 😂",
+      "published": "2026-08-20T13:00:22+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -199,14 +207,6 @@
       "videoId": "qEM0DJC1ihA",
       "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
       "published": "2026-08-15T12:00:18+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "dVp8fQVHHLA",
-      "title": "That Side-Eye While Eating 🌿😂",
-      "published": "2026-08-15T11:55:05+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
