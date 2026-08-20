@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T07:38:08.507Z",
+  "updatedAt": "2026-08-20T08:34:33.547Z",
   "degraded": false,
   "live": [
     {
@@ -109,6 +109,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "f67FUbEtUqY",
+      "title": "大粒ナガノパープルを美味しくいただくおばあちゃん♪#shorts #猿 #動物",
+      "published": "2026-08-20T08:23:56+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "J3pBuBlMrkc",
+      "title": "スイカを頬張るおばあちゃん猿♪#shorts #猿 #動物園",
+      "published": "2026-08-20T08:18:55+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -165,28 +181,12 @@
       "published": "2026-08-18T11:25:19+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "9FjvzDUH6Xg",
-      "title": "抱っこで眠るハクビシンのハクちゃん♫#shorts #ハクビシン #動物園",
-      "published": "2026-08-18T08:19:39+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "o2bwS_e5c4M",
       "title": "応募はこちらから→ https://forms.gle/RdMR172vJUFkXvf66",
       "published": "2026-08-18T01:23:06+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "PzSWPAjkfRk",
-      "title": "ちょーだい！ちょーだい！ちょーだい！とねだるも一歩も譲らないマーラでした。#草津熱帯圏 #動物園 #マーラ #animal #zoo",
-      "published": "2026-08-17T08:21:58+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
