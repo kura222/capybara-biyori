@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T09:30:53.207Z",
+  "updatedAt": "2026-08-20T10:26:40.972Z",
   "degraded": false,
   "live": [
     {
@@ -64,12 +64,6 @@
     },
     {
       "channelSlug": "roger-williams-zoo",
-      "videoId": "2aPBVW40G6U",
-      "title": "Capybara Underwater Livestream Cam 2",
-      "startedAt": "2026-08-19T12:46:53Z"
-    },
-    {
-      "channelSlug": "roger-williams-zoo",
       "videoId": "xKVfa2jgLPc",
       "title": "Capybara Underwater Livestream Cam 1",
       "startedAt": "2026-08-19T12:41:23Z"
@@ -95,12 +89,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "FXP_RhCy5GE",
-      "title": "【KTN】赤ちゃんカピバラ「はち」の成長記録撮影の裏側をご覧ください🌱【はちのすくすく日記】",
-      "scheduledAt": "2026-08-20T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -108,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "FXP_RhCy5GE",
+      "title": "【KTN】赤ちゃんカピバラ「はち」の成長記録撮影の裏側をご覧ください🌱【はちのすくすく日記】",
+      "published": "2026-08-20T10:00:06+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -131,14 +127,6 @@
       "videoId": "pqPkueZNGOA",
       "title": "この動画のどこかにカピバラがいます。",
       "published": "2026-08-20T05:10:46+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "FXP_RhCy5GE",
-      "title": "【KTN】赤ちゃんカピバラ「はち」の成長記録撮影の裏側をご覧ください🌱【はちのすくすく日記】",
-      "published": "2026-08-20T00:52:06+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
