@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T03:43:18.392Z",
+  "updatedAt": "2026-08-20T04:33:44.994Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,24 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "kiryugaoka-zoo",
+      "videoId": "t57gEiPO5LY",
+      "title": "東エリア ワイド",
+      "startedAt": "2026-08-19T00:41:35Z"
+    },
+    {
+      "channelSlug": "kiryugaoka-zoo",
+      "videoId": "N4kcIlIr66k",
+      "title": "西エリア",
+      "startedAt": "2026-07-03T00:30:28Z"
+    },
+    {
+      "channelSlug": "kiryugaoka-zoo",
+      "videoId": "mbmp7hmMG_Q",
+      "title": "東エリア スポット",
+      "startedAt": "2026-03-20T03:04:08Z"
     }
   ],
   "upcoming": [],
