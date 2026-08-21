@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T23:49:35.566Z",
+  "updatedAt": "2026-08-21T01:08:02.678Z",
   "degraded": false,
   "live": [
     {
@@ -88,6 +88,12 @@
     }
   ],
   "upcoming": [
+    {
+      "channelSlug": "adventure-world",
+      "videoId": "S_FH-8S8wWM",
+      "title": "命名ライブ配信🐧 E026（ツンデレ不器用）名前発表",
+      "scheduledAt": "2026-08-21T01:15:00Z"
+    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
