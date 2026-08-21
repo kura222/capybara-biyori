@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T11:51:16.636Z",
+  "updatedAt": "2026-08-21T12:40:29.646Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "TLo-4CJCYiM",
+      "title": "I Saved the Last Treat for My Favorite Capybara 🥹🐹",
+      "published": "2026-08-21T12:00:34+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -191,14 +199,6 @@
       "videoId": "ClSpNOdlwy8",
       "title": "When Summer Vacation Is a Family Affair 😂🦫",
       "published": "2026-08-18T11:25:19+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "-amSDOEbvbE",
-      "title": "I Brought Them Grass… They Still Judged Me 😂🦫",
-      "published": "2026-08-16T10:25:31+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
