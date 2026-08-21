@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T23:20:05.513Z",
+  "updatedAt": "2026-08-21T23:47:37.446Z",
   "degraded": false,
   "live": [
     {
@@ -88,6 +88,12 @@
     }
   ],
   "upcoming": [
+    {
+      "channelSlug": "adventure-world",
+      "videoId": "wmq6Lh48v-I",
+      "title": "命名ライブ配信🐧 E027（兄より強いサメ男）名前発表",
+      "scheduledAt": "2026-08-22T01:15:00Z"
+    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
