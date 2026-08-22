@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T03:38:49.605Z",
+  "updatedAt": "2026-08-22T04:29:52.234Z",
   "degraded": false,
   "live": [
     {
@@ -28,5 +28,38 @@
     }
   ],
   "upcoming": [],
-  "latestVideos": []
+  "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "3NEGKbKuGCY",
+      "title": "明日22日ナイトズー出店店舗🌝 #池田動物園 #岡山 #ナイトズー",
+      "published": "2026-08-21T09:00:28+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "810ZG2jOSew",
+      "title": "サツマイモおいちぃ❤ #池田動物園 #岡山 #パルマワラビー",
+      "published": "2026-08-16T09:00:23+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "pY3RMWPYH5o",
+      "title": "ワニの歯🦷🐊 #池田動物園 #岡山 #メガネカイマン",
+      "published": "2026-08-15T09:00:05+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "9RvXhFHK-IM",
+      "title": "14日のナイトズーの様子です🌛本日も開催されますよ #池田動物園 #岡山 #ナイトズー",
+      "published": "2026-08-15T04:03:22+00:00"
+    }
+  ]
 }
