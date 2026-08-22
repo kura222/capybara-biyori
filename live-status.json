@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T08:30:40.677Z",
+  "updatedAt": "2026-08-22T09:23:25.427Z",
   "degraded": false,
   "live": [
     {
@@ -25,12 +25,6 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "biopark",
-      "videoId": "pZxFax3pCVY",
-      "title": "今日はカンガルー展示場を作るよ　Part15",
-      "startedAt": "2026-08-22T07:40:34Z"
     },
     {
       "channelSlug": "taronga",
@@ -115,6 +109,30 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "arCtRV7ixC0",
+      "title": "近すぎるよチーコちゃん👀 #岡山 #池田動物園 #キバタン",
+      "published": "2026-08-22T09:00:25+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "qAVs-6UezNY",
+      "title": "秋田犬宗春くんの極秘の特訓！？#shorts #秋田犬 #犬",
+      "published": "2026-08-22T08:39:56+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "LqHZyK1Uwf8",
+      "title": "秋田犬の宗春くん！極秘の特訓とは・・・？",
+      "published": "2026-08-22T08:35:58+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -195,28 +213,12 @@
       "published": "2026-08-20T08:23:56+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "J3pBuBlMrkc",
-      "title": "スイカを頬張るおばあちゃん猿♪#shorts #猿 #動物園",
-      "published": "2026-08-20T08:18:55+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
       "videoId": "myqParVTaY0",
       "title": "Capybara ASMR Crunch crunch",
       "published": "2026-08-19T14:35:06+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "TiSLlpIOjKM",
-      "title": "女性だとモン次の甘え方が違う気がする・・・。#shorts #ニホンザル #猿",
-      "published": "2026-08-19T08:38:04+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
@@ -249,14 +251,6 @@
       "videoId": "pY3RMWPYH5o",
       "title": "ワニの歯🦷🐊 #池田動物園 #岡山 #メガネカイマン",
       "published": "2026-08-15T09:00:05+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "9RvXhFHK-IM",
-      "title": "14日のナイトズーの様子です🌛本日も開催されますよ #池田動物園 #岡山 #ナイトズー",
-      "published": "2026-08-15T04:03:22+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
