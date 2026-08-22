@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T09:50:32.499Z",
+  "updatedAt": "2026-08-22T10:19:53.043Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "60_RgKm1dSc",
+      "title": "【衝撃】雑巾掛けをするチンパンジーがすごすぎた！🐒【宮崎市フェニックス自然動物園】",
+      "startedAt": "2026-08-22T10:00:06Z"
     },
     {
       "channelSlug": "taronga",
@@ -89,12 +95,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "60_RgKm1dSc",
-      "title": "【衝撃】雑巾掛けをするチンパンジーがすごすぎた！🐒【宮崎市フェニックス自然動物園】",
-      "scheduledAt": "2026-08-22T10:00:00Z"
-    },
-    {
       "channelSlug": "adventure-world",
       "videoId": "ehD5kYEeOO4",
       "title": "命名ライブ配信🐧 E030（乙女な大泥棒）名前発表",
@@ -108,6 +108,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "60_RgKm1dSc",
+      "title": "【衝撃】雑巾掛けをするチンパンジーがすごすぎた！🐒【宮崎市フェニックス自然動物園】",
+      "published": "2026-08-22T10:00:06+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -147,14 +155,6 @@
       "videoId": "pZxFax3pCVY",
       "title": "今日はカンガルー展示場を作るよ　Part15",
       "published": "2026-08-22T07:40:20+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "60_RgKm1dSc",
-      "title": "【衝撃】雑巾掛けをするチンパンジーがすごすぎた！🐒【宮崎市フェニックス自然動物園】",
-      "published": "2026-08-22T05:40:41+00:00"
     },
     {
       "channelSlug": "biopark",
