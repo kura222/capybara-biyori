@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T07:29:01.848Z",
+  "updatedAt": "2026-08-22T07:56:24.992Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "biopark",
+      "videoId": "pZxFax3pCVY",
+      "title": "今日はカンガルー展示場を作るよ　Part15",
+      "startedAt": "2026-08-22T07:40:34Z"
     },
     {
       "channelSlug": "taronga",
@@ -112,6 +118,14 @@
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
+      "videoId": "pZxFax3pCVY",
+      "title": "今日はカンガルー展示場を作るよ　Part15",
+      "published": "2026-08-22T07:40:20+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
       "videoId": "60_RgKm1dSc",
       "title": "【衝撃】雑巾掛けをするチンパンジーがすごすぎた！🐒【宮崎市フェニックス自然動物園】",
       "published": "2026-08-22T05:40:41+00:00"
@@ -163,14 +177,6 @@
       "videoId": "dU7jCqUcfOI",
       "title": "They All Knew I Had Snacks 😂",
       "published": "2026-08-20T13:00:22+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "FXP_RhCy5GE",
-      "title": "【KTN】赤ちゃんカピバラ「はち」の成長記録撮影の裏側をご覧ください🌱【はちのすくすく日記】",
-      "published": "2026-08-20T10:00:06+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
