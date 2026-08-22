@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T20:19:00.549Z",
+  "updatedAt": "2026-08-22T20:48:03.776Z",
   "degraded": false,
   "live": [
     {
@@ -106,6 +106,14 @@
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
+      "videoId": "pZxFax3pCVY",
+      "title": "今日はカンガルー展示場を作るよ　Part15",
+      "published": "2026-08-22T20:44:04+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
       "videoId": "60_RgKm1dSc",
       "title": "【衝撃】雑巾掛けをするチンパンジーがすごすぎた！🐒【宮崎市フェニックス自然動物園】",
       "published": "2026-08-22T10:00:06+00:00"
@@ -141,14 +149,6 @@
       "videoId": "A6RDb_WVD08",
       "title": "I Finally Fed Okonomiyaki 🥹🐹❤️",
       "published": "2026-08-22T08:10:13+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "pZxFax3pCVY",
-      "title": "今日はカンガルー展示場を作るよ　Part15",
-      "published": "2026-08-22T07:40:20+00:00"
     },
     {
       "channelSlug": "biopark",
