@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T10:49:33.930Z",
+  "updatedAt": "2026-08-23T11:18:15.273Z",
   "degraded": false,
   "live": [
     {
@@ -84,6 +84,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "FUxXj_PqT88",
+      "title": "The Snacks Are Gone… But the Capybaras Don’t Care 😂🐹",
+      "published": "2026-08-23T11:10:12+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -203,14 +211,6 @@
       "videoId": "dU7jCqUcfOI",
       "title": "They All Knew I Had Snacks 😂",
       "published": "2026-08-20T13:00:22+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "myqParVTaY0",
-      "title": "Capybara ASMR Crunch crunch",
-      "published": "2026-08-19T14:35:06+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
