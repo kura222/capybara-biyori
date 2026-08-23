@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T08:57:08.884Z",
+  "updatedAt": "2026-08-23T09:30:13.778Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "N3InPKB2ef8",
+      "title": "休日の私みたいだ♨ #ツキノワグマ #池田動物園  #岡山",
+      "published": "2026-08-23T09:00:34+00:00"
+    },
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "ZeYNl-1_Isk",
+      "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
+      "published": "2026-08-23T09:00:02+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -227,14 +243,6 @@
       "published": "2026-08-15T10:00:17+00:00"
     },
     {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "pY3RMWPYH5o",
-      "title": "ワニの歯🦷🐊 #池田動物園 #岡山 #メガネカイマン",
-      "published": "2026-08-15T09:00:05+00:00"
-    },
-    {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
       "facilitySlug": "uminonakamichi-park",
@@ -305,14 +313,6 @@
       "videoId": "_nht6WFjdjc",
       "title": "アメリカビーバーのごはんタイムASMR🦫",
       "published": "2026-06-30T09:30:11+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "uPlJjBcrawk",
-      "title": "飼育員が作るごはん【アメリカビーバー編】🦫",
-      "published": "2026-06-29T10:30:25+00:00"
     },
     {
       "channelSlug": "saitama-childrens-zoo",
