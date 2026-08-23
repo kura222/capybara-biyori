@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T06:36:04.273Z",
+  "updatedAt": "2026-08-23T07:30:54.834Z",
   "degraded": false,
   "live": [
     {
@@ -13,12 +13,6 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "biopark",
-      "videoId": "ZR8dvBrZ-6M",
-      "title": "バイオパークの避暑地からライブ‼️",
-      "startedAt": "2026-08-23T04:31:52Z"
     },
     {
       "channelSlug": "taronga",
@@ -100,17 +94,17 @@
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
-      "videoId": "UGVU0Ji_MM4",
-      "title": "朝のププくん",
-      "published": "2026-08-23T01:41:07+00:00"
+      "videoId": "ZR8dvBrZ-6M",
+      "title": "バイオパークの避暑地からライブ‼️",
+      "published": "2026-08-23T07:08:05+00:00"
     },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
-      "videoId": "ZR8dvBrZ-6M",
-      "title": "バイオパークの避暑地からライブ‼️",
-      "published": "2026-08-23T01:38:02+00:00"
+      "videoId": "UGVU0Ji_MM4",
+      "title": "朝のププくん",
+      "published": "2026-08-23T01:41:07+00:00"
     },
     {
       "channelSlug": "biopark",
