@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T01:07:00.112Z",
+  "updatedAt": "2026-08-24T02:43:51.380Z",
   "degraded": false,
   "live": [
     {
@@ -71,12 +71,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "adventure-world",
-      "videoId": "Jzk8eEHLr-k",
-      "title": "命名ライブ配信🐧 E032（しっかりもの三女）名前発表",
-      "scheduledAt": "2026-08-24T01:15:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -121,7 +115,7 @@
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "ZR8dvBrZ-6M",
-      "title": "バイオパークの避暑地からライブ‼️",
+      "title": "【LIVE】ビーバーの展示場内から。新しい巣も",
       "published": "2026-08-23T07:08:05+00:00"
     },
     {
