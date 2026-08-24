@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T08:46:48.785Z",
+  "updatedAt": "2026-08-24T09:43:18.217Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "jzjZ7PAmI3U",
+      "title": "He Didn’t Even Open His Eyes… But He Knew There Was Food 😂🦫",
+      "published": "2026-08-24T09:15:03+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -189,14 +197,6 @@
       "videoId": "A6RDb_WVD08",
       "title": "I Finally Fed Okonomiyaki 🥹🐹❤️",
       "published": "2026-08-22T08:10:13+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "TLo-4CJCYiM",
-      "title": "I Saved the Last Treat for My Favorite Capybara 🥹🐹",
-      "published": "2026-08-21T12:00:34+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
