@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T09:59:43.986Z",
+  "updatedAt": "2026-08-25T10:40:45.031Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "DTKAKOr8fj0",
+      "title": "スイカ🍉",
+      "published": "2026-08-25T10:00:03+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -173,14 +181,6 @@
       "videoId": "pZxFax3pCVY",
       "title": "今日はカンガルー展示場を作るよ　Part15",
       "published": "2026-08-22T20:44:04+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "60_RgKm1dSc",
-      "title": "【衝撃】雑巾掛けをするチンパンジーがすごすぎた！🐒【宮崎市フェニックス自然動物園】",
-      "published": "2026-08-22T10:00:06+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
