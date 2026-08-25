@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T08:06:40.143Z",
+  "updatedAt": "2026-08-25T09:07:08.866Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "S49AZLhySVQ",
+      "title": "スイカを美味しそうに食べるリスザルのアブー🎵#shorts #リスザル #猿",
+      "published": "2026-08-25T08:19:09+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "GvG6CZ13hzg",
+      "title": "夏の動物達へのプレゼント！動物達のお食事シーンをたっぷりと♫沢山のプレゼントありがとうございました！！",
+      "published": "2026-08-25T08:08:58+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -173,22 +189,6 @@
       "videoId": "arCtRV7ixC0",
       "title": "近すぎるよチーコちゃん👀 #岡山 #池田動物園 #キバタン",
       "published": "2026-08-22T09:00:25+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "qAVs-6UezNY",
-      "title": "秋田犬宗春くんの極秘の特訓！？#shorts #秋田犬 #犬",
-      "published": "2026-08-22T08:39:56+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "LqHZyK1Uwf8",
-      "title": "秋田犬の宗春くん！極秘の特訓とは・・・？",
-      "published": "2026-08-22T08:35:58+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
