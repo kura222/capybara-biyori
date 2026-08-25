@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T05:28:51.824Z",
+  "updatedAt": "2026-08-25T05:59:52.485Z",
   "degraded": false,
   "live": [
     {
@@ -16,38 +16,5 @@
     }
   ],
   "upcoming": [],
-  "latestVideos": [
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "ZeYNl-1_Isk",
-      "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
-      "published": "2026-08-23T09:00:02+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "qEM0DJC1ihA",
-      "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
-      "published": "2026-08-15T12:00:18+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "xaJUpR1-vOw",
-      "title": "🌵伊豆シャボテン動物公園来たら、ここ行って🌵",
-      "published": "2026-07-20T09:00:17+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "_nht6WFjdjc",
-      "title": "アメリカビーバーのごはんタイムASMR🦫",
-      "published": "2026-06-30T09:30:11+00:00"
-    }
-  ]
+  "latestVideos": []
 }
