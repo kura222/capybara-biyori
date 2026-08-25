@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T23:45:34.969Z",
+  "updatedAt": "2026-08-25T01:06:01.582Z",
   "degraded": false,
   "live": [
     {
@@ -70,6 +70,12 @@
     }
   ],
   "upcoming": [
+    {
+      "channelSlug": "adventure-world",
+      "videoId": "DZJ4dBthOGo",
+      "title": "命名ライブ配信🐧 E033（ザ・ペンギン）名前発表",
+      "scheduledAt": "2026-08-25T01:15:00Z"
+    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
