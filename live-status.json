@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T09:37:51.984Z",
+  "updatedAt": "2026-08-26T10:32:18.687Z",
   "degraded": false,
   "live": [
     {
@@ -25,6 +25,12 @@
       "videoId": "QiGiSmSU2U8",
       "title": "Angel Valley Farm Extra Live – 24/7 Cute Animal Moments & Bonus Streams",
       "startedAt": "2026-08-25T11:43:31Z"
+    },
+    {
+      "channelSlug": "taronga",
+      "videoId": "RzasUXCTStM",
+      "title": "Capybara Live stream",
+      "startedAt": "2026-07-03T21:00:26Z"
     },
     {
       "channelSlug": "kiryugaoka-zoo",
@@ -77,12 +83,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "KBIGdasvDT8",
-      "title": "PAWでキウイをあげたら、お友達を止める可愛すぎるデグーが見れました！",
-      "scheduledAt": "2026-08-26T10:00:00Z"
-    },
-    {
       "channelSlug": "adventure-world",
       "videoId": "mqaUHw0FHDc",
       "title": "命名ライブ配信🐧 E040（小魚ビッグラブ）名前発表",
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "KBIGdasvDT8",
+      "title": "PAWでキウイをあげたら、お友達を止める可愛すぎるデグーが見れました！",
+      "published": "2026-08-26T10:00:06+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -119,14 +127,6 @@
       "videoId": "UnYSojdhm3I",
       "title": "カピバラニキのYes!東京　#エビダン",
       "published": "2026-08-26T04:43:39+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "KBIGdasvDT8",
-      "title": "PAWでキウイをあげたら、お友達を止める可愛すぎるデグーが見れました！",
-      "published": "2026-08-26T01:05:28+00:00"
     },
     {
       "channelSlug": "biopark",
