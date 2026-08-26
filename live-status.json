@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T11:56:42.960Z",
+  "updatedAt": "2026-08-26T12:54:34.697Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "OL-jT3V6QAI",
+      "title": "Even Capybaras Are Tired of the Rain… 🌧️🥺",
+      "published": "2026-08-26T12:00:27+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -207,14 +215,6 @@
       "videoId": "arCtRV7ixC0",
       "title": "近すぎるよチーコちゃん👀 #岡山 #池田動物園 #キバタン",
       "published": "2026-08-22T09:00:25+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "A6RDb_WVD08",
-      "title": "I Finally Fed Okonomiyaki 🥹🐹❤️",
-      "published": "2026-08-22T08:10:13+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
