@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T23:48:26.641Z",
+  "updatedAt": "2026-08-26T01:08:00.202Z",
   "degraded": false,
   "live": [
     {
@@ -82,6 +82,12 @@
     }
   ],
   "upcoming": [
+    {
+      "channelSlug": "adventure-world",
+      "videoId": "sP-UoexEwMo",
+      "title": "命名ライブ配信🐧 E035（夢見るビッグガール）名前発表",
+      "scheduledAt": "2026-08-26T01:15:00Z"
+    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
