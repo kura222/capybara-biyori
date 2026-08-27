@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T00:26:05.254Z",
+  "updatedAt": "2026-08-27T10:07:32.592Z",
   "degraded": false,
   "live": [
     {
@@ -83,12 +83,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "adventure-world",
-      "videoId": "mqaUHw0FHDc",
-      "title": "命名ライブ配信🐧 E040（小魚ビッグラブ）名前発表",
-      "scheduledAt": "2026-08-27T01:15:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -96,6 +90,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "GY8vz4b5360",
+      "title": "PUI PUI #モルモット #guineaprg",
+      "published": "2026-08-27T08:56:18+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "yW-k-RT1EM4",
+      "title": "豪快にスイカにかぶりつくくるみおばあちゃん♪#shorts #猿 #スイカ",
+      "published": "2026-08-27T08:14:07+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -153,14 +163,6 @@
       "published": "2026-08-25T08:19:09+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "GvG6CZ13hzg",
-      "title": "夏の動物達へのプレゼント！動物達のお食事シーンをたっぷりと♫沢山のプレゼントありがとうございました！！",
-      "published": "2026-08-25T08:08:58+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -199,14 +201,6 @@
       "videoId": "ZeYNl-1_Isk",
       "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
       "published": "2026-08-23T09:00:02+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "ZR8dvBrZ-6M",
-      "title": "【LIVE】ビーバーの展示場内から。新しい巣も",
-      "published": "2026-08-23T07:08:05+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
