@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T17:35:42.175Z",
+  "updatedAt": "2026-08-29T01:26:50.122Z",
   "degraded": false,
   "live": [
     {
@@ -25,12 +25,6 @@
       "videoId": "QiGiSmSU2U8",
       "title": "Angel Valley Farm Extra Live – 24/7 Cute Animal Moments & Bonus Streams",
       "startedAt": "2026-08-25T11:43:31Z"
-    },
-    {
-      "channelSlug": "taronga",
-      "videoId": "RzasUXCTStM",
-      "title": "Capybara Live stream",
-      "startedAt": "2026-07-03T21:00:26Z"
     },
     {
       "channelSlug": "kiryugaoka-zoo",
@@ -82,12 +76,6 @@
     }
   ],
   "upcoming": [
-    {
-      "channelSlug": "adventure-world",
-      "videoId": "6Vmju-uB5EI",
-      "title": "命名ライブ配信🐧 E042（洋ナシ娘）名前発表",
-      "scheduledAt": "2026-08-29T01:15:00Z"
-    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
