@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T13:55:47.113Z",
+  "updatedAt": "2026-08-29T17:30:43.006Z",
   "degraded": false,
   "live": [
     {
@@ -84,6 +84,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "z127anVHU-E",
+      "title": "The Turtle Rider Is Back! 🐢😂",
+      "published": "2026-08-29T14:15:32+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -203,14 +211,6 @@
       "videoId": "ojtSGc7rpRE",
       "title": "ぶどうを頬張るハクビシンのハクちゃん♫#shorts #ハクビシン #動物園",
       "published": "2026-08-26T08:09:07+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "jzjZ7PAmI3U",
-      "title": "He Didn’t Even Open His Eyes… But He Knew There Was Food 😂🦫",
-      "published": "2026-08-24T09:15:03+00:00"
     },
     {
       "channelSlug": "shabotengroup",
