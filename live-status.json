@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T08:09:48.399Z",
+  "updatedAt": "2026-08-29T13:55:47.113Z",
   "degraded": false,
   "live": [
     {
@@ -77,12 +77,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "z5AdW8O8yqA",
-      "title": "暑さ対策！ひつじの毛刈りで振り回される新人飼育員たち🐏",
-      "scheduledAt": "2026-08-29T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -91,20 +85,36 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "z5AdW8O8yqA",
+      "title": "暑さ対策！ひつじの毛刈りで振り回される新人飼育員たち🐏",
+      "published": "2026-08-29T10:00:06+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "5eMgXBOzuRY",
+      "title": "夏と言えばスイカとメロン #岡山 #池田動物園 #アメリカバク",
+      "published": "2026-08-29T09:00:10+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "x9RDEot_-yk",
+      "title": "夏の終わりも近づいてきましたね夏の疲れはくるみばあちゃんに取ってもらいましょう☺️#動物園 #草津熱帯圏 #タラポアン #猿 #monkey",
+      "published": "2026-08-29T08:24:53+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
       "videoId": "N_lkTso6zBY",
       "title": "今日はナイトズー最終日！16時スタート😸 #池田動物園 # #岡山 #ナイトズー",
       "published": "2026-08-29T03:00:13+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "z5AdW8O8yqA",
-      "title": "暑さ対策！ひつじの毛刈りで振り回される新人飼育員たち🐏",
-      "published": "2026-08-29T02:31:50+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -195,28 +205,12 @@
       "published": "2026-08-26T08:09:07+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "yZRHuJY9pUU",
-      "title": "お風呂でくつろぐカピバラベビー達♪#shorts #カピバラ #capybara",
-      "published": "2026-08-26T05:36:58+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
       "videoId": "jzjZ7PAmI3U",
       "title": "He Didn’t Even Open His Eyes… But He Knew There Was Food 😂🦫",
       "published": "2026-08-24T09:15:03+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "N3InPKB2ef8",
-      "title": "休日の私みたいだ♨ #ツキノワグマ #池田動物園  #岡山",
-      "published": "2026-08-23T09:00:34+00:00"
     },
     {
       "channelSlug": "shabotengroup",
