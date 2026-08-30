@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T17:40:10.962Z",
+  "updatedAt": "2026-08-30T20:32:14.149Z",
   "degraded": false,
   "live": [
     {
@@ -88,6 +88,14 @@
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
+      "videoId": "CnBC7giFN7E",
+      "title": "🌧️ The Rain Didn’t Stop Me… I Found a Capybara Paradise! 🐹 | LIVE",
+      "published": "2026-08-30T18:32:18+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
       "videoId": "BwBVzvTRW4A",
       "title": "Rainy Day with Two Capybaras ☔️🦫 | Cozy Capybara Live",
       "published": "2026-08-30T15:01:34+00:00"
@@ -147,14 +155,6 @@
       "videoId": "z127anVHU-E",
       "title": "The Turtle Rider Is Back! 🐢😂",
       "published": "2026-08-29T14:15:32+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "CnBC7giFN7E",
-      "title": "🌧️ The Rain Didn’t Stop Me… I Found a Capybara Paradise! 🐹 | LIVE",
-      "published": "2026-08-29T14:04:13+00:00"
     },
     {
       "channelSlug": "biopark",
