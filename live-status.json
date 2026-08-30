@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T07:03:07.555Z",
+  "updatedAt": "2026-08-30T13:06:35.735Z",
   "degraded": false,
   "live": [
     {
@@ -84,6 +84,38 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "aC8RSBwQ_sM",
+      "title": "This Little Capybara Loves Chin Scratches 🥹",
+      "published": "2026-08-30T11:25:14+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "hxobnas0QXQ",
+      "title": "なにかおるかな？ #池田動物園 #岡山 #ミーアキャット",
+      "published": "2026-08-30T11:00:08+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "_2Bl9BKXx2Y",
+      "title": "とんがりの水飲み　#モルモット #guineapig",
+      "published": "2026-08-30T09:00:21+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "O1xN7pGGLvM",
+      "title": "夏休み終わったからサボってもいいよね？#shorts #ミーアキャット #動物",
+      "published": "2026-08-30T07:26:55+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -179,38 +211,6 @@
       "videoId": "3y5NHnKW6cY",
       "title": "【LIVE】ビーバー展示場の中から Beaver",
       "published": "2026-08-28T05:13:11+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "DhO1_6LZ47g",
-      "title": "360° Capybara Surveillance 👀😂",
-      "published": "2026-08-27T14:30:22+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "wt3v2VS4ixM",
-      "title": "池田動物園ナイトズー2026#岡山 #ナイトズー #池田動物園",
-      "published": "2026-08-27T11:00:16+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "GY8vz4b5360",
-      "title": "PUI PUI #モルモット #guineaprg",
-      "published": "2026-08-27T08:56:18+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "yW-k-RT1EM4",
-      "title": "豪快にスイカにかぶりつくくるみおばあちゃん♪#shorts #猿 #スイカ",
-      "published": "2026-08-27T08:14:07+00:00"
     },
     {
       "channelSlug": "shabotengroup",
