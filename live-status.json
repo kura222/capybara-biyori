@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T20:32:14.149Z",
+  "updatedAt": "2026-08-30T23:08:54.730Z",
   "degraded": false,
   "live": [
     {
@@ -76,6 +76,12 @@
     }
   ],
   "upcoming": [
+    {
+      "channelSlug": "adventure-world",
+      "videoId": "P7vmuRSNSL0",
+      "title": "命名ライブ配信🐧 E044（最強の末っ子アイドル）名前発表",
+      "scheduledAt": "2026-08-31T01:15:00Z"
+    },
     {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
