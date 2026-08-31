@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T07:24:48.522Z",
+  "updatedAt": "2026-08-31T15:15:51.732Z",
   "degraded": false,
   "live": [
     {
@@ -88,6 +88,30 @@
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
+      "videoId": "neZjiP5qc98",
+      "title": "She Almost Fell Asleep 🥹🌧️",
+      "published": "2026-08-31T13:05:25+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "i7vtRFLOFto",
+      "title": "カピタンDISCO #discotheque #水樹奈々",
+      "published": "2026-08-31T08:49:11+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "ZcsZviNk_u0",
+      "title": "髪の毛をセットしてやるよと言わんばかりに手を伸ばしてくれるナマケモノ🦥おかげさまでボサボサになりました☺️#動物園 #ナマケモノ #zoo #animal #sloths",
+      "published": "2026-08-31T08:13:11+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
       "videoId": "CnBC7giFN7E",
       "title": "🌧️ The Rain Didn’t Stop Me… I Found a Capybara Paradise! 🐹 | LIVE",
       "published": "2026-08-30T18:32:18+00:00"
@@ -149,14 +173,6 @@
       "published": "2026-08-30T04:49:29+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "z127anVHU-E",
-      "title": "The Turtle Rider Is Back! 🐢😂",
-      "published": "2026-08-29T14:15:32+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -195,22 +211,6 @@
       "videoId": "h4RX51Wf9mY",
       "title": "29日ナイトズーワンコイングルメフェス #池田動物園 #ナイトズー #岡山",
       "published": "2026-08-28T11:00:25+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "ofrgsdtj5-0",
-      "title": "笹をむさぼるハクビシン！？実はハクビシンの健康法でもあった？",
-      "published": "2026-08-28T08:06:59+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "3y5NHnKW6cY",
-      "title": "【LIVE】ビーバー展示場の中から Beaver",
-      "published": "2026-08-28T05:13:11+00:00"
     },
     {
       "channelSlug": "shabotengroup",
