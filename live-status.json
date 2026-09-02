@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02T07:36:48.228Z",
+  "updatedAt": "2026-09-02T12:31:34.797Z",
   "degraded": false,
   "live": [
     {
@@ -88,6 +88,38 @@
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
+      "videoId": "ydIpM9bMgfE",
+      "title": "Just Me and My Little Capybara 🥹🦫",
+      "published": "2026-09-02T11:25:38+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "Zhc6tIlf4-A",
+      "title": "PAW新人飼育員・小渕さんの仕事に密着！エサやりから獣舎掃除までリアルな裏側をお届け【飼育員のお仕事シリーズ】",
+      "published": "2026-09-02T10:00:06+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "b56z7P9vg1c",
+      "title": "薬をゴクンするまでちょっと我慢してね♪#shorts #コモンマーモセット #猿",
+      "published": "2026-09-02T08:13:10+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "RgE4kYoGATA",
+      "title": "人気者くるみおばあちゃんの１日♪開園前〜閉園までの過ごし方♫",
+      "published": "2026-09-02T07:54:22+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
       "videoId": "GJhviV3QLBc",
       "title": "How Did It Not Fall?! 😂🧡 | Capybara",
       "published": "2026-09-01T09:25:14+00:00"
@@ -133,14 +165,6 @@
       "published": "2026-08-30T18:32:18+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "BwBVzvTRW4A",
-      "title": "Rainy Day with Two Capybaras ☔️🦫 | Cozy Capybara Live",
-      "published": "2026-08-30T15:01:34+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -157,36 +181,12 @@
       "published": "2026-08-30T09:00:21+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "O1xN7pGGLvM",
-      "title": "夏休み終わったからサボってもいいよね？#shorts #ミーアキャット #動物",
-      "published": "2026-08-30T07:26:55+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "RxSa1lhe_eE",
       "title": "【LIVE】ビーバー🦫のテラス君に密着！",
       "published": "2026-08-30T06:46:07+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "04kRop-a2sc",
-      "title": "一足先に秋を堪能するヨザルのよっちゃん♪#shorts #猿 #おばあちゃん",
-      "published": "2026-08-30T04:49:29+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "z5AdW8O8yqA",
-      "title": "暑さ対策！ひつじの毛刈りで振り回される新人飼育員たち🐏",
-      "published": "2026-08-29T10:00:06+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
