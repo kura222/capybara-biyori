@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T08:47:44.838Z",
+  "updatedAt": "2026-09-05T12:21:04.076Z",
   "degraded": false,
   "live": [
     {
@@ -77,12 +77,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "sQKpG4viFK4",
-      "title": "【池掃除】今年もやります！カピバラの池の水ぜんぶ抜いたら何が出てくる…？",
-      "scheduledAt": "2026-09-05T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -90,6 +84,30 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "AaasvkyUAyo",
+      "title": "4 Capybaras, 1 Sleeping Position 😂🦫",
+      "published": "2026-09-05T11:15:00+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "eYw-xOkpxH8",
+      "title": "しゃくれておらっしゃるよ？ #ホワイトタイガー #池田動物園 #岡山",
+      "published": "2026-09-05T11:00:48+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "sQKpG4viFK4",
+      "title": "【池掃除】今年もやります！カピバラの池の水ぜんぶ抜いたら何が出てくる…？",
+      "published": "2026-09-05T10:00:06+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -105,14 +123,6 @@
       "videoId": "btcNe6UJuUw",
       "title": "カバの展示場をつくっちゃうよ～　Part16",
       "published": "2026-09-05T07:41:55+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "sQKpG4viFK4",
-      "title": "【池掃除】今年もやります！カピバラの池の水ぜんぶ抜いたら何が出てくる…？",
-      "published": "2026-09-05T06:47:32+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
@@ -171,14 +181,6 @@
       "published": "2026-09-02T10:00:06+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "GJhviV3QLBc",
-      "title": "How Did It Not Fall?! 😂🧡 | Capybara",
-      "published": "2026-09-01T09:25:14+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -209,14 +211,6 @@
       "videoId": "N_lkTso6zBY",
       "title": "今日はナイトズー最終日！16時スタート😸 #池田動物園 # #岡山 #ナイトズー",
       "published": "2026-08-29T03:00:13+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "h4RX51Wf9mY",
-      "title": "29日ナイトズーワンコイングルメフェス #池田動物園 #ナイトズー #岡山",
-      "published": "2026-08-28T11:00:25+00:00"
     },
     {
       "channelSlug": "shabotengroup",
