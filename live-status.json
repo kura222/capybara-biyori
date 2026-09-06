@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T11:12:39.309Z",
+  "updatedAt": "2026-09-06T14:19:02.259Z",
   "degraded": false,
   "live": [
     {
@@ -84,6 +84,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "XcZSNIvopZQ",
+      "title": "One of Them Is Fake… Can You Spot It? 👀🦫",
+      "published": "2026-09-06T13:00:22+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -179,14 +187,6 @@
       "videoId": "gNT4aT7M7YQ",
       "title": "Why Is She Looking at Me Like That? 😂🦫",
       "published": "2026-09-04T03:30:33+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "W9salBquOW4",
-      "title": "I Think I Met the Capybara Family 😂",
-      "published": "2026-09-03T11:05:03+00:00"
     },
     {
       "channelSlug": "biopark",
