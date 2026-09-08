@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T08:58:16.150Z",
+  "updatedAt": "2026-09-08T13:27:01.583Z",
   "degraded": false,
   "live": [
     {
@@ -84,6 +84,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "JHojbG8I2PA",
+      "title": "Lunch First, Questions Later 😂｜先吃飯，再聊天 😂",
+      "published": "2026-09-08T12:25:10+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "uegfxipGrwY",
+      "title": "瞬間、心、重ねて",
+      "published": "2026-09-08T10:00:09+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -181,14 +197,6 @@
       "published": "2026-09-05T20:46:40+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "AaasvkyUAyo",
-      "title": "4 Capybaras, 1 Sleeping Position 😂🦫",
-      "published": "2026-09-05T11:15:00+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -203,14 +211,6 @@
       "videoId": "sQKpG4viFK4",
       "title": "【池掃除】今年もやります！カピバラの池の水ぜんぶ抜いたら何が出てくる…？",
       "published": "2026-09-05T10:00:06+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "Zhc6tIlf4-A",
-      "title": "PAW新人飼育員・小渕さんの仕事に密着！エサやりから獣舎掃除までリアルな裏側をお届け【飼育員のお仕事シリーズ】",
-      "published": "2026-09-02T10:00:06+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
