@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T11:41:09.822Z",
+  "updatedAt": "2026-09-09T15:54:01.081Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "hlRUnXWlDzk",
+      "title": "What? 😐 什麼？",
+      "published": "2026-09-09T13:35:31+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -175,14 +183,6 @@
       "videoId": "mZq6mF-T89k",
       "title": "🌞 Free-Roaming Capybaras on a Sunny Day | Pingtung, Taiwan 🦫🌿 LIVE",
       "published": "2026-09-06T21:11:22+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "XcZSNIvopZQ",
-      "title": "One of Them Is Fake… Can You Spot It? 👀🦫",
-      "published": "2026-09-06T13:00:22+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
