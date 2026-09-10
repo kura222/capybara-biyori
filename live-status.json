@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T13:00:54.245Z",
+  "updatedAt": "2026-09-10T17:03:40.661Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "dC4vZ1eIWHc",
+      "title": "A Little Moment With a Capybara 🐹🌿｜和水豚的療癒時光",
+      "published": "2026-09-10T13:55:08+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -183,14 +191,6 @@
       "videoId": "SfKKYT4J-YQ",
       "title": "クモザルらしくなってきたクモザルベイビー",
       "published": "2026-09-07T03:45:46+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "mZq6mF-T89k",
-      "title": "🌞 Free-Roaming Capybaras on a Sunny Day | Pingtung, Taiwan 🦫🌿 LIVE",
-      "published": "2026-09-06T21:11:22+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
