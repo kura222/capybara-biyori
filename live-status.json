@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T17:29:51.433Z",
+  "updatedAt": "2026-09-11T19:58:52.943Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "hhEl1PLrTM0",
+      "title": "伊豆シャボテン動物公園公式チャンネル がライブ配信中！",
+      "published": "2026-09-11T19:25:15+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -119,14 +127,6 @@
       "videoId": "mn5-R1e_qkA",
       "title": "mgmg",
       "published": "2026-09-11T03:00:06+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "hhEl1PLrTM0",
-      "title": "伊豆シャボテン動物公園公式チャンネル がライブ配信中！",
-      "published": "2026-09-10T23:49:01+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
