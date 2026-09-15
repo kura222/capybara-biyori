@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T20:23:11.025Z",
+  "updatedAt": "2026-09-15T23:01:20.359Z",
   "degraded": false,
   "live": [
     {
@@ -55,18 +55,6 @@
       "videoId": "EeU_fG7pmX4",
       "title": "【熊本市動植物園】マサイキリン | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Giraffe)",
       "startedAt": "2025-11-04T09:28:46Z"
-    },
-    {
-      "channelSlug": "roger-williams-zoo",
-      "videoId": "9h0uy-DvOdY",
-      "title": "Capybara Underwater Livestream Cam 2",
-      "startedAt": "2026-09-08T13:58:21Z"
-    },
-    {
-      "channelSlug": "roger-williams-zoo",
-      "videoId": "DmbuDK2AJF4",
-      "title": "Capybara Underwater Livestream Cam 1",
-      "startedAt": "2026-09-08T13:56:02Z"
     },
     {
       "channelSlug": "budapest-zoo",
