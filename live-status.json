@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T07:12:08.554Z",
+  "updatedAt": "2026-09-16T12:41:52.403Z",
   "degraded": false,
   "live": [
     {
@@ -71,12 +71,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "YXSuzKGtys0",
-      "title": "みんな違ってみんな可愛い！PAWのオウムインコたちを全羽紹介してみた🦜【オウムインコデー】",
-      "scheduledAt": "2026-09-16T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -85,12 +79,12 @@
   ],
   "latestVideos": [
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "z-d0ztM4o7A",
-      "title": "ファンの方から似顔絵とシャインマスカットのプレゼント♫#動物園 #ハクビシン #似顔絵",
-      "published": "2026-09-16T03:56:25+00:00"
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "gD5ZumSvQEc",
+      "title": "Too Comfortable to Eat 😂 | 舒服到連飯都不想吃 😂",
+      "published": "2026-09-16T12:35:21+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -98,7 +92,15 @@
       "facilitySlug": "nagasaki-biopark",
       "videoId": "YXSuzKGtys0",
       "title": "みんな違ってみんな可愛い！PAWのオウムインコたちを全羽紹介してみた🦜【オウムインコデー】",
-      "published": "2026-09-16T00:22:42+00:00"
+      "published": "2026-09-16T10:00:06+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "z-d0ztM4o7A",
+      "title": "ファンの方から似顔絵とシャインマスカットのプレゼント♫#動物園 #ハクビシン #似顔絵",
+      "published": "2026-09-16T03:56:25+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -211,14 +213,6 @@
       "videoId": "hhEl1PLrTM0",
       "title": "伊豆シャボテン動物公園公式チャンネル がライブ配信中！",
       "published": "2026-09-11T19:25:15+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "dC4vZ1eIWHc",
-      "title": "A Little Moment With a Capybara 🐹🌿｜和水豚的療癒時光",
-      "published": "2026-09-10T13:55:08+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
