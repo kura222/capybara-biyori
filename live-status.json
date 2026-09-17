@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T12:41:02.771Z",
+  "updatedAt": "2026-09-17T17:26:55.866Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "hqvG_rMPqBE",
+      "title": "The Capybara Meeting Has Started 🦫😂｜水豚會議開始了 🦫😂",
+      "published": "2026-09-17T12:55:01+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -181,14 +189,6 @@
       "videoId": "6WWwGlkAcPQ",
       "title": "シルバーウィークは池田動物園へ🍴 #池田動物園 #シルバーウィーク #岡山",
       "published": "2026-09-13T09:00:21+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "CqCpjEowmSs",
-      "title": "She Took the Whole Meal 😂 | 全部被水豚搶走了 😂",
-      "published": "2026-09-12T11:55:16+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
