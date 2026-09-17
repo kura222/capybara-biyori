@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T07:08:31.611Z",
+  "updatedAt": "2026-09-17T12:41:02.771Z",
   "degraded": false,
   "live": [
     {
@@ -79,6 +79,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "DVA5KqiGkxc",
+      "title": "柿を堪能するニホンザルのモン吉♫#shorts #ニホンザル #猿",
+      "published": "2026-09-17T08:13:12+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -133,14 +141,6 @@
       "videoId": "oZi8b0bLtxo",
       "title": "長く生き続けるおじいちゃん、おばあちゃんの動物達に感謝♫もちろんそれを支えるシニアスタッフにも感謝です！",
       "published": "2026-09-15T07:59:42+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "niQQUEXV6M4",
-      "title": "高齢スタッフの仕事とは思えません・・・。#shorts #おじいちゃん #動物園",
-      "published": "2026-09-15T04:59:23+00:00"
     },
     {
       "channelSlug": "biopark",
