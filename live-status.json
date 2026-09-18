@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T01:21:55.646Z",
+  "updatedAt": "2026-09-18T06:17:26.483Z",
   "degraded": false,
   "live": [
     {
@@ -16,38 +16,5 @@
     }
   ],
   "upcoming": [],
-  "latestVideos": [
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "DVA5KqiGkxc",
-      "title": "柿を堪能するニホンザルのモン吉♫#shorts #ニホンザル #猿",
-      "published": "2026-09-17T08:13:12+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "z-d0ztM4o7A",
-      "title": "ファンの方から似顔絵とシャインマスカットのプレゼント♫#動物園 #ハクビシン #似顔絵",
-      "published": "2026-09-16T03:56:25+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "rcER0p2mG1U",
-      "title": "おばあちゃんでありながらこの可愛さキープ♫#shorts #動物 #おばあちゃん",
-      "published": "2026-09-15T08:21:29+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "oZi8b0bLtxo",
-      "title": "長く生き続けるおじいちゃん、おばあちゃんの動物達に感謝♫もちろんそれを支えるシニアスタッフにも感謝です！",
-      "published": "2026-09-15T07:59:42+00:00"
-    }
-  ]
+  "latestVideos": []
 }
