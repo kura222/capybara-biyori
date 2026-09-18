@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T11:35:57.706Z",
+  "updatedAt": "2026-09-18T15:48:14.218Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "6iyCr4wuxc0",
+      "title": "Scratch My Neck, Please 🥹｜幫我搔搔脖子～",
+      "published": "2026-09-18T14:15:22+00:00"
+    },
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "IGPg94MDaDI",
+      "title": "伊豆ぐらんぱる公園を遊び尽くす！🎡✨",
+      "published": "2026-09-18T12:05:14+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -159,14 +175,6 @@
       "published": "2026-09-15T03:05:18+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "6u9kntaav8s",
-      "title": "Never mind. 😂｜算了。",
-      "published": "2026-09-14T14:50:36+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -245,14 +253,6 @@
       "videoId": "ZeYNl-1_Isk",
       "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
       "published": "2026-08-23T09:00:02+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "qEM0DJC1ihA",
-      "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
-      "published": "2026-08-15T12:00:18+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
