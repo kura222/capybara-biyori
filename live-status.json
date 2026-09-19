@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T01:27:26.279Z",
+  "updatedAt": "2026-09-19T06:24:06.057Z",
   "degraded": false,
   "live": [
     {
@@ -13,117 +13,8 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "angel-valley-farm",
-      "videoId": "uwfbLYKJ3P4",
-      "title": "Angel Valley Farm Extra Live – 24/7 Cute Animal Moments & Bonus Streams",
-      "startedAt": "2026-09-06T10:06:58Z"
-    },
-    {
-      "channelSlug": "angel-valley-farm",
-      "videoId": "iiFdP5U9aHg",
-      "title": "Angel Valley Farm LIVE 24/7 🟢 Relaxing Capybara Pool Stream 🐹💦",
-      "startedAt": "2026-08-25T11:52:47Z"
     }
   ],
   "upcoming": [],
-  "latestVideos": [
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "6iyCr4wuxc0",
-      "title": "Scratch My Neck, Please 🥹｜幫我搔搔脖子～",
-      "published": "2026-09-18T14:15:22+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "hqvG_rMPqBE",
-      "title": "The Capybara Meeting Has Started 🦫😂｜水豚會議開始了 🦫😂",
-      "published": "2026-09-17T12:55:01+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "gD5ZumSvQEc",
-      "title": "Too Comfortable to Eat 😂 | 舒服到連飯都不想吃 😂",
-      "published": "2026-09-16T12:35:21+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "V0HeJFTdRs0",
-      "title": "Not Again 😂 | 又來了 😂",
-      "published": "2026-09-15T11:00:36+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "ZKbmeGCb2pM",
-      "title": "スイカ美味しい💕 #池田動物園 #岡山 #ミシシッピアカミミガメ #ミドリガメ",
-      "published": "2026-09-13T11:00:23+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "6WWwGlkAcPQ",
-      "title": "シルバーウィークは池田動物園へ🍴 #池田動物園 #シルバーウィーク #岡山",
-      "published": "2026-09-13T09:00:21+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "jzZUP30Xis0",
-      "title": "キレ―じゃろ？ #池田動物園  #岡山 #ヨーロッパフラミンゴ",
-      "published": "2026-09-12T11:00:25+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "nblMfVO2Apg",
-      "title": "てとてと🐧 #池田動物園  #岡山 #マゼランペンギン",
-      "published": "2026-09-06T11:00:59+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "Ye9LzfbAVqk",
-      "title": "【栃木・夏休み特集】動物園・夜の遊園地・プール！宇都宮動物園",
-      "published": "2026-07-24T01:00:06+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "u0ofOfPxKmk",
-      "title": "【宇都宮動物園】迫力満点！カバの歯磨きタイム🦛 歯磨きの大切さと豪快なスイカの食べっぷり！",
-      "published": "2026-06-30T15:00:06+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "UzTpl2o9dkY",
-      "title": "「【園内初の室内展示場が完成！】ナマケモノの新しいおうちに潜入🌿｜宇都宮動物園",
-      "published": "2026-05-30T15:00:05+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "A26Lpp2J_yw",
-      "title": "【宇都宮動物園】初登場！ナマケモノの愛らしさと驚きの生態を紹介🦥",
-      "published": "2026-04-30T15:00:06+00:00"
-    }
-  ]
+  "latestVideos": []
 }
