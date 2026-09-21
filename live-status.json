@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T10:57:23.165Z",
+  "updatedAt": "2026-09-21T16:52:00.488Z",
   "degraded": false,
   "live": [
     {
@@ -79,6 +79,30 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "J4Ul9LAhIsU",
+      "title": "🦫 Unexpected Capybara Stop! | Mountain Trip in Taiwan ⛰️ | 山路上偶遇水豚",
+      "published": "2026-09-21T15:17:12+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "pZncCqpNQzQ",
+      "title": "Simon’s Favorite Spa 😂💦 | Simon 最愛的 SPA",
+      "published": "2026-09-21T14:40:04+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "_IhmJUpr-AE",
+      "title": "お誕生日にシカ肉をあげたよ🍖#池田動物園 #岡山 #ブチハイエナ",
+      "published": "2026-09-21T11:00:01+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -143,14 +167,6 @@
       "published": "2026-09-20T15:00:36+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "0HkexSUKhwM",
-      "title": "I Haven’t Even Touched You Yet 😂｜我都還沒摸到你耶 😂",
-      "published": "2026-09-20T12:20:09+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -199,28 +215,12 @@
       "published": "2026-09-19T09:00:06+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "6iyCr4wuxc0",
-      "title": "Scratch My Neck, Please 🥹｜幫我搔搔脖子～",
-      "published": "2026-09-18T14:15:22+00:00"
-    },
-    {
       "channelSlug": "shabotengroup",
       "channelName": "伊豆シャボテン公園グループ",
       "facilitySlug": "izu-shaboten",
       "videoId": "IGPg94MDaDI",
       "title": "伊豆ぐらんぱる公園を遊び尽くす！🎡✨",
       "published": "2026-09-18T12:05:14+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "ZKbmeGCb2pM",
-      "title": "スイカ美味しい💕 #池田動物園 #岡山 #ミシシッピアカミミガメ #ミドリガメ",
-      "published": "2026-09-13T11:00:23+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
