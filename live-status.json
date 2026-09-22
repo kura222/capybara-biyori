@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T08:43:51.887Z",
+  "updatedAt": "2026-09-22T13:53:09.357Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "4NEp5xMzKDE",
+      "title": "Not Him Again… 😂 | 怎麼又是他… 🐹💦",
+      "published": "2026-09-22T12:35:35+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -173,14 +181,6 @@
       "videoId": "p7YYOse9FP0",
       "title": "🦫 Capybara Adventure Continues in Taiwan | 台灣水豚探險繼續中 🥬 LIVE",
       "published": "2026-09-20T20:05:25+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "vNpojpezzQg",
-      "title": "Looking for Capybaras in Chiayi, Taiwan! 🇹🇼 | Exploring a Huge Animal Farm嘉義動物農場探險 🐾｜尋找水豚！",
-      "published": "2026-09-20T18:16:16+00:00"
     },
     {
       "channelSlug": "biopark",
