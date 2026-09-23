@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T07:19:40.435Z",
+  "updatedAt": "2026-09-23T12:53:25.558Z",
   "degraded": false,
   "live": [
     {
@@ -71,6 +71,12 @@
   ],
   "upcoming": [
     {
+      "channelSlug": "utsunomiya-zoo",
+      "videoId": "vB5kSfq7NWY",
+      "title": "馬は耳で気持ちを伝える！？ミニチュアホース・ポニー・ウサギのひみつ｜宇都宮動物園",
+      "scheduledAt": "2026-09-30T15:00:00Z"
+    },
+    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -79,12 +85,36 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "32_0uV4i0iw",
+      "title": "いっぱいお水飲んでえらいね🐵 #池田動物園 #岡山 ＃ニホンザル",
+      "published": "2026-09-23T11:00:16+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "Il46ZrQoVpo",
+      "title": "飼育員の指を食べ物だと思ってしまうナマケモノ♫#shorts #ナマケモノ #sloth",
+      "published": "2026-09-23T07:29:17+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "DPCnkRsiXXg",
       "title": "カピバラのハロウィン",
       "published": "2026-09-23T06:33:30+00:00"
+    },
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "vB5kSfq7NWY",
+      "title": "馬は耳で気持ちを伝える！？ミニチュアホース・ポニー・ウサギのひみつ｜宇都宮動物園",
+      "published": "2026-09-23T05:19:08+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -167,14 +197,6 @@
       "published": "2026-09-21T08:30:28+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "n72PdR6wfQk",
-      "title": "長生きなお猿さん達にありがとう♪沢山のプレゼントにも感謝です！！",
-      "published": "2026-09-21T08:10:20+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -205,14 +227,6 @@
       "videoId": "ldqQMCr2hkY",
       "title": "岡山と言えば清水白桃じゃな🐻 #池田動物園  #岡山 #ツキノワグマ",
       "published": "2026-09-20T11:00:32+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "uQnb4GzVMmI",
-      "title": "音ちゃんパイナップルお美味しいね💕 #池田動物園  #岡山 #リスザル",
-      "published": "2026-09-19T11:00:22+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
@@ -325,14 +339,6 @@
       "videoId": "E7Q_od9vm6s",
       "title": "W杯「日本vsチュニジア」グンディに予想してもらいました！",
       "published": "2026-06-20T05:58:24+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "UzTpl2o9dkY",
-      "title": "「【園内初の室内展示場が完成！】ナマケモノの新しいおうちに潜入🌿｜宇都宮動物園",
-      "published": "2026-05-30T15:00:05+00:00"
     }
   ]
 }
