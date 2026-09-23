@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T12:53:25.558Z",
+  "updatedAt": "2026-09-23T17:41:42.129Z",
   "degraded": false,
   "live": [
     {
@@ -84,6 +84,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "KalFxuIuc9s",
+      "title": "My Capybara Is a Duck Taxi 🦆😂",
+      "published": "2026-09-23T14:00:23+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -203,14 +211,6 @@
       "videoId": "Xs7TeVYsKZc",
       "title": "カピバラのハロウィン",
       "published": "2026-09-21T06:42:09+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "p7YYOse9FP0",
-      "title": "🦫 Capybara Adventure Continues in Taiwan | 台灣水豚探險繼續中 🥬 LIVE",
-      "published": "2026-09-20T20:05:25+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
