@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T08:38:43.081Z",
+  "updatedAt": "2026-09-24T14:00:15.771Z",
   "degraded": false,
   "live": [
     {
@@ -84,6 +84,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "0FTP8hNYSvg",
+      "title": "Charging… 🔋睡覺充電中 🔋",
+      "published": "2026-09-24T13:00:01+00:00"
+    },
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "a5Qu115AqSc",
+      "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
+      "published": "2026-09-24T11:30:33+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -181,14 +197,6 @@
       "published": "2026-09-21T15:17:12+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "pZncCqpNQzQ",
-      "title": "Simon’s Favorite Spa 😂💦 | Simon 最愛的 SPA",
-      "published": "2026-09-21T14:40:04+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -275,14 +283,6 @@
       "videoId": "PZeSf2BnYXA",
       "title": "🌵伊豆シャボテン動物公園来たら、ここ行って🌵",
       "published": "2026-09-06T11:00:04+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "ZeYNl-1_Isk",
-      "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
-      "published": "2026-08-23T09:00:02+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
