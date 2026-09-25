@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T10:23:52.784Z",
+  "updatedAt": "2026-09-25T15:24:53.193Z",
   "degraded": false,
   "live": [
     {
@@ -13,12 +13,6 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "biopark",
-      "videoId": "7Xr5gypQDM4",
-      "title": "動物園でお月見しよう🎑🌕",
-      "startedAt": "2026-09-25T08:53:21Z"
     },
     {
       "channelSlug": "angel-valley-farm",
@@ -96,7 +90,7 @@
       "facilitySlug": "nagasaki-biopark",
       "videoId": "7Xr5gypQDM4",
       "title": "動物園でお月見しよう🎑🌕",
-      "published": "2026-09-25T08:51:45+00:00"
+      "published": "2026-09-25T10:49:07+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
