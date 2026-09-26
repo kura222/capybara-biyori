@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T11:39:38.010Z",
+  "updatedAt": "2026-09-26T15:44:55.650Z",
   "degraded": false,
   "live": [
     {
@@ -84,6 +84,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "oawVCQSF1wI",
+      "title": "The King Has Little Guests 👑❤️ | 國王迎來小客人",
+      "published": "2026-09-26T13:35:27+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -219,14 +227,6 @@
       "videoId": "O49LEq7jYnk",
       "title": "【フラミンゴ特集】なぜピンク？なぜ片足？宇都宮動物園のフラミンゴに密着！",
       "published": "2026-09-22T04:52:45+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "J4Ul9LAhIsU",
-      "title": "🦫 Unexpected Capybara Stop! | Mountain Trip in Taiwan ⛰️ | 山路上偶遇水豚",
-      "published": "2026-09-21T15:17:12+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
