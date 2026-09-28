@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T15:45:03.273Z",
+  "updatedAt": "2026-09-28T21:34:32.883Z",
   "degraded": false,
   "live": [
     {
@@ -88,6 +88,14 @@
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
+      "videoId": "enWBHFktJes",
+      "title": "🦫 LIVE from Bambi Land | Relaxing with Capybaras in Yilan, Taiwan",
+      "published": "2026-09-28T17:15:30+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
       "videoId": "6uU81lRwhuQ",
       "title": "He chose me 🥹 ASMR",
       "published": "2026-09-28T10:45:21+00:00"
@@ -131,14 +139,6 @@
       "videoId": "vhNl-cVFGuY",
       "title": "Just Two Capybaras Enjoying Life 🌿 | 兩隻水豚的悠閒時光",
       "published": "2026-09-27T13:15:32+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "enWBHFktJes",
-      "title": "🦫 LIVE from Bambi Land | Relaxing with Capybaras in Yilan, Taiwan",
-      "published": "2026-09-27T13:05:08+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
