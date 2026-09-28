@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T07:18:06.345Z",
+  "updatedAt": "2026-09-28T15:45:03.273Z",
   "degraded": false,
   "live": [
     {
@@ -85,6 +85,30 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "6uU81lRwhuQ",
+      "title": "He chose me 🥹 ASMR",
+      "published": "2026-09-28T10:45:21+00:00"
+    },
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "DpeBzfZ64qM",
+      "title": "🌵伊豆シャボテン動物公園来たら、ここ行って🌵",
+      "published": "2026-09-28T09:00:19+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "qCCE_JPbulg",
+      "title": "餌をもらってなんともご満悦なゴールデンテグー🦎見た目はかっこいい系でも、舌をぺろぺろしてる姿は可愛い系☺️#動物園 #草津熱帯圏 #テグー #tegu #zoo",
+      "published": "2026-09-28T08:13:16+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -149,14 +173,6 @@
       "published": "2026-09-27T07:51:54+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "oawVCQSF1wI",
-      "title": "The King Has Little Guests 👑❤️ | 國王迎來小客人",
-      "published": "2026-09-26T13:35:27+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -203,14 +219,6 @@
       "videoId": "7Xr5gypQDM4",
       "title": "【LIVE】動物園でお月見しよう🎑🌕",
       "published": "2026-09-25T10:49:07+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "HhkKdSB16yo",
-      "title": "広いお風呂であえて寄り合うカピバラ達♫#shorts #カピバラ #capybara",
-      "published": "2026-09-25T08:13:53+00:00"
     },
     {
       "channelSlug": "shabotengroup",
@@ -275,14 +283,6 @@
       "videoId": "ohUb3QPxJcA",
       "title": "仲良くグルーミング",
       "published": "2026-09-12T09:00:16+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "hhEl1PLrTM0",
-      "title": "伊豆シャボテン動物公園公式チャンネル がライブ配信中！",
-      "published": "2026-09-11T19:25:15+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
