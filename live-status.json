@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T21:34:32.883Z",
+  "updatedAt": "2026-09-29T01:27:44.306Z",
   "degraded": false,
   "live": [
     {
@@ -75,6 +75,12 @@
       "videoId": "vB5kSfq7NWY",
       "title": "馬は耳で気持ちを伝える！？ミニチュアホース・ポニー・ウサギのひみつ｜宇都宮動物園",
       "scheduledAt": "2026-09-30T15:00:00Z"
+    },
+    {
+      "channelSlug": "chiba-zoological-park",
+      "videoId": "l7rniNfkEFE",
+      "title": "【アーカイブ 10/5 10:00まで】９月22日（火祝）未来へ紡ぐゴリラプロジェクト報告会（世界ゴリラの日講演会）",
+      "scheduledAt": "2026-10-02T01:00:00Z"
     },
     {
       "channelSlug": "budapest-zoo",
