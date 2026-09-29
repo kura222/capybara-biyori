@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T01:27:44.306Z",
+  "updatedAt": "2026-09-29T07:22:15.810Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "7mQGye3OfB0",
+      "title": "食欲増進中のハクビシンのハクちゃんにデラウェアを房ごと与えたら・・・。すごい勢いでかぶりついてきました！",
+      "published": "2026-09-29T06:56:18+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "7SLnsHhPg3o",
+      "title": "コモンおばあちゃん譲りの食べっぷり♪#shorts #猿 #動物園",
+      "published": "2026-09-29T03:50:17+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -201,22 +217,6 @@
       "videoId": "6cWeAIdISBg",
       "title": "マーラの三つ子が産まれました！",
       "published": "2026-09-26T09:00:13+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "mb6myu7A-s4",
-      "title": "こんなマッサージ屋さんがあったらいいな♫#shorts #猿 #癒し",
-      "published": "2026-09-26T07:24:56+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "U-bY-L9gIA8",
-      "title": "硬いさつまいもをバリバリと食べるよっちゃんはまだまだ若い♪#shorts #おばあちゃん #猿",
-      "published": "2026-09-26T06:08:30+00:00"
     },
     {
       "channelSlug": "biopark",
