@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T08:51:08.361Z",
+  "updatedAt": "2026-09-30T15:36:26.175Z",
   "degraded": false,
   "live": [
     {
@@ -71,18 +71,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "6ftte3CJIMA",
-      "title": "【大苦戦】ラマの毛刈りでツバの洗礼を受けまくる飼育員たち",
-      "scheduledAt": "2026-09-30T10:00:00Z"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "videoId": "vB5kSfq7NWY",
-      "title": "馬は耳で気持ちを伝える！？ミニチュアホース・ポニー・ウサギのひみつ｜宇都宮動物園",
-      "scheduledAt": "2026-09-30T15:00:00Z"
-    },
-    {
       "channelSlug": "chiba-zoological-park",
       "videoId": "l7rniNfkEFE",
       "title": "【アーカイブ 10/5 10:00まで】９月22日（火祝）未来へ紡ぐゴリラプロジェクト報告会（世界ゴリラの日講演会）",
@@ -96,6 +84,30 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "vB5kSfq7NWY",
+      "title": "馬は耳で気持ちを伝える！？ミニチュアホース・ポニー・ウサギのひみつ｜宇都宮動物園",
+      "published": "2026-09-30T15:00:08+00:00"
+    },
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "saxgsxWTQS4",
+      "title": "疲れているあなたに、30秒の癒しをおすそ分け🍃",
+      "published": "2026-09-30T11:30:12+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "6ftte3CJIMA",
+      "title": "【大苦戦】ラマの毛刈りでツバの洗礼を受けまくる飼育員たち",
+      "published": "2026-09-30T10:00:10+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -119,14 +131,6 @@
       "videoId": "BmR3ZocBKWE",
       "title": "くるみおばあちゃんの日！？#shorts #おばあちゃん #猿",
       "published": "2026-09-30T03:30:14+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "6ftte3CJIMA",
-      "title": "【大苦戦】ラマの毛刈りでツバの洗礼を受けまくる飼育員たち",
-      "published": "2026-09-30T00:33:32+00:00"
     },
     {
       "channelSlug": "shabotengroup",
@@ -217,14 +221,6 @@
       "published": "2026-09-27T11:00:33+00:00"
     },
     {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "au6_yn6UFKs",
-      "title": "【かわいすぎる❤︎】どうぶつの赤ちゃん大集合〜📣",
-      "published": "2026-09-27T08:15:42+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -255,14 +251,6 @@
       "videoId": "32_0uV4i0iw",
       "title": "いっぱいお水飲んでえらいね🐵 #池田動物園 #岡山 ＃ニホンザル",
       "published": "2026-09-23T11:00:16+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "vB5kSfq7NWY",
-      "title": "馬は耳で気持ちを伝える！？ミニチュアホース・ポニー・ウサギのひみつ｜宇都宮動物園",
-      "published": "2026-09-23T05:19:08+00:00"
     },
     {
       "channelSlug": "utsunomiya-zoo",
