@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T08:49:30.548Z",
+  "updatedAt": "2026-10-02T15:22:03.906Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "nDnZDdcgMfw",
+      "title": "I Went Looking for Capybaras at Bambi Land 🦫 | Yilan, Taiwan宜蘭斑比山丘尋找水豚 ｜第一視角探索台灣",
+      "published": "2026-10-02T13:30:02+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "pt41p3ysEe0",
+      "title": "My Capybara Friends Helped Me Celebrate 1K 😂🦫",
+      "published": "2026-10-02T10:45:08+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -181,22 +197,6 @@
       "videoId": "bMBSZl3Dg3Y",
       "title": "ん？んあぁ、うん...もぐもぐ",
       "published": "2026-09-29T10:00:30+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "enWBHFktJes",
-      "title": "🦫 LIVE from Bambi Land | Relaxing with Capybaras in Yilan, Taiwan",
-      "published": "2026-09-28T17:15:30+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "6uU81lRwhuQ",
-      "title": "He chose me 🥹 ASMR",
-      "published": "2026-09-28T10:45:21+00:00"
     },
     {
       "channelSlug": "shabotengroup",
