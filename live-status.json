@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T18:31:40.795Z",
+  "updatedAt": "2026-10-03T21:58:05.111Z",
   "degraded": false,
   "live": [
     {
@@ -79,6 +79,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "CO8qWc6drh4",
+      "title": "ワオキツネザルの展示場を作るよ！Wow！　Part17",
+      "published": "2026-10-03T20:47:43+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -109,14 +117,6 @@
       "videoId": "jGYREvIOmUs",
       "title": "おぉ、何撮ってんだ、あぁ？って形相でメンチを切ってくるヨウムのくぅ〜ちゃん🦜#動物園 #草津熱帯圏 #ヨウム #grayparrot #zoo",
       "published": "2026-10-03T08:15:33+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "CO8qWc6drh4",
-      "title": "ワオキツネザルの展示場を作るよ！Wow！　Part17",
-      "published": "2026-10-03T07:40:13+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
