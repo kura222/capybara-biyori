@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T09:58:49.187Z",
+  "updatedAt": "2026-10-03T14:38:20.272Z",
   "degraded": false,
   "live": [
     {
@@ -71,12 +71,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "d8KV04GksHU",
-      "title": "【人気企画】カメさんピクニック！PAWのカメたちと青空の下でお散歩したら今回も最高に癒やされました",
-      "scheduledAt": "2026-10-03T10:00:00Z"
-    },
-    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -84,6 +78,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "DNY6Mx87Fp0",
+      "title": "今年の桃も終わりじゃな🍑 #池田動物園 #岡山 #チンパンジー",
+      "published": "2026-10-03T11:00:33+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "d8KV04GksHU",
+      "title": "【人気企画】カメさんピクニック！PAWのカメたちと青空の下でお散歩したら今回も最高に癒やされました",
+      "published": "2026-10-03T10:00:09+00:00"
+    },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
@@ -115,14 +125,6 @@
       "videoId": "HXqOEXPUdDE",
       "title": "Capybara’s New Hairstyle 🍊🍊😂",
       "published": "2026-10-03T06:45:03+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "d8KV04GksHU",
-      "title": "【人気企画】カメさんピクニック！PAWのカメたちと青空の下でお散歩したら今回も最高に癒やされました",
-      "published": "2026-10-03T01:58:28+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -267,14 +269,6 @@
       "videoId": "O49LEq7jYnk",
       "title": "【フラミンゴ特集】なぜピンク？なぜ片足？宇都宮動物園のフラミンゴに密着！",
       "published": "2026-09-22T04:52:45+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "_IhmJUpr-AE",
-      "title": "お誕生日にシカ肉をあげたよ🍖#池田動物園 #岡山 #ブチハイエナ",
-      "published": "2026-09-21T11:00:01+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
