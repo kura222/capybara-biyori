@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T09:26:13.054Z",
+  "updatedAt": "2026-10-05T18:43:56.445Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "zBeJ9CSUYB0",
+      "title": "小小一隻的超萌水豚 🥹🤎｜The Tiniest Little Capybara 🥹",
+      "published": "2026-10-05T11:10:16+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -193,14 +201,6 @@
       "videoId": "HXqOEXPUdDE",
       "title": "Capybara’s New Hairstyle 🍊🍊😂",
       "published": "2026-10-03T06:45:03+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "nDnZDdcgMfw",
-      "title": "I Went Looking for Capybaras at Bambi Land 🦫 | Yilan, Taiwan宜蘭斑比山丘尋找水豚 ｜第一視角探索台灣",
-      "published": "2026-10-02T13:30:02+00:00"
     },
     {
       "channelSlug": "biopark",
