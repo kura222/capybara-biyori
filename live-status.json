@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T02:16:34.059Z",
+  "updatedAt": "2026-10-05T09:26:13.054Z",
   "degraded": false,
   "live": [
     {
@@ -71,6 +71,18 @@
   ],
   "upcoming": [
     {
+      "channelSlug": "chiba-zoological-park",
+      "videoId": "1pS2HtsW8Oc",
+      "title": "2026年11月23日（月・祝）東邦大学オープンセミナー　「ニホンザルはストレスで食べ物を洗うのか」",
+      "scheduledAt": "2026-11-23T04:45:00Z"
+    },
+    {
+      "channelSlug": "chiba-zoological-park",
+      "videoId": "WqwHl_Hc5oA",
+      "title": "2026年10月17日（土）東邦大学セミナー 植物生態学 植物とともに生きる生物ー花と葉に着目してー 講演会",
+      "scheduledAt": "2026-10-17T04:45:00Z"
+    },
+    {
       "channelSlug": "budapest-zoo",
       "videoId": "-lNW4F9VIlE",
       "title": "Budapesti Állatkert élő közvetítése",
@@ -78,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "yBsIMygTg0A",
+      "title": "りんごの香りと美味しそうな音に集まりだすカピバラ四兄弟♫#shorts #カピバラ #capybara",
+      "published": "2026-10-05T08:06:33+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -101,6 +121,22 @@
       "videoId": "aQEg77P5G0w",
       "title": "【LIVE】ビーバー展示場🦫",
       "published": "2026-10-04T06:45:23+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "83V8RxuEnmQ",
+      "title": "Even in His Dreams, He’s Thinking About Food 😂💤 | 連睡覺都在想吃東西",
+      "published": "2026-10-04T05:30:24+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "DY5TnNfSo7g",
+      "title": "宜蘭蘭陽動植物王國｜好多可愛動物！🦫🦘🦙｜第一視角探索",
+      "published": "2026-10-04T05:00:06+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
@@ -151,12 +187,20 @@
       "published": "2026-10-03T08:15:33+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "YNhgXF4fNgA",
-      "title": "ベビーに好き放題やられるカピバラまゆちゃん♪#shorts #カピバラ #capybara",
-      "published": "2026-10-02T08:26:06+00:00"
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "HXqOEXPUdDE",
+      "title": "Capybara’s New Hairstyle 🍊🍊😂",
+      "published": "2026-10-03T06:45:03+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "nDnZDdcgMfw",
+      "title": "I Went Looking for Capybaras at Bambi Land 🦫 | Yilan, Taiwan宜蘭斑比山丘尋找水豚 ｜第一視角探索台灣",
+      "published": "2026-10-02T13:30:02+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -263,12 +307,44 @@
       "published": "2026-07-24T01:00:06+00:00"
     },
     {
+      "channelSlug": "saitama-childrens-zoo",
+      "channelName": "埼玉県こども動物自然公園",
+      "facilitySlug": "saitama-childrens-zoo",
+      "videoId": "Iue4MURcLmE",
+      "title": "【ASMR】アルダブラゾウガメ、きゅうりを食べる",
+      "published": "2026-07-09T10:00:02+00:00"
+    },
+    {
+      "channelSlug": "saitama-childrens-zoo",
+      "channelName": "埼玉県こども動物自然公園",
+      "facilitySlug": "saitama-childrens-zoo",
+      "videoId": "5mjgMPaFlac",
+      "title": "【ASMR】ケヅメリクガメ、ゴーヤを食べる",
+      "published": "2026-07-07T10:00:36+00:00"
+    },
+    {
       "channelSlug": "utsunomiya-zoo",
       "channelName": "宇都宮動物園",
       "facilitySlug": "utsunomiya-zoo",
       "videoId": "u0ofOfPxKmk",
       "title": "【宇都宮動物園】迫力満点！カバの歯磨きタイム🦛 歯磨きの大切さと豪快なスイカの食べっぷり！",
       "published": "2026-06-30T15:00:06+00:00"
+    },
+    {
+      "channelSlug": "saitama-childrens-zoo",
+      "channelName": "埼玉県こども動物自然公園",
+      "facilitySlug": "saitama-childrens-zoo",
+      "videoId": "KLEARSKYvxM",
+      "title": "フェルトでつくるハダカデバネズミ",
+      "published": "2026-06-21T04:00:05+00:00"
+    },
+    {
+      "channelSlug": "saitama-childrens-zoo",
+      "channelName": "埼玉県こども動物自然公園",
+      "facilitySlug": "saitama-childrens-zoo",
+      "videoId": "E7Q_od9vm6s",
+      "title": "W杯「日本vsチュニジア」グンディに予想してもらいました！",
+      "published": "2026-06-20T05:58:24+00:00"
     }
   ]
 }
