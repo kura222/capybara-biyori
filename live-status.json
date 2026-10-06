@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T07:09:57.719Z",
+  "updatedAt": "2026-10-06T14:21:47.682Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,30 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "UqvjId71mSM",
+      "title": "你看不到我…👀｜You Can’t See Me",
+      "published": "2026-10-06T11:05:38+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "iTJmTyrG1U8",
+      "title": "手のひらでもポリポリと食べてくれるマカロニマウス♫#shorts #小動物 #動物園",
+      "published": "2026-10-06T08:00:57+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "rEE0MZEMNy4",
+      "title": "コモンおばあちゃんも筋力の低下・・・。家を少しだけ楽にしてあげました。",
+      "published": "2026-10-06T07:28:18+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -123,14 +147,6 @@
       "published": "2026-10-04T11:00:21+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "mUUxwjtCdOQ",
-      "title": "コモンおばあちゃんの本来の姿とは？#shorts #猿 #おばあちゃん",
-      "published": "2026-10-04T07:10:36+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -153,14 +169,6 @@
       "videoId": "DY5TnNfSo7g",
       "title": "宜蘭蘭陽動植物王國｜好多可愛動物！🦫🦘🦙｜第一視角探索",
       "published": "2026-10-04T05:00:06+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "BA8UG7Q0RXc",
-      "title": "肌寒い時には身に染みるイグアナスープ♫#shorts #動物 #友達",
-      "published": "2026-10-04T04:45:28+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -193,14 +201,6 @@
       "videoId": "ZHm7jg19QKo",
       "title": "リスザルベイビーお食事の様子",
       "published": "2026-10-03T09:00:30+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "HXqOEXPUdDE",
-      "title": "Capybara’s New Hairstyle 🍊🍊😂",
-      "published": "2026-10-03T06:45:03+00:00"
     },
     {
       "channelSlug": "biopark",
