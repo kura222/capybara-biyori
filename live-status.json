@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T11:14:30.336Z",
+  "updatedAt": "2026-10-07T17:54:01.724Z",
   "degraded": false,
   "live": [
     {
@@ -85,6 +85,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "3wCTkurp1so",
+      "title": "宜蘭星夢森林劇場｜水豚真的會給手？🦫｜第一視角探索動物樂園",
+      "published": "2026-10-07T14:00:31+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "9HE87fP6XH8",
+      "title": "黑天鵝幫水豚按摩脖子 😂🦢🦫｜Capybara Gets a Neck Massage",
+      "published": "2026-10-07T12:10:13+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -155,22 +171,6 @@
       "videoId": "aQEg77P5G0w",
       "title": "【LIVE】ビーバー展示場🦫",
       "published": "2026-10-04T06:45:23+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "83V8RxuEnmQ",
-      "title": "Even in His Dreams, He’s Thinking About Food 😂💤 | 連睡覺都在想吃東西",
-      "published": "2026-10-04T05:30:24+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "DY5TnNfSo7g",
-      "title": "宜蘭蘭陽動植物王國｜好多可愛動物！🦫🦘🦙｜第一視角探索",
-      "published": "2026-10-04T05:00:06+00:00"
     },
     {
       "channelSlug": "biopark",
