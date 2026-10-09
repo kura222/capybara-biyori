@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T08:28:14.016Z",
+  "updatedAt": "2026-10-09T15:30:39.139Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "RCKdKXPkDxU",
+      "title": "Mom Is Watching Me 👀🌿 #Capybara",
+      "published": "2026-10-09T10:35:22+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "8zXk5uW_09Q",
+      "title": "早めのハロウィンパーティー♪#shorts #ニホンザル #ハロウィン",
+      "published": "2026-10-09T08:41:16+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -161,22 +177,6 @@
       "videoId": "a65euQ07cRg",
       "title": "ちょっと邪魔？？#shorts #アルマジロ #動物",
       "published": "2026-10-07T08:12:42+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "Lo7H9YR5cy8",
-      "title": "優しくブラッシングされて嬉しそうな宗春くん♫#shorts #秋田犬 #犬",
-      "published": "2026-10-07T04:41:47+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "UqvjId71mSM",
-      "title": "你看不到我…👀｜You Can’t See Me",
-      "published": "2026-10-06T11:05:38+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
