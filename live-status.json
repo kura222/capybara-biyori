@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T01:43:59.176Z",
+  "updatedAt": "2026-10-09T08:28:14.016Z",
   "degraded": false,
   "live": [
     {
@@ -91,6 +91,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "jGCl2Bkq4n0",
+      "title": "人工哺育で育ったニホンザル兄弟に早めのハロウィンパーティーをプレゼント♫",
+      "published": "2026-10-09T07:27:37+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -169,14 +177,6 @@
       "videoId": "UqvjId71mSM",
       "title": "你看不到我…👀｜You Can’t See Me",
       "published": "2026-10-06T11:05:38+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "iTJmTyrG1U8",
-      "title": "手のひらでもポリポリと食べてくれるマカロニマウス♫#shorts #小動物 #動物園",
-      "published": "2026-10-06T08:00:57+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
