@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T18:16:53.909Z",
+  "updatedAt": "2026-10-11T22:15:39.704Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "5jPzfC-ykhM",
+      "title": "カピバラのハロウィン",
+      "published": "2026-10-11T18:40:10+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -193,14 +201,6 @@
       "videoId": "0b-6xMJkwro",
       "title": "視聴はこちらから！https://twitch.tv/ngsbiopark",
       "published": "2026-10-08T08:04:16+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "5jPzfC-ykhM",
-      "title": "カピバラのハロウィン",
-      "published": "2026-10-08T08:01:59+00:00"
     },
     {
       "channelSlug": "biopark",
