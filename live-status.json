@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T08:35:09.117Z",
+  "updatedAt": "2026-10-12T18:34:18.809Z",
   "degraded": false,
   "live": [
     {
@@ -96,6 +96,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "trnuu77-478",
+      "title": "泡在水裡，站著也要慢慢吃草 🌿🦫",
+      "published": "2026-10-12T13:50:10+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "km8XfRf1Rdw",
+      "title": "秋はイモじゃな🍠 #池田動物園 #動物 #岡山 #ボリビアリスザル",
+      "published": "2026-10-12T11:00:36+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -201,14 +217,6 @@
       "published": "2026-10-10T07:54:43+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "RCKdKXPkDxU",
-      "title": "Mom Is Watching Me 👀🌿 #Capybara",
-      "published": "2026-10-09T10:35:22+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -223,14 +231,6 @@
       "videoId": "66rW4oZOaxE",
       "title": "キャベツシャクシャク🥬 #池田動物園 #動物 #岡山 #カピバラ",
       "published": "2026-10-04T11:00:21+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "DNY6Mx87Fp0",
-      "title": "今年の桃も終わりじゃな🍑 #池田動物園 #岡山 #チンパンジー",
-      "published": "2026-10-03T11:00:33+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
