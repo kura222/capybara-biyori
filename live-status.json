@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T01:05:50.716Z",
+  "updatedAt": "2026-10-13T08:04:32.644Z",
   "degraded": false,
   "live": [
     {
@@ -15,6 +15,36 @@
       "startedAt": "2025-11-05T14:22:02Z"
     },
     {
+      "channelSlug": "angel-valley-farm",
+      "videoId": "nCkKa6XPbo8",
+      "title": "Angel Valley Farm Extra Live – 24/7 Cute Animal Moments & Bonus Streams",
+      "startedAt": "2026-10-11T07:58:50Z"
+    },
+    {
+      "channelSlug": "angel-valley-farm",
+      "videoId": "iiFdP5U9aHg",
+      "title": "Angel Valley Farm LIVE 24/7 🟢 Relaxing Capybara Pool Stream 🐹💦",
+      "startedAt": "2026-08-25T11:52:47Z"
+    },
+    {
+      "channelSlug": "kiryugaoka-zoo",
+      "videoId": "1KOB5mvbvqk",
+      "title": "西エリア",
+      "startedAt": "2026-10-12T02:48:46Z"
+    },
+    {
+      "channelSlug": "kiryugaoka-zoo",
+      "videoId": "t57gEiPO5LY",
+      "title": "東エリア ワイド",
+      "startedAt": "2026-08-19T00:41:35Z"
+    },
+    {
+      "channelSlug": "kiryugaoka-zoo",
+      "videoId": "mbmp7hmMG_Q",
+      "title": "東エリア スポット",
+      "startedAt": "2026-03-20T03:04:08Z"
+    },
+    {
       "channelSlug": "kumamoto-city-zoo-livecam",
       "videoId": "iLsJ1R8iz78",
       "title": "【熊本市動植物園】アフリカゾウ | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Elephant)",
@@ -25,10 +55,79 @@
       "videoId": "EeU_fG7pmX4",
       "title": "【熊本市動植物園】マサイキリン | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Giraffe)",
       "startedAt": "2025-11-04T09:28:46Z"
+    },
+    {
+      "channelSlug": "budapest-zoo",
+      "videoId": "i3kmj2b8zkA",
+      "title": "Állatkert Budapest szívében - Elefánt kifutó ÉLŐ",
+      "startedAt": "2026-05-21T12:16:41Z"
+    },
+    {
+      "channelSlug": "budapest-zoo",
+      "videoId": "bo6yE8iIpNE",
+      "title": "Állatkert Budapest szívében - Cápasuli ÉLŐ",
+      "startedAt": "2023-05-18T11:24:48Z"
+    },
+    {
+      "channelSlug": "budapest-zoo",
+      "videoId": "6SZMHQr1CtM",
+      "title": "Állatkert Budapest szívében - Orangután kifutó ÉLŐ",
+      "startedAt": "2020-08-18T11:05:05Z"
     }
   ],
-  "upcoming": [],
+  "upcoming": [
+    {
+      "channelSlug": "chiba-zoological-park",
+      "videoId": "1pS2HtsW8Oc",
+      "title": "2026年11月23日（月・祝）東邦大学オープンセミナー　「ニホンザルはストレスで食べ物を洗うのか」",
+      "scheduledAt": "2026-11-23T04:45:00Z"
+    },
+    {
+      "channelSlug": "chiba-zoological-park",
+      "videoId": "WqwHl_Hc5oA",
+      "title": "2026年10月17日（土）東邦大学セミナー 植物生態学 植物とともに生きる生物ー花と葉に着目してー 講演会",
+      "scheduledAt": "2026-10-17T04:45:00Z"
+    },
+    {
+      "channelSlug": "budapest-zoo",
+      "videoId": "-lNW4F9VIlE",
+      "title": "Budapesti Állatkert élő közvetítése",
+      "scheduledAt": null
+    }
+  ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "UTc7nI2pjog",
+      "title": "梨を口いっぱいに頬張るハクビシン♫#shorts #ハクビシン #動物園",
+      "published": "2026-10-13T05:57:52+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "trnuu77-478",
+      "title": "泡在水裡，站著也要慢慢吃草 🌿🦫",
+      "published": "2026-10-12T13:50:10+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "km8XfRf1Rdw",
+      "title": "秋はイモじゃな🍠 #池田動物園 #動物 #岡山 #ボリビアリスザル",
+      "published": "2026-10-12T11:00:36+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "YreglCKTKIo",
+      "title": "三世代で美味しそうにパパイヤを食べるコモンおばあちゃん一家♫#shorts #猿 #動物園",
+      "published": "2026-10-12T07:26:15+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -44,6 +143,62 @@
       "videoId": "5jPzfC-ykhM",
       "title": "カピバラのハロウィン",
       "published": "2026-10-11T18:40:10+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "VZQ69db1b4o",
+      "title": "小水豚：對！就是這裡！😂🤎",
+      "published": "2026-10-11T12:30:27+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "5Bn9rwiAbx4",
+      "title": "シッポが可愛すぎじゃないか？ #池田動物園 #岡山 #動物 #ホワイトタイガー",
+      "published": "2026-10-11T11:00:29+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "_lL3OaEVgc0",
+      "title": "柔らかいパパイヤはおばあちゃんにも優しいごはん♫#shorts #コモンマーモセット #grandma",
+      "published": "2026-10-11T08:14:55+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "uOdYtxm6QDg",
+      "title": "開園57年目を迎えた草津熱帯圏ですが、これまで見守ってきてくれた長老アイクじいさんの様子が・・・。",
+      "published": "2026-10-11T08:08:44+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "MsL_tUpm4HQ",
+      "title": "潮州鐵道園區｜水豚竟然不吃就跑了？😂｜第一視角 POV 探索Chaozhou Railway Park, Taiwan | Capybara POV Adventure",
+      "published": "2026-10-11T02:40:14+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "zk7W74_W4hE",
+      "title": "部長のDIY🪵🪚 #池田動物園 #岡山 #部長",
+      "published": "2026-10-10T11:00:02+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "7rIDk4IKtAE",
+      "title": "This Capybara Is Having a VERY Weird Spa Day 😂🦫",
+      "published": "2026-10-10T10:00:33+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -70,6 +225,14 @@
       "published": "2026-10-08T08:04:16+00:00"
     },
     {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "66rW4oZOaxE",
+      "title": "キャベツシャクシャク🥬 #池田動物園 #動物 #岡山 #カピバラ",
+      "published": "2026-10-04T11:00:21+00:00"
+    },
+    {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
       "facilitySlug": "uminonakamichi-park",
@@ -84,6 +247,38 @@
       "videoId": "vB5kSfq7NWY",
       "title": "馬は耳で気持ちを伝える！？ミニチュアホース・ポニー・ウサギのひみつ｜宇都宮動物園",
       "published": "2026-09-30T15:00:08+00:00"
+    },
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "saxgsxWTQS4",
+      "title": "疲れているあなたに、30秒の癒しをおすそ分け🍃",
+      "published": "2026-09-30T11:30:12+00:00"
+    },
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "DtNv-3xtNk8",
+      "title": "飼育員が作るごはん【ワオキツネザル編】🐒",
+      "published": "2026-09-29T12:30:38+00:00"
+    },
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "tx6njawhcDg",
+      "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
+      "published": "2026-09-29T10:30:01+00:00"
+    },
+    {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "DpeBzfZ64qM",
+      "title": "🌵伊豆シャボテン動物公園来たら、ここ行って🌵",
+      "published": "2026-09-28T09:00:19+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
