@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T08:04:32.644Z",
+  "updatedAt": "2026-10-13T16:14:14.060Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,30 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "GTPWO1QpBJs",
+      "title": "小水豚：我才不要一口一口吃！😂Baby Capybara Has a Better Plan 😂",
+      "published": "2026-10-13T15:35:11+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "eCBKrhlq6OY",
+      "title": "カピバラの池の水、全部抜いてみた",
+      "published": "2026-10-13T13:00:17+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "gsHFA3LN1Sw",
+      "title": "鳴き声で反応する長老アイクじいさん。#shorts #猿 #動物園",
+      "published": "2026-10-13T08:04:03+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -169,14 +193,6 @@
       "published": "2026-10-11T08:14:55+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "uOdYtxm6QDg",
-      "title": "開園57年目を迎えた草津熱帯圏ですが、これまで見守ってきてくれた長老アイクじいさんの様子が・・・。",
-      "published": "2026-10-11T08:08:44+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -193,14 +209,6 @@
       "published": "2026-10-10T11:00:02+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "7rIDk4IKtAE",
-      "title": "This Capybara Is Having a VERY Weird Spa Day 😂🦫",
-      "published": "2026-10-10T10:00:33+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -215,14 +223,6 @@
       "videoId": "HjfTJ3TfaAo",
       "title": "おうちでくつろぐプレーリードッグ",
       "published": "2026-10-10T07:54:43+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "0b-6xMJkwro",
-      "title": "視聴はこちらから！https://twitch.tv/ngsbiopark",
-      "published": "2026-10-08T08:04:16+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
