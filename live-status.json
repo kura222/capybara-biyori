@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T10:25:56.161Z",
+  "updatedAt": "2026-10-14T15:21:05.161Z",
   "degraded": false,
   "live": [
     {
@@ -97,6 +97,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "Ezk-7gdJvk0",
+      "title": "我只是坐著，怎麼被水豚包圍了？😂🐹",
+      "published": "2026-10-14T12:10:21+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -191,14 +199,6 @@
       "videoId": "5Bn9rwiAbx4",
       "title": "シッポが可愛すぎじゃないか？ #池田動物園 #岡山 #動物 #ホワイトタイガー",
       "published": "2026-10-11T11:00:29+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "MsL_tUpm4HQ",
-      "title": "潮州鐵道園區｜水豚竟然不吃就跑了？😂｜第一視角 POV 探索Chaozhou Railway Park, Taiwan | Capybara POV Adventure",
-      "published": "2026-10-11T02:40:14+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
