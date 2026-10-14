@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T00:28:04.940Z",
+  "updatedAt": "2026-10-14T05:15:31.557Z",
   "degraded": false,
   "live": [
     {
@@ -16,5 +16,38 @@
     }
   ],
   "upcoming": [],
-  "latestVideos": []
+  "latestVideos": [
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "vB5kSfq7NWY",
+      "title": "馬は耳で気持ちを伝える！？ミニチュアホース・ポニー・ウサギのひみつ｜宇都宮動物園",
+      "published": "2026-09-30T15:00:08+00:00"
+    },
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "O49LEq7jYnk",
+      "title": "【フラミンゴ特集】なぜピンク？なぜ片足？宇都宮動物園のフラミンゴに密着！",
+      "published": "2026-09-22T04:52:45+00:00"
+    },
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "Ye9LzfbAVqk",
+      "title": "【栃木・夏休み特集】動物園・夜の遊園地・プール！宇都宮動物園",
+      "published": "2026-07-24T01:00:06+00:00"
+    },
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "u0ofOfPxKmk",
+      "title": "【宇都宮動物園】迫力満点！カバの歯磨きタイム🦛 歯磨きの大切さと豪快なスイカの食べっぷり！",
+      "published": "2026-06-30T15:00:06+00:00"
+    }
+  ]
 }
