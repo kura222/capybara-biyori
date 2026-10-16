@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T19:37:50.504Z",
+  "updatedAt": "2026-10-16T22:29:57.393Z",
   "degraded": false,
   "live": [
     {
@@ -58,6 +58,12 @@
     },
     {
       "channelSlug": "budapest-zoo",
+      "videoId": "wkfL5Dua6gc",
+      "title": "Állatkert Budapest szívében - Szavanna kifutó ÉLŐ",
+      "startedAt": "2026-10-16T20:50:18Z"
+    },
+    {
+      "channelSlug": "budapest-zoo",
       "videoId": "ZXwT563tbf4",
       "title": "Állatkert Budapest szívében - Fóka medence ÉLŐ",
       "startedAt": "2026-10-16T19:22:32Z"
@@ -87,12 +93,6 @@
       "videoId": "WqwHl_Hc5oA",
       "title": "2026年10月17日（土）東邦大学セミナー 植物生態学 植物とともに生きる生物ー花と葉に着目してー 講演会",
       "scheduledAt": "2026-10-17T04:45:00Z"
-    },
-    {
-      "channelSlug": "budapest-zoo",
-      "videoId": "-lNW4F9VIlE",
-      "title": "Budapesti Állatkert élő közvetítése",
-      "scheduledAt": null
     }
   ],
   "latestVideos": [
