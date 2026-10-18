@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T07:56:29.508Z",
+  "updatedAt": "2026-10-18T12:28:37.274Z",
   "degraded": false,
   "live": [
     {
@@ -37,12 +37,6 @@
       "videoId": "mbmp7hmMG_Q",
       "title": "東エリア スポット",
       "startedAt": "2026-03-20T03:04:08Z"
-    },
-    {
-      "channelSlug": "adventure-world",
-      "videoId": "H5tnOJoY7rE",
-      "title": "オウサマペンギンの赤ちゃんライブカメラ",
-      "startedAt": "2026-10-18T07:41:45Z"
     },
     {
       "channelSlug": "kumamoto-city-zoo-livecam",
@@ -83,31 +77,51 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "iEJ--goci0o",
-      "title": "【100問】Instagramでいただいた質問にPAWスタッフが片っ端から答えてみた！",
-      "scheduledAt": "2026-10-18T10:00:00Z"
-    },
-    {
       "channelSlug": "chiba-zoological-park",
       "videoId": "1pS2HtsW8Oc",
       "title": "2026年11月23日（月・祝）東邦大学オープンセミナー　「ニホンザルはストレスで食べ物を洗うのか」",
       "scheduledAt": "2026-11-23T04:45:00Z"
-    },
-    {
-      "channelSlug": "adventure-world",
-      "videoId": "YInFbzp5zz4",
-      "title": "オウサマペンギンの赤ちゃんライブカメラ",
-      "scheduledAt": "2026-10-18T07:37:04Z"
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "Rdcw0iJco1s",
+      "title": "ハンモック床に付いてる？ #池田動物園 #動物 #岡山 #ツキノワグマ",
+      "published": "2026-10-18T11:00:29+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "iEJ--goci0o",
+      "title": "【100問】Instagramでいただいた質問にPAWスタッフが片っ端から答えてみた！",
+      "published": "2026-10-18T10:00:08+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "tuFSdRakWPM",
+      "title": "水豚被刷到直接躺平了 😂 | Capybara Goes FULLY RELAXED!",
+      "published": "2026-10-18T09:50:06+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "ZMeCgA3KkdM",
+      "title": "アイクじいさんが天国へと旅立ちました。",
+      "published": "2026-10-18T08:46:16+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
       "videoId": "h0CmHOXefKk",
-      "title": "長老アイクじいさんとついにお別れです。",
+      "title": "長老アイクじいさんとついにお別れです。10月16日に永眠しました。",
       "published": "2026-10-18T07:27:50+00:00"
     },
     {
@@ -167,28 +181,12 @@
       "published": "2026-10-16T11:25:26+00:00"
     },
     {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "iEJ--goci0o",
-      "title": "【100問】Instagramでいただいた質問にPAWスタッフが片っ端から答えてみた！",
-      "published": "2026-10-16T09:05:36+00:00"
-    },
-    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
       "videoId": "Fr4z8pGW5cs",
       "title": "そのままだと捨てられる枝豆を廃棄せずに動物園のお猿さん達に♫",
       "published": "2026-10-16T06:50:25+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "QcNkdNjAoH4",
-      "title": "上手に枝豆を食べるくるみおばあちゃん♫#猿 #sdgs #動物",
-      "published": "2026-10-16T04:22:29+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -207,14 +205,6 @@
       "published": "2026-10-15T10:00:06+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "Ezk-7gdJvk0",
-      "title": "我只是坐著，怎麼被水豚包圍了？😂🐹",
-      "published": "2026-10-14T12:10:21+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -229,14 +219,6 @@
       "videoId": "5Bn9rwiAbx4",
       "title": "シッポが可愛すぎじゃないか？ #池田動物園 #岡山 #動物 #ホワイトタイガー",
       "published": "2026-10-11T11:00:29+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "zk7W74_W4hE",
-      "title": "部長のDIY🪵🪚 #池田動物園 #岡山 #部長",
-      "published": "2026-10-10T11:00:02+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
