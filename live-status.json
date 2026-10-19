@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T07:17:38.933Z",
+  "updatedAt": "2026-10-19T14:50:23.584Z",
   "degraded": false,
   "live": [
     {
@@ -84,6 +84,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "TH1vobQQkeQ",
+      "title": "水豚竟然用前腳抓鼻子！😂🐹 | Capybara Scratches Its Nose!",
+      "published": "2026-10-19T09:55:01+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "G-Ptpf3L2Ys",
+      "title": "珍しく木の下でじーっとしているナマケモノ何事かと思って見ていたら...おトイレ中でした🚽#動物園 #ナマケモノ #動物 #animal #sloth",
+      "published": "2026-10-19T08:21:58+00:00"
+    },
     {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
@@ -179,22 +195,6 @@
       "videoId": "qhATAcC0zzY",
       "title": "水豚偷偷探頭，發現我還在拍！😂🦫 | Capybara Caught Me Filming!",
       "published": "2026-10-16T11:25:26+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "Fr4z8pGW5cs",
-      "title": "そのままだと捨てられる枝豆を廃棄せずに動物園のお猿さん達に♫",
-      "published": "2026-10-16T06:50:25+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "xj5xgjzoglY",
-      "title": "三隻水豚同步放空 😂 Three Capybaras, One Brain! 🧠",
-      "published": "2026-10-15T10:25:11+00:00"
     },
     {
       "channelSlug": "biopark",
