@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T20:20:54.483Z",
+  "updatedAt": "2026-10-19T23:50:54.912Z",
   "degraded": false,
   "live": [
     {
@@ -77,6 +77,12 @@
   ],
   "upcoming": [
     {
+      "channelSlug": "utsunomiya-zoo",
+      "videoId": "JXWLasMvgBI",
+      "title": "【マーコール特集】ドリルみたいな角はなぜねじれる？岩山をスイスイ登る足のひみつ｜宇都宮動物園",
+      "scheduledAt": "2026-10-31T14:00:00Z"
+    },
+    {
       "channelSlug": "chiba-zoological-park",
       "videoId": "1pS2HtsW8Oc",
       "title": "2026年11月23日（月・祝）東邦大学オープンセミナー　「ニホンザルはストレスで食べ物を洗うのか」",
@@ -147,6 +153,14 @@
       "videoId": "CDg2j0vhzsc",
       "title": "カピバラ🎃ハロウィン",
       "published": "2026-10-18T06:43:25+00:00"
+    },
+    {
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "JXWLasMvgBI",
+      "title": "【マーコール特集】ドリルみたいな角はなぜねじれる？岩山をスイスイ登る足のひみつ｜宇都宮動物園",
+      "published": "2026-10-17T22:04:46+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
@@ -315,14 +329,6 @@
       "videoId": "5mjgMPaFlac",
       "title": "【ASMR】ケヅメリクガメ、ゴーヤを食べる",
       "published": "2026-07-07T10:00:36+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "u0ofOfPxKmk",
-      "title": "【宇都宮動物園】迫力満点！カバの歯磨きタイム🦛 歯磨きの大切さと豪快なスイカの食べっぷり！",
-      "published": "2026-06-30T15:00:06+00:00"
     },
     {
       "channelSlug": "saitama-childrens-zoo",
