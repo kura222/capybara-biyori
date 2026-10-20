@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T08:46:57.049Z",
+  "updatedAt": "2026-10-20T14:04:57.882Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "kVfH_IV7yGY",
+      "title": "原來全台灣的水豚都認識我？😂 | Do All Capybaras Know Me?! 👀 #Shorts",
+      "published": "2026-10-20T12:45:33+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -201,14 +209,6 @@
       "videoId": "w7Qk_8EQVeU",
       "title": "【LIVE】カピバラ～レッサーパンダ",
       "published": "2026-10-17T07:56:12+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "qhATAcC0zzY",
-      "title": "水豚偷偷探頭，發現我還在拍！😂🦫 | Capybara Caught Me Filming!",
-      "published": "2026-10-16T11:25:26+00:00"
     },
     {
       "channelSlug": "biopark",
