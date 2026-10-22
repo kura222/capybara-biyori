@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T08:48:56.254Z",
+  "updatedAt": "2026-10-22T14:19:39.943Z",
   "degraded": false,
   "live": [
     {
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "Pq-YvU85OEQ",
+      "title": "史上最難教的學生！🤣 五隻水豚的上課日常 | The Hardest Students Ever! 🐹",
+      "published": "2026-10-22T10:40:39+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -193,14 +201,6 @@
       "videoId": "kFgqmdPjB4U",
       "title": "お母さんの袋に入るカンガルー",
       "published": "2026-10-17T12:00:28+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "T_t3qR9qEj0",
-      "title": "這不是掃把，是按摩棒！😂🐹｜Not a Broom, It's a Massage Stick! #Shorts",
-      "published": "2026-10-17T11:10:04+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
