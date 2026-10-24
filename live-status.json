@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T01:20:51.380Z",
+  "updatedAt": "2026-10-24T06:10:51.458Z",
   "degraded": false,
   "live": [
     {
@@ -16,70 +16,5 @@
     }
   ],
   "upcoming": [],
-  "latestVideos": [
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "9_DjgF1bkU8",
-      "title": "ふれあい館でカイロトゲマウスとも触れ合えます♪#shorts #小動物 #動物",
-      "published": "2026-10-23T07:37:54+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "9yclYzFQe38",
-      "title": "ご支援のバナナを頬張るカピバラベビー♪#shorts #カピバラ #capybara",
-      "published": "2026-10-23T03:44:19+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "uP_kzx0tK4E",
-      "title": "皆さんに愛されたアイク。#shorts #動物 #猿",
-      "published": "2026-10-22T08:26:19+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "BJA5WT7t8i4",
-      "title": "くるみおばあちゃんの食欲の秋♪#shorts #猿 #動物",
-      "published": "2026-10-22T03:42:00+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "Iue4MURcLmE",
-      "title": "【ASMR】アルダブラゾウガメ、きゅうりを食べる",
-      "published": "2026-07-09T10:00:02+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "5mjgMPaFlac",
-      "title": "【ASMR】ケヅメリクガメ、ゴーヤを食べる",
-      "published": "2026-07-07T10:00:36+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "KLEARSKYvxM",
-      "title": "フェルトでつくるハダカデバネズミ",
-      "published": "2026-06-21T04:00:05+00:00"
-    },
-    {
-      "channelSlug": "saitama-childrens-zoo",
-      "channelName": "埼玉県こども動物自然公園",
-      "facilitySlug": "saitama-childrens-zoo",
-      "videoId": "E7Q_od9vm6s",
-      "title": "W杯「日本vsチュニジア」グンディに予想してもらいました！",
-      "published": "2026-06-20T05:58:24+00:00"
-    }
-  ]
+  "latestVideos": []
 }
