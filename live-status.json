@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T14:47:28.193Z",
+  "updatedAt": "2026-10-25T18:06:30.808Z",
   "degraded": false,
   "live": [
     {
@@ -85,6 +85,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "OotKoaYLMTw",
+      "title": "雨の日のジャックオーランタン",
+      "published": "2026-10-25T17:03:52+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -131,14 +139,6 @@
       "videoId": "XaHIXNhfwHk",
       "title": "他のインコが歌う歌でテンション爆上がりになるオカメインコ♪#shorts #インコ #オカメインコ",
       "published": "2026-10-25T06:08:53+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "OotKoaYLMTw",
-      "title": "雨の日のジャックオーランタン",
-      "published": "2026-10-25T04:29:04+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
