@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T00:48:16.258Z",
+  "updatedAt": "2026-10-25T05:39:31.745Z",
   "degraded": false,
   "live": [
     {
@@ -16,38 +16,5 @@
     }
   ],
   "upcoming": [],
-  "latestVideos": [
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "SuitTpYmHVM",
-      "title": "【㊗️】ビーバーの赤ちゃんが4頭誕生しました🦫！【3年ぶり】",
-      "published": "2026-10-24T10:00:11+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "eWdXBULiKi8",
-      "title": "【激怒】ホワイトコーン🌽をあげたら独り占めしたくてムームーが止まらないビーバー🦫www",
-      "published": "2026-10-21T10:00:11+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "iEJ--goci0o",
-      "title": "【100問】Instagramでいただいた質問にPAWスタッフが片っ端から答えてみた！",
-      "published": "2026-10-18T10:00:08+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "CDg2j0vhzsc",
-      "title": "カピバラ🎃ハロウィン",
-      "published": "2026-10-18T06:43:25+00:00"
-    }
-  ]
+  "latestVideos": []
 }
