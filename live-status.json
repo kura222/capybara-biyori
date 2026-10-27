@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T09:34:58.181Z",
+  "updatedAt": "2026-10-27T15:42:28.554Z",
   "degraded": false,
   "live": [
     {
@@ -34,9 +34,9 @@
     },
     {
       "channelSlug": "adventure-world",
-      "videoId": "7YhcLNnqKmk",
+      "videoId": "mlQv2GUDHGk",
       "title": "【24時間生中継】キタイワトビペンギンの赤ちゃん まもなく誕生！",
-      "startedAt": "2026-10-27T06:08:18Z"
+      "startedAt": "2026-10-27T11:48:57Z"
     },
     {
       "channelSlug": "kumamoto-city-zoo-livecam",
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "olntMmeHNJ0",
+      "title": "She Checked My Hand First 🥹🐹她先聞聞我的手 🥹",
+      "published": "2026-10-27T10:25:16+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -193,14 +201,6 @@
       "videoId": "dmx6qPr9ieE",
       "title": "両脇に仔を抱えるマーラ母ちゃん",
       "published": "2026-10-24T11:00:15+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "FKOd8-nV1IQ",
-      "title": "Two Capybaras Eating Beside Me 🥹🌿｜兩隻水豚在我身邊吃草",
-      "published": "2026-10-24T10:45:30+00:00"
     },
     {
       "channelSlug": "biopark",
