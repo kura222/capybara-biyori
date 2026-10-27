@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T23:33:21.554Z",
+  "updatedAt": "2026-10-27T03:40:23.218Z",
   "degraded": false,
   "live": [
     {
@@ -13,8 +13,65 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
+    },
+    {
+      "channelSlug": "budapest-zoo",
+      "videoId": "wkfL5Dua6gc",
+      "title": "Állatkert Budapest szívében - Szavanna kifutó ÉLŐ",
+      "startedAt": "2026-10-16T20:50:18Z"
+    },
+    {
+      "channelSlug": "budapest-zoo",
+      "videoId": "ZXwT563tbf4",
+      "title": "Állatkert Budapest szívében - Fóka medence ÉLŐ",
+      "startedAt": "2026-10-16T19:22:32Z"
+    },
+    {
+      "channelSlug": "budapest-zoo",
+      "videoId": "i3kmj2b8zkA",
+      "title": "Állatkert Budapest szívében - Elefánt kifutó ÉLŐ",
+      "startedAt": "2026-05-21T12:16:41Z"
+    },
+    {
+      "channelSlug": "budapest-zoo",
+      "videoId": "bo6yE8iIpNE",
+      "title": "Állatkert Budapest szívében - Cápasuli ÉLŐ",
+      "startedAt": "2023-05-18T11:24:48Z"
     }
   ],
   "upcoming": [],
-  "latestVideos": []
+  "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "OotKoaYLMTw",
+      "title": "雨の日のジャックオーランタン",
+      "published": "2026-10-25T17:03:52+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "Oqisgh4Nia8",
+      "title": "ジャンボスイカ🍉🍉",
+      "published": "2026-10-25T10:00:05+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "aLtRte7Pt44",
+      "title": "雨とカピバラ☔️",
+      "published": "2026-10-25T06:38:38+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "SuitTpYmHVM",
+      "title": "【㊗️】ビーバーの赤ちゃんが4頭誕生しました🦫！【3年ぶり】",
+      "published": "2026-10-24T10:00:11+00:00"
+    }
+  ]
 }
