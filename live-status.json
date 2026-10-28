@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T10:23:53.686Z",
+  "updatedAt": "2026-10-28T16:45:07.580Z",
   "degraded": false,
   "live": [
     {
@@ -34,9 +34,9 @@
     },
     {
       "channelSlug": "adventure-world",
-      "videoId": "bllVL4HslEI",
+      "videoId": "97HafN1OElA",
       "title": "【ライブ配信】キタイワトビペンギンの赤ちゃん見守りカメラ",
-      "startedAt": "2026-10-28T09:10:42Z"
+      "startedAt": "2026-10-28T12:01:20Z"
     },
     {
       "channelSlug": "kumamoto-city-zoo-livecam",
@@ -90,6 +90,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "x4JD3ZFSqGI",
+      "title": "She Saw the Grass! 🌿 她看到牧草了！",
+      "published": "2026-10-28T11:00:36+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -161,14 +169,6 @@
       "videoId": "OotKoaYLMTw",
       "title": "雨の日のジャックオーランタン",
       "published": "2026-10-25T17:03:52+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "fWXF9UmqA5E",
-      "title": "One Fan, Many Capys ❤️ 一位水豚粉絲",
-      "published": "2026-10-25T13:30:40+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
