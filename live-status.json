@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T08:18:54.755Z",
+  "updatedAt": "2026-10-31T14:39:08.958Z",
   "degraded": false,
   "live": [
     {
@@ -34,9 +34,9 @@
     },
     {
       "channelSlug": "adventure-world",
-      "videoId": "sf31j8ll6qw",
+      "videoId": "XcjGxClWKrs",
       "title": "【ライブ配信】キタイワトビペンギンの赤ちゃん見守りカメラ",
-      "startedAt": "2026-10-31T00:41:12Z"
+      "startedAt": "2026-10-31T08:51:10Z"
     },
     {
       "channelSlug": "kumamoto-city-zoo-livecam",
@@ -77,18 +77,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "wf8KO_1wFc0",
-      "title": "規格外のジャンボかぼちゃ🎃をカピバラに丸ごとプレゼントしてみた【ジャック・オー・ランタン】",
-      "scheduledAt": "2026-10-31T10:00:00Z"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "videoId": "JXWLasMvgBI",
-      "title": "【マーコール特集】ドリルみたいな角はなぜねじれる？岩山をスイスイ登る足のひみつ｜宇都宮動物園",
-      "scheduledAt": "2026-10-31T14:00:00Z"
-    },
-    {
       "channelSlug": "chiba-zoological-park",
       "videoId": "1pS2HtsW8Oc",
       "title": "2026年11月23日（月・祝）東邦大学オープンセミナー　「ニホンザルはストレスで食べ物を洗うのか」",
@@ -97,12 +85,28 @@
   ],
   "latestVideos": [
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "Fat7w48n-YE",
-      "title": "動物達の楽しいハロウィン♫",
-      "published": "2026-10-31T08:14:21+00:00"
+      "channelSlug": "utsunomiya-zoo",
+      "channelName": "宇都宮動物園",
+      "facilitySlug": "utsunomiya-zoo",
+      "videoId": "JXWLasMvgBI",
+      "title": "【マーコール特集】ドリルみたいな角はなぜねじれる？岩山をスイスイ登る足のひみつ｜宇都宮動物園",
+      "published": "2026-10-31T14:00:11+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "5i9AP11x0h8",
+      "title": "むにゃむにゃ🍎 #岡山 #池田動物園 #レッサーパンダ #しずく",
+      "published": "2026-10-31T11:00:40+00:00"
+    },
+    {
+      "channelSlug": "uminonakamichi-doubutsu-no-mori",
+      "channelName": "海の中道「動物の森」",
+      "facilitySlug": "uminonakamichi-park",
+      "videoId": "uQg-VK7Y3-I",
+      "title": "何頭いるでしょう！",
+      "published": "2026-10-31T11:00:18+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -110,7 +114,39 @@
       "facilitySlug": "nagasaki-biopark",
       "videoId": "wf8KO_1wFc0",
       "title": "規格外のジャンボかぼちゃ🎃をカピバラに丸ごとプレゼントしてみた【ジャック・オー・ランタン】",
-      "published": "2026-10-31T06:27:50+00:00"
+      "published": "2026-10-31T10:00:10+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "VBksyG2j3VY",
+      "title": "The Sweetest Little Baby Capybara 🥹❤️",
+      "published": "2026-10-31T09:10:05+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "n6FE-8JKDH4",
+      "title": "可愛いりんごお化け♫#shorts #ハロウィン #halloween",
+      "published": "2026-10-31T08:34:24+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "ZjwNsUXcklw",
+      "title": "コモンおばあちゃんの楽しくて美味しいハロウィン♫#shorts #ハロウィン #halloween",
+      "published": "2026-10-31T08:31:29+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "Fat7w48n-YE",
+      "title": "動物達の楽しいハロウィン♫",
+      "published": "2026-10-31T08:14:21+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -129,28 +165,12 @@
       "published": "2026-10-30T08:24:44+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "JfDcA13dofg",
-      "title": "ヨザルのよっちゃんの可愛いハロウィン♫#shorts #ハロウィン #猿",
-      "published": "2026-10-30T04:52:32+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
       "videoId": "wYhdTN0HGuA",
       "title": "Excuse Me, I'm Eating! 😂🌱｜不好意思，我正在吃草！",
       "published": "2026-10-29T13:05:36+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "ICcMPyPwn5w",
-      "title": "秋になると撮りたくなる♫#秋田犬 #犬 #紅葉",
-      "published": "2026-10-29T08:13:40+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -167,14 +187,6 @@
       "videoId": "rsgZTt2Um_U",
       "title": "【飼育員が解説！】まるで人間？ワオキツネザル・クロキツネザルの見分け方を伝授します🐒",
       "published": "2026-10-28T10:00:07+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "olntMmeHNJ0",
-      "title": "She Checked My Hand First 🥹🐹她先聞聞我的手 🥹",
-      "published": "2026-10-27T10:25:16+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -225,14 +237,6 @@
       "published": "2026-10-18T11:00:29+00:00"
     },
     {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "JXWLasMvgBI",
-      "title": "【マーコール特集】ドリルみたいな角はなぜねじれる？岩山をスイスイ登る足のひみつ｜宇都宮動物園",
-      "published": "2026-10-17T22:04:46+00:00"
-    },
-    {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
       "facilitySlug": "uminonakamichi-park",
@@ -241,28 +245,12 @@
       "published": "2026-10-17T12:00:28+00:00"
     },
     {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "4LOU9aBndiQ",
-      "title": "おーちゃん今日は上手にしゃべるね🦜 #池田動物園 #動物 #キエリボウシインコ",
-      "published": "2026-10-17T11:00:04+00:00"
-    },
-    {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
       "facilitySlug": "uminonakamichi-park",
       "videoId": "HjfTJ3TfaAo",
       "title": "おうちでくつろぐプレーリードッグ",
       "published": "2026-10-10T07:54:43+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "ZHm7jg19QKo",
-      "title": "リスザルベイビーお食事の様子",
-      "published": "2026-10-03T09:00:30+00:00"
     },
     {
       "channelSlug": "utsunomiya-zoo",
