@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T08:40:42.903Z",
+  "updatedAt": "2026-11-01T15:43:57.512Z",
   "degraded": false,
   "live": [
     {
@@ -34,9 +34,9 @@
     },
     {
       "channelSlug": "adventure-world",
-      "videoId": "werWwXVl9GE",
+      "videoId": "YBtcGSizW44",
       "title": "【ライブ配信】キタイワトビペンギンの赤ちゃん見守りカメラ",
-      "startedAt": "2026-11-01T00:52:09Z"
+      "startedAt": "2026-11-01T08:53:21Z"
     },
     {
       "channelSlug": "kumamoto-city-zoo-livecam",
@@ -84,6 +84,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "URWEtwSd5WU",
+      "title": "The Little Zombie Capybara Wants MORE! 🧟😂 | 小殭屍水豚還想吃！",
+      "published": "2026-11-01T14:25:12+00:00"
+    },
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "eUZQr7L1vq0",
+      "title": "ニコちゃん池田での最後の動画です！静岡市日本平動物園にお引っ越ししました😁元気でね👋 #アビシニアコロブス #池田動物園 #岡山",
+      "published": "2026-11-01T11:00:05+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -161,7 +177,7 @@
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "wf8KO_1wFc0",
-      "title": "規格外のジャンボかぼちゃ🎃をカピバラに丸ごとプレゼントしてみた【ジャック・オー・ランタン】",
+      "title": "【巨大】ジャンボかぼちゃ🎃をみんなで仲良くもぐもぐ食べるカピバラたち Capybara eat huge pumpkin【ジャック・オー・ランタン】",
       "published": "2026-10-31T10:00:10+00:00"
     },
     {
@@ -197,14 +213,6 @@
       "published": "2026-10-30T10:50:35+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "wYhdTN0HGuA",
-      "title": "Excuse Me, I'm Eating! 😂🌱｜不好意思，我正在吃草！",
-      "published": "2026-10-29T13:05:36+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -227,14 +235,6 @@
       "videoId": "dmx6qPr9ieE",
       "title": "両脇に仔を抱えるマーラ母ちゃん",
       "published": "2026-10-24T11:00:15+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "Rdcw0iJco1s",
-      "title": "ハンモック床に付いてる？ #池田動物園 #動物 #岡山 #ツキノワグマ",
-      "published": "2026-10-18T11:00:29+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
