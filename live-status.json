@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T23:44:36.030Z",
+  "updatedAt": "2026-11-02T04:22:26.135Z",
   "degraded": false,
   "live": [
     {
@@ -16,102 +16,5 @@
     }
   ],
   "upcoming": [],
-  "latestVideos": [
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "eUZQr7L1vq0",
-      "title": "ニコちゃん池田での最後の動画です！静岡市日本平動物園にお引っ越ししました😁元気でね👋 #アビシニアコロブス #池田動物園 #岡山",
-      "published": "2026-11-01T11:00:05+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "JXWLasMvgBI",
-      "title": "【マーコール特集】ドリルみたいな角はなぜねじれる？岩山をスイスイ登る足のひみつ｜宇都宮動物園",
-      "published": "2026-10-31T14:00:11+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "5i9AP11x0h8",
-      "title": "むにゃむにゃ🍎 #岡山 #池田動物園 #レッサーパンダ #しずく",
-      "published": "2026-10-31T11:00:40+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "iv_UW16ZgzY",
-      "title": "いっぱい食べてね #池田動物園 #動物 #コールダック #岡山",
-      "published": "2026-10-25T11:00:00+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "aC273N85NQQ",
-      "title": "ハリーちゃんに芋づる持っていかれちゃった🥹 #池田動物園 #動物 #岡山 #インドタテガミヤマアラシ",
-      "published": "2026-10-24T11:00:22+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "vB5kSfq7NWY",
-      "title": "馬は耳で気持ちを伝える！？ミニチュアホース・ポニー・ウサギのひみつ｜宇都宮動物園",
-      "published": "2026-09-30T15:00:08+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "saxgsxWTQS4",
-      "title": "疲れているあなたに、30秒の癒しをおすそ分け🍃",
-      "published": "2026-09-30T11:30:12+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "DtNv-3xtNk8",
-      "title": "飼育員が作るごはん【ワオキツネザル編】🐒",
-      "published": "2026-09-29T12:30:38+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "tx6njawhcDg",
-      "title": "飼育員がチャレンジ💪お絵描き伝言ゲーム🎨",
-      "published": "2026-09-29T10:30:01+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "DpeBzfZ64qM",
-      "title": "🌵伊豆シャボテン動物公園来たら、ここ行って🌵",
-      "published": "2026-09-28T09:00:19+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "O49LEq7jYnk",
-      "title": "【フラミンゴ特集】なぜピンク？なぜ片足？宇都宮動物園のフラミンゴに密着！",
-      "published": "2026-09-22T04:52:45+00:00"
-    },
-    {
-      "channelSlug": "utsunomiya-zoo",
-      "channelName": "宇都宮動物園",
-      "facilitySlug": "utsunomiya-zoo",
-      "videoId": "Ye9LzfbAVqk",
-      "title": "【栃木・夏休み特集】動物園・夜の遊園地・プール！宇都宮動物園",
-      "published": "2026-07-24T01:00:06+00:00"
-    }
-  ]
+  "latestVideos": []
 }
