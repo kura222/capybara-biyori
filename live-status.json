@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T11:36:28.224Z",
+  "updatedAt": "2026-11-03T19:01:43.339Z",
   "degraded": false,
   "live": [
     {
@@ -85,6 +85,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "kTlqubn1F7s",
+      "title": "カピバラ展示場からライブ‼️",
+      "published": "2026-11-03T17:07:19+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -155,14 +163,6 @@
       "videoId": "q9E19N0K_fI",
       "title": "夕方になると急に気温が下がる季節🍁宗春くんの息も白く見えるくらいに冷え込んできています🥶#動物園 #草津熱帯圏 #秋田犬 #犬 #dog",
       "published": "2026-11-02T08:09:03+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "kTlqubn1F7s",
-      "title": "カピバラ展示場からライブ‼️",
-      "published": "2026-11-02T06:39:33+00:00"
     },
     {
       "channelSlug": "biopark",
