@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T15:03:41.439Z",
+  "updatedAt": "2026-11-04T21:23:22.245Z",
   "degraded": false,
   "live": [
     {
@@ -84,6 +84,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "KDZdXWTVyHg",
+      "title": "A Little Paw, A Little Treat 🐾❤️｜給我一隻手，送你一份小點心！",
+      "published": "2026-11-04T15:35:10+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -195,14 +203,6 @@
       "videoId": "eUZQr7L1vq0",
       "title": "ニコちゃん池田での最後の動画です！静岡市日本平動物園にお引っ越ししました😁元気でね👋 #アビシニアコロブス #池田動物園 #岡山",
       "published": "2026-11-01T11:00:05+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "0ZhjSMHaRU4",
-      "title": "樹谷農場｜水豚太可愛了！山羊表情超搞笑 😂🦫",
-      "published": "2026-11-01T03:30:19+00:00"
     },
     {
       "channelSlug": "utsunomiya-zoo",
