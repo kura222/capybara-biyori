@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T08:56:05.911Z",
+  "updatedAt": "2026-11-05T17:08:09.479Z",
   "degraded": false,
   "live": [
     {
@@ -34,9 +34,9 @@
     },
     {
       "channelSlug": "adventure-world",
-      "videoId": "cx4r5t09nak",
+      "videoId": "6RqmE0ZOfgo",
       "title": "【ライブ配信】キタイワトビペンギンの赤ちゃん見守りカメラ",
-      "startedAt": "2026-11-04T23:27:28Z"
+      "startedAt": "2026-11-05T09:19:30Z"
     },
     {
       "channelSlug": "kumamoto-city-zoo-livecam",
@@ -84,6 +84,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "idUrx_lfmd0",
+      "title": "She Just Climbed Onto My Lap 🥹 | 她直接把前腳放在我腿上了",
+      "published": "2026-11-05T12:40:30+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -187,14 +195,6 @@
       "videoId": "HZTw7TodvmE",
       "title": "【HAPPY HALLOWEEN】カピバラにカボチャをプレゼント",
       "published": "2026-11-02T08:14:30+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "URWEtwSd5WU",
-      "title": "The Little Zombie Capybara Wants MORE! 🧟😂 | 小殭屍水豚還想吃！",
-      "published": "2026-11-01T14:25:12+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
