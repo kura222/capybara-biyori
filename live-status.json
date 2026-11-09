@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T08:23:52.741Z",
+  "updatedAt": "2026-11-09T18:59:42.578Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "kPaj9QPGRos",
+      "title": "3 Baby Capybaras Couldn't Care Less 😂🐈‍⬛",
+      "published": "2026-11-09T11:10:16+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -181,14 +189,6 @@
       "videoId": "iSz027kaKoM",
       "title": "POV: Feeding 10 Capybaras | Natural ASMR 🥬",
       "published": "2026-11-06T11:50:09+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "idUrx_lfmd0",
-      "title": "She Just Climbed Onto My Lap 🥹 | 她直接把前腳放在我腿上了",
-      "published": "2026-11-05T12:40:30+00:00"
     },
     {
       "channelSlug": "biopark",
