@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T09:42:27.530Z",
+  "updatedAt": "2026-11-11T17:41:57.222Z",
   "degraded": false,
   "live": [
     {
@@ -71,12 +71,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "RFtRvrErVns",
-      "title": "少年のように虫捕りに没頭するうちの園長と水族館員🐬【マリンワールド海の中道】",
-      "scheduledAt": "2026-11-11T10:00:00Z"
-    },
-    {
       "channelSlug": "chiba-zoological-park",
       "videoId": "NnBjBxr60Dw",
       "title": "【アーカイブ 11/16 10:00まで】11月3日（火祝）ちばZOOフェスタ2026 生物多様性フォーラム AMの部",
@@ -90,6 +84,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "WP7mM7EPX0Y",
+      "title": "Good Night, Everyone 🌙 Just One Sleepy Capybara Moment",
+      "published": "2026-11-11T11:15:30+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "RFtRvrErVns",
+      "title": "少年のように虫捕りに没頭するうちの園長と水族館員🐬【マリンワールド海の中道】",
+      "published": "2026-11-11T10:00:06+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -105,14 +115,6 @@
       "videoId": "yYU1pSAGFu8",
       "title": "ニホンザルのモン吉のさつまいもを美味しく食べる姿♪#shorts #猿 #ニホンザル",
       "published": "2026-11-11T05:29:54+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "RFtRvrErVns",
-      "title": "少年のように虫捕りに没頭するうちの園長と水族館員🐬【マリンワールド海の中道】",
-      "published": "2026-11-11T02:40:14+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -201,14 +203,6 @@
       "videoId": "Hzvp5KjidHE",
       "title": "セロリLOVEなクモザル",
       "published": "2026-11-07T03:00:22+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "iSz027kaKoM",
-      "title": "POV: Feeding 10 Capybaras | Natural ASMR 🥬",
-      "published": "2026-11-06T11:50:09+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
