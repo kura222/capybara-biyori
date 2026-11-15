@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T16:47:21.844Z",
+  "updatedAt": "2026-11-15T21:27:33.159Z",
   "degraded": false,
   "live": [
     {
@@ -79,6 +79,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "shabotengroup",
+      "channelName": "伊豆シャボテン公園グループ",
+      "facilitySlug": "izu-shaboten",
+      "videoId": "qJNblDwU7bc",
+      "title": "伊豆シャボテン動物公園公式チャンネル がライブ配信中！",
+      "published": "2026-11-15T19:19:47+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "jS1iUQ0QUhw",
+      "title": "長崎バイオパーク、開園46周年ライブ‼️",
+      "published": "2026-11-15T17:35:28+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -109,14 +125,6 @@
       "videoId": "x05KFpkSORE",
       "title": "長崎バイオパーク開園46周年ライブ‼️",
       "published": "2026-11-15T06:46:18+00:00"
-    },
-    {
-      "channelSlug": "shabotengroup",
-      "channelName": "伊豆シャボテン公園グループ",
-      "facilitySlug": "izu-shaboten",
-      "videoId": "qJNblDwU7bc",
-      "title": "伊豆シャボテン動物公園公式チャンネル がライブ配信中！",
-      "published": "2026-11-15T06:20:02+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
@@ -197,14 +205,6 @@
       "videoId": "C2yS9fCo4KY",
       "title": "さくらちゃん🌸#カピバラ#capybara",
       "published": "2026-11-12T07:28:07+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "jS1iUQ0QUhw",
-      "title": "長崎バイオパーク、開園46周年ライブ‼️",
-      "published": "2026-11-11T00:10:41+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
