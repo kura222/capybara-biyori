@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T08:17:25.443Z",
+  "updatedAt": "2026-11-16T18:45:54.438Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,14 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "hmb-McuhTuo",
+      "title": "Too Slow, My Friend! 😂🐢 #asmr",
+      "published": "2026-11-16T10:10:39+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -189,14 +197,6 @@
       "videoId": "Eot6vYv38tQ",
       "title": "Capybaras Going Full T-Rex Mode! 🦖😂｜水豚突然變身暴龍！#asmrsounds",
       "published": "2026-11-13T11:05:37+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "h3aQbRypftk",
-      "title": "The Capybara Wasn't Part of My Shot 😂🐢",
-      "published": "2026-11-12T11:00:10+00:00"
     },
     {
       "channelSlug": "biopark",
