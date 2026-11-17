@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T02:16:49.935Z",
+  "updatedAt": "2026-11-17T10:57:15.079Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "t6orRzLsEMQ",
+      "title": "ごはんまだかな〜？の鼻ヒクヒク♪#shorts #ハリネズミ #hedgehog",
+      "published": "2026-11-17T08:03:39+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "mJYNSukQ6BA",
+      "title": "大盛況に終わったハクビシンのハクちゃん復活祭！！",
+      "published": "2026-11-17T07:24:54+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -181,22 +197,6 @@
       "videoId": "czit0RIEqTA",
       "title": "【💩⁉️】うんちからわかる動物たちの多様な生態と体のしくみをPAW飼育員が解説します！",
       "published": "2026-11-14T10:00:09+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "OJXKFlCCWLc",
-      "title": "あえてぎゅうぎゅう詰めを好むマカロニマウス♫#小動物 #動物園 #shorts",
-      "published": "2026-11-14T08:07:32+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "H5IZ2NLo214",
-      "title": "さつまいもの皮も上手にむくお猿さん♫#shorts #猿 #さつまいも",
-      "published": "2026-11-14T03:42:04+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
