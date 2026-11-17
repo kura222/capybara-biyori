@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T18:45:54.438Z",
+  "updatedAt": "2026-11-17T02:16:49.935Z",
   "degraded": false,
   "live": [
     {
@@ -78,6 +78,22 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "n9fZb40i5ow",
+      "title": "ジャンボカボチャ美味しいね🎃🎃🎃【ライブハイライト】",
+      "published": "2026-11-17T01:12:34+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "0DYTiPpAb3o",
+      "title": "Wait… Another Capybara Wants Guava Too! 😂🍈 | 水豚也想吃芭樂！#ASMR",
+      "published": "2026-11-16T22:00:39+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -189,22 +205,6 @@
       "videoId": "mOKP6dwuACQ",
       "title": "ポニーのおじいちゃん帰宅の様子",
       "published": "2026-11-14T03:00:13+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "Eot6vYv38tQ",
-      "title": "Capybaras Going Full T-Rex Mode! 🦖😂｜水豚突然變身暴龍！#asmrsounds",
-      "published": "2026-11-13T11:05:37+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "C2yS9fCo4KY",
-      "title": "さくらちゃん🌸#カピバラ#capybara",
-      "published": "2026-11-12T07:28:07+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
