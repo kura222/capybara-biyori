@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T19:39:37.702Z",
+  "updatedAt": "2026-11-18T02:05:35.835Z",
   "degraded": false,
   "live": [
     {
@@ -71,6 +71,12 @@
   ],
   "upcoming": [
     {
+      "channelSlug": "biopark",
+      "videoId": "pHrsa7odqdY",
+      "title": "【飼育員のお仕事？】ビーバー🦫の新しいお家を作っていたのに何故かこうなるうちの筋トレ大好き飼育員🏋️",
+      "scheduledAt": "2026-11-18T10:00:00Z"
+    },
+    {
       "channelSlug": "chiba-zoological-park",
       "videoId": "BXLrRrlIyaY",
       "title": "2026年11月23日（月・祝）東邦大学セミナー 「ニホンザルはストレスで食べ物を洗うのか」講演会",
@@ -135,6 +141,14 @@
       "published": "2026-11-16T08:09:20+00:00"
     },
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "pHrsa7odqdY",
+      "title": "【飼育員のお仕事？】ビーバー🦫の新しいお家を作っていたのに何故かこうなるうちの筋トレ大好き飼育員🏋️",
+      "published": "2026-11-16T03:00:20+00:00"
+    },
+    {
       "channelSlug": "shabotengroup",
       "channelName": "伊豆シャボテン公園グループ",
       "facilitySlug": "izu-shaboten",
@@ -189,14 +203,6 @@
       "videoId": "8IxZA0vnCSk",
       "title": "この鳴き声はどの動物でしょうか？クイズ!!!　正解はコメントにのせます。  #池田動物園 #岡山 #クイズ",
       "published": "2026-11-14T11:00:30+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "czit0RIEqTA",
-      "title": "【💩⁉️】うんちからわかる動物たちの多様な生態と体のしくみをPAW飼育員が解説します！",
-      "published": "2026-11-14T10:00:09+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
