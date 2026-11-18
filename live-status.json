@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T02:05:35.835Z",
+  "updatedAt": "2026-11-18T10:28:57.068Z",
   "degraded": false,
   "live": [
     {
@@ -71,12 +71,6 @@
   ],
   "upcoming": [
     {
-      "channelSlug": "biopark",
-      "videoId": "pHrsa7odqdY",
-      "title": "【飼育員のお仕事？】ビーバー🦫の新しいお家を作っていたのに何故かこうなるうちの筋トレ大好き飼育員🏋️",
-      "scheduledAt": "2026-11-18T10:00:00Z"
-    },
-    {
       "channelSlug": "chiba-zoological-park",
       "videoId": "BXLrRrlIyaY",
       "title": "2026年11月23日（月・祝）東邦大学セミナー 「ニホンザルはストレスで食べ物を洗うのか」講演会",
@@ -84,6 +78,46 @@
     }
   ],
   "latestVideos": [
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "pHrsa7odqdY",
+      "title": "【飼育員のお仕事？】ビーバー🦫の新しいお家を作っていたのに何故かこうなるうちの筋トレ大好き飼育員🏋️",
+      "published": "2026-11-18T10:00:09+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "KLBHtrg9AQk",
+      "title": "ミルクを飲んで少しでも元気になって。#おばあちゃん #猿 #動物園",
+      "published": "2026-11-18T08:16:32+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "3Jagn1ChXNI",
+      "title": "コモンおばあちゃんが心配・・・。#shorts #猿 #おばあちゃん",
+      "published": "2026-11-18T07:58:27+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "zGP4uzRCWPM",
+      "title": "ご長寿猿コモンおばあちゃんの体調が心配です・・・。",
+      "published": "2026-11-18T07:27:21+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "IcL2CsT1XUk",
+      "title": "Capybara Kiss Time ❤️ | Too Cute to Handle!",
+      "published": "2026-11-18T05:20:18+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -99,14 +133,6 @@
       "videoId": "t6orRzLsEMQ",
       "title": "ごはんまだかな〜？の鼻ヒクヒク♪#shorts #ハリネズミ #hedgehog",
       "published": "2026-11-17T08:03:39+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "mJYNSukQ6BA",
-      "title": "大盛況に終わったハクビシンのハクちゃん復活祭！！",
-      "published": "2026-11-17T07:24:54+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -133,22 +159,6 @@
       "published": "2026-11-16T10:10:39+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "dcGL-lDEMYQ",
-      "title": "かくれんぼが上手なホオミドリアカオウロコインコ🦜頭隠して尻隠さず？🧐#動物園 #インコ #ホオミドリアカオウロコインコ #zoo #parakeet",
-      "published": "2026-11-16T08:09:20+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "pHrsa7odqdY",
-      "title": "【飼育員のお仕事？】ビーバー🦫の新しいお家を作っていたのに何故かこうなるうちの筋トレ大好き飼育員🏋️",
-      "published": "2026-11-16T03:00:20+00:00"
-    },
-    {
       "channelSlug": "shabotengroup",
       "channelName": "伊豆シャボテン公園グループ",
       "facilitySlug": "izu-shaboten",
@@ -165,28 +175,12 @@
       "published": "2026-11-15T17:35:28+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "BloSNkKb21U",
-      "title": "The Most Relaxed Capybara Ever 😂 #asmr",
-      "published": "2026-11-15T13:21:36+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
       "videoId": "pooX9UljtLM",
       "title": "お昼寝は気持ちが良いなぁ※動画でっす！ #池田動物園 #岡山 #カピバラ",
       "published": "2026-11-15T11:00:19+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "0ZI63LW18dY",
-      "title": "柿に夢中になったカピバラベビー♪#shorts #カピバラ #capybara",
-      "published": "2026-11-15T08:04:20+00:00"
     },
     {
       "channelSlug": "biopark",
