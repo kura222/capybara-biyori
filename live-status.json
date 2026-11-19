@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T01:02:32.715Z",
+  "updatedAt": "2026-11-19T09:06:50.262Z",
   "degraded": false,
   "live": [
     {
@@ -79,6 +79,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "KCiMpJfdAsg",
+      "title": "Everyone Is Eating… But the King Uses Bluetooth 😂👑 | 大家都在吃，只有國王用藍牙進食？",
+      "published": "2026-11-19T09:00:35+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "r6h6aJ7_TKU",
+      "title": "熱帯ドームにあの流氷の天使が！？『クリオネミミカキグサ』という、こう見えて食虫植物なんです！#動物園 #植物 #食虫植物 #クリオネ #plant",
+      "published": "2026-11-19T08:15:59+00:00"
+    },
+    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -127,14 +143,6 @@
       "published": "2026-11-17T14:35:10+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "t6orRzLsEMQ",
-      "title": "ごはんまだかな〜？の鼻ヒクヒク♪#shorts #ハリネズミ #hedgehog",
-      "published": "2026-11-17T08:03:39+00:00"
-    },
-    {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
@@ -149,14 +157,6 @@
       "videoId": "0DYTiPpAb3o",
       "title": "Wait… Another Capybara Wants Guava Too! 😂🍈 | 水豚也想吃芭樂！#ASMR",
       "published": "2026-11-16T22:00:39+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "hmb-McuhTuo",
-      "title": "Too Slow, My Friend! 😂🐢 #asmr",
-      "published": "2026-11-16T10:10:39+00:00"
     },
     {
       "channelSlug": "shabotengroup",
