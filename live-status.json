@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T00:50:14.121Z",
+  "updatedAt": "2026-11-20T08:03:18.563Z",
   "degraded": false,
   "live": [
     {
@@ -79,6 +79,22 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "fakzM__OD9Y",
+      "title": "コモンおばあちゃん奇跡の回復！！#shorts #おばあちゃん #動物",
+      "published": "2026-11-20T08:01:18+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "0-rArusjNbs",
+      "title": "コモンおばあちゃんの奇跡の回復！！",
+      "published": "2026-11-20T07:57:25+00:00"
+    },
+    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -109,22 +125,6 @@
       "videoId": "KLBHtrg9AQk",
       "title": "ミルクを飲んで少しでも元気になって。#おばあちゃん #猿 #動物園",
       "published": "2026-11-18T08:16:32+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "3Jagn1ChXNI",
-      "title": "コモンおばあちゃんが心配・・・。#shorts #猿 #おばあちゃん",
-      "published": "2026-11-18T07:58:27+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "zGP4uzRCWPM",
-      "title": "ご長寿猿コモンおばあちゃんの体調が心配です・・・。",
-      "published": "2026-11-18T07:27:21+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
