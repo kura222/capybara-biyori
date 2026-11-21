@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T23:14:38.108Z",
+  "updatedAt": "2026-11-21T04:08:08.528Z",
   "degraded": false,
   "live": [
     {
@@ -82,6 +82,22 @@
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "jQVnfEYqt4E",
+      "title": "規格外のさつまいもを頬張るヨザルのよっちゃん♪#shorts #猿 #動物",
+      "published": "2026-11-21T03:53:41+00:00"
+    },
+    {
+      "channelSlug": "uminonakamichi-doubutsu-no-mori",
+      "channelName": "海の中道「動物の森」",
+      "facilitySlug": "uminonakamichi-park",
+      "videoId": "5O7VZQ5ZAq4",
+      "title": "カピバラの行列",
+      "published": "2026-11-21T03:00:12+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
       "videoId": "SzwIsiOnJF8",
       "title": "草津温泉も雪の時期になりました！#shorts #秋田犬 #雪",
       "published": "2026-11-20T08:16:37+00:00"
@@ -109,14 +125,6 @@
       "videoId": "KCiMpJfdAsg",
       "title": "Everyone Is Eating… But the King Uses Bluetooth 😂👑 | 大家都在吃，只有國王用藍牙進食？",
       "published": "2026-11-19T09:00:35+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "r6h6aJ7_TKU",
-      "title": "熱帯ドームにあの流氷の天使が！？『クリオネミミカキグサ』という、こう見えて食虫植物なんです！#動物園 #植物 #食虫植物 #クリオネ #plant",
-      "published": "2026-11-19T08:15:59+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -245,14 +253,6 @@
       "videoId": "JXWLasMvgBI",
       "title": "【マーコール特集】ドリルみたいな角はなぜねじれる？岩山をスイスイ登る足のひみつ｜宇都宮動物園",
       "published": "2026-10-31T14:00:11+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "uQg-VK7Y3-I",
-      "title": "何頭いるでしょう！",
-      "published": "2026-10-31T11:00:18+00:00"
     },
     {
       "channelSlug": "utsunomiya-zoo",
