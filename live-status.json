@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T04:08:08.528Z",
+  "updatedAt": "2026-11-21T12:53:16.170Z",
   "degraded": false,
   "live": [
     {
@@ -79,6 +79,46 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "j3iJatQvaOY",
+      "title": "体重計に乗るのも得意なもんです😁 #池田動物園 #岡山 #インドタテガミヤマアラシ #ダンくん",
+      "published": "2026-11-21T11:00:23+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "TBTVkCXjNdY",
+      "title": "My Butt Needs Its Own Seat! 😂 | Capybara Conversation 🦫 我的屁股需要自己的座位！",
+      "published": "2026-11-21T10:50:38+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "B-mlP3QAvEQ",
+      "title": "【Wりょうすけ】バイオパーク生まれの先輩カピバラと初対面！可愛すぎて超癒されました【阿蘇ファームランド】",
+      "published": "2026-11-21T10:00:08+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "ItsWsOP6EKE",
+      "title": "体調の波があるコモンおばあちゃん。#shorts #コモンマーモセット #おばあちゃん",
+      "published": "2026-11-21T08:27:15+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "y4w5x6wmvE0",
+      "title": "ビーバー展示場つくるよ！　part18",
+      "published": "2026-11-21T07:40:08+00:00"
+    },
+    {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
       "facilitySlug": "kusatsu-nettaiken",
@@ -109,14 +149,6 @@
       "videoId": "fakzM__OD9Y",
       "title": "コモンおばあちゃん奇跡の回復！！#shorts #おばあちゃん #動物",
       "published": "2026-11-20T08:01:18+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "0-rArusjNbs",
-      "title": "コモンおばあちゃんの奇跡の回復！！",
-      "published": "2026-11-20T07:57:25+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -159,14 +191,6 @@
       "published": "2026-11-17T01:12:34+00:00"
     },
     {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "0DYTiPpAb3o",
-      "title": "Wait… Another Capybara Wants Guava Too! 😂🍈 | 水豚也想吃芭樂！#ASMR",
-      "published": "2026-11-16T22:00:39+00:00"
-    },
-    {
       "channelSlug": "shabotengroup",
       "channelName": "伊豆シャボテン公園グループ",
       "facilitySlug": "izu-shaboten",
@@ -175,28 +199,12 @@
       "published": "2026-11-15T19:19:47+00:00"
     },
     {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "jS1iUQ0QUhw",
-      "title": "長崎バイオパーク、開園46周年ライブ‼️",
-      "published": "2026-11-15T17:35:28+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
       "videoId": "pooX9UljtLM",
       "title": "お昼寝は気持ちが良いなぁ※動画でっす！ #池田動物園 #岡山 #カピバラ",
       "published": "2026-11-15T11:00:19+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "x05KFpkSORE",
-      "title": "長崎バイオパーク開園46周年！カピバラたちとお祝い生配信🎉",
-      "published": "2026-11-15T06:46:18+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
@@ -221,14 +229,6 @@
       "videoId": "W_BNPVwGQ4c",
       "title": "リンゴが美味しいね🍎 #池田動物園 #岡山 #レッサーパンダ ＃しずく",
       "published": "2026-11-08T11:00:23+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "wx-gWOLwa2k",
-      "title": "ジャグリングしよんか？ #池田動物園 #コツメカワウソ #岡山",
-      "published": "2026-11-07T11:00:20+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
