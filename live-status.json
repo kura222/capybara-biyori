@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T00:04:50.877Z",
+  "updatedAt": "2026-11-22T07:14:41.274Z",
   "degraded": false,
   "live": [
     {
@@ -82,8 +82,24 @@
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
+      "videoId": "evQREXnOeoY",
+      "title": "カピバラ展示場からライブ‼️",
+      "published": "2026-11-22T06:39:52+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "JBbdAvyS9FQ",
+      "title": "柿の味を堪能するモン吉くん♪#shorts #ニホンザル #猿",
+      "published": "2026-11-22T05:13:01+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
       "videoId": "y4w5x6wmvE0",
-      "title": "ビーバー展示場つくるよ！　part18",
+      "title": "ビーバー展示場つくるよ！　【Planet Zoo Part18】",
       "published": "2026-11-21T20:48:30+00:00"
     },
     {
@@ -143,14 +159,6 @@
       "published": "2026-11-20T08:16:37+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "fakzM__OD9Y",
-      "title": "コモンおばあちゃん奇跡の回復！！#shorts #おばあちゃん #動物",
-      "published": "2026-11-20T08:01:18+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -181,14 +189,6 @@
       "videoId": "OW2S5t0w6rA",
       "title": "16 Little Moments With Capybaras 🧡 | Capybara Taiwan",
       "published": "2026-11-17T14:35:10+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "n9fZb40i5ow",
-      "title": "ジャンボカボチャ美味しいね🎃🎃🎃【ライブハイライト】",
-      "published": "2026-11-17T01:12:34+00:00"
     },
     {
       "channelSlug": "shabotengroup",
