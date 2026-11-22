@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T19:55:01.633Z",
+  "updatedAt": "2026-11-22T00:04:50.877Z",
   "degraded": false,
   "live": [
     {
@@ -79,6 +79,14 @@
   ],
   "latestVideos": [
     {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "y4w5x6wmvE0",
+      "title": "ビーバー展示場つくるよ！　part18",
+      "published": "2026-11-21T20:48:30+00:00"
+    },
+    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -109,14 +117,6 @@
       "videoId": "ItsWsOP6EKE",
       "title": "体調の波があるコモンおばあちゃん。#shorts #コモンマーモセット #おばあちゃん",
       "published": "2026-11-21T08:27:15+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "y4w5x6wmvE0",
-      "title": "ビーバー展示場つくるよ！　part18",
-      "published": "2026-11-21T07:40:08+00:00"
     },
     {
       "channelSlug": "kusatsu-nettaiken",
