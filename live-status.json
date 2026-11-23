@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T10:59:57.104Z",
+  "updatedAt": "2026-11-23T22:32:03.715Z",
   "degraded": false,
   "live": [
     {
@@ -71,6 +71,14 @@
   ],
   "upcoming": [],
   "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "rKbAEtYm2E0",
+      "title": "男前チンパンジー✨ #池田動物園 #岡山 #チンパンジー #トム君",
+      "published": "2026-11-23T11:00:25+00:00"
+    },
     {
       "channelSlug": "kusatsu-nettaiken",
       "channelName": "草津熱帯圏",
@@ -206,14 +214,6 @@
       "videoId": "pooX9UljtLM",
       "title": "お昼寝は気持ちが良いなぁ※動画でっす！ #池田動物園 #岡山 #カピバラ",
       "published": "2026-11-15T11:00:19+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "8IxZA0vnCSk",
-      "title": "この鳴き声はどの動物でしょうか？クイズ!!!　正解はコメントにのせます。  #池田動物園 #岡山 #クイズ",
-      "published": "2026-11-14T11:00:30+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
