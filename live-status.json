@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T22:32:03.715Z",
+  "updatedAt": "2026-11-24T06:43:42.413Z",
   "degraded": false,
   "live": [
     {
@@ -13,60 +13,6 @@
       "videoId": "Fr7dCV4fGIo",
       "title": "Bite Latvija - Kapibaras 2",
       "startedAt": "2025-11-05T14:22:02Z"
-    },
-    {
-      "channelSlug": "kiryugaoka-zoo",
-      "videoId": "1KOB5mvbvqk",
-      "title": "西エリア",
-      "startedAt": "2026-10-12T02:48:46Z"
-    },
-    {
-      "channelSlug": "kiryugaoka-zoo",
-      "videoId": "t57gEiPO5LY",
-      "title": "東エリア ワイド",
-      "startedAt": "2026-08-19T00:41:35Z"
-    },
-    {
-      "channelSlug": "kiryugaoka-zoo",
-      "videoId": "mbmp7hmMG_Q",
-      "title": "東エリア スポット",
-      "startedAt": "2026-03-20T03:04:08Z"
-    },
-    {
-      "channelSlug": "kumamoto-city-zoo-livecam",
-      "videoId": "iLsJ1R8iz78",
-      "title": "【熊本市動植物園】アフリカゾウ | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Elephant)",
-      "startedAt": "2026-03-31T00:45:06Z"
-    },
-    {
-      "channelSlug": "kumamoto-city-zoo-livecam",
-      "videoId": "EeU_fG7pmX4",
-      "title": "【熊本市動植物園】マサイキリン | 定点ライブカメラ / Kumamoto City Zoo and Botanical Garden Live Camera(Giraffe)",
-      "startedAt": "2025-11-04T09:28:46Z"
-    },
-    {
-      "channelSlug": "budapest-zoo",
-      "videoId": "wkfL5Dua6gc",
-      "title": "Állatkert Budapest szívében - Szavanna kifutó ÉLŐ",
-      "startedAt": "2026-10-16T20:50:18Z"
-    },
-    {
-      "channelSlug": "budapest-zoo",
-      "videoId": "ZXwT563tbf4",
-      "title": "Állatkert Budapest szívében - Fóka medence ÉLŐ",
-      "startedAt": "2026-10-16T19:22:32Z"
-    },
-    {
-      "channelSlug": "budapest-zoo",
-      "videoId": "i3kmj2b8zkA",
-      "title": "Állatkert Budapest szívében - Elefánt kifutó ÉLŐ",
-      "startedAt": "2026-05-21T12:16:41Z"
-    },
-    {
-      "channelSlug": "budapest-zoo",
-      "videoId": "bo6yE8iIpNE",
-      "title": "Állatkert Budapest szívében - Cápasuli ÉLŐ",
-      "startedAt": "2023-05-18T11:24:48Z"
     }
   ],
   "upcoming": [],
@@ -92,7 +38,7 @@
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "Dmplr4OEZks",
-      "title": "三連休最終日の動物園ライブ‼️",
+      "title": "三連休ラストのカピバラ＆園内散歩ツアー＆齊藤からのメッセージ",
       "published": "2026-11-23T06:40:07+00:00"
     },
     {
@@ -148,7 +94,7 @@
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
       "videoId": "evQREXnOeoY",
-      "title": "カピバラ展示場からライブ‼️",
+      "title": "薪ストーブでぽかぽかカピバラライブ‼️",
       "published": "2026-11-22T06:39:52+00:00"
     },
     {
