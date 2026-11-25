@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T02:55:07.653Z",
+  "updatedAt": "2026-11-25T12:06:06.798Z",
   "degraded": false,
   "live": [
     {
@@ -75,6 +75,38 @@
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
+      "videoId": "T45tBPOB1TQ",
+      "title": "This Little Capybara Couldn't Wait for Grass! 🥹🌿 | 小小水豚等不及吃草了！",
+      "published": "2026-11-25T11:35:29+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "U7FTImz91po",
+      "title": "【理不尽】水の中に落とした栗🌰を人に取られたと勘違いして激怒するビーバーがこちらですww",
+      "published": "2026-11-25T10:00:08+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "rBFzGtm4pKc",
+      "title": "久々のメロンに夢中になるくるみおばあちゃん♪#shorts #猿 #おばあちゃん",
+      "published": "2026-11-25T08:02:15+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "8GgDPpGKz88",
+      "title": "日本の動物園では当園でしか見られない希少なムネアカタマリン♫#shorts #猿 #動物園",
+      "published": "2026-11-25T04:43:43+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
       "videoId": "LdSJydho21k",
       "title": "Have You Ever Heard a Baby Capybara Make This Sound? 🥹🐹",
       "published": "2026-11-24T12:45:30+00:00"
@@ -102,14 +134,6 @@
       "videoId": "rKbAEtYm2E0",
       "title": "男前チンパンジー✨ #池田動物園 #岡山 #チンパンジー #トム君",
       "published": "2026-11-23T11:00:25+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "nycuJBWbK2Y",
-      "title": "いい湯だな〜みたいな感じで水入れに浸かるメキシコドクトカゲ🦎#動物園 #メキシコドクトカゲ #トカゲ #草津温泉 #zoo",
-      "published": "2026-11-23T08:11:41+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -160,36 +184,12 @@
       "published": "2026-11-22T10:00:17+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "C8GcaxZ9Dgg",
-      "title": "研究者の方から栄養食の差し入れいただきました♫#コモンマーモセット #おばあちゃん #猿",
-      "published": "2026-11-22T08:20:28+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "evQREXnOeoY",
-      "title": "薪ストーブでぽかぽかカピバラライブ‼️",
-      "published": "2026-11-22T06:39:52+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
       "videoId": "j3iJatQvaOY",
       "title": "体重計に乗るのも得意なもんです😁 #池田動物園 #岡山 #インドタテガミヤマアラシ #ダンくん",
       "published": "2026-11-21T11:00:23+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "TBTVkCXjNdY",
-      "title": "My Butt Needs Its Own Seat! 😂 | Capybara Conversation 🦫 我的屁股需要自己的座位！",
-      "published": "2026-11-21T10:50:38+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
