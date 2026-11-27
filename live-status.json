@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T04:45:48.457Z",
+  "updatedAt": "2026-11-27T14:40:47.409Z",
   "degraded": false,
   "live": [
     {
@@ -75,6 +75,38 @@
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
+      "videoId": "qqufYoFTIDE",
+      "title": "Capybara’s Dental Check-up 🦷😂 | 水豚的牙齒檢查",
+      "published": "2026-11-27T14:15:08+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "p7YBFd0c6ik",
+      "title": "水を飲み、口を拭く。",
+      "published": "2026-11-27T10:00:36+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "O_sbNw3jQ1E",
+      "title": "当園のアイドル！ヨザルのよっちゃん♫#shorts #アイドル #猿",
+      "published": "2026-11-27T08:26:44+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "r7V4GrzGcX8",
+      "title": "ハクビシンのハクちゃんにぶどうのプレゼント♫#shorts #ハクビシン #動物園",
+      "published": "2026-11-27T04:54:26+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
       "videoId": "fTpuyuCUctg",
       "title": "The Bluetooth Eater Is Now the King! 😂👑 | 藍牙吃貨變國王了！",
       "published": "2026-11-27T01:00:00+00:00"
@@ -120,22 +152,6 @@
       "published": "2026-11-25T10:00:08+00:00"
     },
     {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "rBFzGtm4pKc",
-      "title": "久々のメロンに夢中になるくるみおばあちゃん♪#shorts #猿 #おばあちゃん",
-      "published": "2026-11-25T08:02:15+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "8GgDPpGKz88",
-      "title": "日本の動物園では当園でしか見られない希少なムネアカタマリン♫#shorts #猿 #動物園",
-      "published": "2026-11-25T04:43:43+00:00"
-    },
-    {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
       "facilitySlug": null,
@@ -158,22 +174,6 @@
       "videoId": "Dmplr4OEZks",
       "title": "三連休ラストのカピバラ＆園内散歩ツアー＆齊藤からのメッセージ",
       "published": "2026-11-23T06:40:07+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "8YSeg_dwY2E",
-      "title": "こんなに小さかったカピバラのあかちゃん【ちょうど1年前】",
-      "published": "2026-11-23T03:10:30+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "7J69qnmv7iE",
-      "title": "Hey, Hands Off! That's My Girlfriend! 😂❤️欸，拿開你的手！那是我的女朋友！",
-      "published": "2026-11-23T01:30:29+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
