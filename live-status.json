@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T22:47:14.275Z",
+  "updatedAt": "2026-11-27T04:45:48.457Z",
   "degraded": false,
   "live": [
     {
@@ -71,6 +71,14 @@
   ],
   "upcoming": [],
   "latestVideos": [
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "fTpuyuCUctg",
+      "title": "The Bluetooth Eater Is Now the King! 😂👑 | 藍牙吃貨變國王了！",
+      "published": "2026-11-27T01:00:00+00:00"
+    },
     {
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
@@ -166,14 +174,6 @@
       "videoId": "7J69qnmv7iE",
       "title": "Hey, Hands Off! That's My Girlfriend! 😂❤️欸，拿開你的手！那是我的女朋友！",
       "published": "2026-11-23T01:30:29+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "UA4geITOl24",
-      "title": "When Your Gym Buddy Needs a Spotter 😂🐹 | 水豚需要專屬保護員！",
-      "published": "2026-11-22T12:35:02+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
