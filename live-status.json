@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T04:51:02.859Z",
+  "updatedAt": "2026-11-28T13:52:14.320Z",
   "degraded": false,
   "live": [
     {
@@ -69,15 +69,40 @@
       "startedAt": "2023-05-18T11:24:48Z"
     }
   ],
-  "upcoming": [
+  "upcoming": [],
+  "latestVideos": [
+    {
+      "channelSlug": "ikeda-zoo",
+      "channelName": "池田動物園【公式】",
+      "facilitySlug": "ikeda-zoo",
+      "videoId": "NkDXdkQP82Q",
+      "title": "ペロンペロンペロン👅 #池田動物園 #岡山 #ホワイトタイガー #サンちゃん",
+      "published": "2026-11-28T11:00:05+00:00"
+    },
     {
       "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
       "videoId": "UcjE4k3Zgjw",
       "title": "熊本のファンが動物たちのために育ててくれた「大好物」をプレゼントしたらリアクションが最高すぎた！🍠",
-      "scheduledAt": "2026-11-28T10:00:00Z"
-    }
-  ],
-  "latestVideos": [
+      "published": "2026-11-28T10:00:09+00:00"
+    },
+    {
+      "channelSlug": "capybara-taiwan",
+      "channelName": "水豚君（台湾カピバラカフェ）",
+      "facilitySlug": null,
+      "videoId": "jbgYRvCp5o0",
+      "title": "4 Capybaras, 1 Luxury Spa 😂🛁",
+      "published": "2026-11-28T09:55:32+00:00"
+    },
+    {
+      "channelSlug": "kusatsu-nettaiken",
+      "channelName": "草津熱帯圏",
+      "facilitySlug": "kusatsu-nettaiken",
+      "videoId": "nt2MeMKcCzs",
+      "title": "カメラ慣れしているよっちゃん。動画撮影にとても協力的すぎるがあまりこんな出来事が。全体を撮りたいのに自らカメラに向かってきちゃいました😄#動物園 #サル #ヨザル #nightmonkey #zoo",
+      "published": "2026-11-28T08:15:45+00:00"
+    },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
       "channelName": "海の中道「動物の森」",
@@ -130,14 +155,6 @@
       "channelSlug": "biopark",
       "channelName": "長崎バイオパーク公式",
       "facilitySlug": "nagasaki-biopark",
-      "videoId": "UcjE4k3Zgjw",
-      "title": "熊本のファンが動物たちのために育ててくれた「大好物」をプレゼントしたらリアクションが最高すぎた！🍠",
-      "published": "2026-11-27T00:29:27+00:00"
-    },
-    {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
       "videoId": "f-JossZHNMc",
       "title": "土砂降りの日のカピバラたち☔️",
       "published": "2026-11-26T10:00:20+00:00"
@@ -149,14 +166,6 @@
       "videoId": "4TZ_L3SW9WI",
       "title": "少しずつですが回復傾向に向かってます♪#shorts #おばあちゃん #猿",
       "published": "2026-11-26T08:25:18+00:00"
-    },
-    {
-      "channelSlug": "kusatsu-nettaiken",
-      "channelName": "草津熱帯圏",
-      "facilitySlug": "kusatsu-nettaiken",
-      "videoId": "eyvfyhEktLM",
-      "title": "療養中のコモンおばあちゃん。食事の介助が必要になってきました。",
-      "published": "2026-11-26T08:18:18+00:00"
     },
     {
       "channelSlug": "capybara-taiwan",
@@ -173,14 +182,6 @@
       "videoId": "U7FTImz91po",
       "title": "【理不尽】水の中に落とした栗🌰を人に取られたと勘違いして激怒するビーバーがこちらですww",
       "published": "2026-11-25T10:00:08+00:00"
-    },
-    {
-      "channelSlug": "capybara-taiwan",
-      "channelName": "水豚君（台湾カピバラカフェ）",
-      "facilitySlug": null,
-      "videoId": "LdSJydho21k",
-      "title": "Have You Ever Heard a Baby Capybara Make This Sound? 🥹🐹",
-      "published": "2026-11-24T12:45:30+00:00"
     },
     {
       "channelSlug": "ikeda-zoo",
@@ -221,14 +222,6 @@
       "videoId": "qJNblDwU7bc",
       "title": "伊豆シャボテン動物公園公式チャンネル がライブ配信中！",
       "published": "2026-11-15T19:19:47+00:00"
-    },
-    {
-      "channelSlug": "ikeda-zoo",
-      "channelName": "池田動物園【公式】",
-      "facilitySlug": "ikeda-zoo",
-      "videoId": "pooX9UljtLM",
-      "title": "お昼寝は気持ちが良いなぁ※動画でっす！ #池田動物園 #岡山 #カピバラ",
-      "published": "2026-11-15T11:00:19+00:00"
     },
     {
       "channelSlug": "uminonakamichi-doubutsu-no-mori",
