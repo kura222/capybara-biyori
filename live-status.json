@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T23:12:18.551Z",
+  "updatedAt": "2026-11-28T04:51:02.859Z",
   "degraded": false,
   "live": [
     {
@@ -69,8 +69,23 @@
       "startedAt": "2023-05-18T11:24:48Z"
     }
   ],
-  "upcoming": [],
+  "upcoming": [
+    {
+      "channelSlug": "biopark",
+      "videoId": "UcjE4k3Zgjw",
+      "title": "熊本のファンが動物たちのために育ててくれた「大好物」をプレゼントしたらリアクションが最高すぎた！🍠",
+      "scheduledAt": "2026-11-28T10:00:00Z"
+    }
+  ],
   "latestVideos": [
+    {
+      "channelSlug": "uminonakamichi-doubutsu-no-mori",
+      "channelName": "海の中道「動物の森」",
+      "facilitySlug": "uminonakamichi-park",
+      "videoId": "Z2YeuFZK__Q",
+      "title": "コソコソ餌をもらうラマ",
+      "published": "2026-11-28T03:00:04+00:00"
+    },
     {
       "channelSlug": "capybara-taiwan",
       "channelName": "水豚君（台湾カピバラカフェ）",
@@ -110,6 +125,14 @@
       "videoId": "fTpuyuCUctg",
       "title": "The Bluetooth Eater Is Now the King! 😂👑 | 藍牙吃貨變國王了！",
       "published": "2026-11-27T01:00:00+00:00"
+    },
+    {
+      "channelSlug": "biopark",
+      "channelName": "長崎バイオパーク公式",
+      "facilitySlug": "nagasaki-biopark",
+      "videoId": "UcjE4k3Zgjw",
+      "title": "熊本のファンが動物たちのために育ててくれた「大好物」をプレゼントしたらリアクションが最高すぎた！🍠",
+      "published": "2026-11-27T00:29:27+00:00"
     },
     {
       "channelSlug": "biopark",
@@ -168,14 +191,6 @@
       "published": "2026-11-23T11:00:25+00:00"
     },
     {
-      "channelSlug": "biopark",
-      "channelName": "長崎バイオパーク公式",
-      "facilitySlug": "nagasaki-biopark",
-      "videoId": "Dmplr4OEZks",
-      "title": "三連休ラストのカピバラ＆園内散歩ツアー＆齊藤からのメッセージ",
-      "published": "2026-11-23T06:40:07+00:00"
-    },
-    {
       "channelSlug": "ikeda-zoo",
       "channelName": "池田動物園【公式】",
       "facilitySlug": "ikeda-zoo",
@@ -230,14 +245,6 @@
       "videoId": "Hzvp5KjidHE",
       "title": "セロリLOVEなクモザル",
       "published": "2026-11-07T03:00:22+00:00"
-    },
-    {
-      "channelSlug": "uminonakamichi-doubutsu-no-mori",
-      "channelName": "海の中道「動物の森」",
-      "facilitySlug": "uminonakamichi-park",
-      "videoId": "HZTw7TodvmE",
-      "title": "【HAPPY HALLOWEEN】カピバラにカボチャをプレゼント",
-      "published": "2026-11-02T08:14:30+00:00"
     },
     {
       "channelSlug": "utsunomiya-zoo",
